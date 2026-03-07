@@ -1,0 +1,49 @@
+namespace OPSS
+{
+    /* 3/5
+     * 
+Rozważmy liczby zawierające dokładnie N cyfr, zapisane w systemie K.
+Liczbę nazwiemy KN-poprawną, jeśli w jej zapisie w systemie K nie wystąpią dwa sąsiadujące ze
+soba zera.
+Na przykład:
+1010230 jest poprawną 7-cyfrowa liczbą KN (n=7, k=4)
+1000198 nie jest poprawną liczbą KN (sąsiadujące zera)
+0121235 nie jest 7-cyfrową, lecz 6-cyfrową liczbą KN (n=7, k=7).
+Zadanie
+Mając dane dwie liczby naturalne N i K, napisz program, który wyznaczy liczbę wszystkich
+poprawnych KN liczb.
+Możesz założyć, że: 2 ≤ K ≤ 10; 2 ≤ N; 4 ≤ N+K ≤ 18.
+Wejście
+Dwie naturalne liczby N i K .
+Wyjście
+Liczba wszystkich poprawnych KN liczb.
+     */
+    public sealed class KNLiczby : ProblemBase
+    {
+        protected override string Input => "2\r\n10";
+
+        protected override string Output => "90";
+
+        protected override void BuildSolution(string[] input, List<string> output)
+        {
+            int K = int.Parse(input[0]);
+            int N = int.Parse(input[1]);
+            List<(int, int)> tree = [(N - 1, N - 1)];
+            for(int i = 1; i < K; i++)
+            {
+                for(int j = 0; j < tree.Count; j++)
+                {
+                    if (tree[j].Item1 == 1)
+                        tree[j] = (K - 1, tree[j].Item2);
+                    else
+                    {
+                        tree.Insert(j, (1, tree[j].Item2));
+                        j++;
+                    }
+                    tree[j] = (K - 1, tree[j].Item2 * (N - 1));
+                }
+            }
+            output.Add(tree.Sum(i => i.Item2).ToString());
+        }
+    }
+}
