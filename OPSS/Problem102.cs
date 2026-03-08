@@ -127,6 +127,13 @@ wejściu.
                     solution.Insert(0, solution[^1]);
                     solution.RemoveAt(solution.Count - 1);
                 }
+                var lastLine = points.Where(p => p.Angle == mapping[solution[^1]].Angle).ToList();
+                if(lastLine.Count > 1)
+                {
+                    lastLine.Sort((a, b) => -a.Radius.CompareTo(b.Radius));
+                    solution.RemoveAt(solution.Count - 1);
+                    solution.AddRange(lastLine.Select(p => p.Position));
+                }
                 output.Add($"{Math.Ceiling(course / 150.0)} {string.Join(" ", solution)}");
             }
         }
