@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace OPSS
 {
     /* 2/5
@@ -24,24 +26,41 @@ liczba nie istnieje program powinien wypisać liczbę -1.
                 output.Add(input[0]);
                 return;
             }
-            List<int> primes = [2, 3, 5, 7];
-            int i = 0;
-            List<int> factors = [];
-            while (i < primes.Count)
+            Dictionary<int, int> factors = new(){ { 2, 0 }, { 3, 0 }, { 5, 0 }, {7, 0} };
+            foreach (var p in factors.Keys)
             {
-                while(N % primes[i] == 0)
+                while(N % p == 0)
                 {
-                    factors.Add(primes[i]);
-                    N /= primes[i];
+                    factors[p]++;
+                    N /= p;
                 }
-                i++;
             }
             if(N > 1)
             {
                 output.Add("-1");
                 return;
             }
-            output.Add(string.Join("", factors));
+            StringBuilder sb = new();
+            if ((factors[2] % 3)  - (factors[3] % 2) == 1)
+            {
+                sb.Append(2);
+                factors[2]--;
+            }
+            if (factors[3] % 2 == 1 && factors[2] % 3 == 0)
+            {
+                sb.Append(3);
+                factors[3]--;
+            }
+            if (factors[2] % 3 == 2)
+            {
+                sb.Append(4);
+                factors[2] -= 2;
+            }
+            sb.Append('5', factors[5]);
+            sb.Append('7', factors[7]);
+            sb.Append('8', factors[2] / 3);
+            sb.Append('9', factors[3] >> 1);
+            output.Add(sb.ToString());
         }
     }
 }

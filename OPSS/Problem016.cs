@@ -27,11 +27,23 @@ Wyjście powinno zawierać jedną cyfrę 0-9 (ostatnia cyfra liczby N).
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            List<int> primes = Enumerable.Range(2, 9999).ToList();
-            for (int i = 0; i < primes.Count; i++)
+            List<int> primes = [2, 3];
+            for (int i = 5; i <= 1000; i  += 2)
             {
-                foreach (var p in Enumerable.Range(2, primes[primes.Count - 1] / primes[i]).Select(j => j * primes[i]))
-                    primes.Remove(p);
+                int index = 0;
+                int limit = (int)Math.Sqrt(i);
+                bool add = true;
+                while (primes[index] <= limit)
+                {
+                    if(i % primes[index] != 0)
+                    {
+                        add = false;
+                        break;
+                    }
+                    index++;
+                }
+                if (add)
+                    primes.Add(i);
             }
             int[] counts = new int[primes.Count];
             for(int i = 0; i < 10; i++)
