@@ -33,25 +33,34 @@ znajduje się a niebieskich zapałek Pi oraz b zielonych zapałek Sigmy.
         protected override void BuildSolution(string[] input, List<string> output)
         {
             int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            for (int i = 1; i <= N; i++)
             {
                 var splits = input[i].Split(' ');
                 int a = int.Parse(splits[0]), b = int.Parse(splits[1]), n = int.Parse(splits[2]), m = int.Parse(splits[3]);
-                List<int> res = [];
-                int fib1 = 1, fib2 = 1;
-                int steps = 0;
-                while(steps < n && (res.Count < 4 || fib1 != res[0] || fib2 != res[1]))
+                int steps = n;
+                int[][] tab = [[1, 1], [1, 0]];
+                int[][] res = [[1, 1], [1, 0]];
+                while (steps > 0)
                 {
-                    int temp = fib1;
-                    fib1 = fib2 % m;
-                    fib2 = (fib2 + temp) % m;
-                    res.Add(steps % 2 == 0 ? (fib1 * a + fib2 * b) % m : (fib2 * a + fib1 * b) % m);
-                    steps++;
+                    if (steps % 2 == 0)
+                    {
+                        tab = Mul(tab, tab, m);
+                        steps >>= 1;
+                    }
+                    else
+                    {
+                        res = Mul(res, tab, m);
+                        steps--;
+                    }
                 }
-                if (steps < n)
-                    res.RemoveRange(res.Count - 3, 3);
-                output.Add(res[n <= res.Count ? n - 1 : n % res.Count].ToString());
+                output.Add($"{(n % 2 == 0 ? ((res[0][0] * a + res[0][1] * b) % m) : ((res[0][0] * b + res[0][1] * a) % m))}");
             }
+        }
+
+        static int[][] Mul(int[][] tab1, int[][] tab2, int m)
+        {
+            return [[(tab1[0][0] * tab2[0][0] + tab1[1][0] * tab2[0][1]) % m, (tab1[0][1] * tab2[0][0] + tab1[1][1] * tab2[0][1]) % m],
+                [(tab1[0][0] * tab2[1][0] + tab1[1][0] * tab2[1][1]) % m, (tab1[1][1] * tab2[1][1] + tab1[0][1] * tab2[1][0]) % m]];
         }
     }
 }
