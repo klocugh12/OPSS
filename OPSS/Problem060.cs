@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 2/5
+    /* 1/5
      * 
 Rekursywna bakteria czwórkowa to bakteria, która żyje na powierzchniach kwadratowych. Bakteria
 składa się z jednego chromosomu typu B, C (chromosomy proste) lub S (chromosomu złożonego).
