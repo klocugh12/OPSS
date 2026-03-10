@@ -1,23 +1,15 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * 
-Dziesięciu matematyków leci balonem nad Oceanem Spokojnym. Kiedy przekroczyli równik,
-zdecydowali uczcić to zdarzenie, otwierając butelkę szampana. Niestety, korek wybił dziurę w
-balonie. Wodór zaczął się ulatniać, powodując opadanie balonu. Wkrótce spadnie do oceanu, a
-baloniarze zostaną zjedzeni przez wygłodniałe rekiny.
-Ale nie wszystko stracone. Jeden z baloniarzy może się poświęcić wyskakując z balonu, w celu
-przedłużenia życia pozostałym chociaż na krótką chwilę. Ciągle istnieje jeden problem - kto ma
-wyskoczyć? Matematycy wymyślili, że każdy z nich napisze liczbę naturalną ai nie mniejszą niż 1 i
-nie większą niż 10000. Następnie obliczają magiczną liczbę N, która jest liczbą wszystkich
-dodatnich dzielników iloczynu a1*a2*...*a10. Na przykład, liczbą dodatnich dzielników liczby 6
-jest 4 (dzielniki: 1,2,3,6). Bohater (matematyk, który wyskoczy) jest wyznaczony przez ostatnią
-cyfrę N.
-Twoim zadaniem, jest wyznaczenie tej cyfry.
-Wejście
-Wejście zawiera dziesięć liczb, każda w oddzielnej linii.
-Wyjście
-Wyjście powinno zawierać jedną cyfrę 0-9 (ostatnia cyfra liczby N).
+     * You're given 10 numbers from 1 to 10000.
+     * Find last digit of number of divisors of product of those numbers.
+     * For example, number 6 has 4 divisors (1, 2, 3 and 6).
+
+    Input:
+    Ten lines, each containing a number from 1 to 10000.
+
+    Output:
+    Last digit of number of divisors of product of input numbers.
      */
     public sealed class DzielniBaloniarze : ProblemBase
     {

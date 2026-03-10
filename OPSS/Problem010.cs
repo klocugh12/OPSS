@@ -3,6 +3,11 @@ namespace OPSS
     /* Difficulty: 2/5
      * 
 Compute value of M = 11^n.
+    Hint:
+          1 + 1 = 2
+        1 + 2 + 1 = 4
+      1 + 3 + 3 + 1 = 8
+    1 + 4 + 6 + 4 + 1 = 16
 
     Input
     First line contains number of data sets i,  (0 < i ≤ 500).

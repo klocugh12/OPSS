@@ -4,22 +4,18 @@ namespace OPSS
 {
     /* Difficulty: 1/5
      * 
-Mnisi podczas studiowania Starego Testamentu natrafili na liczne fragmenty zapisane szyfrem
-atbasz (tradycyjną hebrajską odmianią szyfru podstawieniowego).
-Atbasz polega na zastąpieniu litery położonej w pewnym miejscu, licząc od początka alfabetu, literą
-położoną w tym samym miejscu licząc od końca.
-Pracowici mnisi stworzyli różne alfabety, wypisali wszystkie odnalezione fragmenty i uświadomili
-sobie jak dużo jeszcze przed nimi pracy.
-Pomoż zatem biblistom (bo zależy im na wiedzy i czasie) rozkodować znalezione fragmenty.
-Wejście:
-W pierwszym wierszu znajduje się alfabet (są to znaki ascii z przedziału [33..126] czyli ['!'..'~']. Nie
-muszą być posortowane zgodnie z ich kodami ascii! W następnej linii znajduje sie liczba 0 < N <
-1000000 fragmentów znalezionych przez mnichów.
-W kolejnych N liniach znajdują się zakodowane słowa szyfrem atbasz (każde zawiera minimalnie
-jeden znak i maksymalnie 32 znaki)
-Wyjście:
-W kolejnych N wierszach powinny pojawić się słowa rozkodowane przez Twój program zgodnie z
-kolejnością ich wypisania przez mnichów
+     * You're given an encrypted text and an alphabet.
+     * To decipher it, for each character in encrypted text, 
+     * find its position in an alphabet counting from the beginning and replace it with character
+     * at same position, except counting from the end.
+
+Input
+First line contains an alphabet (ASCII characters with codes [33..126] or ['!'..'~']).
+    Second line contains number of encrypted texts, 0 < N < 1000000.
+Following N lines contain a single encrypted text each.
+
+    Output:
+    N lines each containing a single deciphered text.
      */
     public sealed class StaryTestament : ProblemBase
     {

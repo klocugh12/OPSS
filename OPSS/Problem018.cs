@@ -1,29 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
-     * Waga binarna to specyficzne urządzenie, które może dokonywać pomiarów dowolnych wielkości z
-przedziału (0,1) z ustaloną dokładnością. Dokładność wagi ustala się pokrętłem, które można
-ustawić na pozycji 1 lub 2, lub 3, lub ..., lub 10. Gdy dokładność jest ustawiona na m, to waga
-dokonuje pomiarów z dokładnością do 1/2^m. Wyniki pomiarów wagi są zapisywane w postaci par
-(l,m). Taka para oznacza, że dokładność wagi jest ustawiona na m i wskazanie wagi wynosi l, czyli
-ciężar ważonego przedmiotu wynosi l/2^m (l jest liczbą naturalną i oczywiście 0 < l < 2^m, gdyż
-wspominaliśmy, że waga wskazuje wielkości z przedziału (0,1)).
-Zadanie
-Twoim zadaniem jest napisanie programu, który uporządkuje wyniki pomiarów od najmniejszych
-do największych. Wyniki pomiarów zadane są w postaci par (l,m). Różne pary oznaczające takie
-same wyniki (np. (1,2) i (2,3) należy uporządkować rosnąco według wskazań, czyli pierwszych
-elementów w parach.
-Wejście
-Program powinien czytać dane z wejścia standardowego. W pierwszym wierszu danych podana jest
-liczba n (1 ≤ n ≤ 20000) oznaczająca liczbę par. W kolejnych n wierszach podane są pary liczb li i
-mi, po jednej parze w wierszu; li i mi są oddzielone jedną spacją. Dla każdej pary spełnione są
-warunki: 1 ≤ mi ≤ 10 oraz 0 < l < 2^mi.
-Wyjście
-Program powinien pisać wynik na wyjście standardowe. Wynikiem powinno być n par liczb
-podanych na wejściu, ale w takiej kolejności, by pary odpowiadające mniejszym wartościom
-pomiarów występowały przed parami odpowiadającymi większym wartościom. Takie same
-pomiary należy zapisać niemalejąco według wskazań. Każdą parę należy zapisać w takiej samej
-postaci, w jakiej była podana na wejściu.
+     * 
+     * Consider the scale to measure weight from the interval (0, 1) with specified precision.
+     * Precision can be set as integer from 1 to 10. If precision is equal to m, 
+     * then measurement error is less than 1/2^m. Measurements are written down as pairs (l, m).
+     * l is reading of the scale when precision is set to m, hence actual weight of an item
+     * is estimated to be l/2^m (l is a natural number, 0 < l < 2^m).
+     * 
+     * Write a program to sort measurements in ascending order.
+     * 
+     * Input
+     * First line contains number of measurments n (1 ≤ n ≤ 20000).
+     * Following n lines each contain pairs li, mi, separated by whitespace, 
+     * such as 1 ≤ mi ≤ 10 oraz 0 < l < 2^mi
+     * 
+     * Output
+     * n lines each containing a measurement from input in its original form, but sorted in ascending order.
+     * If two measurements correspond to same weight, sort them ascending by the reading (first value).
      */
     public sealed class WagaBinarna : ProblemBase
     {

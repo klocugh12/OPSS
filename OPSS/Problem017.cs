@@ -2,20 +2,17 @@ namespace OPSS
 {
     /* Difficulty: 1/5
      * 
-Frma MIRACLE, znany potentat na rynku baz danych, opracowała nowy sposób sortowania, który
-będzie zastosowany w najnowszym produkcie o nazwie kodowej Miracle 13k. W obecnej wersji
-metoda pozwala sortować niemalejąco tylko liczby naturalne z przedziału 1..1000.
-Algorytm polega na zamianie miejscami dwóch sąiednich elementów. Na przykład - jeśli chcemy
-posortować ciąg 3 1 2 to musimy zamienić miejscami 1 i 3 - otrzymamy ciąg 1 3 2 - nastepnie 3 - 2.
-Wykonaliśmy zatem 2 zamiany. W celu wytestowania metody potrzebny jest program, który
-policzy minimalną liczbę zamian potrzebną do posortowania ciągu liczb z przedziału 1..1000.
-Niestety, programista pracujący nad algorytm miał wypadek i zadanie to powierzono Tobie.
-Wejście
-W pierwszej linii znajduje się liczba 1≤N≤1000 określająca ilość liczb w ciągu. W drugiej lini jest
-N liczb z przedziału 1..1000 rozdzielonych spacją.
-Wyjście
-Na wyjściu powinna się znaleźć jedna liczba określająca minimalną liczbę zamian w ciągu
-wejściowym.
+     * Consider sorting algorithm that swaps adjacent numbers to achieve ascending sorting order.
+     * Sample input: 3 1 2. First swap 1 and 3 to get 1 3 2, then 3 and 2 to get 1 2 3.
+     * We performed two swaps. Find minimum number of swaps to sort a given input.
+     * 
+     * Input
+     * First line contains number of values to be sorted N, 1≤N≤1000.
+     * Second line contains values to be sorted. All value are from range 1..1000 and are separated
+     * by whitespace.
+     * 
+     * Output
+     * Single number equal to minimum number of swaps needed to sort the input.
      */
     public sealed class Sortowanie : ProblemBase
     {

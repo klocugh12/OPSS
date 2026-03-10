@@ -1,20 +1,17 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Mamy do dyspozycji szachownicę nieskończonej wielkości oraz znajdujące się na niej pionki
-ułożone w prostokąt (wypełniony) o wymiarach m x n (1 ≤ m, n ≤ 1000). Pionki leżą na polach
-planszy. Jeden pionek leży dokładnie na jednym polu planszy.
-Rozpoczynamy rozgrywkę dla jednego gracza, zgodnie z następującymi zasadami gry. Każdy
-pionek może przeskoczyć nad innym pionkiem ("zbić go") wzdłuż linii poziomej lub pionowej na
-planszy. Pionka, który został zbity, usuwamy z planszy i wykluczamy go z dalszej gry. Celem gry
-jest uzyskanie jak najmniejszej liczby pionków na szachownicy.
-Zadanie
-Mając zadaną parę liczb m oraz n, oddzielonych od siebie w pliku wejściowym spacją, należy
-napisać program, który określi najmniejszą możliwą liczbę pionków pozostałych na szachownicy.
-Wejście
-Liczby m i n oddzielone spacją.
-Wyjście
-Najmniejsza liczba pionków pozostałych na szachownicy.
+     * We're given an infinite tiled board. 
+     * We fill rectangle consisting of m x n tiles with stones, each occupying a single tile.
+     * A stone can jump over another stone horizontally or vertically, if stone to jump to is free.
+     * A stone jumped over is removed from the board.
+     * What is minimum number of stones remaining on the board?
+     * 
+Input
+Numbers m and n separated by whitespace.
+
+Output
+Minimum number of stones remaining on the board.
      */
     public sealed class ProstaGra : ProblemBase
     {

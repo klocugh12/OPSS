@@ -4,15 +4,16 @@ namespace OPSS
 {
     /* Difficulty: 1/5
      * 
-Wejście
-Pierwsza linia wejścia zawiera jedną liczbę naturalną N (1 ≤ N ≤ 1000000), określającą liczbę cyfr
-wejściowych liczb. (aby długości liczb były takie same, mogą być dodane na początku nieznaczące
-zera). Następnie na wejściu podane są te dwie liczby - wypisane są one w dwóch kolumnach,
-oddzielonych jedną spacją. Każda kolumna określą jedną liczbę. Obie liczby są większe od 0, a
-długość ich sumy nie przekracza N.
-Wyjście
-Wyjście powinno zawierać dokładnie N cyfr w jednej linii, reprezentujących sumę tych dwóch
-liczb.
+     * Find a sum of two arbitrarily long integers.
+     * 
+     Input
+    First line contains a single number N (1 ≤ N ≤ 1000000). 
+    Next two lines each contain N digits of numbers to add.
+    Digits are separated by whitespaces. Shorter number is padded with leading zeros.
+    Both numbers are greater than zero and length of their sum does not exceed N digits.
+    
+    Output.
+    A single line containing sum of two numbers.
      */
     public sealed class SuperdlugaSuma : ProblemBase
     {
