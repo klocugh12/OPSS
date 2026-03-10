@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Bandyci obrabowali bank. Będą próbowali przedostać się w bezpieczne miejsce na drugim końcu
 miasta. Jednak okazało się, że ich samochód jest uszkodzony i są zmuszeni uciekać pieszo. Nie
 będą więc, rzecz jasna, uciekać ulicami, a poprzez liczne w mieście parki i tereny niezabudowane

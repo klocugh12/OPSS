@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Pantofelek sprawiedliwy (Paramecium iustus) to bardzo specyficzny gatunek pantofelka. Prowadzi
 stadny tryb życia i odżywia się bakteriami, które wchłania tylko wtedy, gdy może się nimi podzielić

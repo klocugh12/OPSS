@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Opsslandia miejscami porośnięta jest bujnymi lasami. Przez jeden z nich drogowcy muszą
 poprowadzić drogę. Las nie jest w każdym miejscu tak samo gęsty, dlatego wybór przebiegu drogi
 wpływa na liczbę wyciętych drzew podczas jej budowy. Ponieważ wszyscy mieszkańcy Opsslandii

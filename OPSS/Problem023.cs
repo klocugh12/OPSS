@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Małgosia przygotowywała urodzinowe przyjęcie. Upiekła tort i zajęła się układaniem listy gości.
 Liczbę gości N wyznaczała następująco: wybrała pewną liczbę cięć K, a następnie podzieliła tort K
 prostymi na maksymalną możliwą liczbę kawałków N. Każdy zaproszony gość dostałby więc

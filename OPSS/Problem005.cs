@@ -1,16 +1,16 @@
 namespace OPSS
 {
-    /* 2/5
-     * Zadanie
-Pomóż Ibn-al-Bannanowi w znalezieniu kwadratu liczby składającej się z samych jedynek.
-Wejście
-Pierwsza linia zawiera dokładnie jedną liczbę k, 1 ≤ k ≤ 500, będącą liczbą zestawów danych. W k
-kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw składa się z jednej linii
-zawierającej dokładnie jedną liczbę n (0 < n ≤ 200) oznaczającą liczbę jedynek w liczbie, którą
-należy podnieść do kwadratu.
-Wyjście
-Program powinien wypisać na standardowe wyjście k linii. Dla każdego zestawu danych program
-powinien wypisać kwadrat wejściowej liczby składającej się z n jedynek.
+    /* Difficulty: 2/5
+     * 
+     Find value of a number consisting of 1s only (1, 11, 111, 1111, ...).
+
+Input
+First line contains number of data sets k, 1 ≤ k ≤ 500.
+    Following k lines contain one data set each. Each data set consists of single number n 
+    (0 < n ≤ 200) corresponding to number of 1s in number to be squared.
+
+Output
+k lines, where i-th line is a square of number consisting of number of 1s from i-th data set.
      */
     public sealed class KwadratJedynek : ProblemBase
     {

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Wejście
 W pierwszej linii wejścia znajduje się liczba C, określająca liczbę zestawów danych, 1 ≤ C ≤ 100.

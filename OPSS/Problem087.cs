@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 W dawnych czasach, starożytna cywilizacja Bajteków do przewidywania zjawisk astronomicznych,
 używała maszyny o nazwie Generis, która wyznaczała mozolnie kolejne wyrazy pewnego

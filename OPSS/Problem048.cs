@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Jesteś jednym z programistów agencji NASA. Pracujecie nad urządzeniem - specjalną tarczą, która
 ma służyć porozumiewaniu się z kosmitami za pomocą sygnałów świetlnych. Tarcza emitująca
 światło ma postać prostokąta, podzielonego na kwadraty o rozmiarach jednostkowych. Każdy

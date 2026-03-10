@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Któż nie zna twierdzenia Pitagorasa?! Albo kto nie słyszał o liczbach pierwszych? Z pewnością nie
 uczestnicy OPSS-esji!, którzy kochają matematykę! Oto zadanie, które zawiera oba te pojęcia...

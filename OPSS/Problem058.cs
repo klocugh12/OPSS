@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Firma Miracle, idąc z duchem czasu postanowiła stać się firmą przyjazną środowisku naturalnemu
 (w chwili obecnej 30% energii elektrycznej pochodzi ze źródeł odnawialnych). Zarząd firmy podjął
 decyzję, że wszystkie odpady bedą segregowane i umieszczane w specjalnych kontenerach, w

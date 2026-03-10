@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * W Opsslandii zbliżają się wybory parlamentarne. Każdy z tamtejszych polityków jest bardzo
 stanowczy i zdecydowany: albo popiera drugiego polityka, albo jest jemu przeciwny. W dodatku
 każdy polityk zawsze odwzajemnia swoje poparcie: popiera tylko tych polityków, którzy go

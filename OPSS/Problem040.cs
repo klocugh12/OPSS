@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Wejście:
 W pierszym wierszu znajduje się liczba zestawów danych 0 < d ≤ 100. Każdy zestaw składa się z
 dwóch liczb: liczby pierwszej P, 2 ≤ P ≤ 1000000 i H, 0 ≤ H ≤ 10000 oddzielonych spacją.

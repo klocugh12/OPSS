@@ -1,20 +1,15 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
-Zadanie
-Napisz program, który dla każdego zestawu danych:
-● Wczytuje liczby a,b ze standardowego wejścia,
-● Oblicza wartość NWD(a,b),
-● Wypisuje wynik na standardowe wyjście.
-Wejście
-Pierwsza linia zawiera dokładnie jedna liczbę n, 1 ≤ n ≤ 50000, będąca liczba zestawów danych. W
-n kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw składa się z dwóch
-liczb a,b, 1 ≤ a,b ≤ 100000000, oddzielonych pojedynczą spacją.
-Wyjście
-Program powinien wypisać na standardowe wyjście n linii. I-ta linia powinna zawierać dokładnie
-jedna liczbę naturalna, będącą największym wspólnym dzielnikiem liczb występujących w i-tym
-zestawie danych.
+Compute value of the greatest common divisor of two numbers a and b.
+
+ Input
+    First line contains number of data sets n, 1 ≤ n ≤ 50000. 
+    Following n lines contain numbers a, b, 1 ≤ a,b ≤ 100000000, separated with a single whitespace.
+
+Output
+    N lines, where i-th line contains value of GCD(a, b), where a and b are values from i-th data set.
      */
     public sealed class ProblemEuklidesa : ProblemBase
     {

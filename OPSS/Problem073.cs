@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Janek, starszy kolega Edka (znanego z hodowli chomików) z Wydziału Biologii, pracuje nad
 doktoratem. W tym celu musi hodować pewien rodzaj alg i oszacować tempo ich wzrostu. Początek
 hodowli wydawał się prosty. "Kolonia" alg umieszczona w akwarium po jednej dobie zwiększyła

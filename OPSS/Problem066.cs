@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Grupa programistów OPSS, postanowiła wzbogacić swój system o dobrą wyszukiwarkę tekstową.
 W trakcie pracy nad głównym algorytmem programiści zdali sobie sprawę, że dobra wyszukiwarka
 powinna nie tylko działać szybko, lecz również pomagać użytkownikom, gdy pomylą się przy

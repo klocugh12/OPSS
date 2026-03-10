@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Prawie każdy, kto instalował oprogramowanie na uniksowych systemach operacyjnych miał do
 czynienia z zależnościami pomiędzy różnymi pakietami.
 Zależność pomiędzy pakietami jest opisana w postaci par liczb (numerów pakietów) oddzielonych

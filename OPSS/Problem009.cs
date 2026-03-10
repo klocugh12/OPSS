@@ -1,18 +1,16 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
-     * Zadanie
-Twoim zadaniem jest napisać program, który wyliczy sumę wszystkich liczb całkowitych leżących
-pomiędzy 1 a N (włącznie).
-Wejście
-Pierwsza linia zawiera dokładnie jedną liczbę naturalną n, 1<=n<=200000, będącą liczbą zestawów
-danych. W n kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw składa się z
-jednej liczby całkowitej N.
-Wyjście
-Program powinien wypisać na standardowe wyjście n linii. I-ta linia powinna zawierać sumę
-wszystkich liczb całkowitych leżących pomiędzy 1 a N. Gwarantujemy, że wartość bezwzględna
-sumy nie przekroczy 2^31
+     * Find sum of all numbers from 1 to N.
+
+Input
+    First line contains number of data sets n, 1<=n<=200000.
+    Following n lines each contain a single number N.
+
+    Output
+    n lines, where i-th line contains a sum from 1 to N for i-th data set. 
+    Absolute value of this sum is no greater than 2^31.
      */
     public sealed class Suma : ProblemBase
     {
@@ -26,7 +24,7 @@ sumy nie przekroczy 2^31
             for(int i = 1; i <= N; i++)
             {
                 uint a = uint.Parse(input[i]);
-                output.Add(((a * (a + 1)) >> 1).ToString());
+                output.Add((a > 0 ? ((a * (a + 1)) >> 1) : (1 - (a * (a - 1) >> 1))).ToString());
             }
         }
     }

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Edek zawsze lubił chomiki. Jeszcze w czasach szkolnych opiekował się tymi zwierzętami w
 pracowni biologicznej, a w domu hodował chomiki syryjskie. Po maturze wybrał studia na
 Wydziale Biologii. Właśnie zbliża się koniec studiów i oczywiście Edek (a teraz właściwie już

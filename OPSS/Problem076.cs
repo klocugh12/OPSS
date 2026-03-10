@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Pewna firma świadczy usługi transportowe, dokładniej mówiąc, transportuje kontenery w
 Opsslandii. Opsslandia to kraj, w którym jest N miast, połączonych K drogami. Miasta
 ponumerowane są kolejnymi liczbami całkowitymi od 1 do N. Każde dwa różne miasta w tym kraju

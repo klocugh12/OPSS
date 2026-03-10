@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Jedna z wiodących na rynku sieci telefonii komórkowej wykonała szereg analiz komunikacji
 pomiędzy nadajnikami rozmieszczonymi na terenie całego kraju. W wyniku badań ustalono, że
 połączenie zostanie tak skonfigurowane, iż każdy nadajnik będzie komunikował się z każdym

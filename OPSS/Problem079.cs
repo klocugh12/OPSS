@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Jeden z bardzo znanych matematyków Opsslandii, Matimus Logaritmus, ma synka Arcusa. Arcus
 już od małego uwielbia matematyczne gry i łamigłówki.
 Ostatnio polubił taką zabawę: wymyśla pewną nieujemną liczbę całkowitą X1 i dodaje do niej

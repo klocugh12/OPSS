@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Masz do dyspozycji nieograniczoną ilość kamieni domina, z których każdy ma wymiary 2x1.
 Twoim zadaniem będzie obliczenie, na ile różnych sposobów można za pomocą nierozróżnialnych

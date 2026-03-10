@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Małgosia dostała na Mikołaja klocki z wypisanymi literami alfabetu. Układanie słów z klocków
 było pasjonującą rozrywką. W trakcie zabawy odkryła, że niektóre słowa czytane od lewej do
 prawej i odwrotnie wyglądają tak samo. Opowiedziała tacie o swoich odkryciach. Ojciec wyjaśnił

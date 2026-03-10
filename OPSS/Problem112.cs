@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Projekty budynków opsslandzkich architektów sięgają granic możliwości ich wykonania.
 Skomplikowanie brył budynków stwarza liczne problemy, na które natrafiają wykonawcy
 projektów. Robotnicy właśnie wybudowali jeden z takich budynków, ale mają problem jego z

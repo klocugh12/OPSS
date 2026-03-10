@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Jeśli zdarzyło Ci się zawieszać firanki, być może zauważyłeś, że bardzo dobrym pomysłem na
 równomierne zaczepienie firanki za pomocą żabek jest przypięcie końców firanki do skrajnych
 żabek, a następnie wyznaczenie środkowej żabki i przypięcie jej na środku firanki. Powstają w ten

@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Krzyś ma kłopoty z działaniami na ułamkach. Jego tata, chcąc pomóc synkowi w szkolnych
 problemach zaproponował mu zabawę w dodawanie "nietypowych" ułamków. Nietypowość polega

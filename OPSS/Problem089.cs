@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Wejście
 W pierwszym wierszu wejścia znajduje się liczba Z, 1 ≤ Z ≤ 100, oznaczająca liczbę zestawów
 danych. Każdy zestaw danych rozpoczyna się linią zawierająca 2 liczby naturalne: S, R, (2 ≤ S+R ≤

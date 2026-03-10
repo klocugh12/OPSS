@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Zadanie
 Napisz program, który dla zadanej kwoty reszty , którą należy wypłacić, oraz dla znanego zestawu

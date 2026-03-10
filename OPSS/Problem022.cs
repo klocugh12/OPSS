@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Pewien matematyk Dobromir oraz pewien fizyk Albert z zamiłowania zajmują się układaniem
 specyficznych układanek z drobnych kamyków. Ich układanki posiadają ciekawą właściwość:

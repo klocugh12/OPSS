@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Zadanie
 Dla zadanych liczb całkowitych x, y, a, należy wyznaczyć, ile jest liczb całkowitych pomiędzy x a y
 (włącznie), których suma cyfr wynosi a.

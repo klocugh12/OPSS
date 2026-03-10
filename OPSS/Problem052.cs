@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Andrzej i Bartek (Alice i Bob jak lubią amerykanie) oglądali film "Ghost Busters", w którym Dr.
 Peter Venkman (grany przez Billa Murraya) przeprowadza badania zdolności telepatycznych

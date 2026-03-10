@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Niegdyś w Opsslandii do handlu służył wydzielony teren na otwartej przestrzeni. Dokonywano tam
 transakcji kupna i sprzedaży pewnych rzeczy (dóbr) wartościowych. Takie targowisko umożliwiało
 swobodny, bezpośredni kontakt handlowca z klientem i możliwość negocjowania ceny.

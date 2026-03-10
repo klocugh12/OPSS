@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Zadanie
 Dana jest plansza o wymiarach 8x7, podzielona na 56 identycznych kwadratów oraz zestaw 28
 różnych kamieni domina. Na każdym kwadracie (polu) znajduje się jedna liczba całkowita z

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Wejście
 W pierwszym wierszu wejścia znajduje się liczba naturalna k (1≤k≤10000), określająca ilość

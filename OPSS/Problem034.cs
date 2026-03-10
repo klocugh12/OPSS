@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Pszczoły, jak wiadomo, budują plastry miodu z przylegających do siebie sześciokątów foremnych.
 Jednak, na jednej z pasiek, pszczoły zbudowały plaster w inny sposób. Plaster ma następującą
 budowę:

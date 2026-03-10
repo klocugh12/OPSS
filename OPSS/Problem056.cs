@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Wejście
 W pierwszej linii znajduje się liczba osób B, 1≤ B≤100000 , które zakupiły bilet na danej trasie. W

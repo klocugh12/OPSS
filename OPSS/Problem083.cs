@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Dwóch matematyków Pi i Sigma spotkało się wieczorem na partyjce pokera. Ponieważ nie mieli
 pieniędzy, postanowili grać "na zapałki". Pi miał przy sobie tylko niebieskie zapałki, a Sigma tylko
 zielone. Przed przystąpieniem do licytacji Pi wyłożył a swoich niebieskich zapałek, zaś Sigma

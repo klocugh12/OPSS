@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Dla zadanej liczby naturalnej należącej do przedziału [1..1000000] wyświetl sumę jej naturalnych dzielników.
 Wejście

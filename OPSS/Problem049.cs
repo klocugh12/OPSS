@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Doszedłeś do etapu na którym czeka na Ciebie Cwany Lutek. Aby przejść dalej musisz poprawnie
 odpowiedzieć na pytanie przez niego postawione. Test Lutka jest krótki i zawsze taki sam. Cwaniak

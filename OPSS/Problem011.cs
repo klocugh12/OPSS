@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Rozważmy liczby zawierające dokładnie N cyfr, zapisane w systemie K.
 Liczbę nazwiemy KN-poprawną, jeśli w jej zapisie w systemie K nie wystąpią dwa sąsiadujące ze

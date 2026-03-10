@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * W pewnej firmie informatycznej znajdują się serwery gromadzące duże ilości danych. W związku z
 przebudową infrastruktury technicznej podjęto decyzję o przeniesieniu i umieszczeniu danych na
 jednym serwerze. Każde dwa serwery połączone są bezpośrednim łączem. Każdy z serwerów w

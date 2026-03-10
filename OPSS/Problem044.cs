@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * Kasia niedawno poznała wszystkie literki w szkole. Z wielką pasją potrafiła całe dnie spędzać na
 pisaniu długich słów swoim ulubionym flamastrem. Pisała i pisała "tasiemce" tak długo, aż
 flamaster wypisał się. Kasia posmutniała. Z trudem, ale udało jej się uprosić swoją mamę, aby

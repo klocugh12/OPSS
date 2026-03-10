@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Zdefiniujmy pojęcie grafu animalnego. Obrazowo można opisać graf animalny, jako graf który
 odpowiednio narysowany na płaszczyźnie może przedstawiać schemat czworonoga.

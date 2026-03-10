@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Zadanie
 Twoim zadaniem będzie stwierdzenie, czy dla zadanego początkowego układu klocków, możliwe
 będzie w skończonej liczbie ruchów doprowadzenie do wygranej. Dodatkowo nie będziemy

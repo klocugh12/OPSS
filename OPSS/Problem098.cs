@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Danych jest N dowolnych liczb a1, a2, a3, .. , aN, będących początkowymi wyrazami pewnego ciągu.
 Kolejne wyrazy ciągu powstają poprzez zsumowanie N bezpośrednio je poprzedzających wyrazów
 tego ciągu:

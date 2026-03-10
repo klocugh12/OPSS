@@ -1,15 +1,16 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
-Zadanie
-Twoim zadaniem jest wyznaczyć liczbę M = 11^n.
-Wejście
-Pierwsza linijka wejścia określa liczbę zestawów danych (0 < i ≤ 500). Każdy zestaw danych składa
-się z jednej linijki, w której pojawia się liczba n (0 ≤ n ≤ 200).
-Wyjście
-Dla każdego zestawu danych odpowiedz powinna składać się z jednej liczby M (M = 11^n).
-Uwaga. Liczba cyfr liczby M nie przekroczy 256.
+Compute value of M = 11^n.
+
+    Input
+    First line contains number of data sets i,  (0 < i ≤ 500).
+    Following i lines each contain a single number n.
+
+    Output
+    n lines, where i-th line contains value of M = 11^n for i-th data set.
+    M has no more than 256 digits.
      */
     public sealed class DziwneWlasnosciJedenastu : ProblemBase
     {

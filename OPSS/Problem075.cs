@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * 
 Zadanie polega na obliczeniu wartości podanych wyrażeń.
 Wejście

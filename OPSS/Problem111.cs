@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Dla liczb całkowitych N, B (0 ≤ N; 2 ≤ B ≤ 36), przez RB(N) oznaczmy liczbę zdefiniowaną
 następująco:
 N, dla 0 ≤ N ≤ B-1

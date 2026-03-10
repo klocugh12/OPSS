@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Mnisi podczas studiowania Starego Testamentu natrafili na liczne fragmenty zapisane szyfrem
 atbasz (tradycyjną hebrajską odmianią szyfru podstawieniowego).

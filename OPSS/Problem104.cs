@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Zadanie
 Napisz program, który pomoże nie tylko Agatce, ale również innym potencjalnym hodowcom

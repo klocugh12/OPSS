@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Wieże Hanoi to tradycyjna zabawa-łamigłówka polegająca na nakładaniu krążków na słupki.
 Dysponujemy n krążkami o średnicach 1,2, ...,n i trzema słupkami, które nazwiemy A, B i C. Każdy
 krążek ma w środku dziurkę, która pozwala nałożyć krążek na słupek. Początkowo wszystkie krążki

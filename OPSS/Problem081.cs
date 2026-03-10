@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Mieszkańcy Opsslandii planują budowę Instytutu Badań nad Figurami Foremnymi (w skrócie
 IBFF). Ma to być przestronny budynek o podstawie kwadratowej, zbudowany na specjalnych
 kwadratowych płytach o rozmiarach a x a metrów, sprowadzonych z odległych zakątków kraju.

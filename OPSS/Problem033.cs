@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Zarząd znanej na rynku firmy informatycznej MIRACLE, tworzącej specjalistyczne
 oprogramowanie bazodanowe, chce pomóc swoim programistom w pokonywaniu drogi z ich
 mieszkań do pracy. Po wstępnej analizie problemu Zarząd dokonał niecodziennego odkrycia:

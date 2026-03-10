@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Pewna firma zajmująca się tworzeniem oprogramowania spostrzegła niedawno, że jej system łat
 jest bardzo skomplikowany. Programy przez nią produkowane składają się z K komponentów
 ponumerowanych kolejnymi liczbami naturalnymi od 1 do K. Każda łata uaktualnia część

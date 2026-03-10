@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Niedawno cały świat opanowała nowa gra o nazwie "Samotnik". Jej zasady są proste: w grze bierze
 udział jeden gracz, który ma do dyspozycji szachownicę oraz pewną liczbę pionków rozłożonych na
 polach szachownicy. Na jednym polu może leżeć co najwyżej 1 pionek.

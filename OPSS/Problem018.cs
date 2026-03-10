@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Waga binarna to specyficzne urządzenie, które może dokonywać pomiarów dowolnych wielkości z
 przedziału (0,1) z ustaloną dokładnością. Dokładność wagi ustala się pokrętłem, które można
 ustawić na pozycji 1 lub 2, lub 3, lub ..., lub 10. Gdy dokładność jest ustawiona na m, to waga

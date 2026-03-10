@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Liczbą wyważoną nazwiemy dodatnią liczbę naturalną posiadającą tyle samo dzielników
 parzystych co nieparzystych. Twoim zadaniem będzie wyznaczenie dla zadanej dodatniej liczby N

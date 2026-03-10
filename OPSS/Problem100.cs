@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Zadanie
 Należy wyznaczyć liczbę różnych konfiguracji, które powstają przy trącaniu się kieliszkami
 parzystej liczby osób siedzących przy okrągłym stole. Stuknięcia kieliszkami w jednej konfiguracji

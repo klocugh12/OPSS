@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Mały Jasio dostał ostatnio od rodziców prezent w postaci 66 klocków. Każdy klocek zbudowany
 jest z dwóch części, z których każda zawiera pewną liczbę oczek, podobnie jak jest to w przypadku
 kostek domina. Liczba oczek znajdujących się na każdej połówce klocka wynosi co najmniej jeden

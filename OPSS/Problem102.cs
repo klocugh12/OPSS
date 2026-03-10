@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Uwaga! Historia jest w całej rozciągłości fikcją literacką i jakiekolwiek podobieństwo do faktów i
 zdarzeń jest zupełnie przypadkowe.
 W pobliżu dosyć dużego, uniwersyteckiego miasta postanowiono rozbudować istniejące lotnisko

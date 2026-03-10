@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Jaś postanowił zbudować sobie domek na działce. Chciał rozpocząć od położenia terakoty, więc
 zakupił dużą ilość kwadratowych płytek i ułożył je na całej działce w szachownicę nie docinając
 żadnej z płytek. Ściany natomiast Jaś chciał postawić na płytkach w taki sposób, aby całe wnętrze

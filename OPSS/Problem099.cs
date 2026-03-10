@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Numery telefonów w Opsslandii są zapisywane w postaci wyrazów, aby książki telefoniczne były
 bardziej przystępne dla przeciętnego czytelnika. Każdej literze wyrazu reprezentującego numer

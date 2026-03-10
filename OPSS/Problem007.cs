@@ -1,18 +1,15 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
-Zadanie
-Napisz program, który:
-● wczyta ze standardowego wejścia nieujemną liczbę całkowitą n,
-● policzy cyfrę jedności w zapisie dziesiętnym liczby n!,
-● wypisze wynik na standardowe wyjście.
-Wejście
-Pierwszy i jedyny wiersz standardowego wejścia zawiera dokładnie jedną nieujemną liczbę
-całkowitą n, 0 ≤ n ≤ 30000.
-Wyjście
-W pierwszym i jedynym wierszu standardowego wyjścia Twój program powinien zapisać
-dokładnie jedną cyfrę równą cyfrze jedności w zapisie dziesiętnym liczby n!.
+A factorial (n!) is defined as 1 for n ≤ 1 and product of all integers from 1 to n otherwise.
+    Find last digit of n!.
+
+Input
+    One line containing a single integer n, 0 ≤ n ≤ 30000.
+
+    Output
+    One line containing last digit of n!.
      */
     public sealed class Silnia : ProblemBase
     {

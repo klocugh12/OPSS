@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Jasio już od dłuższego czasu gromadzi adresy IP (miejmy nadzieję, że Jasio nie jest spamerem).
 Pewnego dnia postanowił uporządkować swoją kolekcję. Okazuje się, że jest ona dość specyficzna,
 bowiem w jej skład wchodzą wszystkie możliwości adresów, które zawierają zawsze takie same

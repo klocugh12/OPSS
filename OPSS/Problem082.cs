@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Wejście
 W pierwszym wierszu wejścia znajduje się jedna liczba całkowita C, określająca liczbę zestawów

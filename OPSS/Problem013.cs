@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Mamy do dyspozycji szachownicę nieskończonej wielkości oraz znajdujące się na niej pionki
 ułożone w prostokąt (wypełniony) o wymiarach m x n (1 ≤ m, n ≤ 1000). Pionki leżą na polach
 planszy. Jeden pionek leży dokładnie na jednym polu planszy.

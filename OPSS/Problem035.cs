@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Zadanie
 Małgosia zastanawia się, ile jest różnych ustawień k hetmanów na szachownicy o wymiarach nxn
 pól, tak aby żadne dwa z nich nie szachowały się. Pomóż Małgosi rozwiązać ten problem.

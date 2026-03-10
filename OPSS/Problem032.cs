@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Zenek prowadzi niewielkie kasyno. Główną atrakcją w jego kasynie, jest "Binarne Bingo dla
 dwojga" - gra którą sam wymyślił (przynajmniej tak mu się wydaje), a w której dwóch graczy
 oczekuje na pewien ciąg wyników rzutów monetą.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Zadanie
 Napisz program, który dla każdego zestawu danych:

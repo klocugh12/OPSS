@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Kosmita wylądował w centrum miasta i chce zniszczyć wszystkie budynki. Tym razem, wyjątkowo,
 nie będziesz ratował świata, ale pomożesz kosmicie.

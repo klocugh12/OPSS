@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Dziesięciu matematyków leci balonem nad Oceanem Spokojnym. Kiedy przekroczyli równik,
 zdecydowali uczcić to zdarzenie, otwierając butelkę szampana. Niestety, korek wybił dziurę w

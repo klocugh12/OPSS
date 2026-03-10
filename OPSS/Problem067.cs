@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Firma Miracle dbająca o stały i niczym nie zachwiany rozwój swojej bazy danych, wymyśliła
 nowy, super szybki indeks na kolumnach przechowujących liczby składające się co najwyżej z 20
 cyfr. Szczegóły dotyczące zasady działania indeksu, są najściślej strzeżoną tajemnicą firmy.

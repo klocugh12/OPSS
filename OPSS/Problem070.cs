@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Firma DB-Bit, główny potentat na rynku baz danych w Opsslandii, postanowiła rozszerzyć swój
 produkt o nowe możliwości wyszukiwania słów w tekście. Firmowi badacze, po przeanalizowaniu

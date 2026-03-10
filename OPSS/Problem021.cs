@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Spróbuj rozwiązać następującą zagadkę:
 "Statek płynie z Warszawy do Gdańska dobę, a z Gdańska do Warszawy dwie doby. Ile płynie

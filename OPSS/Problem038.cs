@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Tomek, podejrzewając swojego szefa o malwersacje finansowe, postanowił włamać się do
 firmowego sejfu i udowodnić mu przestępstwo. Jednak taki plan posiada kilka słabych punktów.
 Jednym z nich jest włamanie się do sejfu, który posiada cyfrowy zamek. Będąc małym chłopcem

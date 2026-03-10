@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Pewnego słonecznego dnia na beztroskie królestwo Bajtocji najechał bezwzględny król Małych i
 Miękkich. Wstrząśnięci mieszkańcy po pierwszym szoku wywołanym tak nagłą napaścią podjęli
 próby obrony. Jednak pomimo zaciętego oporu, jaki stawiali, duża część ich wojsk dostała się do

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Ala obchodziła niedawno imieniny i zaprosiła swoich przyjaciół na małe przyjęcie. Każdy ze
 znajomych wiedząc, że jest ona wielkim łasuchem, przyniósł jej po tabliczce czekolady. Ala

@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Dla danych n liczb znajdź największą możliwą liczbę będącą ich konkatenacją.
 Wejście

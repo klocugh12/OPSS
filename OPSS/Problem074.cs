@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Zadanie
 Dla każdej zadanej normy wyznacz liczbę próbek skał, które ją spełniają.

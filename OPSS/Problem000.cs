@@ -1,16 +1,17 @@
 namespace OPSS
 {
-    /* 1/5
-     * Liczby Fibonacciego zdefiniowane są następująco:
+    /* Difficulty: 1/5
+     * Fibonacci numbers are defined as follows:
 F(0)=1,
 F(1)=1,
 F(n)=F(n-1)+F(n-2), n>1.
-Jaka jest wartość F(n)?
-Zadanie
-Napisz program, który dla każdego zestawu danych:
-● Wczyta liczbę n ze standardowego wejścia,
-● Obliczy wartość F(n),
-● Zapisze wynik na standardowe wyjście.
+Compute value of F(n)
+
+ Input
+    First line contains number of data sets d 0 ≤ d ≤ 1000. Following d lines contain numbers from 0 to 45.
+
+Output
+    d lines, where i-th line contains F(n), where n is value from i-th data set.
      */
     public sealed class TreningLiczbyFibonacciego : ProblemBase
     {

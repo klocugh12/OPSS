@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Ludzie od wieków, jeszcze w czasach "przedkomputerowych", fascynowali się rachmistrzami.
 Dotyczyło to w szczególności cudownych, najczęściej autystycznych dzieci, które często nie umiały

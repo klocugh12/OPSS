@@ -1,21 +1,16 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
-Zadanie
-Napisz program, który dla każdego zestawu danych:
-● Wczytuje liczby n, a1,...,an ze standardowego wejścia,
-● Oblicza wartość a1+a2+...+an,
-● Wypisuje wynik na standardowe wyjście.
-Wejście
-Pierwsza linia zawiera dokładnie jedną liczbę naturalną C, 1<=C<=200000, będącą liczbą
-zestawów danych. W C kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw
-składa się z liczby n, 1=<n<=100000, oraz następujących po niej n liczb ai,0<=ai<=1000, 1<=i<=n,
-oddzielonych pojedyncza spacja.
-Wyjście
-Program powinien wypisać na standardowe wyjście C linii. I-ta linia powinna
-zawierać dokładnie jedną liczbę naturalną, będącą sumą liczb a1,..,an, gdzie n
-oraz ai, 1<=i<=n to liczby występujące w i-tym zestawie danych.
+Compute value of sum of n numbers.
+
+     Input
+First line contains number of data sets C, 1<=C<=200000.
+Following C lines contain one data set each. Each data set consists of one number n 1=<n<=100000,
+    ollowed by n numbers ai 0<=ai<=1000, 1<=i<=n.
+
+    Output
+    C lines, where i-th line contains sum of values described in i-th data set.
      */
     public sealed class LaboratoryjneRozwazania : ProblemBase
     {

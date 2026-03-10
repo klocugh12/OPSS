@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Znani komputerowi telepaci Andrzej i Bartek (o których przygodach można przeczytać w zadaniu
 "Komputerowa telepatia") po kilku miesiącach doszli do takiej wprawy, że bezbłędnie
 rozpoznawali wszystkie przesyłane do siebie figury. Postanowili zatem spróbować czegoś

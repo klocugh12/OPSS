@@ -2,7 +2,7 @@ using System.Drawing;
 
 namespace OPSS
 {
-    /* 5/5
+    /* Difficulty: 5/5
      * Zadanie
 Należy podać wartość promieniowania oraz współrzędne punktu, w którym to promieniowanie jest
 najmniejsze. Punkt musi należeć do obszaru leżącego poza zasięgiem dział laserowych. Dane,

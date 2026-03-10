@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Zespół ludzi tworzących system OPSS chce stworzyć specjalny język programowania OPS., który
 będzie pomagał im w generowaniu testów do zadań konkursowych. Jednak ze względu na brak

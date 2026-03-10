@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Zadanie
 Napisz program, który dla zadanej listy czynników, wyznaczy liczbę cyfr w zapisie dziesiętnym

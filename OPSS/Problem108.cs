@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Przy głównej ulicy w stolicy Opsslandii po jednej stronie mieści się pałac królewski, a po drugiej
 stronie, wzdłuż ulicy, w rzędzie, w równych odstępach, na N specjalnie przygotowanych miejscach
 pomnikowych ponumerowanych kolejnymi liczbami całkowitymi od 1 do N, stoją pomniki

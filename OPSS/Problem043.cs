@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Po sukcesie rynkowym, jakim było wyprodukowanie bazy danych Mir 13k, dla firmy Miracle
 nastał okres dynamicznego rozwoju. Dział programistów znacznie się powiększył i postanowiono

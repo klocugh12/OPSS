@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Profesor Przemysław pasjonuje się obliczeniami równoległymi. Wykorzystuje sieć komputerową
 uczelni i nocami prowadzi eksperymenty przy użyciu maszyn w pracowniach. Obliczenia te
 przebiegają najczęściej według następującego schematu:

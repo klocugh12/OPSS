@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Wejście
 Pierwsza linia wejścia zawiera jedną liczbę naturalną N (1 ≤ N ≤ 1000000), określającą liczbę cyfr

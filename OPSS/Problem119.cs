@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Rozważmy kwadratową planszę z polami o standardowych współrzędnych. Pole o współrzędnych (1, 1) 
     jest zawsze polem startowym. Każde pole ma miejsce na etykietę oznaczającą kierunek (góra, 

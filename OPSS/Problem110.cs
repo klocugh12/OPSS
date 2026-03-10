@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Każdego lata szpitale w Opsslandii narzekają na niewystarczającą liczbę osób oddających krew.
 Często też brakuje jednostek krwi dla przebywających aktualnie w szpitalu pacjentów

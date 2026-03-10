@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Pewien znany, najbardziej skuteczny detektyw Opsslandii prowadzi własne śledztwo w kolejnej 
     kryminalnej sprawie. Podejrzanych jest wielu, a wśród nich dokładnie jeden winny. Każdy 

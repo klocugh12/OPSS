@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Wejście
 W pierwszym wierszu wejścia znajduje się liczba C określająca liczbę zestawów danych (1 ≤ C ≤
 100). W kolejnych C wierszach wejścia znajdują się zestawy danych. Każdy z C zestawów danych

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Agencja wywiadu, która zleca Ci od czasu do czasu tajne zadania, ma dla Ciebie kolejny problem
 do rozwiązania. W jej OPeracyjnej Sieci Szyfrów (OPSS) pojawił się kolejny szyfr. Według

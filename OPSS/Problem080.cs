@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Jest rok 3749. Rasa ludzka wymyśliła sztuczny mechanizm obronny przeciwko wirusom
 infekującym genotyp.
 Genotyp to łańcuch genów. Każdy gen jest kodowany w postaci dwuznaku składającego się z liter

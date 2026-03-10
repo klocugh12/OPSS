@@ -1,38 +1,26 @@
 namespace OPSS
 {
-    /* 4/5
-     * Na prostokątnej szachownicy składającej się z m x n kwadratowych pól wybieramy jedno pole
-znajdujące się na krawędzi szachownicy - nazywamy je "polem startowym". Następnie
-umieszczamy na jego środku piłeczkę i wprawiamy ją w ruch tak, aby toczyła się po szachownicy.
-Średnica piłeczki równa jest szerokości (i wysokości) każdego z pól szachownicy. Kąt pomiędzy
-kierunkiem ruchu piłeczki a krawędzią szachownicy wynosi 45 stopni. Piłeczka odbija się od
-krawędzi szachownicy następująco: jeżeli piłeczka dotknie krawędzi szachownicy wtedy każda
-składowa prędkości piłeczki prostopadła do krawędzi, z którą nastąpiło zetkniecie, zostaje
-odwrócona. Na początku piłeczka zostaje rozpędzona w kierunku wzrostu wartości współrzędnych
-(w przypadku gdy pole startowe ma największa wartość której ze współrzędnych, piłeczka
-natychmiastowo odbija się od krawędzi).
-Przypisujemy punkt polu szachownicy za każdym razem gdy piłeczka przetacza się przez obszar
-wnętrza pola. Grę uważamy za zakończona jeżeli punkt zostanie przypisany polu startowemu. Jaka
-jest liczba pól szachownicy, którym przypisano nieparzysta liczbę punktów? Poniższe rysunki
-obrazują problem. Trasa piłeczki zaznaczona jest linią przerywaną. Pola z nieparzystą liczba
-punktów są zaznaczone kolorem szarym.
-Zadanie
-Napisać program, który dla każdego zestawu danych wejściowych, należącego do ciągu kilkunastu
-zestawów danych:
-● wczytuje ze standardowego wejścia wymiary szachownicy oraz współrzędne pola
-startowego,
-● znajduje liczbę pól, którym przypisano nieparzystą liczbę punktów,
-● wypisuje wynik na standardowe wyjście,
-Wejście
-Pierwsza linia wejścia zawiera jedną liczbę całkowita d, 1<=d<=20, która oznacza liczbę zestawów
-danych. Po niej, w kolejnych liniach, następują zestawy danych wejściowych - każdy zestaw
-znajduje się w jednej linii. Linia taka zawiera cztery liczby całkowite x, y, a, b oddzielone
-pojedynczymi spacjami. Liczby te to odpowiednio: x'owy i y'owy wymiar szachownicy oraz x'owa
-oraz y'owa współrzędna pola startowego. Liczby x oraz y są większe niż 2, liczba pól szachownicy
-nie przekracza 10^9, pole startowe leży na krawędzi szachownicy.
-Wyjście
-I-ta linia wyjścia powinna zawierać jedną liczbę całkowita, która jest równa liczbie pól
-szachownicy, którym przypisano nieparzystą liczbę punktów.
+    /* Difficulty: 4/5
+     * 
+     * We're given a board of size m x n, made of square tiles.
+     * We pick an starting position on the edge of the board.
+     * We put a ball on a starting position and make it go at angle 45 degrees with x-axis.
+     * Anytime ball hits the wall, it flips horizontal or vertical velocity, so that it stays inside the board.
+     * We assign a point to any tile that ball goes over.
+     * Game ends when a ball returns to starting position and assigns a point to it.
+     * How many tiles have odd number of points assigned to them when the game ends?
+     
+Input
+    First line contains number of data sets d, 1<=d<=20.
+    Following d lines contain one data set each.
+    Each data set consists of four integers, x, y, a, b. x and y are dimensions of board,
+    a and b describe x-coordinate and y-coordinate of starting point respectively.
+    x and y are greater than 2, number of tiles on the board does not exceed 10^9,
+    starting position is on the edge of the board.
+
+    Output
+    d lines, where i-th line contains number of tiles assigned odd number of points for i-th data set.
+
      */
     public sealed class Pileczka : ProblemBase
     {

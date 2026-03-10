@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * Grupa archeologów z Bitlandii zorganizowała wyprawę naukową na Półwysep Bajtocki w celu
 przeprowadzenia wykopalisk. Podejrzewali znaleźć tam szczątki pradawnej cywilizacji
 Andorxorów, znanej powszechnie z posiadania wysokiego poziomu maszyn liczących. Już drugiego

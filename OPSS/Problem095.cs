@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Liczbę całkowitą dodatnią L nazwiemy samoopisującą się liczbą, jeżeli jej pierwsza cyfra w zapisie
 dziesiętnym (najbardziej znacząca cyfra - pierwsza cyfra od lewej) oznacza liczbę wystąpień cyfry
 '0' w zapisie tej liczby, druga cyfra oznacza liczbę wystąpień '1' w zapisie tej liczby, itd...

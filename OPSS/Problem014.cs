@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 2/5
+    /* Difficulty: 2/5
      * 
 Twoim zadaniem jest znaleźć najmniejszą dodatnią liczbę całkowitą Q, tak aby iloczyn jej cyfr był
 równy N.

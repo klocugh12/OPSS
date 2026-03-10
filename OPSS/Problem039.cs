@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * Wejście:
 W pierwszym wierszu znajduje się liczba zestawów danych 0 < d ≤ 100. Każdy zestaw danych
 składa się z trzech wierszy: w pierwszym mamy daną chwilę t w której chcemy wyznaczyć wartość

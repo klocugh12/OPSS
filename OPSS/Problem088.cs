@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Barney - geolog amator - skorzystał z okazji, aby fotografować pustkowia Szkocji "z lotu ptaka".
 Okazja ta związana była z ćwiczebnym lotem balonem kilku jego przyjaciół - matematyków. W

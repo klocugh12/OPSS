@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Szkrable jest bardzo popularną i niezwykle skomplikowaną grą słowną polegającą na układaniu
 słów przez graczy. Jedna z setek zasad tej gry mówi, że słowo jest dopuszczalne do gry jeżeli każdy
 jego spójny podciąg o długości trzech liter jest wyrazem ze słownika ustalonego przez graczy na

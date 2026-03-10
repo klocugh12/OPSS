@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Michał zawsze bardzo lubił matematykę, więc - co zrozumiałe - był pojętnym uczniem.
 Rozwiązywał problemy matematyczne znacznie szybciej niż koledzy w klasie.
 Pewnego dnia, na lekcji, gdy Michał zrobił już zadania z ćwiczeń, trochę ze znużenia, trochę z

@@ -1,18 +1,16 @@
 namespace OPSS
 {
-    /* 1/5
-     * 
-Liczba pierwsza to liczba naturalna większa od 1, która dzieli się tylko przez 1 i przez siebie samą
-(a zatem ma dokładnie dwa dzielniki naturalne).
-Zadanie
-Napisz program, który wyznacza n-tą w kolejności liczbę pierwszą.
-Wejście
-Pierwsza linia zawiera dokładnie jedną liczbę C, 1<=C<=200000, będącą liczbą zestawów danych.
-W C kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw składa się z jednej
-liczby naturalnej 1<=n<=15000.
-Wyjście
-Program powinien wypisać na standardowe wyjście C linii. I-ta linia powinna zawierać dokładnie
-jedną liczbę naturalną, będącą n-tą w kolejności liczbą pierwszą dla zestawu o numerze I
+    /* Difficulty: 1/5
+     
+    A prime number is an integer greater than 1 that is only divisible by 1 and itself.
+    Find n-th prime number.
+
+Input
+First line contains number of data sets C, 1<=C<=200000.
+Following C lines contain one data set each. Each data set consist of single number n, 1<=n<=15000.
+
+    Output
+    C lines, where i-th line contains n-th prime number, where n is value from i-th data set.
      */
     public sealed class LiczbyPierwsze : ProblemBase
     {

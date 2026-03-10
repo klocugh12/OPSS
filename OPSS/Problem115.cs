@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * 
 Janek jest studentem ogrodnictwa. W czasie zajęć opiekuje się egzotycznymi drzewkami
 owocowymi mango. Zauważył, że szkodniki, które uszkadzają owoce mango często uszkadzają

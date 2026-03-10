@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Andrzej i Bartek, bawiąc się wymyślone przez siebie zabawy (Komputerowa telepatia, Kąt obrotu),
 zdobyli tyle doświadczenia w zgadywaniu zeskanowanych symboli, że robili to za każdym razem

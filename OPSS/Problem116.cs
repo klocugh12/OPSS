@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Ostatnimi czasy Święty Mikołaj trochę przytył i nie mieści się już w niektórych kominach, 
     przez które wchodził do domów, by zostawić prezenty. Co gorsza, przestał mieścić się 

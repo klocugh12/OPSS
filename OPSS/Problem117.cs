@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Zorganizowane zostało ogromne całodniowe przyjęcie, na które zaproszono wiele osób. Każda 
     zaproszona osoba mogła przyjść na przyjęcie i wyjść, kiedy tylko zechciała. Zaproszony został 

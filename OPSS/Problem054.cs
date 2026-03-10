@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Nieujemną liczbę całkowitą H nazwiemy HEX-palindromiczną jeśli istnieje liczba naturalna k > 1
 taka że, odwrócony zapis szesnastkowy liczby H jest taki sam jak zapis szesnastkowy liczby H*k

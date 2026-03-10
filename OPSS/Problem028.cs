@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Dwaj koledzy grają w grę polegającą na dowiązywaniu kolejnych kawałków sznurka do siebie, aż
 do momentu, gdy taka konstrukcja urwie się pod własnym ciężarem. Pierwszy sznurek
 dowiązywany jest przez gracza rozpoczynającego grę do specjalnego haczyka o nieskończonej

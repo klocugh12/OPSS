@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Zdefiniujmy AB-drzewo jako pełne drzewo, którego węzłami będą słowa nad alfabetem {a, b},
 korzeniem będzie słowo puste "0", a dla dowolnego słowa w, jego synami będą słowa: {xw: x

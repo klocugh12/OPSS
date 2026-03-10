@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 1/5
+    /* Difficulty: 1/5
      * 
 Frma MIRACLE, znany potentat na rynku baz danych, opracowała nowy sposób sortowania, który
 będzie zastosowany w najnowszym produkcie o nazwie kodowej Miracle 13k. W obecnej wersji

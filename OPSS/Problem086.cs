@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 4/5
+    /* Difficulty: 4/5
      * Wzorcem bitowym nazywamy dowolny ciąg zerojedynkowy długości n zawierający k jedynek, 1 ≤
 k ≤ n. Dla ustalonej długości n i liczby jedynek k, rozpatrzmy wszystkie wzorce bitowe
 posortowane malejąco w porządku leksykograficznym. Jaką będzie miał postać wzorzec bitowy

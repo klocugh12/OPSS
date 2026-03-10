@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * Juhasi Jędruś i Bartuś postanowili urozmaicić sobie wieczorne zaganianie owiec wymyśloną przez
 siebie zabawą. Każdy z nich z pomocą psa może zagonić do zagrody dowolną liczbę owiec
 pasących się na hali w kilku grupach. Ponieważ mają jednego psa, to zapędzanie owiec będą robili

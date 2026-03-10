@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
 Zadanie
 Napisz program, który dla zadanego pliku OPSSML:

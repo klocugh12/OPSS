@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * W pewnym nowoczesnym mieście zbudowano ronda według nowej technologii. Każde rondo ma n
 lamp. Przed zmierzchem wypuszczany jest robot, którego zadaniem jest włączenie wszystkich
 lamp. Jednak programista dokonał pewnych błędów w programie robotów i wyprodukowano serię n

@@ -1,22 +1,19 @@
 namespace OPSS
 {
-    /* 3/5
+    /* Difficulty: 3/5
      * 
-Żabka porusza się po prostej ścieżce złożonej z n pól. Startowe położenie to pole numer 1, a
-końcowe - n. Żabka porusza się tylko w kierunku pola końcowego. Żabka może przesunąć się
-jednym skokiem minimalnie o kmin pól, a maksymalnie o kmax pól.
-Zadanie
-Napisz program, który obliczy na ile sposobów żabka może osiągnąć swoje położenie końcowe,
-jeżeli porusza się tak że każdy następny skok jest co najmniej takiej samej długości jak poprzedni.
-Wejście
-Pierwsza linia zawiera dokładnie jedną liczbę m, 1 ≤ m ≤ 100, będąca liczbą zestawów danych. W
-m kolejnych liniach występują poszczególne zestawy danych. Każdy zestaw składa się z liczb
-naturalnych n, kmin, kmax, oddzielonych pojedynczą spacją. (2 ≤ n ≤ 1000, 1 ≤ kmin ≤ kmax ≤
-1000).
-Wyjście
-Program powinien wypisać na standardowe wyjście m linii. I-ta linia powinna zawierać dokładnie
-jedną liczbę naturalną, będąca liczbą możliwych ruchów dających żabce osiągniecie pola
-końcowego. Liczba ta nie będzie większa od 2^31.
+A frog leaps along the path consisting of n steps, starting from position 1 and ending at position n. 
+    A frog can only move forward. Each leap traverses at least kmin and no more than kmax steps.
+    Find number of ways a frog can traverse whole path, assuming each leap is at least as long as previous.
+
+Input:
+First line contains number of data sets m, 1 ≤ m ≤ 100.
+   Following m lines contain one data set each. Each data set consists of three numbers
+    n, kmin, kmax, each separated by a whitespace. (2 ≤ n ≤ 1000, 1 ≤ kmin ≤ kmax ≤ 1000).
+
+    Output:
+    m lines, where i-th line contains number of ways a frog can reach final step for i-th data set.
+    This number is no greater than 2^31.
      */
     public sealed class Zabka : ProblemBase
     {
