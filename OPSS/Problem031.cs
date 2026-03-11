@@ -1,58 +1,33 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Profesor Przemysław pasjonuje się obliczeniami równoległymi. Wykorzystuje sieć komputerową
-uczelni i nocami prowadzi eksperymenty przy użyciu maszyn w pracowniach. Obliczenia te
-przebiegają najczęściej według następującego schematu:
-● Najpierw program wykonujący obliczenia jest uruchamiany na jednym z komputerów.
-(Nazwiemy go komputerem głównym).
-● Uruchomiony program dzieli dane na małe fragmenty i rozsyła je do wszystkich
-komputerów w sieci. Każdy komputer w sieci otrzymuje inną, niepodzielną i przesyłaną w
-pojedynczym pakiecie porcję danych.
-● Komputery wykonują obliczenia dla danych które otrzymały.
-● Komputer główny czeka na wyniki od wszystkich komputerów, a następnie po odebraniu
-wszystkich wyników częściowych, wykonuje jakieś czynności związane z obliczeniem na
-ich podstawie wyniku końcowego.
-Nie bez znaczenia jest wybór komputera na którym będą wykonywane obliczenia. Nie wszystkie
-komputery w sieci są ze sobą bezpośrednio połączone. (Zawsze istnieje jakaś droga pomiędzy
-komputerami, ale nie zawsze jest to połączenie bezpośrednie). Komputery komunikując się między
-sobą korzystają więc czasami z komputerów pośrednich, na zasadach podobnych do tych jakie
-panują we współczesnych sieciach komputerowych. Jeśli komputer otrzymuje porcję danych do
-obliczeń, która nie jest do niego adresowana, przekazuje ją dalej, tak aby dotarła do adresata
-najkrótszą drogą. Komputer rozsyłający dane również wysyła je w kierunku który gwarantuje
-przekazanie danych adresatowi najkrótszą drogą. Oczywiste jest, że wybierając komputer który ma
-służyć jako główny komputer wykonujący obliczenia, trzeba zminimalizować ilość pracy jaka
-zostanie wykonana podczas rozsyłania danych i zbierania wyników cząstkowych. To będzie
-właśnie Twoje zadanie.
-Sieć komputerowa na uczelni ma strukturę drzewiastą. To znaczy, że pomiędzy dwoma
-komputerami istnieje zawsze dokładnie jedna droga. Znaczy to też, że można tę sieć opisać
-przypisując każdemu komputerowi (za wyjątkiem jednego) komputer dla niego nadrzędny (tak jak
-w drzewie każdy węzeł za wyjątkiem korzenia ma jednego ojca). Komputery zostały
-ponumerowane kolejnymi liczbami naturalnymi począwszy od 1, przy czym komputer o numerze 1
-nie ma komputera nadrzędnego - jest to główny router uczelni. Profesor może wybrać dowolny
-komputer do prowadzenia obliczeń, ale nie ma bezpośredniego dostępu do routera, gdyż znajduje
-się on za drzwiami z zamkiem szyfrowym, a Profesor nie zna kodu wejściowego. Komputer o
-numerze 1 tak jak wszystkie komputery prowadzi więc obliczenia cząstkowe, ale nie może zostać
-wybrany jako komputer główny.
-Twoim zadaniem będzie wyznaczenie dla zadanej sieci komputerowej, komputera przy wyborze
-którego, suma pracy wykonywanej przez WSZYSTKIE komputery sieci podczas rozsyłania danych
-będzie najmniejsza. Jeśli będzie kilka takich komputerów, wybieramy ten o najmniejszym numerze.
-Poprosimy Cię też o podanie sumy pracy wykonywanej przez wszystkie komputery podczas
-rozsyłania danych, przy założeniu, że dokonano optymalnego wyboru. Przyjmujemy, że jednostką
-pracy wykonywanej przez komputer jest operacja wysłania lub przekazania dalej pakietu danych.
-Przypominamy, że nie można wybrać komputera o numerze 1.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, 1 ≤ C ≤ 30, oznaczająca ilość zestawów
-danych. W kolejnych wierszach znajdują się zestawy danych. W pierwszym wierszu każdego
-zestawu danych znajduje się liczba N, 2 ≤ N ≤ 100000 - jest to ilość komputerów w uczelnianej
-sieci. W kolejnych N-1 wierszach znajdują się numery komputerów nadrzędnych kolejnych
-komputerów, od 2 do N, po jednym w każdym wierszu. (W terminologii "drzewowej" są to numery
-ojców w drzewie.)
-Wyjście
-Dla każdego zestawu danych należy wypisać 1 wiersz wyniku, zawierający 2 liczby naturalne
-oddzielone spacją. Pierwsza z nich to numer komputera wybranego jako komputer główny, a druga
-to suma pracy wykonanej przez wszystkie komputery podczas rozsyłania danych od komputera
-głównego do pozostałych komputerów, przy założeniu że komputer główny wybrano optymalnie.
+     * You're given a network of N computers. Not all computers are directly connected, 
+     * but for any two computers in the network there exists some connection between them.
+     * Network has a tree structure, i.e. there exists a parent node for any computer in the network
+     * other than computer 1, which is main router of the network.
+     * 
+     * Task is organized in following manner:
+     * ● First, pick a main computer of the network and run master program on it.
+     * ● Master program splits the task and sends execution units to all other computers in the network.
+     * ● When other computer is done with its calculations, it sends results back to main computer.
+     * ● Main computer composes final solution from partial results it received from other computers.
+     * 
+     * If there is no direct connection from main computer to some other machines, data packet travels 
+     * through all intermediate computers on the way via shortest possible way.
+     * It is necessary to pick a main computer in such way to minimize transfers across the network.
+     * You cannot pick computer 1, as it is not physically available to you.
+     * Also, compute work needed to transfer all data across the network, assuming each direct transfer 
+     * takes 1 unit of work.
+     * 
+     * Input
+     * First line contains number of data sets  C, 1 ≤ C ≤ 30.
+     * First line of each data set contains number of computers in the network N, 2 ≤ N ≤ 100000.
+     * Following N-1 lines each contain a single number equal to number of parent of computers 2 to N.
+     * 
+     * Output
+     * C lines each containing two numbers separated by a whitespace. 
+     * First number is a number of main computer to minimize work done transferring data. 
+     * Second number is a minimum number of work units spent to transfer data.
      */
     public sealed class ObliczeniaRownolegle : ProblemBase
     {

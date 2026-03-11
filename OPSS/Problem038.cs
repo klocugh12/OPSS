@@ -1,24 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Tomek, podejrzewając swojego szefa o malwersacje finansowe, postanowił włamać się do
-firmowego sejfu i udowodnić mu przestępstwo. Jednak taki plan posiada kilka słabych punktów.
-Jednym z nich jest włamanie się do sejfu, który posiada cyfrowy zamek. Będąc małym chłopcem
-Tomek często oglądał MacGyver'a, który w jednym z odcinków miał podobny problem. Na filmie
-udało mu się rozwiązać go w następujący sposób: za pomocą mąki stwierdził, które klawisze na
-zamku są tłuste (a więc używane) - dmuchnął mąką w klawiaturę i do tych tłustych klawiszy
-przykleiła się mąka ;) - a następnie, wiedząc jak długi jest kod, wystukał po kolei wszystkie
-możliwe kombinacje. Tomek postanowił skorzystać z podobnej metody. Jednak po kupieniu mąki i
-stwierdzeniu jakie klawisze są używane, zaczął się zastanawiać ile czasu zajmie mu dostanie się do
-środka. Twoim zadaniem jest oszacowanie tego czasu (przy założeniu że na jedną kombinację
-potrzebuje 1 sekundy).
-Wejście
-W pierwszej linii znajduje się liczba naturalna D, 1 ≤ D ≤ 100, oznaczająca liczbę zestawów
-danych. Każdy zestaw składa się z jednej linii zawierającej dwie liczby całkowite: K, 1 ≤ K ≤ 10,
-oraz N, K ≤ N ≤ 24, gdzie K oznacza liczbę różnych cyfr, zaś N długość kodu.
-Wyjście
-Dla każdego zestawu danych wypisz w osobnej linii czas jaki zajmie Tomkowi włamanie się do
-sejfu w formacie: dni:godziny:minuty:sekundy
+     * You're given a safe you need to crack. A safe contains a keypad with digits 0 to 9.
+     * Using flour, you've found, which digits are in the code (flour stuck to the grease 
+     * from the fingers). You also know, how long the code is. 
+     * Assuming each combination takes 1 second to check, calculate, how long at most 
+     * it's going to take to crack the code.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 100.
+     * Each data set consists of two numbers K and N separated by a whitespace, 1 ≤ K ≤ 10, K ≤ N ≤ 24.
+     * K is number of distinct digits in a code, N is length of a code.
+     * 
+     * Output
+     * D lines, each containing maximum time it takes to crack the code in the following format: days:hours:minutes:seconds.
      */
     public sealed class Wlamanie : ProblemBase
     {

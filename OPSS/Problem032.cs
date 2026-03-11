@@ -1,33 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Zenek prowadzi niewielkie kasyno. Główną atrakcją w jego kasynie, jest "Binarne Bingo dla
-dwojga" - gra którą sam wymyślił (przynajmniej tak mu się wydaje), a w której dwóch graczy
-oczekuje na pewien ciąg wyników rzutów monetą.
-Dokładniej: Każdy z graczy posiada wzorzec składający się z liter "O", "R", oznaczających
-odpowiednio orła i reszkę. Krupier rzuca monetą zapisując kolejne wyniki, a pierwsze wystąpienie
-wzorca oznacza wygraną posiadacza wzorca. Wystąpienie wzorca o długości L następuje, gdy
-ostatnie L zapisanych przez krupiera wyników, pokrywa się ze wzorcem. Czasami może zdarzyć się
-remis - gdy obaj gracze w tym samym momencie stwierdzą uzgodnienie wzorca. Wtedy gra jest
-powtarzana od początku.
-Zenek chciałby zalegalizować swoje kasyno. Poszedł więc do odpowiedniego urzędu, i otrzymał do
-wypełnienia wiele formularzy. Okazało się, że aby zarejestrować "Binarne Bingo ..." musi podać w
-formularzu, dla każdej zadanej pary wzorców, który wzorzec ma większe szanse wygranej. Cała
-atrakcja gry Zenka, wynikała przecież z tego, że gracze mogą wybierać wzorce z ogromnej liczby
-dostępnych wzorców. Zenek nie jest w stanie poradzić sobie z wymaganiami urzędników i oczekuje
-Twojej pomocy. Pomóż Zenkowi zalegalizować kasyno.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 200, oznaczająca liczbę
-zestawów danych. W kolejnych wierszach znajdują się zestawy danych, po jednym zestawie w
-wierszu. Zestaw danych składa się z 2 niepustych wzorców, wybranych przez obu graczy,
-oddzielonych pojedynczą spacją. Wzorzec jest ciągiem znaków, którego elementami mogą być
-wyłącznie duże litery "O" lub "R". Długość wzorca nie przekracza 30 znaków.
-Wyjście
-W C wierszach wyjścia należy umieścić odpowiedzi dla poszczególnych zestawów danych, przy
-czym odpowiedzią jest dokładnie jedna liczba:
-● 1 - jeśli wzorzec pierwszy daje większe szanse na wygraną,
-● 2 - jeśli wzorzec drugi daje większe szanse na wygraną,
-● 0 - jeśli oba wzorce dają takie same szanse na wygraną.
+     * Alice and Bob play a gambling game. Each of them writes down a pattern consisting of letters
+     * O (heads) and R (tails). Then they alternate throwing a coin, each writing down result,
+     * until either of them gets a match against a pattern they have.
+     * Your task is to establish, given two arbitrary patterns, which pattern is more likely to win.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 200.
+     * Each of C following lines contains two strings, Alice's and Bob's patterns respectively.
+     * Patterns contain no more than 30 characters and consist only of letters "O" and "R".
+     * 
+     * Output
+     * C lines, each containing an answer for each data set:
+     * ● 1 - if Alice's pattern is more likely to win
+     * ● 2 - if Bob's pattern is more likely to win
+     * ● 0 - if both patterns are equally likely to win
      */
     public sealed class BinarneBingo : ProblemBase
     {

@@ -3,41 +3,26 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Pszczoły, jak wiadomo, budują plastry miodu z przylegających do siebie sześciokątów foremnych.
-Jednak, na jednej z pasiek, pszczoły zbudowały plaster w inny sposób. Plaster ma następującą
-budowę:
-● sześciokąty foremne stykają się ze sobą tylko wierzchołkami,
-● przestrzeń między szesciokątami wypełniają trójkąty równoboczne,
-● trójkąty i sześciakąty stykają się tylko wzdłuż swoich krawędzi,
-● każdy trójkąt styka się krawędzią przynajmniej z jednym sześciokątem.
-Zgodnie z najnowszymi unijnymi przepisami, miody wytwarzane na plastrach składających się z
-innych figur niż sześciokąty, są objęte wyższą stawką podatku VAT.
-Na szczęście pszczoła pilnująca poprawności plastra zorientowała się, że coś jest nie tak. Pszczoły
-zastanawiają się, czy opłaca się przekształcać strukturę plastra, tak aby składał się z samych
-sześciokątów. Sześciokąty foremne będą bezproblemowo przenoszone w inne miejsca plastra,
-problemem są natomiast trójkąty. Podczas naprawy plastra, miód zawarty w trójkątach jest spisany
-na straty. Pszczoły nie wiedzą czy zyski związane z objęciem miodu niższą stawką podatku VAT
-zrekompensują straty miodu spowodowane naprawą struktury. Pomóż pszczołom stwierdzić, czy
-opłaca się dostosowywać plaster do unijnych norm.
-Pszczoły dysponują opisem kształtu plastra otrzymanym poprzez obejście plastra na około. Opis
-składa się z ciągu kierunków wzdłuż których poruszano się obchodząc plaster po obwodzie.
-Pszczoły budują plaster w taki sposób, że nigdy nie ma w nim dziur, dzięki czemu taki opis kształtu
-plastra jest w pełni wystarczający i od dawna stosowany przez pszczoły. Obwód plastra jest łamaną
-zamkniętą, a to znaczy, że mogą istnieć punkty do których pszczoła dotrze więcej niż jeden raz,
-zanim obejdzie cały plaster. Dla zadanej zamkniętej trasy po której pszczoła obeszła plaster na
-około, oblicz liczbę zawartych wewnątrz plastra trójkątów.
-Rys. Struktura miodu którą stworzyły pszczoły wraz z przykładową trasą przejścia.
-Wejście
-W pierwszym wierszu wejścia znajduję się liczba całkowita C, 1 ≤ C ≤ 100, oznaczająca liczbę
-zestawów danych testowych. W kolejnych wierszach znajdują się zestawy danych testowych. W
-pierwszym i jedynym wierszu każdego zestawu danych znajduje się ciąg cyfr z zakresu 1..6
-opisujący jednoznacznie zamkniętą trasę, którą musiała pokonać pszczoła obchodząc
-nieprawidłowy plaster miodu. Pomiędzy cyframi znajdującymi się w jednym wierszu nie występują
-inne znaki. Każdy wiersz wejścia zawiera co najwyżej 100000 cyfr.
-Wyjście
-W C wierszach wyjścia należy podać wyznaczoną dla każdego zestawu danych liczbę trójkątów
-równobocznych (tylko tych najmniejszych, nie zawierających wewnątrz innych figur) zawartych w
-plastrze miodu zbudowanym przez pszczoły z tej pasieki.
+     * Bees, as we know, build honeycombs out of adjacent regular hexagons.
+     * One swarm of bees however did things differently. It built its honeycomb in such a way that:
+     * ● regular hexagons don't have common edges, only common vertices,
+     * ● empty space between hexagons is filled with regular triangles,
+     * ● each triangle has at least one common edge with a hexagon.
+     * Since this is not as efficient way to store honey, bees decided to convert to just using hexagons.
+     * However, honey stored in triangular sections of honeycomb cannot be reused and is going to waste.
+     * Find out, how much honey is going to waste.
+     * A honeycomb is a polygon without holes that can be described with a way to walk around it,
+     * using numbers 1..6, where 1 describes step at 0 degrees towards x-axis, 2 describes step at 60 degrees,
+     * 3 - 120 degrees, and so on.
+     * Given such description, calculate number of triangular sections of a honeycomb.
+     * 
+     * Input
+     * First line contains number of data sets  C, 1 ≤ C ≤ 100.
+     * Each data set consists of a single line containing a sequence of steps describing a honeycomb.
+     * Digits are not separated by any characters. Length of each sequence is no more than 100000 digits.
+     * 
+     * Output
+     * C lines, each containing number of triangular segments within respective honeycomb.
      */
     public sealed class PlasterMiodu : ProblemBase
     {

@@ -1,17 +1,15 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Zadanie
-Małgosia zastanawia się, ile jest różnych ustawień k hetmanów na szachownicy o wymiarach nxn
-pól, tak aby żadne dwa z nich nie szachowały się. Pomóż Małgosi rozwiązać ten problem.
-Wejście
-W pierwszym wierszu dana jest liczba naturalna d oznaczająca ilość zestawów danych, 1 ≤ d ≤ 10.
-W następnych wierszach podane są kolejne zestawy danych. Każdy zestaw składa się z jednego
-wiersza, w którym znajdują się, oddzielone pojedynczą spacją, liczby naturalne n oraz k, 1 ≤ n ≤ 12,
-1 ≤ k ≤ n^2, oznaczające odpowiednio: "wymiar" szachownicy oraz ilość hetmanów.
-Wyjście
-W d wierszach wyjścia należy podać wyznaczoną dla każdego zestawu liczbę różnych ustawień k
-hetmanów na szachownicy nxn tak, aby żadne dwa z nich nie szachowały się.
+     * Given n x n chessboard, find number of ways you can place k queens, so that no two queens attack each other.
+     * 
+     * Input
+     * First line contains number of data sets d, 1 ≤ d ≤ 10.
+     * Next d lines each contain a single data set. Each data set consists of two numbers separated by a whitespace
+     * n and k, 1 ≤ n ≤ 12, 1 ≤ k ≤ n^2, corresponding to size of chessboard and number of queens.
+     * 
+     * Output
+     * d lines, each containing number of ways to place k queens on nxn chessboard without any two queens attacking each other.
      */
     public sealed class Hetmani : ProblemBase
     {
@@ -44,6 +42,11 @@ hetmanów na szachownicy nxn tak, aby żadne dwa z nich nie szachowały się.
             {
                 var splits = input[i].Split(' ');
                 int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                if(a < b)
+                {
+                    output.Add("0");
+                    continue;
+                }
                 int j = 0;
                 bool[] cols = new bool[a], diag1 = new bool[(a << 1) - 1], diag2 = new bool[(a << 1) - 1];
                 List<int> queens = new(b);

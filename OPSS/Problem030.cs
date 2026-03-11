@@ -1,25 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Małgosia dostała na Mikołaja klocki z wypisanymi literami alfabetu. Układanie słów z klocków
-było pasjonującą rozrywką. W trakcie zabawy odkryła, że niektóre słowa czytane od lewej do
-prawej i odwrotnie wyglądają tak samo. Opowiedziała tacie o swoich odkryciach. Ojciec wyjaśnił
-córce, że z dowolnego słowa można usunąć pewną liczbę liter (nawet równą zeru) i otrzymać
-niepuste słowo, które wygląda tak samo, gdy jest czytane od prawej do lewej i odwrotnie. Małgosia,
-po chwili zastanowienia, spytała, na ile sposobów da się to zrobić. Zafrasowany rodzic, jak
-przystało na programistę firmy MIRACLE, postanowił napisać program, który rozwiąże ten
-problem. Niestety, z powodu nawału pracy nad modułem sortującym nowej bazy danych zadanie to
-zlecił Tobie. Dodał jeszcze, że słowo musi zawierać co najmniej jedną literę i dwa sposoby
-usuwania liter są różne, jeśli usuwamy litery na różnych pozycjach (nie jest ważna kolejność
-usuwania). Np. ze słowa AAA możemy usunąć literę na pozycji 1, 2 lub 3 (trzy różne sposoby) i
-otrzymamy trzy słowa AA (*AA, A*A, AA*).
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, 1 ≤ C ≤ 100 , oznaczająca liczbę zestawów
-danych. W kolejnych C liniach znajdują sie zestawy danych. Każdy zestaw danych to opis słowa -
-składa się z dużych liter alfabetu angielskiego, o długości L, 1 ≤ L ≤ 50.
-Wyjście
-Na wyjściu, dla każdego słowa wejściowego, trzeba podać liczbę sposobów usuwania liter, tak by
-otrzymane słowa czytane od lewej do prawej, wyglądały tak samo, jak czytane od prawej do lewej.
+     * You're given a word consisting of letters from English alphabet.
+     * Find number of ways you can remove letters from that word, such as resulting word reads the same
+     * left to right and right to left. Each way is considered unique, if it removes letters from different
+     * positions. E.g., for word AAA you can obtain word AA in three unique ways (*AA, A*A, AA*).
+     * Resulting word has to have at least one letter. Removing zero letters is also a valid option.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 100.
+     * Each data set consists of a single line containing a single word of length L, 1 ≤ L ≤ 50.
+     * 
+     * Output
+     * C lines, each containing number of ways to remove letters from original words to get a word
+     * reading the same right to left as left to right.
      */
     public sealed class Mikolaj : ProblemBase
     {

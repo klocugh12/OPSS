@@ -1,28 +1,18 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Pewnego słonecznego dnia na beztroskie królestwo Bajtocji najechał bezwzględny król Małych i
-Miękkich. Wstrząśnięci mieszkańcy po pierwszym szoku wywołanym tak nagłą napaścią podjęli
-próby obrony. Jednak pomimo zaciętego oporu, jaki stawiali, duża część ich wojsk dostała się do
-niewoli. Wśród nich znalazł się także ukochany nasz Linus T. Jednak on, w przeciwieństwie do
-reszty współwięźniów, postanowił uciec z niewoli. Naprzeciw wszystkim przeciwnościom losu
-powiodło mu się. Teraz, będąc na wolności, zaczął się martwić o pozostawiony dom i rodzinę.
-Dlatego też pierwsze co zrobił, to udał się do najbliższego pubu i zaczął wypytywać jak przebiegają
-działania wojenne... Dowiedział się, że bardzo duży obszar jest pod okupacją wroga. Wówczas
-zaczął się zastanawiać, czy jego dom też się tam znajduje. Twoim zadaniem jest pomóc Linusowi
-T. stwierdzić czy jego dom znajduje się na terenach okupowanych czy nie.
-Teren okupowany jest opisany łamaną zamkniętą, której krawędzie nie przecinają się. Do terenu
-okupowanego zaliczają się również punkty znajdujące się na odcinkach łączących kolejne punkty
-łamanej.
-Wejście
-W pierwszej linii znajduje się liczba naturalna D, 1 ≤ D ≤ 100, oznaczająca liczbę zestawów
-danych. W pierwszej linii każdego zestawu danych znajdują się współrzędne domu Linusa T.
-(współrzędne naturalne x, y; 0 ≤ x, y ≤ 10^9. W drugiej linii znajduje się liczba K, 3 ≤ K ≤ 1000,
-określająca liczbę punktów ograniczających teren okupowany przez wroga, a następnie K par
-współrzędnych kolejnych punktów (współrzędne naturalne kx, ky; 0 ≤ kx, ky ≤ 10^9).
-Wyjście
-Dla każdego zestawu danych wypisz w osobnej linii pojedyncze słowo TAK lub NIE oznaczające,
-czy dom znajduje się na terenie okupowanym.
+     * You're given a number of points describing a simple, closed polygon. 
+     * Find out, whether given point lies inside a polygon or on its edge.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 100.
+     * Each data set consists of two lines.
+     * First line contains two integers separated by a whitespace x, y; 0 ≤ x, y ≤ 10^9, which are point's coordinates. 
+     * Second line starts with number K, 3 ≤ K ≤ 1000, followed by K pairs of numbers kx, ky; 0 ≤ kx, ky ≤ 10^9
+     * which are coordinates of vertices of a polygon.
+     * 
+     * Output
+     * D lines, each containing an answer: TAK, if point lies inside a polygon or on its edge, NIE otherwise.
      */
     public sealed class Wojna : ProblemBase
     {

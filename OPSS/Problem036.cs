@@ -1,27 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * W pewnym nowoczesnym mieście zbudowano ronda według nowej technologii. Każde rondo ma n
-lamp. Przed zmierzchem wypuszczany jest robot, którego zadaniem jest włączenie wszystkich
-lamp. Jednak programista dokonał pewnych błędów w programie robotów i wyprodukowano serię n
-robotów, które zamiast podchodzić do wszystkich lamp podchodziły tylko do k pierwszych (k -
-numer seryjny robota). Na dodatek, po podejściu do lampy robot przełącza wyłącznik (jeżeli był
-włączony to wyłącza, jeśli wyłączony to włącza). Następnie roboty podchodzą do k następnych
-lamp i tak w kółko, aż nie zostanie im wydany rozkaz zakończenia prac, który jest realizowany po
-zakończeniu przełączania aktualnych k lamp. Projektanci ronda załamali ręce. Jednak zauważyli, że
-część robotów jest w stanie zapalić wszystkie lampy (przykładowo dla n=4 wszystkie roboty są w
-stanie tego dokonać; dla n=3 tylko roboty o numerze seryjnym 1 i 3). Wszyscy wielce uradowaniu
-już zabrali się do selekcji odpowiednich robotów, gdy Urząd Miasta i Gminy zarządził wielkie
-oszczędności - na każdym rondzie może palić się tylko jedna lampa. To doszczętnie dobiło zespół.
-Jednak Ty, młody, inteligentny informatyk wiesz, że niektóre roboty potrafią tego dokonać. Dlatego
-też postanowiłeś napisać program, który policzy ile z serii n robotów mogłoby obsłużyć rondo o n
-lampach.
-Wejście
-W pierwszej linii znajduje się liczba naturalna D, 1 ≤ D ≤ 100, oznaczająca liczbę zestawów
-danych. Każdy zestaw składa się z jednej linii zawierającej liczbę całkowitą n, 1 ≤ n ≤ 10^9.
-Wyjście
-Dla każdego zestawu danych w osobnej linii wypisz liczbę robotów, które mogą obsłużyć rondo o n
-lampach.
+     * Consider n lamps handled by a robot. Each robot has its series number k.
+     * A robot with series number k can toggle a switch on first k lamps (either turning them on or off).
+     * Then they move on to next k lamps, doing the same operation. They continue this cycle
+     * until ordered to stop, however they only stop after finishing toggling each batch of k lamps.
+     * For example, if n=4, all series of robots are able to have all lamps on.
+     * If n=3, only series 1 and 3 can.
+     * However, we want only one lamp to be on. Not all series of robots can achieve this state.
+     * Find number of series of robots, which can.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 100. 
+     * Each data set contains one number n, 1 ≤ n ≤ 10^9, equal to number of lamps.
+     * 
+     * Output
+     * D lines, each containing number of series of robots which can leave only one lamp on.
      */
     public sealed class Robot : ProblemBase
     {

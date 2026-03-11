@@ -1,32 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Zarząd znanej na rynku firmy informatycznej MIRACLE, tworzącej specjalistyczne
-oprogramowanie bazodanowe, chce pomóc swoim programistom w pokonywaniu drogi z ich
-mieszkań do pracy. Po wstępnej analizie problemu Zarząd dokonał niecodziennego odkrycia:
-okazało się, że domy programistów leżą na okręgu, którego środkiem jest siedziba firmy!
-Firma chce wybudować sieć dróg w taki sposób, aby każdy programista, korzystając z nowych
-połączeń, mógł dojechać do jej siedziby.
-Przepisy jednoznacznie określają warunki jakie powinna spełniać droga: jedna droga może łączyć
-dwa budynki i nie może przebiegać przez żaden inny budynek. Dodatkowo, jedna droga może albo
-łączyć bezpośrednio mieszkanie programisty z siedzibą firmy (inaczej mówiąc: łączyć środek
-okręgu - siedzibę firmy - z punktem leżącym na okręgu - mieszkaniem programisty) albo łączyć
-dwa sąsiadujące ze sobą mieszkania programistów (czyli: należeć do okręgu). Inne sposoby
-przeprowadzania dróg są sprzeczne z przepisami.
-Zarząd firmy akceptuje wyłącznie takie projekty budowy, w których liczba niezbędnych dróg jest
-najmniejsza.
-Zadanie
-Twoim zadaniem jest wyznaczenie liczby wszystkich możliwych projektów budowy dróg,
-spełniających wymagania Zarządu firmy MIRACLE.
-Rys. Przykładowy projekt budowy dróg (0 - siedziba firmy, 1-5 - mieszkania programistów).
-Wejście
-W pierwszej linijce wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 100, oznaczająca liczbę
-zestawów danych. W kolejnych C wierszach wejścia znajdują się zestawy danych. Każdy zestaw
-składa się z liczby naturalnej n, 3 ≤ n ≤ 1000, oznaczającej liczbę programistów zatrudnionych w
-firmie.
-Wyjście
-Dla każdego zestawu danych, dla liczby n, na wyjściu powinna znaleźć się liczba naturalna, będąca
-liczbą możliwych projektów budowy dróg spełniających wymagania Zarządu firmy MIRACLE.
+     * A certain company has its office in a center of a circle, on whose perimeter lie
+     * houses of all of company's employees.
+     * A company attempts to build network of roads to its office from all homes.
+     * Each road can either connect a house and office directly, or two adjacent houses
+     * lying on a circle.
+     * Your task is to find number of distinct networks containing minimum possible
+     * number of roads that meet those criteria.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 100.
+     * Each data set consists of a number of employees of the company n, 3 ≤ n ≤ 1000.
+     * 
+     * Output
+     * c lines, each containing a single number equal to number of distinct networks
+     * meeting task's criteria.
      */
     public sealed class Drogi : ProblemBase
     {
