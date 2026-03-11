@@ -1,25 +1,18 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
-     * Małgosia przygotowywała urodzinowe przyjęcie. Upiekła tort i zajęła się układaniem listy gości.
-Liczbę gości N wyznaczała następująco: wybrała pewną liczbę cięć K, a następnie podzieliła tort K
-prostymi na maksymalną możliwą liczbę kawałków N. Każdy zaproszony gość dostałby więc
-dokładnie jeden kawałek tortu.
-Małgosia nie mogła się zdecydować jak dobrać liczbę cięć K. Zapisywała więc liczby cięć i
-odpowiadające im liczby gości w prototypowej bazie danych Miracle 13k, nad którą pracował jej
-ojciec. Wersje testowe (i nie tylko testowe) tej bazy mają to do siebie, że ulegają awarii w
-najbardziej nieodpowiednich momentach. Nie inaczej było tym razem. Pech chciał, że część danych
-uległa zniszczeniu i udało się odzyskać tylko liczby gości.
-Jak teraz Małgosia ma podzielić tort? Los przyjęcia spoczął w rękach ojca Małgosi. Jak wiadomo -
-nieszczęścia chodzą parami - rodzic Małgosi został wezwany na niezwykle ważne konsultacje do
-siedziby firmy Miracle i wróci dopiero na przyjęcie. Kolejny już raz cała nadzieja spoczęła w
-Twoich rękach. Pomóż Małgosi podzielić tort.
-Wejście
-Na wejściu znajduje się liczba zestawów danych C, 1 ≤ C ≤ 65535. W kolejnych C wierszach
-znajdują się liczby N, 1 ≤ N < 2^31, określające maksymalną ilość gości zaproszonych na urodziny.
-Wyjście
-Dla każdej liczby N, na wyjściu powinna się znaleźć liczba cięć K jakie wykonać powinna
-Małgosia.
+     * Alice threw a birthday party, baked a cake and invited her guests.
+     * To slice a cake, she made K straight cuts to make as many pieces as possible, 
+     * so that each guest gets a single piece.
+     * 
+     * For a given number of guests N find minimum number of cuts needed to provide each guest with a piece.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 65535.
+     * Each of lines contains a single number N, 1 ≤ N < 2^31, equal to number of guests invited.
+     * 
+     * Output
+     * C lines, each containing number of cuts K necessary to slice the cake.
      */
     public sealed class Tort : ProblemBase
     {

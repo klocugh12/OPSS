@@ -1,25 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Jeśli zdarzyło Ci się zawieszać firanki, być może zauważyłeś, że bardzo dobrym pomysłem na
-równomierne zaczepienie firanki za pomocą żabek jest przypięcie końców firanki do skrajnych
-żabek, a następnie wyznaczenie środkowej żabki i przypięcie jej na środku firanki. Powstają w ten
-sposób 2 nieprzypięte obszary firanki, które przypinamy analogicznie (rekursywnie) - wyznaczamy
-ponownie środkową żabkę i przypinamy ją na środku firanki, itd.
-Jednak nie zawsze możemy wyznaczyć środkową żabkę, zwłaszcza wtedy gdy musimy ją wybrać z
-parzystej liczby żabek. Chcąc przyczepić ładnie firankę bierzemy linijkę i wyznaczamy punkty
-zaczepienia 2 "środkowych" żabek. Cały czas staramy się, o ile jest to możliwe, wyznaczać jedną
-środkową żabkę.
-Zadanie
-Twoim celem będzie wyznaczenie dla zadanej liczby żabek, ile razy będziemy zmuszeni wziąć do
-ręki linijkę.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita d, 1 ≤ d ≤ 500000. W kolejnych d
-wierszach znajdują się liczby żabek (n, 3 ≤ n < 2^31), dla których należy wyznaczyć ilość pomiarów
-potrzebnych do równomiernego rozmieszczenia żabek.
-Wyjście
-W d liniach wyjścia należy podać dla każdej zadanej na wejściu liczby żabek, liczbę potrzebnych
-pomiarów linijką.
+     * In order to hang the curtains it is a good idea to first hang clips on both ends,
+     * then find the middle to hang a clip there, then repeat process recursively for two halves
+     * that still need hanging. If however we have even number of clips remaining, it is necessary
+     * to use two of them. This requires using measurement tape to find two points around the middle
+     * to put clips. We try to do that as few times as possible.
+     * 
+     * For a given amount of clips, find minimum number of times using measurement tape is necessary.
+     * 
+     * Input
+     * First line contains number of data sets  d, 1 ≤ d ≤ 500000.
+     * Each data set consists of single number n, 3 ≤ n < 2^31 equal to number of clips to use.
+     * 
+     * Output
+     * d lines, each containing a single number equal to number of times to use measuring tape for respective number of clips.
      */
     public sealed class Firanki : ProblemBase
     {

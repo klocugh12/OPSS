@@ -1,24 +1,15 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Michał zawsze bardzo lubił matematykę, więc - co zrozumiałe - był pojętnym uczniem.
-Rozwiązywał problemy matematyczne znacznie szybciej niż koledzy w klasie.
-Pewnego dnia, na lekcji, gdy Michał zrobił już zadania z ćwiczeń, trochę ze znużenia, trochę z
-ciekawości zapisał w zeszycie ciąg: 1121231234123451234561234567... - każda cyfra była w
-odzielnej kratce.
-Zaintrygowany profesor szybko odgadł, w jaki sposób jego uczeń zbudował ciąg i chcąc go
-"zagiąć", zapytał, czy potrafi powiedzieć jaka cyfra znajduje się na zadanej pozycji. Michał
-odpowiedział dyplomatycznie, że problem wymaga głębszych przemyśleń i obiecał, że na następnej
-lekcji przedstawi rozwiązanie.
-Po powrocie do domu zabrał się ostro do pracy - najpierw musi zobaczyć jak wyglądają wyniki dla
-"małych" liczb z przedziału 1..2^31-1. Michał nie posiada komputera. Pomóż mu znaleźć rozwiązanie
-dla "małych" przypadków.
-Wejście
-Pierwsza liczba C, 1 ≤ C ≤ 100, określa liczbę zestawów danych. W kolejnych C liniach znajdują
-się liczby N, 1 ≤ N < 231, określające pozycję cyfry w ciągu.
-Wyjście
-Na wyjściu powinno znaleźć się C cyfr, każda w osobnej linii, równych odpowiednio cyfrze na N-
-tej pozycji w ciągu.
+     * One day Bob was bored and started writing down a sequence. It went as follows: 1121231234123451234561234567... 
+     * Find n-th digit of that sequence
+     * 
+     * Input
+     * First line contain number of data sets C, 1 ≤ C ≤ 100.
+     * Next C lines each contain a single number N, 1 ≤ N < 2^31, position of digit to find.
+     * 
+     * Output
+     * C lines each containing a digit at N-th position.
      */
     public sealed class ZagadkowyCiag : ProblemBase
     {

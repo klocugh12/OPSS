@@ -2,22 +2,18 @@ namespace OPSS
 {
     /* Difficulty: 2/5
      * 
-Spróbuj rozwiązać następującą zagadkę:
-"Statek płynie z Warszawy do Gdańska dobę, a z Gdańska do Warszawy dwie doby. Ile płynie
-tratwa z Warszawy do Gdańska?"
-Krótkie wyjaśnienie: statek płynie po Wiśle i posiada własny napęd o stałej w czasie mocy, a zatem
-posiada stałą prędkość względem wody. Kiedy płynie z prądem, pokonuje ten sam dystans szybciej
-niż płynąc pod prąd. Tratwa nie posiada własnego napędu i porusza się z prędkością prądu Wisły.
-Wyjątkowo podamy rozwiązanie zagadki. Tratwa płynie z Warszawy do Gdańska 4 doby. Twoim
-zadaniem będzie jednak rozwiązanie tego problemu dla dowolnych danych.
-Wejście:
-W jedynym wierszu wejścia znajdują się 2 liczby całkowite: N, M, 1 ≤ N < M ≤ 100000, gdzie N
-oznacza czas w jakim statek pokonuje trasę z prądem, a M oznacza czas w jakim ten sam statek,
-pokonuje tę samą trasę pod prąd.
-Wyjście:
-Wynikiem jest jeden wiersz zawierający liczbę oznaczającą czas w jakim trasę pokonuje tratwa.
-Gwarantujemy, że dane będą tak dobrane, że wynikiem będzie dodatnia liczba całkowita mniejsza
-od 2.
+     * A ship travels one hour downstream and two hours upstream. How long would a raft travel downstream?
+     * 
+     * Explanation:
+     * A ship has its own engine and can travel both downstream and upstream, downstream naturally being faster.
+     * A raft has no engine and can only travel downstream with same speed as stream does.
+     * 
+     * Input:
+     * A single line containing two integers: N, M, 1 ≤ N < M ≤ 100000, where N is time ship spends travelling downstream,
+     * while M is time ship spents travelling upstream.
+     * 
+     * Output:
+     * Single integer equal to time raft spends travelling downstream.
      */
     public sealed class Tratwa : ProblemBase
     {

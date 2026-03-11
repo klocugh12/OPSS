@@ -2,27 +2,23 @@ namespace OPSS
 {
     /* Difficulty: 3/5
      * 
-Zdefiniujmy AB-drzewo jako pełne drzewo, którego węzłami będą słowa nad alfabetem {a, b},
-korzeniem będzie słowo puste "0", a dla dowolnego słowa w, jego synami będą słowa: {xw: x
-należy do {a, b}}. Synami słowa w są 2 słowa powstałe w wyniku doklejenia jednej z liter {a, b} na
-początku słowa w. Wszystkie słowa w drzewie są różne. Wszelkie wątpliwości powinien wyjaśnić
-poniższy schemat:
-Pełnym AB-drzewem o wysokości h nazywamy AB-drzewo w którym wszystkie liście są słowami
-o długości h. Z pełnego AB-drzewa o zadanej wysokości (równej długości słowa znajdującego się
-w liściu), będziemy usuwać pewne słowa, wraz z potomkami (poddrzewami). Twoim zadaniem
-będzie wyznaczenie liczby słów które pozostaną w drzewie po usunięciu zadanych słów wraz z
-potomkami.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 10, oznaczająca liczbę
-zestawów danych. W kolejnych wierszach znajdują się zestawy danych. W pierwszym wierszu
-każdego zestawu danych znajduje się liczba naturalna H, 1 ≤ H ≤ 30 - jest to wysokość AB-drzewa.
-W drugim wierszu każdego zestawu danych znajduje się liczba naturalna N, 0 ≤ N ≤ 50000,
-oznaczająca ilość słów które chcemy usunąć z drzewa wraz z ich poddrzewami. W kolejnych N
-wierszach znajdują się słowa które będziemy usuwać. Wszystkie słowa znajdują się w pełnym AB-
-drzewie o wysokości H, i nie ma wśród nich słowa pustego (korzenia).
-Wyjście
-W kolejnych liniach wyjścia powinny znaleźć się liczby słów które pozostały w drzewach z
-kolejnych zestawów danych.
+     * An AB-tree is a complete tree, whose nodes are words made using letters {a, b}.
+     * Its root is an empty word "0". For any word w in a tree, it has two children 
+     * { xw: x in {a, b}}, i.e two words being result of appending one of {a, b} letters
+     * at the beginning of word w. All words in the tree are distinct.
+     * An AB-tree has height h, if it contains words of length h. From a complete tree
+     * we want to remove certain words with all their children.
+     * Find number of words remaining in the tree after removing said words with their children.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 10.
+     * First line of each data contains height of a tree H, 1 ≤ H ≤ 30.
+     * Second line of each data set contains number of words to remove N, 0 ≤ N ≤ 50000.
+     * Following N lines each contain a single word to remove from a tree.
+     * All words are contained within a tree and empty word is not allowed.
+     * 
+     * Output
+     * C lines, each containing number of words remaining in a tree for each respective data set.
      */
     public sealed class ABDrzewo : ProblemBase
     {

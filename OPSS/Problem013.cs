@@ -2,16 +2,16 @@ namespace OPSS
 {
     /* Difficulty: 3/5
      * We're given an infinite tiled board. 
-     * We fill rectangle consisting of m x n tiles with stones, each occupying a single tile.
-     * A stone can jump over another stone horizontally or vertically, if stone to jump to is free.
-     * A stone jumped over is removed from the board.
-     * What is minimum number of stones remaining on the board?
+     * We fill rectangle consisting of m x n tiles with pebbles, each occupying a single tile.
+     * A pebble can jump over another stone horizontally or vertically, if pebbles to jump to is free.
+     * A pebble jumped over is removed from the board.
+     * What is minimum number of pebbles remaining on the board?
      * 
 Input
 Numbers m and n separated by whitespace.
 
 Output
-Minimum number of stones remaining on the board.
+Minimum number of pebbles remaining on the board.
      */
     public sealed class ProstaGra : ProblemBase
     {

@@ -1,36 +1,25 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Dwaj koledzy grają w grę polegającą na dowiązywaniu kolejnych kawałków sznurka do siebie, aż
-do momentu, gdy taka konstrukcja urwie się pod własnym ciężarem. Pierwszy sznurek
-dowiązywany jest przez gracza rozpoczynającego grę do specjalnego haczyka o nieskończonej
-wytrzymałości, a kolejne sznurki dowiązywane na zmianę przez obu graczy, zawsze do sznurka
-który był dowiązywany przez poprzednika.
-Gracze mają do dyspozycji wiele rodzajów sznurków, o różnej wadze i różnej wytrzymałości.
-Wytrzymałość sznurka jest wprost proporcjonalna do jego wagi, a współczynnik wytrzymałości taki
-sam dla wszystkich wag sznurków. Zapasy sznurków każdej wagi są nieskończone. Gracze na
-zmianę dowiązują do sznurka położonego najniżej sznurek o wybranej wadze (tym samym i
-wytrzymałości), a przegrywa ten, po czyim ruchu któryś ze sznurków się zerwie.
-Współczynnik wytrzymałości określa krotność ciężaru jaki wytrzymuje sznurek w odniesieniu do
-jego własnej wagi. Sznurek musi udźwignąć także własny ciężar. Sznurek zrywa się, gdy waga
-sznurków przywiązanych niżej od niego, wraz z jego wagą, przekracza wagę sznurka pomnożoną
-przez współczynik wytrzymałości.
-Twoim zadaniem jest stwierdzenie, dla zadanego zbioru różnych wag dostępnych w grze sznurków
-oraz współczynnika wytrzymałości, czy gracz który rozpoczyna grę wybierając pierwszy sznurek,
-ma strategię wygrywającą. To znaczy, czy może tak wybrać pierwszy i następne sznurki, aby
-niezależnie od wyborów przeciwnika wygrać grę. Gracze na zmianę nie tylko dowiązują wybrane
-sznurki, ale także dokonują wyborów, znając wcześniejsze ruchy przeciwnika.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C,1 ≤ C ≤ 100, oznaczająca ilość zestawów
-danych. W kolejnych wierszach znajdują się zestawy danych. W pierwszym wierszu każdego
-zestawu danych znajduje się liczba N,1 ≤ N < 100 - jest to liczba różnych wag sznurków. W
-kolejnym wierszu znajduje się N liczb całkowitych dodatnich, mniejszych od 1000, posortowanych
-rosnąco, oddzielonych pojedynczymi spacjami. Są to wagi sznurków dostępnych w grze. W
-ostatnim wierszu każdego zestawu znajduje się liczba naturalna - współczynnik wytrzymałości -
-WW, 1 ≤ WW ≤ 100, WW=Wytrzymałość/Waga, dla każdego sznurka.
-Wyjście
-Dla każdego zestawu danych należy wydać na standardowe wyjście linię zawierającą słowo "tak",
-jeśli gracz rozpoczynający grę ma strategię wygrywającą, a słowo "nie" w przeciwnym wypadku.
+     * Alice and Bob play a game, where they append pieces of line in alternating manner, 
+     * until line collapses under its own weight.
+     * First piece is appended to an infinitely durable hook, following pieces are each appended to the last one.
+     * Players can use many pieces, with different weights and durabilities.
+     * Durability of a piece is directly proportional to its weight, and the ratio is the same for all pieces.
+     * Ratio describes how many times its weight a piece can handle. If combined weight of all appended pieces
+     * exceed piece's durability, it breaks and player who appended last piece loses the game.
+     * All pieces are in infinite supply.
+     * Bob starts the game. For any given set of pieces you must determine, if he has a winning strategy.
+     * A winning strategy means that Bob's choices can force a win regardless of Alice's choices.
+     * 
+     * Input
+     * First line contains number of data sets C,1 ≤ C ≤ 100.
+     * First line of each data set contains a single number N, 1 ≤ N < 100, equal to number of available pieces.
+     * Next line contains N positive numbers no greater than 1000 separated by whitespace, equal to weights of available pieces.
+     * Last line of each data set contains a single number WW, 1 ≤ WW ≤ 100, equal to durability to weight ratio of all pieces.
+     * 
+     * Output
+     * C lines, each containg an answer: "tak", if Bob has winning strategy for respective data set, "nie" otherwise.
      */
     public sealed class Sznurki : ProblemBase
     {

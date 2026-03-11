@@ -2,19 +2,15 @@ namespace OPSS
 {
     /* Difficulty: 3/5
      * 
-Masz do dyspozycji nieograniczoną ilość kamieni domina, z których każdy ma wymiary 2x1.
-Twoim zadaniem będzie obliczenie, na ile różnych sposobów można za pomocą nierozróżnialnych
-kamieni domina pokryć prostokąt o wymiarach 3xN.
-Na rysunku pokazano wszystkie sposoby na jakie można pokryć dominem prostokąty 3x2 i 3x4.
-Jest ich odpowiednio 3 i 11.
-Rys. Wszystkie sposoby pokrycia prostokątów o wymiarach 3x2 i 3x4 kamieniami domina.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 2000, oznaczająca liczbę
-zestawów danych. Każdy zestaw danych składa się z jednego wiersza, zawierającego liczbę
-naturalną N, 1 ≤ N ≤ 100000.
-Wyjście
-Dla każdego zestawu danych należy podać jeden wiersz wyniku zawierający liczbę P mod 106,
-gdzie P jest liczbą sposobów na jakie można pokryć prostokąt o wymiarach 3xN.
+     * You have unlimited amount of 2x1 domino tiles of size.
+     * Find number of ways you can tile a 3xN rectangle using those tiles.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 2000.
+     * Each data set consists of a single number N, 1 ≤ N ≤ 100000.
+     * 
+     * Output
+     * C lines, each containing P mod 10^6, where P is number of ways to tile a 3xN rectangle.
      */
     public sealed class Domino : ProblemBase
     {

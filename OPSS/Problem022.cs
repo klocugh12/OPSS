@@ -2,39 +2,26 @@ namespace OPSS
 {
     /* Difficulty: 2/5
      * 
-Pewien matematyk Dobromir oraz pewien fizyk Albert z zamiłowania zajmują się układaniem
-specyficznych układanek z drobnych kamyków. Ich układanki posiadają ciekawą właściwość:
-składają się z ciągu kolumn ułożonych z kamyków tak, że każda następna kolumna (licząc od lewej
-strony) zawiera nie więcej kamyków niż poprzednia. Wszystkie kolumny zaś są "wyrównane" do
-dołu (zaczynają się od najniższego wiersza układanki).
-Swoje układanki Dobromir zwykł opisywać, jak na matematyka przystało, jako ciąg liczb,
-używając następującej konwencji (nazwijmy ją umownie konwencją M): pierwsza liczba oznacza
-ilość wszystkich kamyków w całej układance, zaś kolejne liczby oznaczają ilość kamyków w
-kolejnych kolumnach, rozpoczynając od kolumny w której jest najwięcej kamyków. Albert, nie
-chcąc być gorszym od Dobromira, wymyślił swój, nieco inny sposób opisywania układanek
-(nazwijmy go umownie konwencją F). Używał w tym celu również ciągu liczb, ale takiego, w
-którym kolejne liczby oznaczają ilość kamyków w poszczególnych wierszach układanki
-(rozpoczynając od wiersza znajdującego się na samym dole układanki, w którym jest najwięcej
-kamyków).
-Rys. Przykładowy układ kamyków (konwencja M: 24 8 6 4 4 2; konwencja F: 5 5 4 4 2 2 1 1).
-Pewnego dnia obaj uczeni spotkali się, aby porównać kolekcje swoich układanek, okazało się
-bowiem, że wiele z nich znajduje się w zbiorach obydwu panów. Chcieli takie egzemplarze
-wyodrębnić, jednakże metoda wizualna porównywania układanek "na oko" okazała się bardzo
-żmudna i mało skuteczna. Dobromir i Albert postanowili zatem porównywać swoje dzieła wg
-opisów. Pojawiła się jednak kolejna przeszkoda: przecież opisy układanek dokonywane są w
-różnych konwencjach! Podjęli wspólnie decyzję, że będą "przepisywać" opisy Dobromira do
-formatu, w jakim dokonywał swoich opisów Albert. Pomóż uczonym przebrnąć przez ogromną
-ilość konwersji opisów układanek z konwencji M do konwencji F...
-Wejście:
-W pierwszym wierszu wejścia znajduję się liczba całkowita C, 1 ≤ C ≤ 100, oznaczająca liczbę
-zestawów danych. W kolejnych wierszach znajdują się zestawy danych, z których każdy zawiera
-dokładnie 1 wiersz, będący opisem pewnej układanki w konwencji M. W wierszu każdego zestawu
-znajduje się liczba N, oznaczająca ilość wszystkich kamyków w układance, 1 ≤ N ≤ 1000000, oraz
-po spacji oddzielone pojedynczymi spacjami liczby a1, a2, ..., ai (1 ≤ i ≤ 1000; 1 ≤ ai ≤ 1000)
-określające ilości kamyków w kolejnych kolumnach układanki.
-Wyjście:
-W C wierszach wyjścia należy podać wyznaczony dla każdego zestawu danych opis układanki w
-konwencji F. Kolejne liczby stanowiące opis powinny być oddzielone pojedynczymi spacjami.
+     * Alice and Bob spend time arranging pebbles in specific patterns, such as
+     * each column of the arrangement has no more pebbles than previous ones.
+     * Both Bob and Alice describe such arrangements with sequences.
+     * First element of Bob's sequence is total number of pebbles, followed by numbers of pebbles
+     * in each column, starting from the column with most pebbles. 
+     * Alice's sequence consists of numbers of pebbles in each row instead,
+     * also starting from row with most pebbles.
+     * Sample arrangement (Bob: 24 8 6 4 4 2, Alice: 5 5 4 4 2 2 1 1).
+     * Write a program translating Bob's descriptions to Alice's.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 100.
+     * Following C lines each contain Bob's description of some arrangement.
+     * Each line starts with total number of pebbles N, 1 ≤ N ≤ 1000000,
+     * followed by i numbers a1, a2, ..., ai (1 ≤ i ≤ 1000; 1 ≤ ai ≤ 1000)
+     * sorted in descending order, each meaning number of pebbles in i-th column.
+     * Numbers are separated by a single whitespace.
+     * 
+     * Output
+     * C lines each containing Alice's descriptions of respective arrangement.
      */
     public sealed class Kamyki : ProblemBase
     {
