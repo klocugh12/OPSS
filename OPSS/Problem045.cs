@@ -1,30 +1,24 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Consider following programing language names OPS:
+     * Commands are executed left to right.
+     * Each command is either an inteeger or one of 4 tokens: 'O', 'P', 'S', '.'
+     * Each integer is put on a stack. Other commands are executed as follows:
+     * 'O' - take two numbers from a stack L1, then L2. Put L1-L2 on a stack.
+     * 'P' - take two numbers from a stack. Put their product on a stack.
+     * 'S' - take two numbers from a stack. Put their sum on a stack.
+     * '.' - clear a stack, displaying all numbers put on it in order they were removed from it, and halt.
+     * Write an OPS interpreter.
      * 
-Zespół ludzi tworzących system OPSS chce stworzyć specjalny język programowania OPS., który
-będzie pomagał im w generowaniu testów do zadań konkursowych. Jednak ze względu na brak
-czasu Tobie powierzają napisanie jego interpretera. Język ma być prosty i ma korzystać z notacji
-postfiksowej.
-Interpreter powinien wykonywać program w kolejności występowania w nim poleceń (symboli).
-Poleceniem może być liczba całkowita bądź jedna z 4 operacji: 'O', 'P', 'S', '.'. Po napotkaniu liczby
-interpreter powinien umieścić ją na szczycie stosu. Interpreter po napotkaniu operacji:
-● O (Odejmij) - powinien zdjąć ze stosu liczbę L1, następnie zdjąć drugą liczbę L2 i umieścić
-na szczycie stosu ich różnicę (L2-L1),
-● P (Przemnóż) - powinien zdjąć dwie liczby ze szczytu stosu a następnie umieścić na stosie
-ich iloczyn,
-● S (Sumuj) - powinien zdjąć dwie liczby ze stosu a następnie na stosie umieścić ich sumę,
-● . (Koniec) - powinien zakończyć wykonywanie programu, zdejmować kolejno wszystkie
-liczby ze stosu i wypisać je na standardowe wyjście.
-Wejście
-W pierwszym wierszu znajduje się liczba C, oznaczająca ilość programów, 0 < C ≤ 100. W
-następnych C liniach dostajemy treści programów, w których polecenia oddzielone są
-pojedynczymi spacjami. Każdy program kończy się operacją '.'. Programy będą gwarantować, że
-wartość bezwzględna wyniku każdej operacji 'O', 'P', 'S' nie przekroczy 231-1. Każdy program może
-się składać maksymalnie z 500000 symboli.
-Wyjście
-Dla każdego programu w osobnej linijce wyjścia powinien znaleźć się wynik działania danego
-programu w języku OPS. ;-)
+     * Input
+     * First line contains number of scripts to execute, 0 < C ≤ 100.
+     * Following C lines each contain a script to execute. Scripts are made of commands of OPS language
+     * separated by a whitespace each. Absolute value on a stack will never exceed 2^31 - 1.
+     * Each script is no more than 500000 characters long.
+     * 
+     * Output
+     * C lines, each containing result of executing respective OPS script ;-)
      */
     public sealed class OPS : ProblemBase
     {

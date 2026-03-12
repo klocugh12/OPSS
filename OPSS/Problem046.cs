@@ -1,25 +1,18 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * You have a vending machine, which gives out a change after each transaction.
+     * Given list of coin values and a change to dispense, find minimum number of coins to use.
      * 
-Zadanie
-Napisz program, który dla zadanej kwoty reszty , którą należy wypłacić, oraz dla znanego zestawu
-nominałów monet dostępnych w automacie, obliczy optymalną (minimalną) liczbę monet, jaką
-powinien wypłacić automat. Bajtocki automat posiada nieskończenie wiele monet o zadanym
-nominale.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita C, 0 < C ≤ 100, określająca ilość
-zestawów danych. Każdy zestaw składa się z dwóch wierszy. Pierwszy z nich zawiera dwie liczby
-całkowite N i K oddzielone pojedynczą spacją, gdzie N to kwota reszty jaką trzeba wydać, 0 ≤ N ≤
-1000, zaś K to liczba dostępnych nominałów monet, 0 < K ≤ 100. W drugim wierszu zestawu
-znajduje się K dostępnych nominałów monet, oddzielonych pojedynczymi spacjami. Każdy
-nominał określony jest przez dodatnią liczbę naturalną nie większą niż 1000. Zakładamy, że żaden
-nominał nie występuje więcej niż jeden raz w drugiej linii zestawu.
-Wyjście
-Dla każdego zestawu danych program powinien wypisać na wyjście minimalną możliwą liczbę
-monet jaką powinien wydać automat, aby wydana reszta równa była zadanej kwocie . Jeśli automat
-nie może wydać reszty (bo np. nie posiada monet, którymi mógłby wydać żądaną sumę) należy
-wypisać 0.
+     * Input
+     * First line contains number of data sets C, 0 < C ≤ 100.
+     * First line of each data set contains two numbers N and K separated by a whitespace,  0 ≤ N ≤ 1000, 0 < K ≤ 100.
+     * They are equal to change to dispense and number of coins respectively.
+     * Second line of each data set contains K values of coins used to dispense a change.
+     * Values are unique, positive and no greater than 1000. Each value is separated by a whitespace.
+     * 
+     * Output
+     * C lines, each containing minimum number of coins needed to dispense a change, or 0 if it is not possible for a given value.
      */
     public sealed class Automat : ProblemBase
     {

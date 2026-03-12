@@ -1,12 +1,29 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Wejście:
-W pierszym wierszu znajduje się liczba zestawów danych 0 < d ≤ 100. Każdy zestaw składa się z
-dwóch liczb: liczby pierwszej P, 2 ≤ P ≤ 1000000 i H, 0 ≤ H ≤ 10000 oddzielonych spacją.
-Wyjście:
-Dla każdego zestawu danych powinieneś wypisać liczbę pól (liczb) na planszy (w trójkącie Pascala
-o wysokości H), które nie dzielą sie przez P.
+     * A Pascal's triangle is constructed as follows:
+     * Left and right edges of a triangle are both filled with ones.
+     * Inner numbers inside of a triangle are a sum of two numbers above. Picture below
+     * represents a triangle of height H = 4:
+     * 
+     * H = 0       1
+     * H = 1      1 1
+     * H = 2     1 2 1
+     * H = 3    1 3 3 1
+     * H = 4   1 4 6 4 1
+     * 
+     * Given a triangle of any height H, find number of values in it, which are not divisible
+     * by some given prime number P.
+     * 
+     * Input
+     * First line contains number of data sets d, 0 < d ≤ 100. 
+     * Each data set consists of two numbers separated by a single whitespace.
+     * First number P, 2 ≤ P ≤ 1000000 is equal to a prime number to check.
+     * Second number H, 0 ≤ H ≤ 10000 is equal to triangle's height.
+     * 
+     * Output
+     * d lines, each containing number of values inside triangle of height H, which are not divisible
+     * by P.
      */
     public sealed class Lotki : ProblemBase
     {

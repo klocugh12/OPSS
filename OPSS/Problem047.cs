@@ -1,47 +1,32 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Bandyci obrabowali bank. Będą próbowali przedostać się w bezpieczne miejsce na drugim końcu
-miasta. Jednak okazało się, że ich samochód jest uszkodzony i są zmuszeni uciekać pieszo. Nie
-będą więc, rzecz jasna, uciekać ulicami, a poprzez liczne w mieście parki i tereny niezabudowane
-(dla ułatwienia wszystkie takie tereny nazywać będziemy parkami). Park jest obszarem miasta
-ograniczonym trzema lub więcej ulicami, nie zawierający ulic i niezabudowany. Bandyci mogą
-przemieścić się z parku do parku tylko wtedy, gdy mają one co najmniej jedną wspólną ulicę je
-ograniczającą lub oba sąsiadują ze wspólnym skrzyżowaniem (wtedy bandyci szybko przebiegają
-na drugi koniec ulicy lub skrzyżowania). Bandyci postanowili uciekać tylko i wyłącznie poprzez
-parki, wybierając jedną z możliwych tras, niekoniecznie najkrótszą aby nie ułatwiać pracy
-ścigającej ich policji.
-Przed komendantem policji stoi poważne zadanie złapania bandytów. Wie, że będą uciekać pieszo
-poprzez sąsiadujące parki, ale nie wie dokładnie którędy. Bandyci znajdują się w parku o numerze 1
-i chcą dostać się do parku o numerze p. W parkach o numerach 1 i p bandyci czują się bezpiecznie i
-do tych parków policja nie ma wstępu. Parki 1 i p na całe szczęście nie sąsiadują ze sobą, więc
-policja nie jest bez szans. Jedną z możliwości rozpatrywanych przez komendanta, jest zastawienie
-zasadzek na bandytów w parkach przez które mogą się przemieszczać. Nie może jednak dopuścić
-do tego, by bandyci się wymknęli. Komendant chce wiedzieć, w ilu co najmniej parkach należy
-umieścić policyjne patrole, aby bandyci nie mieli możliwości ucieczki. Zakładamy, że jeśli park jest
-patrolowany, i bandyci spróbują się przez niego przedostać, zostaną złapani. Pomóż komendantowi
-podjąć decyzję i wyznacz minimalną liczbę parków jaką należy patrolować, aby mieć gwarancję że
-bandyci zostaną złapani. Jeśli liczba ta będzie zbyt duża, może nie wystarczyć radiowozów i trzeba
-będzie szybko szukać innego planu, więc to od Ciebie w dużej mierze zależy sukces całej operacji.
-Do dzieła! Każda minuta ma znaczenie!
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, 1<=C<=100, oznaczająca ilość zestawów
-danych. W kolejnych wierszach znajdują się zestawy danych. W pierwszym wierszu każdego
-zestawu danych znajdują się dwie liczby, n i m, 1<=n<m<=100000. Są to odpowiednio: liczba
-skrzyżowań i liczba ulic w mieście. Skrzyżowania są ponumerowane od 1 do n, kolejnymi liczbami
-naturalnymi. W kolejnych m wierszach znajdują się pary liczb oznaczające numery skrzyżowań
-które łączą kolejne ulice. Dwa skrzyżowania mogą być bezpośrednio połączone co najwyżej jedną
-ulicą, a żadne dwie ulice nie przecinają się. W kolejnym wierszu znajduje się liczba p, 3<=p<=300
-oznaczająca liczbę parków. W kolejnych p wierszach znajdują się opisy parków. W każdym
-wierszu opisującym park znajdują się liczby naturalne, oddzielone pojedynczymi spacjami.
-Pierwszą z nich jest liczba skrzyżowań (a tym samym i ulic) sąsiadujących z parkiem, a następnie
-po spacji oddzielone spacjami numery tych skrzyżowań. Parki są ponumerowane od 1 do p i
-podawane w kolejności rosnących numerów. (Przypominamy, że bandyci znajdują się w parku 1 i
-chcą uciec do parku p).
-Wyjście
-W C wierszach wyjścia należy podać wyznaczoną dla każdego zestawu minimalną liczbę patroli
-niezbędną do zatrzymania bandytów przy założeniu, że wybrano plan działania polegający na
-patrolowaniu wybranych parków.
+     * Thieves have robbed the bank and are trying to escape to their hideout.
+     * To avoid being spotted as much as possible, they will be going through numerous city parks.
+     * Each city park is bounded by three or more streets and contains no streets itself.
+     * Thieves can only get from one park to another, if those parks are across a street
+     * or a junction of two streets. Thieves need not pick the shortest possible way to their
+     * hideout. Parks are numbered 1 to p. Thieves are currently in park 1, park p contains their hideout.
+     * City police is trying to catch the thieves. They cannot access parks 1 or p, but they can set up
+     * patrols in any other park. Assume, that if thieves go through patrolled park, they will get caught.
+     * Parks 1 and p are not adjacent to each other, hence it is possible to catch thieves.
+     * You must find minimum number of parks to patrol to ensure thieves are caught.
+     * 
+     * Input
+     * First line contains number of data sets C, 1<=C<=100.
+     * Each data set is described as follows:
+     * First line contains two numbers separated by a whitespace, n and m, 1<=n<m<=100000.
+     * They are, respectively, number of junctions and streets in the city.
+     * Following m lines contain two numbers separated by a whitespace, 
+     * meaning indexes of junctions connecting consecutive streets.
+     * Each two junctions can only be connected by a single street, and streets do not intersect with one another.
+     * Following line contains a single number p, 3<=p<=300, meaning number of parks.
+     * Following p lines start with number of junctions (and hence also streets) surrounding given park,
+     * then contain that many indexes of junctions surrounding that park.
+     * Both parks and junctions in the data set are described in ascending order (1 to p and 1 to m respectively).
+     * 
+     * Output
+     * C lines, each containing minimum number of patrols needed to catch the thieves.
      */
     public sealed class Oblawa : ProblemBase
     {

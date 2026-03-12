@@ -1,34 +1,25 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Jesteś jednym z programistów agencji NASA. Pracujecie nad urządzeniem - specjalną tarczą, która
-ma służyć porozumiewaniu się z kosmitami za pomocą sygnałów świetlnych. Tarcza emitująca
-światło ma postać prostokąta, podzielonego na kwadraty o rozmiarach jednostkowych. Każdy
-element tarczy może być w danym momencie zapalony lub zgaszony. Naukowcy mają nadzieję, że
-odpowiedni dobór kombinacji zapalonych pól tarczy świetlnej pozwoli komunikować się z
-przybyszami z innych planet.
-Programistyczny interfejs tarczy świetlnej jest jednak dość osobliwy - wyjaśnimy tylko to co
-konieczne, zasłaniając się tajemnicą wojskową. W momencie rozpoczynania tworzenia
-wiadomości, wszystkie pola są zgaszone. Wiadomość jest tworzona poprzez umieszczanie na tarczy
-prostokątnych szachownic, przy czym pola każdej szachownicy mają wymiary odpowiadające
-rozmiarom pól tarczy. Każda szachownica składa się z pól aktywnych i nieaktywnych,
-przeplatających się tak jak przeplatają się pola białe i czarne klasycznej szachownicy. W lewym
-górnym rogu każdej szachownicy znajduje się zawsze pole aktywne.
-Każde pole szachownicy przylega dokładnie do jednego z pól tarczy. Pole tarczy zapala się w
-momencie, gdy suma pól aktywnych, które zostały na nie położone, jest nieparzysta.
-Projekt jest już prawie gotowy, pozostało tylko opracowanie kontroli poprawności sygnałów. Tobie
-przypadło zadanie opracowania algorytmu obliczającego sumę wszystkich zapalonych pól tarczy
-świetlnej.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba zestawów danych C, 1<=C<=20. W pierwszym
-wierszu każdego zestawu danych znajduje się liczba N, 1<=N<=1000, oznaczająca liczbę
-szachownic użytych do konstrukcji wiadomości świetlnej. W każdym z kolejnych N wierszy
-zestawu znajdują się 4 liczby całkowite, x1,y1,x2,y2, -1000000000<=x1,y1,x2,y2<=1000000000.
-Określają one pozycję i rozmiary kolejnych szachownic tworzących wiadomość. Lewy górny róg
-szachownicy znajduje się na pozycji (x1,y1) a prawy dolny na pozycji (x2,y2). Układ
-współrzędnych jest tak dobrany, że x1<=x2 oraz y1<=y2.
-Wyjście
-Dla każdego zestawu danych należy wyznaczyć sumę zapalonych pól tarczy świetlnej.
+     * In order to send signals to outer space, a new, peculiar interface has been developed.
+     * It consists of arbitrarily large board divided into square cells.
+     * Each cell can be set to on or off state at any given moment.
+     * Initially all cells are off. In order to create a message, chessboards of limited size are overlapped
+     * with the board, which toggle cells on the board corresponding to black cells on a chessboard.
+     * Top left corner of a chessboard is always black.
+     * If a cell is toggled on and another black piece from another chessboard is put on it, cell is toggled off again.
+     * Your goal is to find number of cells toggled on given positions and dimensions of used chessboards.
+     * 
+     * Input
+     * First line contains number of data sets C, 1<=C<=20.
+     * First line of each data set contains a number N, 1<=N<=1000, which is number of chessboards used.
+     * Following N lines each contain four integers separated by a single whitespace 
+     * x1,y1,x2,y2, -1000000000<=x1,y1,x2,y2<=1000000000. They mean, respectively,
+     * x and y coordinates of top left and bottom right corner of a chessboard.
+     * Assume x1<=x2 oraz y1<=y2.
+     * 
+     * Output
+     * C lines, each containing number of cells turned on for each data set.
      */
     public sealed class KosmiczneSygnaly : ProblemBase
     {

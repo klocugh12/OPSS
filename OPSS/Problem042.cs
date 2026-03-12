@@ -1,22 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Zadanie
-Twoim zadaniem będzie stwierdzenie, czy dla zadanego początkowego układu klocków, możliwe
-będzie w skończonej liczbie ruchów doprowadzenie do wygranej. Dodatkowo nie będziemy
-ograniczać się do klasycznej wersji gry, ale wprowadzimy dowolne rozmiary planszy, zawsze
-jednak będzie tylko 1 puste pole.
-Fot. Klasyczna "Piętnastka".
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 10, oznaczająca ilość
-zestawów danych. Każdy zestaw danych rozpoczyna się linią zawierającą 2 liczby naturalne W i K,
-2 ≤ W, K ≤ 100. Liczby te oznaczają odpowiednio liczbę wierszy oraz kolumn w układance. W
-każdym z kolejnych W wierszy zestawu danych znajduje się K liczb naturalnych z zakresu 0..W*K-
-1. Są to numery klocków na poszczególnych pozycjach w momencie rozpoczęcia gry. Numer 0
-oznacza puste miejsce za pomocą którego dokonujemy ruchów.
-Wyjście
-Dla każdego zestawu danych w osobnych liniach należy wypisać słowo "tak" jeśli gracz może
-doprowadzić do wygranej albo słowo "nie", jeśli jest to niemożliwe.
+     * A sliding puzzle consists of N x N square with a single free tile. Other tiles are numbered 1 .. N*N.
+     * Using free tile, manipulate other tiles in other to line up all tiles in ascending order,
+     * left to right, top to bottom, and the free tile is in the bottom right corner.
+     * Not all initial arrangements are solvable. You need to determine, whether given
+     * initial arrangement is solvable.
+     * 
+     * Input
+     * First number contains number of data sets C, 1 ≤ C ≤ 10.
+     * First line of each data set contains two numbers W and K, 2 ≤ W, K ≤ 100, 
+     * a number of rows and columns respectively for a given arrangement. 
+     * Following W rows each contain K numbers each separated by a single whitespace,
+     * describing subsequent rows of an arrangement.
+     * All numbers are from the range 0 .. W*K-1. 0 represents a free tile.
+     * 
+     * Output
+     * C lines, each containing an answer for a respective data set: "tak", if an arrangement
+     * is solvable, "nie" otherwise.
      */
     public sealed class Pietnastka : ProblemBase
     {

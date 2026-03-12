@@ -2,18 +2,17 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Difficulty: 2/5
      * 
-Liczbą wyważoną nazwiemy dodatnią liczbę naturalną posiadającą tyle samo dzielników
-parzystych co nieparzystych. Twoim zadaniem będzie wyznaczenie dla zadanej dodatniej liczby N
-najmniejszej liczby wyważonej większej od N.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, określająca ilość zestawów danych, 1 ≤ C ≤
-100. Każdy z C zestawów danych składa się z jednego wiersza zawierającego jedną dodatnią liczbę
-naturalną N, składającą się co najwyżej z 200 cyfr.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wyznaczyć najmniejszą liczbę
-wyważoną większą od zadanej liczby N z każdego zestawu danych.
+     * A balanced number is a number, which has same number of odd and even divisors.
+     * For a given N, find smallest number greater than N.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 100. 
+     * Each data set contains a natural number N. N has at most 200 digits.
+     * 
+     * Output
+     * C lines, each containing smallest balanced number greater than respective N numbers.
      */
     public sealed class LiczbyWywazone : ProblemBase
     {

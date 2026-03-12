@@ -1,19 +1,16 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Your task is to determine, whether number of ways you can select K out of N items is odd or even.
      * 
-Doszedłeś do etapu na którym czeka na Ciebie Cwany Lutek. Aby przejść dalej musisz poprawnie
-odpowiedzieć na pytanie przez niego postawione. Test Lutka jest krótki i zawsze taki sam. Cwaniak
-rzuca dwie liczby N i K, a Ty musisz odpowiedzieć, czy liczba sposobów wskazania K
-przedmiotów ze zbioru wszystkich N przedmiotów (kolejność wskazywania nie ma znaczenia) jest
-liczbą parzystą czy nieparzystą.
-Wejście
-W pierwszym wierszu znajduje się liczba d, określająca ilość zestawów danych, 1 ≤ d ≤ 1000.
-Każdy zestaw znajduje się w osobnej linii i zawiera dwie liczby całkowite N i K, 0 ≤ N, K ≤
-1000000000, oddzielone pojedynczą spacją.
-Wyjście
-Dla każdego zestawu danych w oddzielnej linii wyjścia powinieneś wypisać jedną literę 'P' jeśli
-liczba sposobów jest liczbą parzystą lub 'N' jeśli jest liczbą nieparzystą.
+     * Input
+     * First line contains number of data sets d, 1 ≤ d ≤ 1000.
+     * Each data set is defined by a single line containing two numbers N and K, 
+     * 0 ≤ N, K ≤ 1000000000, separated by a single whitespace.
+     * 
+     * Output
+     * d lines, each containing an answer for respective data set - a single letter 'P' if number of ways is even,
+     * 'N' otherwise
      */
     public sealed class CwanyLutek : ProblemBase
     {

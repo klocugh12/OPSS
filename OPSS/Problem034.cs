@@ -12,8 +12,13 @@ namespace OPSS
      * However, honey stored in triangular sections of honeycomb cannot be reused and is going to waste.
      * Find out, how much honey is going to waste.
      * A honeycomb is a polygon without holes that can be described with a way to walk around it,
-     * using numbers 1..6, where 1 describes step at 0 degrees towards x-axis, 2 describes step at 60 degrees,
-     * 3 - 120 degrees, and so on.
+     * using numbers 1..6, where 1 describes step at 0 degrees towards x-axis, and values increase
+     * every 60 degrees clockwise, as shown below:
+     *   5   6
+     *    \ /
+     * 4 - * - 1
+     *    / \
+     *   3   2
      * Given such description, calculate number of triangular sections of a honeycomb.
      * 
      * Input
