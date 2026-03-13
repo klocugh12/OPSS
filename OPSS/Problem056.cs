@@ -2,14 +2,16 @@ namespace OPSS
 {
     /* Difficulty: 2/5
      * 
-Wejście
-W pierwszej linii znajduje się liczba osób B, 1≤ B≤100000 , które zakupiły bilet na danej trasie. W
-kolejnych B liniach znajdują się liczby całkowite nieujemne: t0 i t1, 0≤ t0< t1≤ 2^31 - 1; oddzielone
-pojedynczą spacją. Są to odpowiednio: czas wejścia do pociągu oraz czas wyjścia z pociągu
-kolejnej osoby.
-Wyjście
-Na standardowym wyjściu powinna być wypisana jedna liczba, będącą maksymalną ilością osób
-znajdujących się równocześnie w pociągu.
+     * A train travels from Lublin to Kraków. It stops at several midway stations, where passengers 
+     * board the train or leave it. Find maximum number of passengers on a train during a trip.
+     * 
+     * Input
+     * First line contains total number of passengersm on a trip B, 1≤ B≤100000.
+     * Following B lines contain two numbers separated by a whitespace, t0 and t1, 0 ≤ t0 < t1 ≤ 2^31 - 1
+     * They are, respectively: boarding time and leaving time for each passenger.
+     * 
+     * Output
+     * A single number equal to maximum number of passengers on a train during the trip.
      */
     public sealed class LublinKrakow : ProblemBase
     {

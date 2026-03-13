@@ -1,24 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Alice and Bob have plenty of chocolate bars left after a birthday party.
+     * They decided they will be eating it piece by piece in alternating manner,
+     * with Alice taking the first piece out of first chocolate bar.
+     * They are however wondering, who will eat last remaining piece given all those chocolate bars?
+     * Help them find out a solution.
      * 
-Ala obchodziła niedawno imieniny i zaprosiła swoich przyjaciół na małe przyjęcie. Każdy ze
-znajomych wiedząc, że jest ona wielkim łasuchem, przyniósł jej po tabliczce czekolady. Ala
-przygotowała dla swoich przyjaciół dużo innych smakołyków którymi mogła ich poczęstować, więc
-słodkie prezenty zostawiła na później.
-Na drugi dzień Ala zebrała wszystkie czekolady, z zamiarem podzielenia się nimi ze swoim bratem.
-Zaczęła się jednak zastanawiać, czy jeżeli to ona weźmie pierwszy kawałeczek z pierwszej
-tabliczki, i będą brać po jednej "cegiełce" na zmianę, to kto zje ostatni kawałeczek ostatniej
-tabliczki?... Pomóż Ali rozwikłać ten problem.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba D, określająca ilość zestawów danych, 1 ≤ D ≤
-20. W kolejnych wierszach wejścia znajdują się zestawy danych. W pierwszej linii jednego zestawu
-znajduję się liczba C, 1 ≤ C ≤ 100, określająca liczbę tabliczek czekolady. W kolejnych C liniach
-zestawu znajdują się wymiary kolejnych tabliczek. Wymiary opisane są przez dwie liczby
-naturalne: a, b, 0 < a, b < 2^31, oddzielone pojedynczą spacją.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać jedną z dwóch liczb: 0,
-jeśli ostatni kawałek zje Ala, 1 - jeśli ostatni kawałek zje jej brat.
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 20. 
+     * First line of each data set contains number of chocolate bars C, 1 ≤ C ≤ 100.
+     * Following C lines each contain two numbers a and b,  0 < a, b < 2^31,
+     * describing dimensions of each chocolate bar. a and b are separated by a single whitespace.
+     * 
+     * Output
+     * D lines, each containing an answer, who will eat last remaining piece. 0 if Alice, 1 if Bob.
      */
     public sealed class Czekoladka : ProblemBase
     {

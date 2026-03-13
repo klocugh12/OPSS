@@ -1,27 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Firma Miracle, idąc z duchem czasu postanowiła stać się firmą przyjazną środowisku naturalnemu
-(w chwili obecnej 30% energii elektrycznej pochodzi ze źródeł odnawialnych). Zarząd firmy podjął
-decyzję, że wszystkie odpady bedą segregowane i umieszczane w specjalnych kontenerach, w
-każdym inny rodzaj. Segregowanie odpadów powoduje dość duże przestoje w pracy - więc w
-interesie Miracle jest, aby trwało możliwie najkrócej.
-Odpady będą segregowane przez robota, który w danym momencie może przenosić tylko jeden
-przedmiot. Czynności wykonywane przez robota sprowadzają się do wyjęcia przedmiotu z
-kontenera i przełożenie go do docelowego kontenera. Jeden przedmiot może być przeniesiony tylko
-jeden raz. Przyjmujemy, że koszt przeniesienia jednego przedmiotu wynosi 1 jednostkę czasu.
-Zakładamy, że kontenery mają nieograniczoną pojemność. Jeżeli przedmioty są posortowane, to
-robot kończy pracę.
-W celu poprawnego zaplanowania całej operacji należy określić, ile czasu zajmuje segregowanie w
-najlepszym i najgorszym przypadku.
-Wejście
-W pierwszym wierszu znajduje się liczba kontenerów N, 1≤ N≤ 200 równa liczbie rodzajów
-odpadów. W kolejnych N wierszach znajduje się opis zawartości kontenerów. Zawartość każdego
-kontenera określa N liczb x1,x2,..., xn równych odpowiednio ilości przedmiotów rodzaju 1,2..n 0≤ xi≤
-1000, 1≤ i≤ N.
-Wyjście
-Na wyjściu powinny znaleźć się dwie liczby równe odpowiednio minimalnej i maksymalnej liczbie
-jednostek czasu potrzebnej na posegregowanie odpadów.
+     * A company needs to segregate its waste to become environmentally friendly.
+     * There are N bins, each dedicated for one type of waste. To segregate waste, a robot is employed
+     * to move waste item by item between containers. Each item can only be moved once, and moving any item
+     * takes a single unit of time. Work is done when all items are segregated in distinct containers,
+     * i.e., there is only one type of waste in each container.
+     * Find out best and worst case for sorting waste.
+     * 
+     * Input
+     * First line contains number of containers (and also waste types) N, 1 ≤ N ≤ 200.
+     * Each of the following N lines contains N numbers separated by a whitespace.
+     * Numbers x1,x2,..., xN represent amount of waste of each type 1 to N, 0 ≤ xi≤ 1000, 1 ≤ i ≤ N.
+     * 
+     * Output
+     * Two numbers separated by a whitespace, equal to respectively shortest and longest time needed
+     * to segregate waste.
      */
     public sealed class Segregacja : ProblemBase
     {

@@ -2,15 +2,19 @@ namespace OPSS
 {
     /* Difficulty: 3/5
      * 
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba D, określająca ilość zestawów danych, 1 ≤ D ≤
-5000. W kolejnych wierszach wejścia znajdują się zestawy danych. Każdy z D zestawów danych
-składa się z jednej linii zawierającej, oddzielone spacjami, 4 liczby całkowite Sx, Sy, Kx, Ky,
--1000000 ≤ Sx, Sy, Kx, Ky ≤ 1000000. Sx, Sy określają współrzędne startowe, Kx, Ky - współrzędne
-końcowe skoczka na nieskończonej szachownicy.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać minimalną liczbę
-ruchów potrzebną do przemieszczenia skoczka z pola (Sx,Sy) do pola (Kx,Ky).
+     * A knight is a chess piece which moves in L-shaped pattern. First, it moves 2 squares in 
+     * one of four direction, then it moves one square in direction perpendicular to previous one.
+     * Initially, a knight is in position (Sx, Sy). Find minimum number of moves it needs to reach
+     * a given position (Kx, Ky)
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 5000. 
+     * Each data set consists of a single line containing four numbers seaparated by a whitespace each.
+     * They are, respectively, Sx, Sy, Kx, Ky, -1000000 ≤ Sx, Sy, Kx, Ky ≤ 1000000. 
+     * Sx and Sy describe starting position, Kx and Ky describe final position to reach.
+     * 
+     * Output
+     * D lines, each containin minimum number of moves knight needs to get from (Sx,Sy) to (Kx,Ky).
      */
     public sealed class Skoczek : ProblemBase
     {

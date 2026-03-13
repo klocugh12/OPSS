@@ -1,42 +1,29 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Your task is to determine, what shape is on a scanned image.
+     * It can be either of three: square, triangle, rectangle. Assume following:
+     * All images are black and white.
+     * Ellipse's axis and rectangle's sides are always parallel to the edges of the image.
+     * A triangle cannot have an obtuse angle.
+     * One side of a triangle is parallel to the edges of the image.
      * 
-Andrzej i Bartek (Alice i Bob jak lubią amerykanie) oglądali film "Ghost Busters", w którym Dr.
-Peter Venkman (grany przez Billa Murraya) przeprowadza badania zdolności telepatycznych
-studentów. Badanie to polega na pokazywaniu jednemu badanemu tzw. karty Zenera, która zawiera
-jeden z pięciu symboli: gwiazda, fale, krzyż, koło, kwadrat. Badany "nadawca" stara się przekazać
-jej obraz telepatycznie drugiemu badanemu ("odbiorcy"), który wskazuje jedną z pięciu kart.
-Chłopcy postanowili powtórzyć tę zabawę przy pomocy komputerów. Po zastanowieniu doszli do
-wniosku, że na początek, kiedy nie mają jeszcze dużej wprawy, karty Zenera są zbyt
-skomplikowane i wymyślili swoje symbole: elipsę, prostokąt, trójkąt. Ustalili też, że osie elipsy i
-boki prostokąta będą zawsze równoległe do krawędzi obrazu, żaden z kątów trójkąta nie będzie
-rozwarty, co najmniej jeden bok trójkąta będzie równoległy do krawędzi obrazu. Andrzej
-namalował kilka takich figur czarnym pisakiem, i przesłał ich skanowane obrazy do Bartka, którego
-zadaniem było odgadnięcie jaki obraz został przesłany. Aby zagadka nie była zbyt prosta, pliki ze
-skanera zostały pozbawione nagłówków i zakodowane. Rozwiązanie utrudniała też niewielka (64
-kB) pamięć komputerów, którymi dysponowali chłopcy (to był początek lat 80-tych!).
-Spróbuj czy ty też jesteś dobrym komputerowym "telepatą" i czy odgadniesz, jaką figurę skanował
-Andrzej. Masz do dyspozycji znacznie więcej pamięci na przechowanie danych, bo aż 512 kB.
-Zadanie
-Należy podać numer identyfikujący figurę: 1 - prostokąt, 2 - elipsę, 3 - trójkąt.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba D, określająca ilość zestawów danych, 1 ≤ D ≤
-10. Każdy z D zestawów danych składa się z dwóch wierszy. W pierwszym wierszu zestawu
-znajdują się dwie liczby całkowite H i B oddzielone jedną spacją. H oznacza wysokość obrazu
-liczoną w pikselach: 9 ≤ H ≤ 2000, B liczbę znaków szesnastkowych przypadającą na jedną linię
-obrazu, 3 ≤ B ≤ 500. Szerokość obrazu liczona w pikselach (L) jest zatem równa: L=4B. W drugim
-wierszu znajduje się HxB znaków ze zbioru: [0,1,2,..,9,A,B,C,D,E,F], oznaczających cyfry
-szesnastkowe, którymi został zakodowany skanowany rysunek.
-Każda cyfra szesnastkowa oznacza 4 punkty obrazu (piksele). W jej rozwinięciu binarnym 1
-oznacza kolor czarny, 0 oznacza białe tło. Pierwsza cyfra szesnastkowa opisuje lewy dolny
-narożnik obrazu.
-Do konwersji obrazów z formatu .BMP (monochromatyczna bitmapa) można posłużyć się
-zamieszczonym programem.
-Rys. Przykładowy obraz elipsy i trójkąta.
-Wyjście
-Na wyjściu, dla każdego zestawu, należy wypisać liczbę 1, 2 lub 3, która oznacza identyfikator
-figury.
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 10. 
+     * Each data set consists of two rows.
+     * First row of each data set consists of two numbers separated by a whitespace H and B,
+     * H is equal to height of the image in pixels, B is equal to length of line representing
+     * a single row of image, 9 ≤ H ≤ 2000, 3 ≤ B ≤ 500.
+     * Second row of each data set consists of HxB hexadecimal digits 0..9A..F.
+     * Each digit represents 4 pixels of an image, with black bits set to 1 and white to 0.
+     * Therefore, number of pixels in each line of an image is equal to L=4B.
+     * First digit represents bottom left corner of an image.
+     * 
+     * Output
+     * D lines, each containing a single number representing an answer:
+     * 1 - if image contains a rectangle.
+     * 2 - if image contains an ellipse.
+     * 3 - if image contains a triangle.
      */
     public sealed class KomputerowaTelepatia : ProblemBase
     {

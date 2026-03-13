@@ -1,35 +1,30 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * 
-Agencja wywiadu, która zleca Ci od czasu do czasu tajne zadania, ma dla Ciebie kolejny problem
-do rozwiązania. W jej OPeracyjnej Sieci Szyfrów (OPSS) pojawił się kolejny szyfr. Według
-informacji agentów jest on wykorzystywany przez terrorystów do szyfrowania informacji. Na
-szczęście udało się znaleźć algorytm, którym kodowane są wiadomości. Twoim zadaniem jest
-napisanie programu, który odkoduje informację, a zatem będzie działał odwrotnie niż znaleziony
-algorytm. Algorytm wygląda następująco:
-C/C++:
-int foo ( int n )
-{
-return n ^ (n >> 1);
-}
-Pascal:
-function foo ( n : longint ) : longint;
-begin
-foo := n xor (n shr 1);
-end;
-Jeśli Twoja funkcja będzie nazywać się oof wówczas wynik wywołania oof(foo(n)) powinien dać
-liczbę n.
-Zadanie
-Napisz program, który dla zadanej liczby całkowitej n obliczy wartość foo(n) oraz oof(n).
-Wejście
-Każda linia wejścia zawiera dokładnie jedną liczbę całkowitą n, 0 ≤ n ≤ 2^31 - 1. Wczytywanie liczb z
-wejścia należy zakończyć gdy n będzie równe 0 - dla tego wiersza Twój program nie powinien nic
-wypisywać na standardowym wyjściu.
-Wyjście
-I-ta linia wyjścia powinna zawierać dokładnie dwie wartości: foo(n), (n) oddzielone pojedyńczą
-spacją, gdzie n jest I-tą wczytaną liczbą, foo(n) to wynik szyfrowania liczby n, zaś oof(n) to wynik
-deszyfrowania liczby n.
+     * Consider following cipher:
+    
+    C/C++:
+    int foo ( int n )
+    {
+        return n ^ (n >> 1);
+    }
+    
+    Pascal:
+    function foo ( n : longint ) : longint;
+    begin
+        foo := n xor (n shr 1);
+    end;
+
+    Write a function that works other way round.
+    If it's named oof, then oof(foo(n)) = n.
+
+    Input
+    Each line of input contains a single number n, 0 ≤ n ≤ 2^31 - 1.
+    Last line is always equal to zero.
+
+    Output
+    For all non-zero lines write two values foo(n) and oof(n) separated by a whitespace,
+    where foo(n) is result of above function and oof(n) is its inverse.
      */
     public sealed class Szyfr : ProblemBase
     {

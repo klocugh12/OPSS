@@ -1,34 +1,24 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Edek zawsze lubił chomiki. Jeszcze w czasach szkolnych opiekował się tymi zwierzętami w
-pracowni biologicznej, a w domu hodował chomiki syryjskie. Po maturze wybrał studia na
-Wydziale Biologii. Właśnie zbliża się koniec studiów i oczywiście Edek (a teraz właściwie już
-Edward) wybrał temat pracy magisterskiej, który, jak zapewne już odgadliście, związany jest z
-hodowlą chomików. Niedawno Wydział otrzymał dwie pary chomików egzotycznej rasy, która
-dosyć wolno (jak na chomiki) się rozmnaża. Promotor zasugerował Edkowi, aby oszacował
-liczebność populacji nowej rasy po kilku latach.
-Samice chomików nowej rasy rodzą, przy dobrych warunkach, jedną parę co miesiąc. Małe chomiki
-szybko dojrzewają i po miesiącu zdolne są już zostać rodzicami. Z dwóch par chomików, które
-otrzymał wydział po miesiącu urodziły się jednak, zapewne z powodu stresu związanego ze zmianą
-miejsca pobytu, tylko 2 młode, na szczęście była to para. W drugim miesiącu sytuacja sie
-powtórzyła, ale juz w nastepnych miesiącach wszystko potoczyło się normalnie czyli z trzech par
-"starych" urodziły się 3 pary młodych itd. Edek zaczął zliczać pary: chomików i na początku praca
-choć żmudna szła mu bez specjalnych trudności: pierwszy miesiąc - 3, drugi miesiąc - 4, trzeci - 7,
-po roku 521 par. Liczby rosły tak szybko, że Edek zaczął się obawiać czy przypadkiem chomiki nie
-będą mnożyć się szybciej niż on będzie dodawał!
-Pomóż pracowitemu studentowi biologii oszacować liczbę chomików po wielu latach hodowli,
-zakładając, że nowa rasa chomików jest bardzo, bardzo długowieczna. Edek będzie zadowolony
-gdy podasz długość i 10 pierwszych cyfr tej liczby.
-Wejście
-W pierwszej linii wejścia znajduje się liczba D, określająca ilość zestawów danych, 1 ≤ D ≤ 1000.
-W kolejnych wierszach wejścia znajdują się zestawy danych. Każdy z D zestawów danych składa
-się z wiersza zawierającego jedną dodatnią liczbę naturalną L, oznaczającą liczbę lat hodowli L, 1 ≤
-L ≤ 5000.
-Wyjście
-Dla każdego zestawu danych, w osobnej linii wyjścia, należy wypisać liczbę cyfr N, z których
-składa się poszukiwana przez Edka liczba chomików C a po spacji 10 początkowych cyfr liczby C.
-W przypadku gdy N < 10, należy wypisać dokładnie N cyfr.
+     * A certain hamster colony is particularly prolific at breeding.
+     * Each pair of hamsters births two hamsters every month.
+     * Newborn hamsters are capable of breeding after one month.
+     * Colony starts with two pairs of hamsters. For some reason, in the first month only two hamsters were born.
+     * Same thing happened next month. In the third month things went back to normal - 
+     * three mature pairs of hamster gave birth to 3 pairs of young ones.
+     * To recap: first month results in three pairs, second - four pairs, third - seven pairs.
+     * After one year we had 521 pairs. Your task is to track the growth after given number
+     * of years, assuming longevity is not the issue. 10 most significant numbers of result are enough.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 1000.
+     * Each data set consists of a single line containin a single number L, 1 ≤L ≤ 5000, meaning number of years to track.
+     * 
+     * Output
+     * D lines, each containing two numbers separated by a whitespace. 
+     * First number is a number of digits N of resulting number of hamsters C.
+     * Second number is first 10 digits of number C, or, if N < 10, all of them.
      */
     public sealed class ChomikiEdka : ProblemBase
     {

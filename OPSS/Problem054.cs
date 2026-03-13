@@ -1,25 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * A nonnegative integer H is HEX-palindromic, if there exists a natural number k > 1
+     * such as multiplying H times k and reversing it, we get H again, if we use hexadecimal
+     * representation. No leading zeros are allowed.
+     * Example: 17340 dec (43BC hex) is HEX-palindromic (17340 * 3 = 52020 dec,
+     * 43BC * 3 = CB34 hex).
+     * Find largest HEX-palindromic number lesser than any given N.
      * 
-Nieujemną liczbę całkowitą H nazwiemy HEX-palindromiczną jeśli istnieje liczba naturalna k > 1
-taka że, odwrócony zapis szesnastkowy liczby H jest taki sam jak zapis szesnastkowy liczby H*k
-(rozpatrujemy wyłącznie zapisy szesnastkowe bez wiodących zer na początku).
-Np. Liczba 17340 (szesnastkowo: 43BC) jest liczbą HEX-palindromiczną (17340*3=52020,
-szesnastkowo: 43BC*3=CB34).
-Zadanie
-Twoim zadaniem będzie wyznaczenie największej liczby HEX-palindromicznej mniejszej od
-zadanej liczby N.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, określająca ilość zestawów danych, 1 ≤ C ≤
-1000. W kolejnych liniach wejścia znajdują się zestawy danych. Każdy z C zestawów danych
-składa się z jednego wiersza zawierającego zapis szesnastkowy liczby N, N ≥ 0. Zapis szesnastkowy
-liczby N zawiera co najwyżej 10 znaków (nie występują w nim zera wiodące). Dozwolone znaki
-systemu szesnastkowego to cyfry 0-9, duże litery A,B,C,D,E,F.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać zapis szesnastkowy
-największej liczby HEX-palindromicznej mniejszej od zadanej liczby N. W przypadku, gdy taka
-liczba nie istnieje, należy wypisać liczbę 0.
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 1000.
+     * Each data set consists of a single line containing a hexadecimal representation
+     * of a number N, N ≥ 0. It has at most 10 digits and no leading zeros.
+     * Letters are uppercase.
+     * 
+     * Output
+     * C lines, each containing largest HEX-palindromic number lesser than a given N,
+     * or 0 if there is no such number.
      */
     public sealed class LiczbyHEXPalindromiczne : ProblemBase
     {
@@ -33,7 +30,7 @@ liczba nie istnieje, należy wypisać liczbę 0.
             for(int i = 1; i <= N; i++)
             {
                 var s = input[i];
-                if(s.Length < 4 || (s.Length == 4 && s.CompareTo("10EF") < 0))
+                if(s.Length < 4 || (s.Length == 4 && s.CompareTo("10EF") <= 0))
                 {
                     output.Add("0");
                     continue;

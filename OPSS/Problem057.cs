@@ -3,40 +3,36 @@ using System.Drawing;
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Zadanie
-Należy podać wartość promieniowania oraz współrzędne punktu, w którym to promieniowanie jest
-najmniejsze. Punkt musi należeć do obszaru leżącego poza zasięgiem dział laserowych. Dane,
-którymi dysponuje robot są następujące:
-1. Liczba dział laserowych (N), wymiar przestrzeni (W) w której rozgrywa się wojna (W=2 -
-obszar płaski, W=3 - przestrzeń trójwymiarowa, W>3 - hiperprzestrzeń).
-2. Działo laserowe o numerze i opisane jest przez współrzędne punktu działania Di i składowe
-wektora Li wskazującego główny kierunek rażenia. Działo ostrzeliwuje tylko tę połowę
-płaszczyzny (przestrzeni, hiperprzestrzeni), którą wskazuje wektor Li. Przebywanie na
-prostej (płaszczyźnie, hiperpłaszczyźnie) rozdzielającej obie połowy jest bezpieczne,
-wkroczenie na obszar wskazywany przez wektor powoduje zniszczenie robota. Niektóre
-działa mogą znajdować się obszarze ostrzału (np. L8 na rysunku) - ponieważ nie ograniczają
-one obszaru bezpiecznego, powinny być zignorowane.
-3. Współrzędne punktu A, w którym promieniowanie jest zerowe oraz składowe wektora
-promieniowania R, wskazującego kierunek wzrostu i intensywność promieniowania.
-Wartość promieniowania w punkcie P, oblicza się mnożąc moduł wektora promieniowania
-|R| przez odległość d punktu P od prostej (płaszczyzny, hiperpłaszczyzny) do której wektor
-promieniowania jest prostopadły.
-Wejście
-W pierwszym wierszu wejścia podana jest para liczb naturalnych, oddzielona jedną spacją: N W,
-gdzie N jest liczbą dział laserowych, 2<N<1024, a W wymiarem przestrzeni, 1<W≤10. Drugi
-wiersz zawiera 2W liczb rzeczywistych oddzielonych spacjami, z których W początkowych liczb
-jest współrzędnymi punktu A (punktu leżącego na granicy zerowego promieniowania), a W
-następnych liczb oznacza składowe wektora promieniowania R. Dalej następuje N wierszy po 2W
-liczb każdy, które oznaczają współrzędne pozycji działa Di i składowe wektora Li wskazującego
-główny kierunek rażenia działa. Wszystkie współrzędne punktów (Aj, Dij, 1 ≤ i ≤ N, 1 ≤ j ≤ W)
-występujące na wejściu spełniają warunki: 0 ≤ Aj, Dij <10^9. Wszystkie składowe wektorów (Rj,
-Lij, 1 ≤ i ≤ N, 1 ≤ j ≤ W) występujące na wejściu spełniają warunki: -10^9< Rj, Lij <10^9 .
-Wyjście
-Na wyjściu, w jednym wierszu, należy wypisać W+1 liczb całkowitych oddzielonych pojedynczymi
-spacjami. Pierwsza liczba p oznacza wartość promieniowania w znalezionym punkcie, 0≤ p <109, a
-W następnych liczb to współrzędne tego punktu, -10^9< Xi <10^9. Dane występujące w testach zostały
-tak dobrane, ze wynikami są liczby całkowite. Dane wejściowe gwarantują, że znaleziony punkt jest
-jednoznaczny.
+     * Consider W-dimensional space.
+     * It contains a number of laser cannons bounding the safe area. 
+     * Each cannon is placed in some Di point and is described by a vector Li indicating its direction.
+     * Half of the whole space is under the influence of each individual cannon. 
+     * It is safe to be behind the cannon or on a line (in case of 2D space).
+     * Some cannons may be inside region of space that is already under the influence of another cannon,
+     * and as such those cannons can be ignored.
+     * Now, consider there is a hazardous radiation in the space. It is equal to 0 at certain
+     * point of the space A. Intensity of radiation grows along some vector R.
+     * Intensity of radiation at any given point P is a product of modulus of R (|R|)
+     * by distance to a line (in case of 2D space) perpendicular to R vector anchored at point A.
+     * Your task is to find a safe point with minimum radiation intensity. 
+     * 
+     * Input
+     * First line contains two numbers separated by a whitespace N and W,
+     * where N is number of cannons 2 < N < 1024, and W is number of dimensions of a space,  1 < W ≤ 10.
+     * Second line contains 2W real numbers separated by a whitespace.
+     * First W numbers are coordinates of point A (zero radiation point).
+     * Second W numbers are coordinates of a radiation vector R.
+     * Following N lines contain 2W real numbers separated by a whitespace each.
+     * First W numbers in each of those lines are coordinates of a cannon Di.
+     * Second W numbers in each of those lines are coordinates of vector Li.
+     * All points' coordinates (Aj, Dij, 1 ≤ i ≤ N, 1 ≤ j ≤ W) meet following conditions: 0 ≤ Aj, Dij <10^9.
+     * All vectors' coordinates (Rj, Lij, 1 ≤ i ≤ N, 1 ≤ j ≤ W) meet following conditions: -10^9< Rj, Lij <10^9.
+     * 
+     * Output
+     * Single line containing W+1 integer numbers separated by a whitespace each. 
+     * First number is radiation intensity in found point p, 0 ≤ p < 10^9.
+     * Following W numbers are that point's coordinates, -10^9 < Xi < 10^9.
+     * Input data guarantees that there is only one solution and that result only contains integers.
      */
     public sealed class SztukaPrzetrwania : ProblemBase
     {

@@ -1,28 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Jedna z wiodących na rynku sieci telefonii komórkowej wykonała szereg analiz komunikacji
-pomiędzy nadajnikami rozmieszczonymi na terenie całego kraju. W wyniku badań ustalono, że
-połączenie zostanie tak skonfigurowane, iż każdy nadajnik będzie komunikował się z każdym
-innym albo bezpośrednio, albo za pomocą tylko jednego nadajnika pośredniczącego. Aby zapewnić
-maksymalny komfort usług postanowiono, że w przypadku wyłączenia lub awarii pewnej liczby
-nadajników, komunikacja pomiędzy pozostałymi nadajnikami (o ile jest w ogóle możliwa) będzie
-wymagała także co najwyżej jednego nadajnika pośredniczącego. W celu ograniczenia liczby
-możliwych konfiguracji do sprawdzenia wykluczono połączenia typu "każdy z każdym".
-Firma telekomunikacyjna rozpatrzyła efektywność i koszty każdej możliwej konfiguracji
-spełniającej powyższe założenia. Jednak ostatnio skradziono z firmy pewne dokumenty i nie
-wiadomo, czy były wśród nich wyniki badań sieci. Twoim zadaniem będzie wyznaczenie liczby
-możliwych konfiguracji sieci, aby można było określić, czy zaginęły wyniki badań (firma
-podejrzewa, że może być w to zamieszana konkurencja). Musisz wiedzieć, że w trakcie analiz
-nadajniki sieci komórkowej traktowano jako nierozróżnialne.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba zestawów danych C, 1 ≤C ≤ 50. Każdy z C
-zestawów danych składa się z jednego wiersza zawierającego liczbę naturalną N, 2 ≤ N ≤ 50,
-oznaczającą całkowitą liczbę nadajników w sieci.
-Wyjście
-Dla każdego zestawu danych należy wyznaczyć liczbę możliwych konfiguracji komunikacji
-pomiędzy nadajnikami spełniających warunki zadania, przy założeniu, że nie rozróżniamy
-nadajników.
+     * A communication company has set up network of its transmitters.
+     * It decided to configure it in such way that each transmitter can reach any other tranmsmitter
+     * either directly or using at most a single intermediate transmitter.
+     * In case of disabling some transmitter, transmission should also be direct or require at most
+     * a single intermediate transmitter.
+     * Connecting all transmitters directly pairwise together is not allowed.
+     * Find number of configurations meeting those criteria.
+     * Transmitters are nondistinct.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 50.
+     * Each data set consists of a single line containing a single number N, 2 ≤ N ≤ 50,
+     * equal to number of transmitters in a network.
+     * 
+     * Output
+     * C lines, each containing number of configurations meeting described criteria,
+     * assuming transmitters are nondistinct.
      */
     public sealed class Nadajniki : ProblemBase
     {
