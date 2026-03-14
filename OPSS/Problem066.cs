@@ -1,39 +1,32 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Grupa programistów OPSS, postanowiła wzbogacić swój system o dobrą wyszukiwarkę tekstową.
-W trakcie pracy nad głównym algorytmem programiści zdali sobie sprawę, że dobra wyszukiwarka
-powinna nie tylko działać szybko, lecz również pomagać użytkownikom, gdy pomylą się przy
-wpisywaniu jakiegoś słowa lub gdy takiego słowa nie ma w słowniku.
-Programiści wpadli na pomysł, żeby w momencie wpisania hasła, którego nie znaleziono w
-słowniku, zwrócić użytkownikowi listę słów podobnych do wpisanej frazy. Lista powinna być
-posortowana od najbardziej do najmniej podobnych.
-Podobieństwo hasła H1 do H2 wyznaczamy w ten sposób, że sumujemy minimalną liczbę liter,
-które należy wstawić, usunąć lub wymienić w słowie H1 aby uzyskać H2.
-Na przykład, aby ze słowa 'ALA' otrzymać 'MAREK' musimy wykonać łącznie 4 operacje:
-1.Dodajemy na początek literkę 'M', otrzymujemy 'MALA'
-2.Wymieniamy literkę 'L' na 'R', otrzymujemy 'MARA'
-3.Wymieniamy drugą literkę 'A' na 'E', otrzymujemy 'MARE'
-4.Dodajemy na koniec literkę 'K', otrzymujemy 'MAREK'
-Dla hasła 'OLA' wartość podobieństwa do 'MAREK' równa jest 5, gdyż usuwamy literę 'O',
-wymieniamy literę 'L' na 'M' i dodajemy na koniec 3 litery 'R', 'E' i 'K'.
-Jak widać słowo 'ALA' jest bardziej podobne do hasła 'MAREK' niż 'OLA'. Dlatego, gdy
-użytkownik wpisze hasło 'MAREK', którego nie ma w słowniku, system powinien podpowiedzieć
-mu wypisując posortowaną rosnąco listę - w tym przypadku byłoby to: 'ALA' 'OLA'
-Zadanie
-Napisz program, który dla danego słownika S i hasła T, posortuje listę słów S niemalejąco
-względem podobieństwa do hasła T (od najbardziej do najmniej podobnych).
-Wejście
-W pierwszym wierszu znajduje się liczba zestawów danych D, 1 ≤ D ≤ 30. W kolejnych wierszach
-znajdują się zestawy danych. W pierwszym wierszu zestawu podane jest hasło wzorcowe T. W
-drugim znajduje się liczba N, 1 ≤N ≤20 haseł w liście słownikowej, którą należy posortować. W
-kolejnych N wierszach znajdują się hasła. Wszystkie słowa składają się z dużych liter alfabetu
-angielskiego. Długość hasła w słowniku jest nie mniejsza niż 1 znak i nie większa niż 200 znaków.
-Wyjście
-Dla każdego zestawu danych należy wypisać na wyjściu jedną linię, składającą się z N haseł
-oddzielonych pojedynczą spacją. Hasła powinny być posortowane względem podobieństwa do
-wzorca T ( od najbardziej do najmniej pasującego). W przypadku, gdy dwa słowa są tak samo
-podobne do wzorca T, należy je wypisać w takiej kolejności, w jakiej pojawiły się na wejściu
+     * A text search should work quickly, but also help users in case they make a typing error.
+     * In case a user types a word that is not found, a some alternative should be given, sorted descending
+     * by similarity to original word.
+     * A similarity between two words H1 and H2 is described by minimum number of letters to add, 
+     * remove or replace in a word H1 to get H2 instead. The lower the number, the more similar words are.
+     * Example: to get word 'MAREK' from 'ALA' you need 4 operations:
+     * ● Add 'M' at the beginning, resulting in 'MALA'.
+     * ● Replace 'L' with 'R', resulting in 'MARA'.
+     * ● Replace 'A' with 'E', resulting in 'MARE'.
+     * ● Add 'K' at the end, resulting in 'MAREK'.
+     * For word 'OLA' it is 5 operations: remove 'O', replace 'L' with 'M', then add 'R', 'E' and 'K' at the end.
+     * Therefore for word 'MAREK' word 'ALA', should appear before 'OLA' as a suggestion.
+     * Given a certain dictionary S and word T, sort S in order from most to least similar to T,
+     * i.e., from the word needing least operations to transform to T, to the one needing the most.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 30.
+     * First line of each data set contains a given word T.
+     * Second line of data set contains number of words in a dictionary N, 1 ≤ N ≤ 20.
+     * Following N lines each contain a word from a dictionary. Only English uppercase characters are allowed.
+     * Each word is from 1 to 200 characters long.
+     * 
+     * Output
+     * D lines, each containing N words separated by a whitespace.
+     * Words are sorted in order of decreasing similarity to word T from a respective data set.
+     * If they are equally similar, write them down in order they appeared in the input.
      */
     public sealed class Gugle : ProblemBase
     {

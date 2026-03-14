@@ -1,39 +1,31 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Szkrable jest bardzo popularną i niezwykle skomplikowaną grą słowną polegającą na układaniu
-słów przez graczy. Jedna z setek zasad tej gry mówi, że słowo jest dopuszczalne do gry jeżeli każdy
-jego spójny podciąg o długości trzech liter jest wyrazem ze słownika ustalonego przez graczy na
-początku gry. Wyrazy w słowniku (nazywane 'trójkami') nie powtarzają się. Każda 'trójka' składa
-się z trzech różnych dużych liter alfabetu angielskiego i ma przyporządkowaną dodatnią liczbę
-punktów. Za utworzone słowo gracz otrzymuje liczbę punktów równą sumie punktów za każdą
-'trójkę' występującą w tym słowie. Jeśli 'trójka' występuje w słowie więcej niż jeden raz, wówczas
-gracz otrzymuje punkty osobno za każde wystąpienie 'trójki' w słowie. Jedna z zasad szczególnych
-mówi, że słowo jednoliterowe lub dwuliterowe jest słowem dopuszczalnym jeżeli zawiera się w
-którymkolwiek z wyrazów ze słownika. Za utworzone słowa jednoliterowe i dwuliterowe gracz nie
-otrzymuje żadnych punktów.
-Zadanie
-Pan Henryk od niedawna gra w Szkrable. Pragnie szybko stać się dobrym graczem, dlatego
-potrzebuje Twojej pomocy. Chciałby wiedzieć, ile może maksymalnie stracić punktów za ułożone
-przez siebie dopuszczalne do gry słowo, jeżeli będzie do niego dodawał i/lub usuwał litery tak, żeby
-zmodyfikowane słowo wciąż było dopuszczalne do gry, zaczynało się na tę samą literę na którą
-zaczyna się oryginalne słowo sprzed modyfikacji i kończyło się na tę samą literę co słowo sprzed
-modyfikacji. Napisz program, który mu to ułatwi.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba n (1 ≤ n ≤ 1000), określająca liczbę wyrazów w
-słowniku. W kolejnych n wierszach opisane są 'trójki' ze słownika, jedna 'trójka' w każdym wierszu.
-Każdy wiersz z opisem 'trójki' składa się z wyrazu T oraz liczby całkowitej K, oddzielonych
-pojedynczą spacją. Wyraz T jest trzyliterowym wyrazem ze słownika, któremu przyporządkowana
-jest liczba punktów K (1 ≤ K ≤ 1000). Następny wiersz wejścia zawiera liczbę q (1 ≤ q ≤ 1000). W
-kolejnych q wierszach znajdują się niepuste słowa utworzone przez pana Henryka, po jednym
-słowie w każdym wierszu. Długość każdego ze słów nie przekracza 1000 liter.
-Wyjście
-Dla każdego słowa pana Henryka należy w jednym wierszu wyjścia wypisać dwie liczby
-oddzielone spacją:
-● liczbę punktów jaką może on otrzymać za ułożone słowo
-● maksymalną liczbę punktów o jaką może pomniejszyć swój wynik modyfikując ułożone
-słowo tak, żeby dalej było dopuszczalne do gry i żeby zaczynało się i kończyło na te same
-litery na które zaczyna się i kończy słowo niezmodyfikowane.
+     * Szkrable is a popular and complex word game.
+     * It has a predefined dictionary of legal three-letter words (triplets).
+     * A word is legal only if each triplet of consecutive characters in it forms a legal word
+     * from the dictionary. Each triplet has specific number of points assigned in the dictionary.
+     * Score for a final word is equal to sum of individual scores for each triplet contained in it.
+     * If there are repetitions of same triplet in the word, each occurence is scored separately.
+     * All triplet consist of uppercase English letters, and all scores assigned are positive.
+     * As a special rule, one- or two-letter words are allowed, if they are themselves contained
+     * in any of triplet rom the dictionary, but they are worth 0 points each.
+     * 
+     * Your task is to find, how much can a score for a given word be reduced by adding or removing
+     * letters from it, as long as modified words is still legal and first and last letters remain unchanged.
+     * 
+     * Input
+     * First line contains number of data sets n (1 ≤ n ≤ 1000).
+     * Following n lines each contain a string T and number K separated by a whitespace.
+     * T is a triplet from the dictionary, K is number of points assigned to it (1 ≤ K ≤ 1000).
+     * Following line contains a single number q (1 ≤ q ≤ 1000).
+     * Following q lines each contain non-empty legal words. Each word is no more than 1000 characters long.
+     * 
+     * Output
+     * q lines, each containing two numbers separated by a whitespace.
+     * First number is a score given for original word.
+     * Second number is a maximum amount of points you can lose by modifying original word,
+     * as long as it is still legal and first and last letter are unchanged.
      */
     public sealed class Szkrable : ProblemBase
     {

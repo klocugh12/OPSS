@@ -1,40 +1,26 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Znani komputerowi telepaci Andrzej i Bartek (o których przygodach można przeczytać w zadaniu
-"Komputerowa telepatia") po kilku miesiącach doszli do takiej wprawy, że bezbłędnie
-rozpoznawali wszystkie przesyłane do siebie figury. Postanowili zatem spróbować czegoś
-trudniejszego. Po zastanowieniu uzgodnili, że będą odgadywać kąt, o jaki obrócona została figura w
-stosunku do "standardowego" położenia.
-Wybrali prostokąt i elipsę o proporcjach wyraźnie różniących je od kwadratu i koła, tzn. długość
-krótszego boku prostokąta (krótszej osi elipsy) mieści się w przedziale od 0.2 do 0.8 dłuższego
-boku (osi). Standardowym położeniem figury jest takie, w którym dłuższy bok (dłuższa oś) jest
-ułożony poziomo.
-Podobnie jak kiedyś, w telepatii, figury namalowane czarnym flamastrem zostały zeskanowane, ale
-już bez zwracania uwagi na położenie, zatem figura może być obrócona o kąt alfa o wartości
-mieszczącej się w przedziale -85 ≤ alfa ≤ 90 stopni (dla ułatwienia założono, że wartość kąta jest
-wielokrotnością 5 stopni).
-Wnętrze figury może być całkowicie zaczernione lub puste, kontur figury jest zawsze wypełniony
-czarnymi pikselami bez przerw. Pliki skanera przed przesłaniem zostały pozbawione nagłówków i
-zakodowane. Kodowanie polega na założeniu, że obraz składa się z linii równoległych do osi X,
-zatem do określenia położenia i-tej linii wystarczy podać 3 liczby Yi, X1i, X2i, gdzie Yi, X1i
-oznaczają współrzędne punktu początkowego a Yi, X2i punktu końcowego i-tej linii, X1i ≤ X2i.
-Zadanie
-Należy podać wartość kąta alfa, o który została obrócona figura w stosunku do położenia
-"standardowego", z dokładnością do 5 stopni.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita N, 1 ≤ N ≤ 5, oznaczająca liczbę
-zestawów danych, zaś w następnych N wierszach opisane są obrazy obróconych figur. W każdym z
-N wierszy znajdują się trójki liczb naturalnych oddzielonych pojedynczymi spacjami. Każda trójka
-(postaci Y, X1, X2, 0≤Y,X1,X2≤1000) określa położenie (współrzędne punktów początkowych i
-końcowych) jednej z linii obrazu. Założono, że oś X jest osią poziomą skierowaną w prawo a oś Y
-osią pionową skierowaną do góry. Trójek liczb może być więcej niż wynosi wysokość obrazu
-mierzona w pikselach bo możliwe są np. dwa odcinki w jednej linii (liczba trójek jest z zakresu
-100..2000). Koniec wiersza kończy opis jednego obrazu.
-Wyjście
-Na wyjściu dla każdego zestawu w osobnej linii, należy wypisać jedną liczbę całkowitą podzielną
-przez 5, należącą do przedziału <-85..90>, oznaczającą kąt, o który obrócono skanowaną figurę.
-Dodatni kąt obrotu pokazany jest na rysunku.
+     * You're given a bitmap representing a rectangle or ellipse.
+     * Find an angle it is rotated against x-axis. Assume the following:
+     * Bitmaps are black and white, 1 meaning black pixel, 0 meaning white pixel.
+     * A figure can be either filled or just be an outline.
+     * Ratio of shorter side/radius to longer one is in the range from 0.2 to 0.8.
+     * Angle 0 means a rectangle/ellipse is placed with longer side/radius parallel to x-axis.
+     * Angle is an integer within range -85 ≤ alfa ≤ 90 degrees, being a multiple of 5.
+     * 
+     * Input
+     * First line contains number of data sets N, 1 ≤ N ≤ 5.
+     * Each data set consists of a single line of numbers seaparated by a whitespace.
+     * Amount of numbers in each line is a multiple of 3.
+     * Each triplet of numbers in a line has a form Y, X1, X2, 0≤Y,X1,X2≤1000,
+     * where Y is a vertical coordinate and X1 and X2 describe a range of horizontal coordinates,
+     * for which all pixels in line Y are black. If a figure is an outline, there may be more than one
+     * triplet with same Y coordinates. Each line describes a single image.
+     * 
+     * Output
+     * N lines, each containing an integer from range -85 to 90, equal to rotation angle
+     * of a figure in degrees, approximated to 5 degrees of accuracy.
      */
     public sealed class KatObrotu : ProblemBase
     {

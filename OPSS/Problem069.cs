@@ -1,22 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * You're given groups of samples, which are evaluated according to 10 parameters each.
+     * Find number of samples, which meet given evaluation criteria.
      * 
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna k (1≤k≤10000), określająca ilość
-wierszy w tabeli badań. W następnych k liniach znajdują się wiersze tabeli. Każdy wiersz składa się
-z 11 liczb całkowitych: x1, x2, .., x10, y (0≤xi≤100, 0≤y≤1000). Oznacza on, iż w laboratorium
-znajduje się y skał, których pierwszy parametr ma wartość x1, drugi - x2, ..., dziesiąty - x10.
-Ponieważ tabelkę tworzyło kilku naukowców, wiersze z takimi samymi parametrami mogą się
-powtarzać. W kolejnym wierszu znajduje się liczba naturalna m (1≤m≤10000), oznaczająca liczbę
-pytań zadanych przez naukowców. W m następnych liniach wejścia znajdują się poszczególne
-pytania. Każde pytanie składa się z warunków, mających postać 10 liczb całkowitych: a1, a2, ..,
-a10 (-1≤ai≤100). Naukowców interesuje liczebność skał spełniających wszystkie 10 warunków.
-Warunek ai=-1 oznacza, że wartość i-tego parametru może być dowolna. Natomiast ai<>-1 mówi,
-że i-ty parametr ma mieć wartość ai.
-Wyjście
-Dla każdego pytania naukowców, w osobnej linii wyjścia, należy wypisać liczbę skał, które
-spełniają warunki zadane przez naukowców.
+     * Input
+     * First line contains number of sample groups k (1≤k≤10000).
+     * Each of the following k lines contains 11 numbers separated by a whitespace.
+     * First 10 numbers x1, x2, .., x10, 0≤xi≤100, represent values of each of 10 parameters.
+     * Eleventh number y, 0≤y≤1000 represents number of samples in a group.
+     * Following line contains number of queries m (1≤m≤10000).
+     * Following m lines each contain 10 integer numbers a1 to a10 (-1≤ai≤100) separated by a whitespace.
+     * Each of those lines reprents a single query. If ai=-1, any value of i-th parameter is accepted,
+     * otherwise i-th parameter must be equal to given ai.
+     * 
+     * Output
+     * m lines, each containing number of samples, which satisfy all criteria in a respective query.
      */
     public sealed class MarsjanskieSkaly : ProblemBase
     {

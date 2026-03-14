@@ -9,6 +9,26 @@ namespace OPSS
      * We assign a point to any tile that ball goes over.
      * Game ends when a ball returns to starting position and assigns a point to it.
      * How many tiles have odd number of points assigned to them when the game ends?
+     * 
+     * +-+-+-+-+-+-+-+-+-+-+
+     * | | |x| |x| | | |x| |
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * | |x| |.| |x| |x| |x|    | |.| |.| | | |.| | | |.| |
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * |X| |.| |x| |.| |x| |    |X| |.| |.| |.| |.| |.| |.|
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * | |.| |.| |.| |x| | |    | |.| |.| |.| | | |.| |.| |
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * |x| |x| |x| |.| |x| |    |.| | | |.| |.| |.| |.| | |
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * | |x| |.| |x| |x| |x|    | |.| |.| |.| |.| |.| |.| |
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * | | |x| |x| | | |x| |    | | |.| | | |.| |.| | | |x|
+     * +-+-+-+-+-+-+-+-+-+-+    +-+-+-+-+-+-+-+-+-+-+-+-+-+
+     * 
+     * Sample boards. X is a starting point. Fields with x have odd number of poinst assigned.
+     * Field with . have even number of points assigned.
+     * Empty fields have no points assigned.
      
 Input
     First line contains number of data sets d, 1<=d<=20.

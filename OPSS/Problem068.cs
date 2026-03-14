@@ -1,28 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * A Pythagorean triangle is described by a triplet of integers, which satisfy equation a^2 + b^2 = c^2.
+     * A subset of Pythagorean triangles are so called Perfect Pythagorean triangles,
+     * for which additionally two of (a, b, c) numbers are prime.
+     * There are infinitely many of them, and first one is so called Egyptian Triangle (3, 4, 5).
+     * Find n-th Perfect Pythagorean triangle.
      * 
-Któż nie zna twierdzenia Pitagorasa?! Albo kto nie słyszał o liczbach pierwszych? Z pewnością nie
-uczestnicy OPSS-esji!, którzy kochają matematykę! Oto zadanie, które zawiera oba te pojęcia...
-Trójkąty, których boki (a, b, c) spełniają równanie Pitagorasa: a^2 + b^2 = c^2 i jednocześnie a, b, c są
-liczbami całkowitymi, nazywane są trójkątami pitagorejskimi.
-Jest ich nieskończenie wiele, a najmniejszym z nich jest tzw. "trójkąt egipski" o bokach: 3, 4, 5.
-Jeżeli zwiększymy wymagania i zechcemy, aby dwa z boków były liczbami pierwszymi,
-otrzymamy trójkąty, które można nazwać "doskonałymi trójkątami pitagorejskimi" (nie jest to
-nazwa oficjalna), których również jest nieskończenie wiele, ale znacznie mniej niż "zwykłych"
-trójkątów pitagorejskich. Posortowane według długości najkrótszego boku dają się łatwo
-zidentyfikować. Wspomniany trójkąt egipski jest pierwszym w ciągu "doskonałych trójkątów
-pitagorejskich".
-Twoim zadaniem jest znalezienie wskazanego "doskonałego trójkąta pitagorejskiego".
-Zadanie
-Należy podać dwie liczby pierwsze, które są bokami n-tego doskonałego trójkąta pitagorejskiego.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba naturalna C, 1 ≤ C ≤ 1000, oznaczająca liczbę
-zestawów danych. W następnych C wierszach podane są liczby całkowite oznaczające numery
-doskonałych trójkątów. Numery trójkątów są liczbami naturalnymi z przedziału 1..4000.
-Wyjście
-Na wyjściu, w każdym z C wierszy należy wypisać, oddzielone pojedynczą spacją, dwie liczby
-pierwsze m, n, m ≤ n, równe bokom trójkąta pitagorejskiego o podanym numerze.
+     * Input
+     * First line contains number of data sets  C, 1 ≤ C ≤ 1000.
+     * Each data set contains an integer 1..4000 equal to index of Perfect Pythagorean triangle
+     * to find.
+     * 
+     * Output
+     * C lines, each containing two prime numbers m, n, m ≤ n, equal to two prime sides
+     * of a Perfect Pythagorean triangle with a given index.
      */
     public sealed class DoskonaleTrojkatyPitagorejskie : ProblemBase
     {

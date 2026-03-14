@@ -1,22 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Jasio już od dłuższego czasu gromadzi adresy IP (miejmy nadzieję, że Jasio nie jest spamerem).
-Pewnego dnia postanowił uporządkować swoją kolekcję. Okazuje się, że jest ona dość specyficzna,
-bowiem w jej skład wchodzą wszystkie możliwości adresów, które zawierają zawsze takie same
-liczby. Różnią się jedynie kolejnością występowania tych liczb. Wiadomo również, że nie
-występują w niej dwa takie same adresy.
-Adres IP w danej wersji protokołu P składa się z dokładnie P liczb całkowitych z zakresu 0..255,
-oddzielonych od siebie kropką.
-Pomoż Jasiowi w uporządkowaniu jego zbioru adresów IP.
-Wejście
-W pierwszym wierszu wejścia podana jest liczba P, będąca numerem wersji protokołu IP, 3 ≤ P ≤
-10, dla adresów Jasia. Druga linia wejścia składa się z dokładnie P liczb całkowitych, z zakresu
-0..255. Są to liczby, z których zbudowane są adresy z kolekcji Jasia.
-Wyjście
-W oddzielnych liniach wyjścia, należy wypisać w porządku rosnącym adresy IP, pochodzące z
-kolekcji Jasia, jakie można utworzyć z zadanych P liczb. Jeżeli adresów IP jest więcej niż 10000,
-należy wypisać pierwsze 10000 adresów.
+     * An IP address version P consists of P numbers from 0 to 255 separated by a dot each.
+     * In this case addresses can only consist of some specific, predetermined numbers.
+     * Knowing those numbers, print possible IP addresses in ascending order.
+     * 
+     * Input
+     * First line contains IP version P, 3 ≤ P ≤ 10.
+     * Second line contains P numbers separated by a whitespace.
+     * They represent predetermined numbers allowed in an address. 
+     * Each number is an integer from 0 to 255. Repetitions are allowed.
+     * 
+     * Output
+     * Maximum 10000 lines, each containing unique IP address made from given numbers.
+     * Addresses must be printed in ascending order.
+     * If there are no more than 10000 addresses, print all of them.
      */
     public sealed class AdresyIP : ProblemBase
     {

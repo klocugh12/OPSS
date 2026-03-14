@@ -1,31 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Firma Miracle dbająca o stały i niczym nie zachwiany rozwój swojej bazy danych, wymyśliła
-nowy, super szybki indeks na kolumnach przechowujących liczby składające się co najwyżej z 20
-cyfr. Szczegóły dotyczące zasady działania indeksu, są najściślej strzeżoną tajemnicą firmy.
-Wiadomo jedynie, że jest związana z liczbą 11.
-Grupa testująca otrzymała szereg zapytań o wartości kluczy w tym indeksie. W celu wyznaczenia
-wskaźników, które pozwolą sklasyfikować badany indeks w rankingu najlepszych indeksów
-Miracle, naukowcy z firmy muszą wiedzieć ile jest możliwych wartości indeksu dla zadanego
-wzorca klucza i reszty z dzielenia przez 11. Niestety, sami nie potrafią tego zrobić. Musisz im
-pomóc.
-Wzorzec klucza jest ciągiem składającym się z symboli 'X','0','1','2','3','4','5','6','7','8',9'. Symbol 'X'
-zastępuje jedną cyfrę ze zbioru '0','1','2','3','4','5','6','7','8','9'. Przykładowe wzorce kluczy w indeksie
-mogą wyglądać następująco: 'XXX', 'X1X', '2XXX'. Do wzorca można dopasować jedynie liczby -
-dopasowania nie mogą zawierać zer znaczących. Na przykład, '012' nie jest poprawnym
-dopasowaniem do wzorca 'X12'.
-Zadanie
-Wyznacz ilość liczb pasujących do wzorca W, które przy dzieleniu przez 11 dają resztę r.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba zestawów danych n, 1 ≤ n ≤ 100. W kolejnych
-wierszach następują zestawy danych. Każdy zestaw składa się z dwóch linii. W pierwszej jest liczba
-cyfr d, 1 ≤ d ≤ 20 we wzorcu i reszta r, 0 ≤ r ≤ 10 z dzielenia przez 11. W drugiej linii zestawu
-znajduje się wzorzec W długości d zawierający znaki 'X','0','1','2','3','4','5','6','7','8','9'.
-Wyjście
-Dla każdego zestawu danych na wyjściu powinna znaleźć się jedna wartość P określająca ilość
-liczb pasujących do wzorca W, które przy dzieleniu przez 11 dają resztę r. Możesz założyć, że 0 ≤
-P < 2^63-1.
+     * Consider a numeric pattern consisting of digits 0-9 and a wildcard X.
+     * A wildcard can be any digit other than leading zero.
+     * For example, pattern 'X12' is not matched by '012', but is by '112'.
+     * For a given pattern find amount of matching numbers that, when divided by 11, give remainder r.
+     * 
+     * Input
+     * First line contains number of data sets  n, 1 ≤ n ≤ 100.
+     * Each data set consists of two lines. First line contains two numbers separated by 
+     * a whitespace. They are, respectively, length of pattern d, 1 ≤ d ≤ 20,
+     * and remainder r after dividing by 11, 0 ≤ r ≤ 10 z dzielenia przez 11.
+     * Second line of a data set contains a pattern consisting of digits and wildcards 'X'.
+     * 
+     * Output
+     * n lines, each containing number of values P matching given pattern, which give remainder r
+     * when divided by 11. You can assume that  0 ≤ P < 2^63-1.
      */
     public sealed class Jedenastka : ProblemBase
     {

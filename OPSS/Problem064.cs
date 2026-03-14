@@ -1,17 +1,16 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Zadanie
-Dla zadanych liczb całkowitych x, y, a, należy wyznaczyć, ile jest liczb całkowitych pomiędzy x a y
-(włącznie), których suma cyfr wynosi a.
-Wejście
-W pierwszej linii wejścia znajduje się liczba C, określająca liczbę zestawów danych, 1 ≤ C ≤ 1000.
-W kolejnych wierszach wejścia znajdują się zestawy danych. Każdy z C zestawów danych składa
-się z wiersza zawierającego liczby całkowite x, y, a (0 ≤ x ≤ y < 2^31, 0 ≤ a ≤ 100), oddzielone
-pojedyncza spacją.
-Wyjście
-Dla każdego zestawu danych, w osobnej linii wyjścia, należy wypisać liczbę, określającą ile jest
-liczb całkowitych pomiędzy x a y, których suma cyfr jest równa a.
+     * Given integers x, y, a, find number of integers from x to y (inclusive), 
+     * whose sum of digits is equal to a.
+     * 
+     * Input.
+     * First line contans number of data sets C, 1 ≤ C ≤ 1000.
+     * Each data set consists of a single line containg three integers separated by a whitespace.
+     * They are, respectively, x, y and a (0 ≤ x ≤ y < 2^31, 0 ≤ a ≤ 100).
+     * 
+     * Output,
+     * C lines, each containing a single number equal to an answer for each data set.
      */
     public sealed class SumaCyfr : ProblemBase
     {

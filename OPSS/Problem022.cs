@@ -9,6 +9,16 @@ namespace OPSS
      * in each column, starting from the column with most pebbles. 
      * Alice's sequence consists of numbers of pebbles in each row instead,
      * also starting from row with most pebbles.
+     * 
+     *      1 ●
+     *      1 ●
+     *      2 ● ●
+     *      2 ● ●
+     *      4 ● ● ● ●
+     *      4 ● ● ● ●
+     *      5 ● ● ● ● ●
+     *      5 ● ● ● ● ●
+     *        8 6 4 4 2
      * Sample arrangement (Bob: 24 8 6 4 4 2, Alice: 5 5 4 4 2 2 1 1).
      * Write a program translating Bob's descriptions to Alice's.
      * 
