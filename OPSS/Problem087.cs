@@ -1,45 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Consider a sequence generated as follows:
+     * First, set up two parameters as positive integers.
+     * First term of a sequence is equal to sum of two parameters.
+     * Second term is equal to sum of first term and second parameter.
+     * Each following term is a sum of two previous terms.
+     * With right parameter setup, it is possible to get Fibonacci sequence.
+     * Your task is to find a pair of parameters that will generate a given number in most possible steps.
      * 
-W dawnych czasach, starożytna cywilizacja Bajteków do przewidywania zjawisk astronomicznych,
-używała maszyny o nazwie Generis, która wyznaczała mozolnie kolejne wyrazy pewnego
-rosnącego ciągu liczb. Maszyna była konfigurowalna, a na jej konfigurację składały się dwie liczby
-całkowite dodatnie, tzw. pierwsza i druga liczba konfiguracji. Pierwszym wyrazem ciągu
-generowanego przez maszynę była suma liczb z jej konfiguracji, drugim wyrazem, suma
-pierwszego wyrazu oraz drugiej liczby konfiguracji, natomiast od trzeciego wyrazu ciągu, każdy
-wyraz był sumą dwóch poprzednio wygenerowanych wyrazów.
-Przy odpowiedniej konfiguracji maszyna potrafiła generować ciąg Fibonacciego (co prawda nie od
-pierwszego elementu) i był to w zasadzie jedyny ciąg, który znalazł u Bajteków praktyczne
-zastosowanie. Konfigurowalność maszyny nie była zbyt przydatna Bajtekom, a przynajmniej nie
-mieli pojęcia jak ją dobrze wykorzystać. Potrafili dostrzec wszechobecność ciągu Fibonacciego w
-przyrodzie i za pomocą maszyny dokonywali m. in. przewidywania pogody. Konfigurowaniem
-maszyny zajmowali się jedynie naukowcy, próbujący co jakiś czas odnaleźć praktyczne
-zastosowanie innych ciągów generowanych przez maszynę.
-Aby odkryć zastosowania innych ciągów generowanych przez maszynę naukowcy potrzebowali
-grantów na badania nad nią. Postanowili zorganizować prezentację dla możnych Kraju Bajteków,
-aby pokazać im działanie maszyny i wyjaśnić jakie można by uzyskać z niej korzyści, gdyby
-badania nad ciągami generowanymi przez maszynę przyniosły efekty.
-Kierujący badaniami profesor Hexos postanowił, że maszyna wygeneruje takie ciągi, w których
-będą występowały pewne bardzo szczególne dla matematycznej kultury Bajteków liczby. Każdy
-pokaz będzie polegał na odpowiednim skonfigurowaniu maszyny i wykonywaniu obliczeń, aż do
-momentu uzyskania pewnej zadanej i podanej publiczności przed konfiguracją liczby. Profesor
-chce, aby obliczenia były efektowne, oraz aby wyglądały na jak najbardziej skomplikowane
-(wywarcie takiego wrażenia na publiczności ma ułatwić pozyskanie grantu).
-Profesor nie ma czasu aby dla każdej liczby, jaką chce uzyskać w kolejnych pokazach prezentacji,
-wyznaczyć taką konfigurację maszyny, aby dokonywała ona obliczeń możliwie długo. To zadanie
-zlecił swojemu asystentowi, czyli Tobie!
-Wejście
-W pierwszym wierszu występuje jedna liczba całkowita C (1 ≤ C ≤ 5000) określająca ilość
-pokazów zaplanowanych przez profesora. W i+1 (i = 1, 2, ..., C) wierszu znajduje się liczba N (1 ≤
-N ≤ 2*10^9), której wygenerowanie założył sobie profesor.
-Wyjście
-Dla każdej liczby N wypisz taką konfigurację maszyny, w której liczba N będzie wyznaczona przez
-maszynę możliwie najpóźniej. Dla każdego zestawu wypisz w osobnej linii pierwszą i drugą liczbę
-konfiguracji oddzielone pojedyncza spacją. Jeśli istnieje więcej niż jedna konfiguracja, która
-gwarantuje najdłuższy czas obliczeń, podaj tę, dla której pierwsza liczba konfiguracji jest
-najmniejsza. W przypadku, gdy konfiguracja maszyny nie istnieje wypisz jedno słowo: BRAK.
-Pamiętaj, że kolejność liczb w konfiguracji ma znaczenie.
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 5000).
+     * Each data set consists of a single line containing a number N (1 ≤ N ≤ 2*10^9),
+     * equal to a number to generate.
+     * 
+     * Output
+     * C lines, each containing two numbers separated by a whitespace. They are equal to initial
+     * parameters needed to obtain N in most possible steps, or BRAK if it is not possible.
+     * Note that order of parameters does matter.
      */
     public sealed class Generis : ProblemBase
     {

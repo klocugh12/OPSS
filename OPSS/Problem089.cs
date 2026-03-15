@@ -1,25 +1,32 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Wejście
-W pierwszym wierszu wejścia znajduje się liczba Z, 1 ≤ Z ≤ 100, oznaczająca liczbę zestawów
-danych. Każdy zestaw danych rozpoczyna się linią zawierająca 2 liczby naturalne: S, R, (2 ≤ S+R ≤
-500; S, R > 0), gdzie S oznacza liczbę wierszy na liście definiującej stan magazynu, natomiast R
-oznacza liczbę rezerwacji.
-W kolejnych S wierszach podany jest bieżący stan magazynu. Każdy wiersz stanu zawiera 4 liczby
-naturalne: I, A, B, C, (1 ≤ I ≤ 1000; 1 ≤ A, B, C ≤ 10^9), oznaczające odpowiednio ilość towaru oraz
-wartości własności A, B, C towaru.
-Ostatnie R wierszy zestawu opisuje zbiór złożonych rezerwacji. Każda rezerwacja to jeden wiersz,
-zawierający dokładnie 4 liczby całkowite: i, a, b, c, (1 ≤ i ≤ 1000; 0 ≤ a, b, c ≤ 10^9), oznaczające
-odpowiednio ilość oraz oczekiwane przez klienta własności towaru. Jeśli klient oczekuje własności
-o wartości 0, oznacza to, że dana własność towaru go nie interesuje. W szczególności, jeśli w
-rezerwacji wszystkie 3 własności towaru są równe 0, klient zadowoli się dowolnym towarem w
-żądanej ilości, i niekoniecznie cały towar odpowiadający rezerwacji musi być pod względem
-własności jednorodny.
-Liczby występujące w wierszach wejścia oddzielone są od siebie pojedynczą spacją.
-Wyjście
-Dla każdego zestawu danych należy wydać na standardowe wyjście linię zawierającą słowo "tak"
-jeśli magazyn jest w stanie zrealizować wszystkie rezerwacje, a słowo "nie" jeśli jest to niemożliwe.
+     * You are running a store containing some items. Items are stored in batches. Each batch can be
+     * described with 3 integers A, B, C, representing certain quality parameters of items.
+     * 
+     * Customers can place an order for merchandise with specified quality of parameters, or may
+     * be satisfied with any batch. If they placed an order with specific requirements, they cannot
+     * be given items which don't meet those requirements. Your task is to determine, 
+     * whether all customer orders can be fulfilled, given current store.
+     * 
+     * Input
+     * First line contains number of data sets Z, 1 ≤ Z ≤ 100.
+     * First line of each data set contains two numbers separated by a whitespace.
+     * First number S is number of batches. Second number R is number of customer orders.
+     * Both numbers are positive and satisfy 2 ≤ S+R ≤ 500; S, R > 0.
+     * Following S lines each contain 4 numbers each separated by a single whitespace.
+     * They are, respectively I - quantity of items in a batch (1 ≤ I ≤ 1000) and values of parameters
+     * A, B and C (1 ≤ A, B, C ≤ 10^9).
+     * Following R lines each also contain 4 numbers each separated by a single whitespace.
+     * They are, respectively i - quantity ordered by a customer (1 ≤ i ≤ 1000) and values of parameters
+     * a, b and c expected by a customer (0 ≤ a, b, c ≤ 10^9).
+     * Value 0 for a parameter means that parameter does not concern a given customer. In particular,
+     * if all 3 parameters are 0, any batch is acceptable and order can be fulfilled using multiple batches
+     * if needed.
+     * 
+     * Output
+     * Z lines, each containing an answer for respective data set: "tak", if all orders can be fulfilled,
+     * "nie" otherwise
      */
     public sealed class Rezerwacje : ProblemBase
     {

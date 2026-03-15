@@ -1,15 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Fibonacci numbers are defined as follows:
+F(0)=1,
+F(1)=1,
+F(n)=F(n-1)+F(n-2), n>1.
+     * Find least significant digit of n-th Fibonacci's number in binary system.
      * 
-Wejście
-W pierwszym wierszu wejścia znajduje się jedna liczba całkowita C, określająca liczbę zestawów
-danych (1 ≤ C ≤ 100). W i+1 wierszu (i = 1, 2, ..., C) znajduje się liczba b zapisana w systemie
-dwójkowym, składająca się z co najmniej 1 cyfry i co najwyżej 255 cyfr. Pierwszą (najbardziej
-znaczącą) cyfrą w zapisie liczby b jest zawsze 1.
-Wyjście
-Dla każdego zestawu danych, program powinien wypisać na wyjściu najmniej znaczącą (ostatnią)
-cyfrę w zapisie dwójkowym liczby fib(b).
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 100).
+     * Each data set consists of a single line containing a 1 to 255-bit binary number b.
+     * Most significant bit of each number is always 1.
+     * 
+     * Output
+     * C lines, each containing least significant bit of fib(b).
      */
     public sealed class StarozytnaMaszyna : ProblemBase
     {

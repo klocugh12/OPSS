@@ -1,19 +1,16 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Given list of numbers, find number of digits of their product.
      * 
-Zadanie
-Napisz program, który dla zadanej listy czynników, wyznaczy liczbę cyfr w zapisie dziesiętnym
-iloczynu.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba zestawów danych C, 1 ≤ C ≤ 5000. Każdy zestaw
-danych składa się z dwóch wierszy: w pierwszym znajduje się liczba naturalna N, oznaczająca
-liczbę czynników badanego iloczynu, 1 ≤ N < 1000, natomiast w drugim podanych jest N liczb
-całkowitych, oddzielonych pojedynczą spacją, będących czynnikami iloczynu. Każdy czynnik jest
-liczbą składającą się z co najwyżej trzech cyfr.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać liczbę cyfr, z których
-składa się zapis dziesiętny iloczynu.
+     * Input
+     * First line contain number of data sets C, 1 ≤ C ≤ 5000.
+     * Each data set contains two lines.
+     * First line of each data set consists of number of factors to multiply N, 1 ≤ N < 1000.
+     * Each factor is an positive integer with maximum 3 digits.
+     * 
+     * Output
+     * C lines, each containing number of digits in respective product using decimal system.
      */
     public sealed class Multyplikator : ProblemBase
     {

@@ -1,28 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Dwóch matematyków Pi i Sigma spotkało się wieczorem na partyjce pokera. Ponieważ nie mieli
-pieniędzy, postanowili grać "na zapałki". Pi miał przy sobie tylko niebieskie zapałki, a Sigma tylko
-zielone. Przed przystąpieniem do licytacji Pi wyłożył a swoich niebieskich zapałek, zaś Sigma
-dołożył b swoich zielonych. Pi zaczyna licytację. Licytują na zmianę. W każdym kroku licytacji
-zawodnik dorzuca tyle swoich zapałek, ile aktualnie jest zapałek przeciwnika w puli. Licytacja
-trwała dość długo i gracze nie mogli się doliczyć aktualnej liczby zapałek w puli. Wiedzieli jednak,
-ile razy każdy z nich dorzucał zapałki podczas licytacji.
-Zadanie
-Pomóż matematykom określić, ile zapałek jest w puli po n krokach licytacji. Ponieważ to
-matematycy, zadowoli ich znajomość reszty z dzielenia tej liczby (liczby zapałek po n krokach)
-przez ustaloną przez nich "magiczną" liczbę m.
-Wejście
-Pierwsza linia wejścia zawiera liczbę zestawów danych C (1 ≤ C ≤ 1000). W kolejnych wierszach
-wejścia znajdują się zestawy danych. Każdy z C zestawów danych składa się z jednego wiersza
-zawierającego liczby całkowite a, b, n, m, oddzielone pojedynczą spacją (0 < a, b < 2^31, 0 ≤ n <
-2^31, 2 ≤ m < 2^31). Liczby a, b określają kolejno liczbę niebieskich zapałek Pi oraz zielonych
-Sigmy znajdujących się w puli przed rozpoczęciem licytacji. Liczba n określa liczbę kroków
-licytacji. Liczba m to ustalona przez graczy "magiczna" liczba.
-Wyjście
-Dla każdego zestawu danych, wynikiem jest linia zawierająca jedną liczbę - resztę z dzielenia przez
-m liczby zapałek po n krokach licytacji, przy założeniu, że przed przystąpieniem do licytacji w puli
-znajduje się a niebieskich zapałek Pi oraz b zielonych zapałek Sigmy.
+     * Alice and Bob are playing poker and using matches to bet. Alice has only blue matches and Bob
+     * only green ones. Before the betting phase there were a blue matches and b green ones on the table.
+     * Alice and Bob take turns, starting with one, who has less matches on the table.
+     * In each turn player adds as many matches as there are opponent's matches on the table at the moment.
+     * Find number of matches at the table after n turns. Write it as remainder of division of said number 
+     * by specified integer m.
+     * 
+     * Input
+     * First line contains number of data sets  C (1 ≤ C ≤ 1000).
+     * Each data set consists of a single line containing four integers a, b, n, m
+     * separated by a whitespace each (0 < a, b < 2^31, 0 ≤ n < 2^31, 2 ≤ m < 2^31).
+     * They are, respectively, initial numbers of blue and green matches on the table,
+     * total number of turns in betting phase, and a value to divide by to get a remainder.
+     * 
+     * Output
+     * C lines, each containing a remainder of dividing number of matches on the table after n turns by m.
      */
     public sealed class Licytacja : ProblemBase
     {

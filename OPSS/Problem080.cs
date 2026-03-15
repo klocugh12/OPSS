@@ -1,53 +1,36 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Jest rok 3749. Rasa ludzka wymyśliła sztuczny mechanizm obronny przeciwko wirusom
-infekującym genotyp.
-Genotyp to łańcuch genów. Każdy gen jest kodowany w postaci dwuznaku składającego się z liter
-'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'. Zdrowy genotyp złożony jest z genów o takim samym kodzie
-genetycznym P. Na przykład, jeśli P jest genem o kodzie 'AA', to zdrowy genotyp o długości 3 jest
-postaci 'AA AA AA'. Wirus atakujący genotyp może zmienić kod jednego lub więcej genów
-zdrowego genotypu na inny kod, różny od P. Chory gen nie może być już ponownie zmieniony
-przez wirusa. Wszystkie geny ze zmienionym kodem stanowią genotyp wirusa. Przykładowo,
-zainfekowany genotyp z poprzedniego przykładu może wyglądać następująco 'AB AC AA'
-(genotyp wirusa 'AB AC'). Każde X kolejnych genów genotypu wirusa tworzy bakterię o długości
-X. Bakterie o tej samej długości nie mają wspólnych genów. W genotypie wirusa mogą kryć się
-bakterie różnych długości. Na przykład, genotyp wirusa 'AB AC' zawiera dwie bakterie o długości
-1: 'AB','AC' i jedną o długości 2: 'AB AC'.
-Jedyną znaną bronią przeciwko wirusowi są pikoboty. Pikobot jest robotem o bardzo małych
-rozmiarach, którego zadaniem jest przywrócenie chorym genom pierwotnego kodu genetycznego P.
-Pikobot działa według programu, który ma postać sekwencji kodów genetycznych.
-Pikobot jest "wstrzykiwany" do zainfekowanego genotypu i zaczynając od pierwszego genu
-genotypu wirusa, porównuje ciąg genów genotypu wirusa z sekwencją genów zapisaną w swoim
-programie. Jeśli oba ciągi są identyczne, wówczas pikobot przywraca genom w ciągu ich pierwotną
-postać (niszczy bakterię) i przechodzi do kolejnej sekwencji. W przeciwnym razie pikobot
-przechodzi do kolejnej sekwencji genów w genotypie wirusa (przesuwa się o liczbę genów równą
-długości swojego programu).
-Natychmiast po analizie ostatniego genu pikobot wysyła do głównej bazy danych liczbę
-zniszczonych przez siebie bakterii. Zniszczenie bakterii następuje wtedy, gdy wszystkie geny
-bakterii zostaną wyleczone. Pikobot, którego program ma długość X może niszczyć tylko bakterie o
-długości X.
-Zadanie
-Znając kod genetyczny genu pierwotnego P, postać genotypu zainfekowanego, dlugości programów
-pikobota (równe długościom bakterii) i wiedząc, że długość genotypu wirusa nie przekracza
-100000, znaleźć program najlepszego pikobota, czyli takiego, który wyleczy największą część
-"chorego" genotypu. Jeżeli wybór jest niejednoznaczny, należy spośród wcześniej wybranych
-pikobotów, wybrać tego, który zniszczył najwięcej bakterii. Jeśli to nie wyłoni zwycięzcy, wówczas
-zamiast programu należy podać 0. Ponadto jeżeli długość zainfekowanego genotypu nie przekracza
-10000 lekarze chcieliby wiedzieć, na ile różnych sposobów wirus może zmienić zdrowy genotyp,
-wykorzystując kody genetyczne wchodzące w skład genotypu wirusa.
-Wejście
-W pierwszej linii wejścia znajduje się liczba 0< N ≤1000000, określająca długość zainfekowanego
-genotypu oraz po pojedynczej spacji kod genetyczny genu pierwotnego P. W drugim wierszu
-znajduje się N kodów genetycznych oddzielonych pojedynczą spacją, które stanowią opis
-zmienionego genotypu. Liczba 0< D≤ 40 w kolejnym wierszu określa ilość długości programów
-pikobota (równym długościom bakterii). W ostatnim wierszu wejścia znajdują się liczby 1≤ di≤ 40,
-gdzie 0< i≤ D opisujące długości bakterii.
-Wyjście
-W pierwszej linii wyjścia powinien zostać wypisany program najlepszego pikobota. Jeżeli długość
-genotypu nie przekracza 10000 w kolejnym wierszu należy wypisać liczbę różnych sposobów
-modyfikacji zdrowego genotypu (co najmniej jeden gen musi się różnić) przez wirusa. W
-przypadku, gdy liczba ta będzie miała więcej niż 50 cyfr wystarczy wypisać 50 ostatnich.
+     * Consider a genome coded with pairs of uppercase letters A-J. A healthy genome consists of
+     * the same pair P repeated n times. For example, if P equals 'AA', then healthy genome with
+     * length 3 is 'AA AA AA'. A virus alters a healthy gene to another one, different than P.
+     * Each gene can only be modified at most once. For instance, infected genotype may be
+     * 'AB AC AA', in which case virus has genotype 'AB AC'. Each subsequence in such genotype is a 
+     * separate bacteria. 'AB AC' genome has three distinct bacterias: 'AB', 'AC' and 'AB AC'.
+     * Consider a picobot containing a program of length X. It starts from first gene in a genotype
+     * and compares X consecutive genes to its program. If they are equal, original (healthy) sequence
+     * is restored. Otherwise, a picobot moves by X genes to do another comparison.
+     * A single picobot may not always be able to perform a full restore of genome.
+     * Find a program which restorest largest possible portion of infected genome.
+     * If there are multiple candidates, select one, which removed the most bacteria.
+     * If that still results in more than one candidate, write a 0 instead.
+     * Additionally, if infected genotype is no more than 10000 genes long, find number of ways
+     * a virus can alter healthy genome.
+     * 
+     * Input
+     * First line contains a number and two letters separated by a whitespace. First number N, 0< N ≤ 1000000
+     * represents length of genome. It is followed by two letters A-J describing a healthy gene P.
+     * Next line contains N pairs of letters, each pair separated by a single whitespace,
+     * describing infected genome.
+     * Following line contains number of bacteria's lengths D, 0 < D ≤ 40.
+     * Last line contains numbers di, 1 ≤ di≤ 40, where 0< i≤ D, each separated by a whitespace 
+     * and representing a bacteria's length.
+     * 
+     * Output
+     * First line contains best picobot program (or 0 if it cannot be determined).
+     * If length of genome does not exceed 10000 characters, also write number of distinct ways
+     * a healthy genome can be altered by a virus (at least one gene must be altered).
+     * If that number has more than 50 digits, write down 50 last ones.
      */
     public sealed class Pikoboty : ProblemBase
     {
@@ -146,7 +129,8 @@ przypadku, gdy liczba ta będzie miała więcej niż 50 cyfr wystarczy wypisać 
                 }
                 if (result[0] == 0)
                     result.RemoveAt(0);
-                output.Add(string.Join("", result.Take(50)));
+                int toSkip = Math.Max(result.Count - 50, 0);
+                output.Add(string.Join("", result.Skip(toSkip).Take(50)));
             }
         }
     }

@@ -1,24 +1,18 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
-     * Mieszkańcy Opsslandii planują budowę Instytutu Badań nad Figurami Foremnymi (w skrócie
-IBFF). Ma to być przestronny budynek o podstawie kwadratowej, zbudowany na specjalnych
-kwadratowych płytach o rozmiarach a x a metrów, sprowadzonych z odległych zakątków kraju.
-Płyty mają przylegać do siebie bocznymi krawędziami i formować kwadrat - podobnie jak na
-szachownicy. Niestety część płyt uległa zniszczeniu podczas transportu i dowieziono tylko k płyt.
-Mieszkańcy Opsslandii bardzo się tym faktem zmartwili, bo płyt nie wystarczy na zbudowanie
-Instytutu zakładanej wielkości. Dowiezienie płyt też nie wchodzi w grę, ponieważ transport płyt
-trwa bardzo długo i jest niezmiernie kosztowny. Postanowili zatem, że zbudują największy budynek
-z dowiezionych płyt zachowując kwadratową podstawę Instytutu.
-Pomóż mieszkańcom Opsslandii ustalić maksymalną możliwą długość ściany budynku, wiedząc że
-płytek nie można ciąć.
-Wejście
-W pierwszej linii podana jest jedna liczba całkowita C, oznaczająca liczbę zestawów danych
-wejściowych (1 ≤ C ≤ 5000). W linii i+1 (i = 1, 2, ..., C) podane są dwie liczby całkowite: k,
-oznaczająca ilość płyt (1 ≤ k ≤ 2^31-1) oraz a, oznaczająca długość boku płyty (1 ≤ a ≤ 2^31-1).
-Wyjście
-Dla każdego zestawu, w osobnych liniach wyjścia, powinna pojawić się jedna nieujemna liczba
-całkowita, oznaczająca maksymalną możliwą długość ściany budynku, wyrażoną w metrach.
+     * A building is planned to be built over square tiles with dimensions a x a meters.
+     * Tiles must be arranged in a shape of a square. Find largest possible side of a building,
+     * which can be built over such arrangement, whose base is a square as well. Tiles cannot be cut.
+     * 
+     * Input
+     * First line contains number of data sets (1 ≤ C ≤ 5000).
+     * C following lines each contain two numbers separated by a whitespace.
+     * First number, k (1 ≤ k ≤ 2^31-1), represents number of tiles, and second, a 
+     * (1 ≤ a ≤ 2^31-1) represents length of each tile's sides.
+     * 
+     * Output
+     * C lines, each containing maximum possible side of a building expressed in meters.
      */
     public sealed class Plyty : ProblemBase
     {

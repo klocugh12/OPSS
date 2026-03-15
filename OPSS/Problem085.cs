@@ -1,10 +1,8 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Mały Jasio dostał ostatnio od rodziców prezent w postaci 66 klocków. Każdy klocek zbudowany
-jest z dwóch części, z których każda zawiera pewną liczbę oczek, podobnie jak jest to w przypadku
-kostek domina. Liczba oczek znajdujących się na każdej połówce klocka wynosi co najmniej jeden
-i co najwyżej jedenaście:
+     * Consider set of 66 tiles, each containing distinct pairs of numbers from 1 to 11:
+     * 
 1 | 1
 1 | 2
 ..
@@ -15,21 +13,16 @@ i co najwyżej jedenaście:
 2 | 11
 ..
 11 | 11
-Bawiąc się klockami, Jasio wymyślił pewną grę polegającą na układaniu klocków w linii prostej
-według następujących zasad:
-● Wybrać pewną początkową liczbę oczek P
-● Ułożyć obok siebie w linii prostej (klocki można obracać o 180 stopni), od lewej strony,
-klocki tak, aby:
-● dla każdego klocka, jego prawy sąsiad (klocek) miał na lewej połowie tyle oczek ile
-ma ten klocek na swojej prawej połowie
-● każda liczba dostępnych oczek, wystąpiła w tym ciągu klocków dokładnie dwa razy
-● liczba oczek na lewej połowie pierwszego klocka i prawej połowie ostatniego klocka
-były takie same i wynosiły P
-Każdemu klockowi Jasio przyporządkował pewną liczbę punktów i chciałby wiedzieć jaka jest
-minimalna oraz maksymalna możliwa liczba punktów do zdobycia w grze. Do gry, Jasio może
-używać 6, 10, 15, 21, 28, 36, 45, 55 lub 66 klocków, wówczas wykorzystuje klocki z maksymalnie
-odpowiednio 3, 4, 5, 6, 7, 8, 9, 10, 11 oczkami na każdej z połówek.
-Przykładowo, zestaw 15 klocków przedstawia się następująco:
+     Try arranging them in such a way:
+● Select initial value P
+● Arrange tiles horizontally such as adjacent tiles have same numbers on their near sides.
+● Each number from 1 to 11 appears exactly twice in a line.
+● Leftmost and rightmost numbers are both P.
+    Each of tiles is assigned a certain score.
+    Find minimum and maximum possible score.
+    Tilesets can have 6, 10, 15, 21, 28, 36, 45, 55 or 66 pieces, corresponding to maximum numbers
+    from range 3 to 11.
+For example 15 tileset is described below:
 1 | 1
 1 | 2
 ..
@@ -40,22 +33,19 @@ Przykładowo, zestaw 15 klocków przedstawia się następująco:
 2 | 5
 ..
 5 | 5
-Zadanie
-Znając początkową liczbę oczek P oraz punktację dla kolejnych klocków, wyznacz minimalną i
-maksymalną liczbę punktów jaką Jasio może uzyskać w swojej grze.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba zestawów danych C, 1 ≤ C ≤ 3. W kolejnych
-wierszach wejścia znajdują się zestawy danych. Każdy z C zestawów danych składa się z trzech
-wierszy. W pierwszej linii zestawu znajduje się liczba N (możliwe wartości: 6, 10, 15, 21, 28, 36,
-45, 55, 66), określająca liczbę klocków, które Jasio wykorzystuje do gry. Drugą linię zestawu
-stanowi N oddzielonych pojedynczą spacją liczb całkowitych z przedziału <-1000; 1000>,
-określających punktację klocków (klocki w kolejności odpowiednio: 1 | 1, 1 | 2, .. 2 | 2, 2 | 3, ..). W
-ostatniej linii zestawu znajduje się wybrana przez Jasia początkowa liczba oczek P, 1 ≤ P ≤ 11.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać minimalną i
-maksymalną liczbę punktów jaką może uzyskać Jasio. Liczby powinny być oddzielone pojedynczą
-spacją. W przypadku, gdy nie istnieje ciąg klocków spełniający zasad gry należy przyjąć, że
-maksimum jest równe minimum i wynosi 0.
+
+Input
+    First line contains number of data sets C, 1 ≤ C ≤ 3.
+    Each data set consists three lines.
+    First line contains number N of tiles in a tileset (possible values: 6, 10, 15, 21, 28, 36,
+    45, 55, 66). Second line contains N integers from range <-1000; 1000>, assigning scores to tiles
+    (tiles are ordered as follows: 1 | 1, 1 | 2, .. 2 | 2, 2 | 3, ..). 
+    Third line contains a single number equal to initial number P, 1 ≤ P ≤ 11.
+
+    Output
+    C lines, each containing minimum and maximum score for each data set.
+    Numbers are separated by a single whitespace. If there are no sequences of tiles which satisfy
+    requirements, minimum and maximum scores are both equal to 0.
      */
     public sealed class Klocki : ProblemBase
     {
@@ -87,6 +77,12 @@ maksimum jest równe minimum i wynosi 0.
                         splits.RemoveAt(0);
                     }
                 int start = int.Parse(input[j]);
+                j++;
+                if (start > n)
+                {
+                    output.Add("0 0");
+                    continue;
+                }
                 List<int> toUse = Enumerable.Range(1, n).ToList();
                 List<int> max = [start];
                 List<int> min = [start];
@@ -128,7 +124,6 @@ maksimum jest równe minimum i wynosi 0.
                     min.Insert(min1, next);
                     max.Insert(max1, next);
                 }
-                j++;
                 int sum1 = 0, sum2 = 0;
                 for(int k = 1; k < min.Count; k++)
                 {

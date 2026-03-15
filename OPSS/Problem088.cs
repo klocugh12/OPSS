@@ -1,41 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * You're given two lines, a quarter of certain cosine wave and half of certain tangent graph 
+     * (both starting from angle 0). a is a value for which a cosine becomes 0. 
+     * b is value of cosine wave for angle 0. c is an argument, for which tg(c) = b.
+     * Find x, for which cosine wave and tangent graph intersect. All lengths are expressed in Imperial
+     * length units (miles, yards, feet, inches).
      * 
-Barney - geolog amator - skorzystał z okazji, aby fotografować pustkowia Szkocji "z lotu ptaka".
-Okazja ta związana była z ćwiczebnym lotem balonem kilku jego przyjaciół - matematyków. W
-czasie lotu Barney fotografował w podczerwieni i ultrafiolecie tereny nad którymi przelatywali. Już
-w domu, po wywołaniu filmów, stwierdził dziwne formacje skał (czy też innych obiektów)
-układające się w krzywoliniowe ścieżki, które wpisywały się w ortogonalną sieć starych dróg,
-biegnących wzdłuż południków lub równoleżników.
-Większość tych ścieżek układała się w figury podobne do tych na rysunku. Kolega matematyk,
-któremu Barney pokazał wywołane zdjęcie, zasugerował, że krzywe, na których układały się
-obiekty na zdjęciach, przypominają znane wykresy funkcji "tangens" i "cosinus". Barneya
-zainteresowały punkty przecięcia ścieżek, które zobaczył na zdjęciach, bo - jak się spodziewał - są
-to ścieżki wydeptane przez celtyckich kapłanów - druidów, co wróżyło zapewne jakąś tajemnicę.
-Poprosił matematyka o znalezienie współrzędnych punktów przecięcia ścieżek, aby łatwiej je
-można było znaleźć w terenie. Ten oczywiście obiecał pomóc, bo to nie wydawało się trudne, ale
-ponieważ zaplanował już z kolegami lot balonem nad Pacyfikiem (ich przygody opisane są w
-zadaniu "Dzielni baloniarze"), prosił geologa o cierpliwość. Barney nie może jednak wytrzymać, aż
-kolega wróci (zresztą powrót z niebezpiecznej wyprawy wcale nie jest pewny) i szuka pomocy.
-Pomóż niecierpliwemu geologowi!
-Niebieska ścieżka widoczna na rysunku jest 1/4 fali cosinusoidy stycznej do drogi równoleżnikowej
-w punkcie x = 0. Czerwona ścieżka to 1/2 tangensoidy, dla której prawa droga południkowa jest
-asymptotą pionową. Krzywa ta przecina północną drogę równoleżnikową w odległości c od
-zachodniej drogi południkowej (c < a).
-Zadanie
-Należy wyznaczyć współrzędną x, określającą położenie punktu przecięcia ścieżek druidów w
-jednostkach imperialnych: mile, jardy, stopy, cale.
-Wejście
-W pierwszym wierszu wejścia podana jest liczba całkowita 0 < N ≤ 1000, równa liczbie zestawów
-danych. W kolejnych N wierszach występują trójki liczb całkowitych 0 < a, b, c ≤ 1000,
-oznaczające odległości podane w milach angielskich (patrz rysunek).
-Wyjście
-Dla każdego zestawu danych, w jednym wierszu, należy wypisać cztery liczby całkowite: m, j, s, c
-(0 ≤ m, 0 ≤ j < 1760, 0 ≤ s < 3, 0 ≤ c < 12) oddzielone pojedynczymi spacjami określające
-współrzędną x (patrz rysunek) punktu przecięcia krzywych (zaokrągloną do najbliższej liczby cali).
-Kolejne liczby oznaczają mile, jardy, stopy i cale. Dla porządku przypominamy że: 1 stopa=12 cali,
-1 jard=3 stopy, 1 mila=1760 jardów.
+     * Input
+     * First line contains number of data sets N, 0 < N ≤ 1000.
+     * Each data set consists of three integers separated by a whitespace.
+     * They are a, b and c respectively, as described above 0 < a, b, c ≤ 1000.
+     * All of them express distance in miles.
+     * 
+     * Output
+     * N lines, each containing four numbers separated by a whitespace each.
+     * They represent x in Imperial length units as miles, yards, feet and inches respectively, 
+     * rounded to the nearest inch. Reminder: 1 foot = 12 inches, 1 yard = 3 feet, 1 mile = 1760 yards.
      */
     public sealed class Geolog : ProblemBase
     {

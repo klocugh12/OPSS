@@ -3,18 +3,18 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Wzorcem bitowym nazywamy dowolny ciąg zerojedynkowy długości n zawierający k jedynek, 1 ≤
-k ≤ n. Dla ustalonej długości n i liczby jedynek k, rozpatrzmy wszystkie wzorce bitowe
-posortowane malejąco w porządku leksykograficznym. Jaką będzie miał postać wzorzec bitowy
-znajdujący się na pozycji d?. Zakładamy, że liczba d jest tak dobrana, że taki wzorzec istnieje.
-Wejście
-W pierwszym wierszu znajduje się liczba zestawów danych C, 1 ≤ C ≤ 500. Każdy zestaw danych
-składa się z dwóch wierszy. W pierwszym wierszu znajdują się dwie liczby naturalne n i k, 1 ≤ k ≤
-n ≤ 100 oddzielone pojedynczą spacją. Oznaczają odpowiednio długość wzorca i liczbę jedynek. W
-drugim wierszu podana jest pozycja d, 1 ≤ d ≤ 2^31-1 szukanego wzorca.
-Wyjście
-Dla każdego zestawu danych na wyjściu należy wypisać wzorzec bitowy znajdujący się na pozycji
-d.
+     * A bit pattern is a binary number with n-bits, of which k are equal to 1, 1 ≤ k ≤ n.
+     * Consider all bit patterns sorted lexicographically in descending order.
+     * Find d-th bit pattern. Assume that d is not larger than number of such bit patterns.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 500.
+     * Each data set consists of two lines. First line contains two natural numbers n and k, 1 ≤ k ≤ n ≤ 100,
+     * separated by a whitespace. They mean, respectively, length of pattern and number of 1s.
+     * econd line contains index of pattern to find d, 1 ≤ d ≤ 2^31-1.
+     * 
+     * Output
+     * C lines, each containing a bit pattern with requested index d.
      */
     public sealed class WzorceBitowe : ProblemBase
     {
