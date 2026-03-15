@@ -1,33 +1,22 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Difficulty: 2/5
+     * Paramecium iustus is a singular genus. It feeds on bacteria, but a colony attempts to 
+     * equally distribute all local bateria between members to consume, then search for food 
+     * somewhere else. Periodically colony multiplies by factor X. Local bacteria multiply the same way.
+     * Determine, whether available bacteria can be divided equally among the colony.
      * 
-Pantofelek sprawiedliwy (Paramecium iustus) to bardzo specyficzny gatunek pantofelka. Prowadzi
-stadny tryb życia i odżywia się bakteriami, które wchłania tylko wtedy, gdy może się nimi podzielić
-sprawiedliwie z innymi osobnikami w stadzie. Pantofelki sprawiedliwe jeśli zaczynają jeść, to
-zawsze wchłaniają wszystkie okoliczne bakterie, a następnie przemieszczają się w inne miejsce, w
-którym jest pokarm. O sprawiedliwym podziale bakterii mówimy wtedy, gdy wszystkie okoliczne
-bakterie można podzielić po równo pomiędzy wszystkie pantofelki. Wówczas każdy pantofelek
-wchłonie tę samą liczbę okolicznych bakterii i w okolicy nie będzie już żadnej. Zarówno pantofelki,
-jak i bakterie, rozmnażają się szybko i w bardzo specyficzny sposób. Co pewien czas, nagle u
-wszystkich pantofelków dochodzi do podziału komórkowego, w wyniku którego każdy osobnik
-dzieli się na X osobników potomnych (liczebność populacji wzrasta X razy). Okoliczne bakterie
-rozmnażają się w taki sam sposób.
-Na podstawie historii rozmnożeń jednego pantofelka i jednej bakterii sprawdź, czy aktualny stan ich
-liczebności pozwala na sprawiedliwy podział. Jeśli taki podział istnieje, oblicz ile bakterii przypada
-na jednego pantofelka.
-Wejście
-Pierwsza linia zawiera liczbę zestawów danych D (1 ≤ D ≤ 10). W następnych liniach znajdują się
-kolejno po sobie opisy D zestawów danych. Pierwsza linia zestawu danych zawiera liczbę
-rozmnożeń N (1 ≤ N ≤ 100000). Każda z kolejnych N linii zestawu zawiera parę symbol-liczba,
-będącą opisem jednego rozmnożenia. Symbolem jest jedna z małych liter 'b' lub 'p' oznaczająca
-odpowiednio rozmnożenie się bakterii lub rozmnożenie się pantofelka. Liczba naturalna X w parze
-symbol-liczba oznacza, że liczebność osobników określonych przez symbol wzrasta X razy (1 ≤ X ≤
-100000). Symbol w parze jest oddzielony od liczby pojedynczą spacją.
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach, wypisz w przypadku sprawiedliwego podziału
-liczbę bakterii przypadających na jednego pantofelka (liczba ta będzie zawsze mniejsza od 2^31)
-lub -1 jeśli bakterii nie da się podzielić sprawiedliwie.
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10).
+     * Each data set is defined as follows:
+     * First line of a data set contains number of multiplications N (1 ≤ N ≤ 100000).
+     * Following N lines each contain a letter and a number separated by a whitespace.
+     * A letter is either b, if bacteria have multiplied, or p, if paramecium have multiplied.
+     * A number is multiplication factor X to apply to respective colony, (1 ≤ X ≤ 100000).
+     * 
+     * Output
+     * D lines, each containing number of bacteries for each paramecium colony member, or -1,
+     * if equal distribution is not possible.
      */
     public sealed class Pantofelek : ProblemBase
     {

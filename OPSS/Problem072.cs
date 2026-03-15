@@ -1,17 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Wejście
-W pierwszej linii wejścia znajduje się liczba C, określająca liczbę zestawów danych, 1 ≤ C ≤ 10. W
-kolejnych wierszach znajdują się zestawy danych. Każdy z C zestawów danych składa się z 2 linii.
-Pierwsza linia zawiera dwie liczby całkowite N, S, oddzielone pojedynczą spacją, gdzie N oznacza
-ile liczb bierze udział w sumowaniu, zaś S to suma jakiej oczekujemy (1 ≤ N ≤ 500, -2^31 < S <
-2^31). W drugim wierszu zestawu znajduje się N liczb całkowitych, oddzielonych pojedynczą
-spacją: a1, a2, ..., an, -500 ≤ ai ≤ 500, dla i: 1 ≤ i ≤ N.
-Wyjście
-Dla każdego zestawu danych, w osobnej linii wyjścia, należy wypisać słowo TAK, jeśli istnieje
-niepusty podciąg ciągu liczb a1, a2, ..., an, który daje zadaną sumę S, w przeciwnym razie należy
-wypisać słowo NIE.
+     * You're given N integer numbers. Find out whether you can create a subset of those numbers,
+     * whose sum is equal to a given value.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 10.
+     * Each data set consists of two lines. First line contains two numbers N and S, separated by a whitespace.
+     * N is a number of values in a set, and S is a sum to reach (1 ≤ N ≤ 500, -2^31 < S < 2^31).
+     * Second line contains N integers, each separated by a whitespace: 
+     * a1, a2, ..., an, -500 ≤ ai ≤ 500, for i: 1 ≤ i ≤ N.
+     * 
+     * Output
+     * C lines, each containing an answer for respective data set: TAK - if exists a subset of
+     * input numbers, whose sum is equal to S, NIE otherwise.
      */
     public sealed class Optymalizator : ProblemBase
     {

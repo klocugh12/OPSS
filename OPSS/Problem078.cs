@@ -1,37 +1,24 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * You're given series bitmaps describing a 3D space composed of black and white pixels.
+     * Each bitmap represents one of the following: ellipsoid, cuboid or a square pyramid.
+     * Recognize a figure represented by a bitmap, assuming that each radius of an ellipsoid, 
+     * each side of pyramid's base and each of cuboid's edges are parallel 
+     * (or perpendicular) to respective axis of coordinate system.
      * 
-Andrzej i Bartek, bawiąc się wymyślone przez siebie zabawy (Komputerowa telepatia, Kąt obrotu),
-zdobyli tyle doświadczenia w zgadywaniu zeskanowanych symboli, że robili to za każdym razem
-bezbłędnie. Postanowili więc po raz kolejny utrudnić sobie zadanie. Ponieważ kupili niedawno
-skaner do przedmiotów trójwymiarowych, postanowili, że tym razem będą starać się rozpoznać, czy
-skan przedmiotu przedstawia elipsoidę, prostopadłościan, czy też ostrosłup prawidłowy
-czworokątny. Skaner ten skanuje wycinek przestrzeni będący prostopadłościanem. Ustalili, że
-skanowane przedmioty będą ułożone w przestrzeni w specyficzny sposób: osie symetrii elipsoidy
-oraz krawędzie prostopadłościanu i krawędzie podstawy ostrosłupa będą ułożone tylko prostopadle
-lub równolegle do krawędzi prostopadłościanu będącego całym zeskanowanym wycinkiem
-przestrzeni.
-Zadanie
-Należy zidentyfikować zeskanowany obiekt i wypisać jego numer: 1 - prostopadłościan, 2 -
-elipsoida, 3 - ostrosłup.
-Wejście
-W pierwszym wierszu znajduje się liczba C (1 ≤ C ≤ 8), oznaczająca liczbę zestawów danych.
-Każdy zestaw składa się z dwóch wierszy.
-W pierwszym wierszu zestawu znajdują się trzy liczby W, H i D odzielone od siebie pojedynczą
-spacją. W oznacza liczbę cyfr szesnastkowych przypadającą na szerokość obrazu (2 ≤ W ≤ 100).
-Szerokość obrazu liczona w pikselach jest równa 4*W. H oznacza wysokość obrazu liczoną w
-pikselach (6 ≤ H≤ 100), a D głębokość obrazu liczoną w pikselach (6 ≤ D ≤ 100).
-W drugim wierszu zestawu znajduje się W*H*D znaków ze zbioru [0,1,..9,A,B,C,D,E,F],
-oznaczających liczby szesnastkowe, którymi została zakodowana figura. Każda cyfra szesnastkowa
-oznacza 4 punkty obrazu (piksele). W rozwinięciu binarnym 1 oznacza kolor czarny (zeskanowaną
-bryłę), 0 to białe tło. Pierwsze W*H znaków opisuje płaszczyznę na głębokości 1, kolejne W*H
-znaków płaszczyznę na głębokości 2 i tak aż do głębokości D. Opis płaszczyzny zaczyna się od
-lewego dolnego rogu. Figury opisane na płaszczyznach są spójne (nie maja żadnych dziur). Opis
-skanu jednoznacznie identyfikuje bryłę.
-Wyjście
-Dla każdego zestawu danych, w osobnym wierszu wyjścia, należy wypisać cyfrę 1, 2 lub 3
-identyfikującą zeskanowany obiekt.
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 8).
+     * First line of each data set contains three numbers each separated by a whitespace, W, H and D.
+     * They are, respectively, width, height and depth of each bitmap (2 ≤ W ≤ 100, 6 ≤ H, D ≤ 100). 
+     * Second line of each data set contains W*H*D hexadecimal digits.
+     * First W*H digits describe plane at depth = 1, second W*H digits - plane at depth = 2, and so on.
+     * Each digit describes 4 pixels bitwise, with 0s meaning white pixels, and 1 meaning black pixels.
+     * Each plane's description starts from bottom left corner.
+     * 
+     * Output
+     * C lines, each containing an answer for a respective bitmap.
+     * 1 - cuboid, 2 - ellipsoid, 3 - pyramid. Solutons are guaranteed to be unique for each bitmap.
      */
     public sealed class KomputerowaTelepatia3D : ProblemBase
     {

@@ -1,29 +1,30 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Janek, starszy kolega Edka (znanego z hodowli chomików) z Wydziału Biologii, pracuje nad
-doktoratem. W tym celu musi hodować pewien rodzaj alg i oszacować tempo ich wzrostu. Początek
-hodowli wydawał się prosty. "Kolonia" alg umieszczona w akwarium po jednej dobie zwiększyła
-swoją objętość czterokrotnie, to znaczy, że młodych alg było 3 razy więcej niż ich "matek", ale po 5
-dniach młodych było "prawie" 600 razy więcej niż na początku, zatem reguła czterokrotnego
-wzrostu okazała się fałszywa. Dokładniejsze badania wykazały, że komórki alg "matek" w ciągu
-doby pączkując dają życie czterem nowym komórkom, poprzednie pokolenie alg ("babki") ginąc
-wydzielają toksynę, która hamuje wzrost młodych w stosunku 1:1, to znaczy ginie tyle samo
-starych co nowych komórek. Na początku hodowli nie było co prawda starych alg, ale widocznie
-hodowla dopiero przystosowywała się do nowego środowiska stąd wolniejszy wzrost. Szczegóły
-rozwoju alg najlepiej prześledzić na rysunku. Ponieważ Janek, jak to biolog, nie jest zbyt sprawny
-w rachunkach, więc oszacowanie wielkości hodowli (np. po kilku miesiącach) przerasta jego
-możliwości. Pomóż ambitnemu badaczowi!
-Zadanie
-Należy oszacować "mnożnik", czyli liczbę komórek młodych alg wywodzących się z jednej
-komórki macierzystej, po zadanej liczbie dni.
-Wejście
-W pierwszym wierszu znajduje się liczba N, 0 < N ≤ 10000 oznaczająca liczbę zestawów danych.
-W każdym z kolejnych N wierszy znajduje się liczba dni hodowli Di, 0 ≤ Di ≤ 200000.
-Wyjście
-Na wyjściu, w oddzielnych wierszach, należy wypisać dwie liczby całkowite N, C, oddzielone
-jedną spacją. N oznacza liczbę cyfr, z których składa się poszukiwany przez Janka mnożnik, a C 10
-pierwszych cyfr mnożnika. Gdy N ≤ 10 to należy wypisać dokładnie N cyfr.
+     * Bob has an algae colony and is trying to estimate its growth rate. After a day colony grew 
+     * by factor 4, with new cells being 3 times as numerous as old ones, but after 5 days
+     * ratio was estimated to be a little below 600, hence growth factor per day is not constantly 4.
+     * More accurately, in each generation mature algae creates 4 young ones, but old algae die,
+     * releasing toxin, which also kills some of young algae at 1:1 ratio.
+     * After one day only three new algae were created despite there being no old ones releasing 
+     * toxin, but consider that a one-off.
+     * 
+     * To recap: 
+     * Initial state: 1 algae cell
+     * After 1 day: 1 mature cell, 3 new ones created, none died.
+     * After 2 days 3 mature cells, 12 new ones created, original cell dies, 
+     * killing one new cell for 11 remaining.
+     * 
+     * Estimate size of colony after given time.
+     *
+     * Input
+     * First line contains number of data sets N, 0 < N ≤ 10000.
+     * Each line contains a single number Di, 0 ≤ Di ≤ 200000.
+     * 
+     * Output
+     * N pairs of numbers separated by a whitespace.
+     * First number is number of digits for size of colony.
+     * Second number is up to 10 first digits of size of colony.
      */
     public sealed class HodowlaAlg : ProblemBase
     {

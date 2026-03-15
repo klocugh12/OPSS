@@ -1,30 +1,26 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
+     * You're given set of expressions to evaulate. Each expression can be any of following:
+     * 1. A single unsigned number.
+     * 2. Two expressions with addition, subtraction, multiplication or division operators (+, -, *, /, respectively).
+     * 3. Another expression inside parentheses ().
+     * 4. Another expression with leading negative - sign, both contained inside parentheses.
+     * 5. A symbol wn, where n is a number of another expression in a data set, starting from 1.
+     *    It represents value of another expression to substitute.
+     *    
+     * Respect standard order of algebraic operations.
      * 
-Zadanie polega na obliczeniu wartości podanych wyrażeń.
-Wejście
-Pierwsza linia wejścia zawiera liczbę całkowitą Q (1 ≤ Q ≤ 20), oznaczającą liczbę zestawów
-danych. W następnych liniach opisane są kolejno po sobie zestawy danych. Pierwsza linia każdego
-zestawu zawiera liczbę całkowitą N (1 ≤ N ≤ 10000), będącą liczbą wyrażeń. W kolejnych N liniach
-zestawu danych opisanych jest N niepustych wyrażeń, po jednym w każdej linii.
-Wyrażeniem jest:
-1. pojedyncza liczba bez znaku
-2. 2 wyrażenia połączone znakiem dodawania '+', znakiem odejmowania '-' lub znakiem
-mnożenia '*'
-3. wyrażenie ujęte w nawiasy okrągłe
-4. wyrażenie poprzedzone minusem, a następnie ujęte w nawiasy okrągłe
-5. symbol oznaczający wartość jednego z wyrażeń podanych z zestawie danych ('w1' oznacza
-wartość pierwszego wyrażenia, 'w2' - wartość drugiego, 'w3' - trzeciego, itd. aż do N)
-Wartość wyrażenia obliczana jest z zachowaniem kolejności wykonywania działań (w ogólnie
-przyjęty w matematyce sposób). Wartość dowolnego wyrażenia (również wchodzącego w skład
-innego wyrażenia) zawsze zawiera się w przedziale [-10^6, 10^6]. Wyrażenia nie zawierają białych
-znaków. Długość każdego wyrażenia jest mniejsza niż 256 znaków.
-Wszystkie N wyrażeń można ustawić w takiej kolejności, że w każdym wyrażeniu, jeśli wystąpią
-symbole oznaczające wartości wyrażeń, to będą to wartości wyrażeń poprzednich.
-Wyjście
-W oddzielnych liniach należy wypisać wartości wszystkich wyrażeń ze wszystkich zestawów
-danych w tej samej kolejności w jakiej wyrażenia pojawiły się na wejściu.
+     * Input
+     * First line contains number of data sets Q (1 ≤ Q ≤ 20).
+     * First line of each data set contains number of expressions N (1 ≤ N ≤ 10000).
+     * Following N lines of each data set contain a sngle expression described with above rules.
+     * Expressions cannot be empty. Each expression evaluates to value within range [-10^6, 10^6].
+     * Whitespaces are not allowed. Length of any expression does not exceed 256 characters.
+     * There are no circular dependencies between expressions, so all expressions can be fully evaluated.
+     * 
+     * Output
+     * For each data set write N lines, each containing final value of each respective expression.
      */
     public sealed class Wyrazenia : ProblemBase
     {

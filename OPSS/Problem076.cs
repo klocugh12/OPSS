@@ -1,36 +1,28 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Pewna firma świadczy usługi transportowe, dokładniej mówiąc, transportuje kontenery w
-Opsslandii. Opsslandia to kraj, w którym jest N miast, połączonych K drogami. Miasta
-ponumerowane są kolejnymi liczbami całkowitymi od 1 do N. Każde dwa różne miasta w tym kraju
-są połączone co najwyżej jedną drogą. Wszystkie drogi w Opsslandii są dwukierunkowe. Z każdego
-miasta da się dotrzeć do dowolnego innego miasta, ale zdarzyć się może, że nie będzie istniała
-pomiędzy nimi droga bezpośrednia i konieczny będzie przejazd przez inne miasta pośrednie. Na
-każdej drodze obowiązuje dzienne ograniczenie liczby przewożonych kontenerów. Koszt
-przewiezienia jednego kontenera pomiędzy dwoma bezpośrednio połączonymi miastami, czyli
-inaczej mówiąc: przejazd jednego kontenera jedną drogą, wynosi 1 opssar (opssar jest oficjalną
-walutą w Opsslandii). Na każdy kontener nie można wydać więcej niż 1 opssar dziennie (jeden
-kontener może być przetransportowany co najwyżej przez jedną drogę dziennie).
-Twoje zadanie polega na obliczeniu minimalnej liczby dni potrzebnej na przetransportowanie
-wszystkich kontenerów z miasta nr 1 do miasta nr N, mając do dyspozycji określone fundusze
-przeznaczone na ten cel.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą D (1 ≤ D ≤ 20), określającą liczbę zestawów danych. W
-następnych liniach opisane są kolejno po sobie zestawy danych. W pierwszej linii zestawu danych
-znajdują się dwie liczby całkowite: liczba miast N (1 ≤ N ≤ 100) oraz liczba dróg K. W każdej z
-kolejnych K linii zestawu danych znajdują się trzy liczby całkowite A, B i C: A i B (1 ≤ A, B ≤ N) są
-numerami miast, pomiędzy którymi istnieje droga, przez którą dziennie nie można
-przetransportować więcej niż C kontenerów (1 ≤ C ≤ 100). Ostatnia linia zestawu danych zawiera
-dwie liczby całkowite: liczbę T będącą liczbą kontenerów, które należy przetransportować z miasta
-nr 1 do miasta nr N oraz liczbę opssarów F przeznaczoną na transport kontenerów (1 ≤ T ≤ 10^7; 1
-≤ F ≤ 2^31-1).
-Wyjście
-W oddzielnych liniach dla każdego zestawu danych należy wypisać minimalną liczbę dni potrzebną
-do przetransportowania wszystkich kontenerów wykorzystując przy tym nie więcej niż
-przeznaczoną na ten cel liczbę opssarów. Jeśli przeznaczone fundusze są niewystarczające do
-przetransportowania wszystkich kontenerów, wówczas należy zamiast minimalnej liczby dni
-wypisać -1.
+     * A logistics company provides transport services between N towns connected with K roads.
+     * Any two cities have at most a single road connecting them and each road is two-way.
+     * From any city you can get to any other city, but not necessarily directly.
+     * Each road has daily limit of deliveries. Transporting each box costs 1 dollar, and that's
+     * a daily limit for each box, meaning each box can only be transferred between two directly
+     * connected cities each day. Find minimum number of days necessary to deliver all boxes 
+     * from city 1 to city N given specific budget.
+     * 
+     * Input.
+     * First line contains number of data sets D (1 ≤ D ≤ 20).
+     * First line of each data set contains two numbers separated by a whitespace.
+     * First number N (1 ≤ N ≤ 100) represents number of cities. Second number K represents number of roads.
+     * Following K lines each contain three numbers separated by a whitespace: A, B, C (1 ≤ A, B ≤ N, 1 ≤ C ≤ 100)
+     * First two numbers represent numbers of cities a given road connects.
+     * Third number is daily limit of boxes that can be transported using this road.
+     * Last line of each data set contains two numbers separated by a whitespace.
+     * First number T is a number of containers to transport from city 1 to city N.
+     * Second number F is a budget dedicated for whole delivery (1 ≤ T ≤ 10^7; 1 ≤ F ≤ 2^31-1).
+     * 
+     * Output
+     * D lines, each containing minimum number of days needed for entire delivery,
+     * or -1 if budget is not sufficient.
      */
     public sealed class Transport : ProblemBase
     {

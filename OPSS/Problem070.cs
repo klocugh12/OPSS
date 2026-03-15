@@ -1,23 +1,17 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
+     * A resonant word is a word containing more vowels (upper- or lowercase letters: 
+     * 'a', 'e', 'i', 'o', 'u', 'y') than consonants and has at least one consonant.
+     * Given a list of words determine number of resonant words on that list.
      * 
-Firma DB-Bit, główny potentat na rynku baz danych w Opsslandii, postanowiła rozszerzyć swój
-produkt o nowe możliwości wyszukiwania słów w tekście. Firmowi badacze, po przeanalizowaniu
-różnorodnych zbiorów tekstowych, postawili hipotezę, że najlepszym rozwiązaniem będzie oparcie
-nowej technologii na słowach, które mają więcej samogłosek (małe lub duże litery: 'a','e','i','o','u','y')
-niż spółgłosek i zawierają przynajmniej jedną spółgłoskę. Słowa o tej własności nazwali słowami
-dźwięcznymi. W Opsslandii spółgłoski zapisuje się używając tylko jednej litery.
-W celu wykazania słuszności hipotezy, naukowcy muszą sprawdzić częstość występowania
-dźwięcznych słów w zadanym tekście. Naukowcy nie potrafią programować, a programiści firmy
-DB-Bit są zbyt obciążeni pracą. Pomóż ambitnym badaczom.
-Zadanie
-Napisz program, który wyznaczy liczbę dźwięcznych słów w podanej liście.
-Wejście
-W pierwszym wierszu znajduje się liczba słów N, 1 ≤ N ≤ 1000. W kolejnych N wierszach znajdują
-się niepuste słowa składające się z co najwyżej 100 liter (dużych i małych) alfabetu angielskiego.
-Wyjście
-Na wyjściu powinna znaleźć się tylko jedna liczba określająca ilość dźwięcznych słów.
+     * Input
+     * First line contains number of words on the list N, 1 ≤ N ≤ 1000.
+     * Following N lines each contains a single word consisting of upper- and lowercase letters
+     * of English alphabet.
+     * 
+     * Output
+     * A single line containing number of resonant words on the list.
      */
     public sealed class DzwieczneSlowa : ProblemBase
     {

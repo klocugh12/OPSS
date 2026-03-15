@@ -1,40 +1,53 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Zadanie
-Dana jest plansza o wymiarach 8x7, podzielona na 56 identycznych kwadratów oraz zestaw 28
-różnych kamieni domina. Na każdym kwadracie (polu) znajduje się jedna liczba całkowita z
-przedziału [0..6]. Należy przykryć tę planszę jednym zestawem kamieni domina tak, aby liczby
-znajdujące się na dwóch sąsiednich, przykrywanych polach były równe liczbom znajdującym się na
-połówkach kamienia. Kamienie nie mogą na siebie zachodzić, ani leżeć jeden na drugim.
-Nie zawsze przykrycie planszy zestawem kamieni domina jest możliwe, często jednak jest wiele
-możliwości by to zrobić. Twoim zadaniem jest stwierdzenie dla zadanego opisu planszy, na ile
-sposobów można pokryć planszę kamieniami z jednego zestawu domina oraz podać pierwsze
-leksykograficznie pokrycie spełniające warunki zadania.
-Przykładowa plansza oraz ułożone na niej kamienie domina
-Wejście
-Wejście zawiera opis planszy. Opis złożony jest z 8 wierszy, w których występuje po 7 liczb
-całkowitych (oddzielonych pojedynczą spacją) z przedziału [0..6]. J-ta liczba w i-tym wierszu
-wejścia określa liczbę jaka stoi w i-tym wierszu, licząc od góry i j-tej kolumnie planszy.
-Wyjście
-W pierwszej linii wyjścia należy wypisać liczbę możliwych ustawień kamieni domina, tak aby
-pokryć planszę. W następnych liniach wyjścia należy podać opis pierwszego leksykograficznie
-pokrycia spełniającego warunki zadania (o ile takie istnieje).
-Opis pokrycia zawiera 8 wierszy, w których występuje po 7 liczb naturalnych od 1 do 28
-(oddzielonych pojedyncza spacja). J-ta liczba w i-tym wierszu opisu pokrycia oznacza numer
-kamienia jaki leży na polu planszy w i-tym wierszu i j-tej kolumnie w tym pokryciu.
-Kamienie numerujemy w następujący sposób:
-kamień | numer
-0:0 | 1
-0:1 | 2
-0:2 | 3
-...
-1:1 | 8
-1:2 | 9
-...
-6:6 | 28
-Porządek leksykograficzny opisów pokryć oznacza porządek leksykograficzny ciągów uzyskanych
-przez zapisanie opisu pokrycia wierszami, rozpoczynając od pierwszego górnego wiersza.
+     * Consider a 8x7 board, for which each tile has assigned a number from 0 to 6.
+     * You're given a set of 28 stones 2x1, each having distinct pair of numbers from 0 to 6
+     * (some of them have same number on both tiles). Find number of ways to tile a board with 
+     * given stones, so that all numbers on a board are covered by same numbers on respective stones.
+     * Stones are not allowed to overlap each other. A valid tiling may not exist for a given board.
+     * If such tiling exists, print it. If multiple tilings exist, print first one in lexicographical order.
+     * A lexicographical order is determined by sorting used stone indexes in ascending order, reading
+     * left to right, then top to bottom.
+     * 
+     * Stones are indexed as follows:
+     *  1 | 0 0
+     *  2 | 0 1
+     *  3 | 0 2
+     * ...
+     *  8 | 1 1
+     *  9 | 1 2
+     * ...
+     * 28 | 6 6
+     * 
+     * Here's a valid tiling of a sample board:
+     * 
+     * +-+---+---+---+
+     * |3|5 3|4 1|1 1|
+     * | +-+-+---+---+
+     * |4|1|5 0|4 5|0|
+     * +-+ +-+-+---+ |
+     * |0|3|6|4|4 0|2|
+     * | +-+ | +---+-+
+     * |1|6|2|4|2 3|5|
+     * +-+ +-+-+-+-+ |
+     * |2|5|6|0 3|1|5|
+     * | +-+ +---+ +-+
+     * |1|4|4|3 3|6|6|
+     * +-+ +-+-+---+ |
+     * |1|2|2 2|6 0|6|
+     * | +---+---+---+
+     * |5|0 0|6 3|2 5|
+     * +-+---+---+---+
+     * 
+     * Input
+     * 8 rows, each containing 7 integers from range [0..6], seaparated by a whitespace.
+     * 
+     * Output
+     * First line contains number of valid tilings of a given board.
+     * If this number is greater than 0, write additional 8 lines, each containing 7 numbers
+     * separated by single whitespaces. They correspond to indexes of tiles used in first valid 
+     * tiling (sorted lexicographically using indexing described above.
      */
     public sealed class DzienDziecka : ProblemBase
     {

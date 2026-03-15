@@ -1,24 +1,18 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Jeden z bardzo znanych matematyków Opsslandii, Matimus Logaritmus, ma synka Arcusa. Arcus
-już od małego uwielbia matematyczne gry i łamigłówki.
-Ostatnio polubił taką zabawę: wymyśla pewną nieujemną liczbę całkowitą X1 i dodaje do niej
-liczbę powstałą przez zapisanie cyfr liczby X1 w odwrotnej kolejności. Otrzymuje w ten sposób
-liczbę X2. Dalej postępuje analogicznie, czyli do liczby X2 dodaje liczbę powstałą przez
-"odwrócenie" cyfr X2 otrzymując kolejną liczbę X3, itd, itd...
-Arcus mógłby bawić się tak w nieskończoność, więc jego tata Matimus postanowił nieco
-skomplikować chłopcu zabawę. Zapytał go, jaką najmniejszą liczbę należy pomyśleć na samym
-początku, aby w wyniku zabawy otrzymać w pewnym momencie wskazaną liczbę Z. Arcus myśli
-już bardzo długo nad odpowiedzią, pomóż mu rozwiązać zagadkę.
-Wejście
-Pierwsza linia wejścia zawiera liczbę całkowitą N (1 ≤ N ≤ 100), oznaczającą liczbę zestawów
-danych. W kolejnych N liniach znajdują się zestawy danych, po jednym w każdej linii. Jeden
-zestaw składa się z jednej liczby całkowitej Z (0 ≤ Z ≤ 10^9).
-Wyjście
-Dla każdego zestawu danych w oddzielnych liniach, należy wypisać najmniejszą nieujemną liczbę
-całkowitą X, mniejszą od Z, od której Arcus powinien rozpocząć zabawę tak, aby w trakcie zabawy
-otrzymać zadaną liczbę Z. W przypadku, gdy taka liczba nie istnieje należy wypisać -1.
+     * Consider a game, where you take an integer X1, reverse its digits, and add the two together.
+     * Repeat this process for a resulting sum.
+     * You're given some number Z. Find a smallest number that allows you to reach Z in a finite
+     * number of steps.
+     * 
+     * Input
+     * First line contains number of data sets N (1 ≤ N ≤ 100).
+     * Each data set consists of a single line containing a single integer Z (0 ≤ Z ≤ 10^9).
+     * 
+     * Output
+     * Smallest integer X lesser than Z, which, starting from, Z can be achieved in finite number of steps.
+     * If there is no such number, write -1 instead.
      */
     public sealed class Zabawa : ProblemBase
     {
