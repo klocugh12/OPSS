@@ -1,26 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Niedawno cały świat opanowała nowa gra o nazwie "Samotnik". Jej zasady są proste: w grze bierze
-udział jeden gracz, który ma do dyspozycji szachownicę oraz pewną liczbę pionków rozłożonych na
-polach szachownicy. Na jednym polu może leżeć co najwyżej 1 pionek.
-Pionki są zdejmowane w kolejnych ruchach zgodnie z zasadami, że w jednym ruchu można usunąć
-jedynie takie pionki, które znajdują się w jednym wierszu bądź w jednej kolumnie szachownicy (w
-szczególności oznacza to, że dopuszczone jest wykonanie ruchu polegającego na zdjęciu tylko
-jednego pionka). Wszystkie pionki należy zdjąć, wykonując przy tym najmniejszą liczbę ruchów.
-Zadanie
-Napisz program, który dla zadanego ustawienia pionków wyznaczy najmniejszą liczbę ruchów
-potrzebną do zdjęcia wszystkich pionków z szachownicy.
-Wejście
-Pierwsza linia wejścia zawiera liczbę całkowitą C (1 ≤ C ≤ 5), oznaczającą liczbę zestawów
-danych. W kolejnych wierszach znajdują się opisy zestawów danych. W pierwszej linii opisu
-zestawu znajduje się liczba N (1 ≤ N ≤ 100000), oznaczająca liczbę pionków znajdujących się na
-szachownicy. Kolejne N wierszy zawiera opis położenia pionków. Opis położenia pionka to dwie
-liczby naturalne, określające współrzędne X i Y pionka oddzielone pojedynczą spacją: x, y, (1 ≤ x ≤
-2*10^9, 1 ≤ y ≤ 2*10^9).
-Wyjście
-Dla każdego zestawu danych należy wypisać w jednej linii minimalną liczbę ruchów potrzebnych
-do usunięcia wszystkich pionków z planszy w danej grze.
+     * A Loner is a single player game with simple rules: you're given a rectangular board made of square tiles.
+     * Some number of pieces is distributed across the board. Each tile can contain no more than 1 piece.
+     * In each turn you remove all pieces from a single row, or a single column.
+     * In particular it is possible to remove a single piece that way.
+     * Find least number of moves needed to remove all pieces from the board.
+     * 
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 5).
+     * First line of each data set contains number of pieces on the board N (1 ≤ N ≤ 100000).
+     * Following N lines each contain two numbers x and y separated by a whitespace.
+     * They represent coordinates of each piece (1 ≤ x ≤ 2*10^9, 1 ≤ y ≤ 2*10^9).
+     * 
+     * Output
+     * C lines, each containing least number of moves needed to remove all pieces from the board.
      */
     public sealed class Samotnik : ProblemBase
     {

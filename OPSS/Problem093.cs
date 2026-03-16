@@ -1,30 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Juhasi Jędruś i Bartuś postanowili urozmaicić sobie wieczorne zaganianie owiec wymyśloną przez
-siebie zabawą. Każdy z nich z pomocą psa może zagonić do zagrody dowolną liczbę owiec
-pasących się na hali w kilku grupach. Ponieważ mają jednego psa, to zapędzanie owiec będą robili
-na zmianę: najpierw Jędruś potem Bartuś i potem znów Jędruś itd. aż do zapędzenia ostatniej. Ten
-kto zapędza ostatnią owcę przegrywa, bo jego kolega może w tym czasie wziąć jedyną butelkę
-piwa, która się chłodzi w potoku.
-Ponieważ grupy owiec są od siebie oddalone to w czasie jednego zapędzania można zagonić
-dowolną liczbę owiec (minimum jedną, maksimum wszystkie) pod warunkiem, że należą do jednej
-grupy. Kolejność wyboru grup jest dowolna.
-Po kilku zmianach, Jędruś wziął butelkę piwa z potoku mimo, że jeszcze sporo owiec pasło się na
-hali, bo jak powiedział i tak będzie ona jemu się należała bez względu na to co zrobi Bartuś.
-Zastanów się czy jest to możliwe?
-Zadanie
-Napisz program, który wskaże juhasa, który wygra zabawę przy założeniu, że zaczyna zawsze
-Jędruś i obaj są dostatecznie sprytni aby wykorzystać wszystkie szanse jakie stwarza im układ
-owiec pasących się na hali.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita C, oznaczająca liczbę zestawów
-danych, 1 ≤ C ≤ 10. W następnych C wierszach podane są liczby całkowite oznaczające liczbę grup
-owiec i ich liczebność. Pierwsza liczba w wierszu oznacza liczbę grup owiec N, 1 ≤ N ≤ 100000, a
-następujące po niej N liczb ai, 1 ≤ ai ≤ 2^31-1 dla 1 ≤ i ≤ N oznaczają liczebność każdej grupy.
-Wyjście
-Na wyjściu, w C wierszach należy wypisać pojedyncze duże litery: J, gdy wygra Jędruś lub B, gdy
-wygra Bartuś.
+     * Alice and Bob play a game in which they take turns herding sheeps divided into several groups,
+     * starting with Alice. A player during they turn can herd any number of sheeps provided they are all
+     * from the same group. Whoever has to herd the last sheep, loses the game.
+     * After a few turns Alice declared herself a winner, even though the game was far from over.
+     * How is that possible? Find out, whether you can determine a winner in advance, based on
+     * initial grouping of sheeps, assuming Alice starts and both Alice and Bob play optimally.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 10.
+     * Each data set contains a single line with multiple numbers each separated by a whitespace.
+     * First number is equal to number of groups of sheeps N, 1 ≤ N ≤ 100000, and following N
+     * numbers ai 1 ≤ ai ≤ 2^31-1, 1 ≤ i ≤ N are equal to number of sheeps in i-th group.
+     * 
+     * Output
+     * C lines, each containing an answer: J, if Alice will win, or B, if Bob will win.
      */
     public sealed class Owce : ProblemBase
     {

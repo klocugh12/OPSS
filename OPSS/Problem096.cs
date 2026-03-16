@@ -1,22 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Jaś postanowił zbudować sobie domek na działce. Chciał rozpocząć od położenia terakoty, więc
-zakupił dużą ilość kwadratowych płytek i ułożył je na całej działce w szachownicę nie docinając
-żadnej z płytek. Ściany natomiast Jaś chciał postawić na płytkach w taki sposób, aby całe wnętrze
-domku było pokryte płytkami. Jeśli Jaś stawiał ścianę na płytce (ale nie na krawędzi płytki), to
-musiał przyciąć płytkę.
-Napisz program, który pomoże Jasiowi znaleźć najmniejszą ilość płytek, które musi pociąć.
-Zakładamy, że ściana ma grubość zerową.
-Wejście
-Pierwszy wiersz zawiera dodatnią liczbę całkowitą C (1 ≤ C ≤ 10) określającą ilość zestawów
-danych. W kolejnych liniach znajdują się zestawy danych. Pierwszy wiersz zestawu danych zawiera
-dodatnią liczbę całkowitą D (1 ≤ D ≤ 5) określającą długość boku płytki. Drugi wiersz zestawu
-danych zawiera liczbę całkowitą N (4 ≤ N < 10000) określającą liczbę ścian w domku.
-Wiersz o numerze i + 2 (i = 1, 2, ..., N) zestawu danych zawiera dwie liczby całkowite xi (0 ≤ xi
-≤1000000) oraz yi (0 ≤ yi ≤1000000) oddzielone spacjami określające kolejne rogi domku, czyli
-współrzędne (xi, yi) i (xi+1, yi+1) dla i=1, 2, ..., N-1 oraz (xN, yN) i (x1, y1) określają końce ścian.
-Ponadto (xi=xi+1) lub (yi=yi+1) dla i=1, 2, ..., N-1. Długości ścian są liczbami dodatnimi.
+     * John is building a new house. He tiled the floor using square tiles, forming a rectangle.
+     * Then he wants to build walls on the tiled floor. He wants to put as much wall as possible 
+     * on the edges of tiles, otherwise he is forced to cut the tiles.
+     * Find the smallest number of tiles to cut, ignoring thickness of walls.
+     * 
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 10).
+     * First line of each data set contains a single integer D (1 ≤ D ≤ 5), equal to side of each tile.
+     * Second line of each data set contains a single integer N (4 ≤ N < 10000),
+     * equal to number of walls. Following N lines each contain two integers
+     * separated by a whitespace. They are xi and yi, such as (xi, yi) is i-th corner of a house,
+     * xi, 0 ≤ xi ≤ 1000000, 0 ≤ yi ≤ 1000000. Each of the consecutive pairs of corners, as well as
+     * last and first pair together describe a wall of John's house.
+     * 
+     * Output
+     * C lines, each containing a single integer equal to smallest number of tiles to cut.
      */
     public sealed class Plytki : ProblemBase
     {

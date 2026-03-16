@@ -1,29 +1,24 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
+     * Phone numbers can be encoded by words, where letters are mapped to digits as described below:
+     * ABC: 2
+     * DEF: 3
+     * GHI: 4
+     * JKL: 5
+     * MNO: 6
+     * PQRS: 7
+     * TUV: 8
+     * WXYZ: 9
+     * Given a word, find corresponding phone number.
      * 
-Numery telefonów w Opsslandii są zapisywane w postaci wyrazów, aby książki telefoniczne były
-bardziej przystępne dla przeciętnego czytelnika. Każdej literze wyrazu reprezentującego numer
-telefonu odpowiada jedna cyfra.
-ABC: 2
-DEF: 3
-GHI: 4
-JKL: 5
-MNO: 6
-PQRS: 7
-TUV: 8
-WXYZ: 9
-Poza Opsslandią numery telefoniczne zapisywane są w postaci ciągu cyfr i osoby spoza Opsslandii
-mają trudności z rozkodowaniem numerów wyrazowych.
-Napisz program tłumaczący wyrazowe numery telefonów na ich odpowiedniki cyfrowe.
-Wejście
-Pierwszy wiersz zawiera dodatnią liczbę całkowitą C (1 ≤ C ≤ 100000) określającą ilość
-wyrazowych numerów telefonicznych.
-W każdym z kolejnych C wierszy znajduje się wyraz do przetłumaczenia. Każdy wyraz zawiera co
-najmniej 1 i co najwyżej 100 liter.
-Wyjście
-Dla każdego wyrazowego numeru telefonu należy, w osobnej lini, wypisać odpowiadający mu
-numer telefonu w postaci ciągu cyfr
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 100000).
+     * Each data set consists of a single line containing a single word.
+     * Each word consists of 1 to 100 uppercase English letters only.
+     * 
+     * Output
+     * C lines, each containing a phone number corresponding to a given word.
      */
     public sealed class Komorka : ProblemBase
     {

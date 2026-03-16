@@ -1,31 +1,16 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Given an integer c, find pairs of nonnegative integers a, b such as a^2 - b^2 = c.
+     * If there are multiple such pairs, pick one with smallest difference between a and b.
+     * If there are still multiple candidates, pick one with smallest value of b.
      * 
-Ludzie od wieków, jeszcze w czasach "przedkomputerowych", fascynowali się rachmistrzami.
-Dotyczyło to w szczególności cudownych, najczęściej autystycznych dzieci, które często nie umiały
-czytać i pisać, ale liczyły z zadziwiającą sprawnością. W szczególności w XIX wieku zostało
-opisanych kilku takich wyjątkowych rachmistrzów egzaminowanych przez Francuską Akademię
-Nauk. Jednym z nich był urodzony w 1826 roku, młody pasterz owiec Henri Mondeux. Zapytany,
-jakie liczby podniesione do kwadratu maja różnicę równą 133 odpowiedział, że to 66 i 67 a po
-chwili, że jest także inne rozwiązanie: 6 i 13. Dziś taka fascynacja rachmistrzami już bezpowrotnie
-minęła, bo w erze powszechnej dostępności kalkulatorów i komputerów trudno by zgromadzić
-publiczność, która chciałaby przyglądać się takim popisom, ale pozostała nadal ciekawość
-odkrywania sposobów, dzięki którym takie skomplikowane operacje arytmetyczne można sprawnie
-wykonać.
-Spróbuj postawić się w położeniu małego Henri.
-Zadanie
-Należy znaleźć rozwiązanie równania a^2 - b^2 = c, gdzie c jest zadaną liczbą. Liczby a, b, c są
-liczbami całkowitymi nieujemnymi.
-W przypadku istnienia kilku różnych rozwiązań, tj. par (a, b) spełniających równanie, interesuje nas
-to rozwiązanie dla którego różnica a-b jest najmniejsza. Jeżeli istnieje kilka rozwiązań dla których
-różnica a-b jest taka sama, należy wybrać to, dla którego liczba b jest najmniejsza.
-Wejście
-W pierwszym wierszu wejścia podana jest liczba całkowita L, 1 ≤ L ≤ 60000, oznaczająca liczbę
-zestawów danych. W kolejnych L wierszach występują wartości ci, 0 ≤ ci ≤ 5∙10^6.
-Wyjście
-Na wyjściu, w jednym wierszu dla każdej danej ci, należy wypisać jedną liczbę całkowitą bi,
-spełniającą warunki opisane w zadaniu. Jeżeli rozwiązanie nie istnieje, należy wypisać liczbę -1.
+     * Input
+     * First line contains number of data sets L, 1 ≤ L ≤ 60000.
+     * Each data set contains a single number c, 0 ≤ c ≤ 5∙10^6.
+     * 
+     * Output
+     * L lines, each containing b value satisfying described conditions, or -1 if no solution exists..
      */
     public sealed class Rachmistrz : ProblemBase
     {

@@ -1,18 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Liczbę całkowitą dodatnią L nazwiemy samoopisującą się liczbą, jeżeli jej pierwsza cyfra w zapisie
-dziesiętnym (najbardziej znacząca cyfra - pierwsza cyfra od lewej) oznacza liczbę wystąpień cyfry
-'0' w zapisie tej liczby, druga cyfra oznacza liczbę wystąpień '1' w zapisie tej liczby, itd...
-Zadanie
-Dla zadanego n należy wyznaczyć największą liczbę samoopisującą nie większą od n.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita D, 1 ≤ D ≤ 100, oznaczająca liczbę
-zestawów danych. W każdym z D kolejnych wierszy znajduje się liczba całkowita n, 0 ≤ n < 1010,
-po jednej dla każdego zestawu.
-Wyjście
-Na wyjściu, w jednym wierszu dla każdego zestawu, należy wypisać największą liczbę
-samoopisującą nie większą od zadanej liczby n. W przypadku braku rozwiązania należy wypisać -1.
+     * A natural number L is self-descriptive, if, for all k from 1 to L's length,
+     * k-th digit in order from most to least significant, is equal to number of occurrences 
+     * of digit k + 1. In other words, most significant digit is number of zeroes in L,
+     * second most significant digit is number of ones in L, etc.
+     * For a given n, find largest self-descriptive number no lesser than n.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 100.
+     * Each data set contains a single number n, 0 ≤ n < 1010.
+     * 
+     * Output
+     * D lines, each containing largest self-descriptive number no lesser than n, or -1 
+     * if no such number exists.
      */
     public sealed class SamoopisujaceSieLiczby : ProblemBase
     {

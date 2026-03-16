@@ -1,34 +1,28 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Pewna firma zajmująca się tworzeniem oprogramowania spostrzegła niedawno, że jej system łat
-jest bardzo skomplikowany. Programy przez nią produkowane składają się z K komponentów
-ponumerowanych kolejnymi liczbami naturalnymi od 1 do K. Każda łata uaktualnia część
-komponentów programu do pewnej wersji. Łatę uaktualniającą do wersji v+1 można użyć tylko
-wtedy, gdy wszystkie komponenty uaktualniane przez tę łatę mają wersję v.
-Zadanie
-Napisz program, który sprawdzi, czy przy zadanych łatach da się uaktualnić cały program, czyli
-wszystkie jego komponenty, z wersji 1 do wersji zadanej w pliku wejściowym. Jeśli da się
-uaktualnić cały program, wówczas należy wypisać numery łat, z których trzeba skorzystać.
-Wejście
-Pierwsza linia wejścia zawiera liczbę zestawów danych D, 1 ≤ D ≤ 10. W następnych liniach
-znajdują się kolejno po sobie opisy D zestawów danych. Pierwsza linia zestawu danych zawiera
-trzy liczby naturalne oddzielone pojedynczymi spacjami: K, L oraz V, 1 ≤ K ≤ 10, 1 ≤ L ≤ 10000, 2
-≤ V ≤ 1000. K oznacza liczbę komponentów, z których składa się program, L - liczbę łat, którymi
-można uaktualniać program, natomiast V - wersję, do której należy uaktualnić wszystkie
-komponenty programu. W kolejnych liniach zestawu danych znajdują się opisy L łat. Opis łaty
-składa się z dwóch linii. W pierwszej linii opisu łaty znajdują się dwie liczby naturalne oddzielone
-spacją: VL, oznaczająca wersję, do której łata uaktualnia komponenty oraz KL, oznaczająca liczbę
-komponentów uaktualnianych przez łatę (2 ≤ VL ≤ V, 1 ≤ KL ≤ K). W drugiej linii opisu łaty
-znajduje się KL numerów komponentów, które uaktualnia łata. Sąsiednie numery w pliku
-wejściowym oddzielone są od siebie spacją. Numery uaktualnianych komponentów podane są w
-kolejności rosnącej. Łaty są ponumerowane kolejnymi liczbami naturalnymi od 1 do L w kolejności
-pojawiania się ich opisów w pliku wejściowym.
-Wyjście
-W oddzielnych liniach dla każdego zestawu danych należy wypisać numery łat w kolejności, w
-jakiej powinny być stosowane. Jeśli istnieje wiele rozwiązań, należy wypisać ciąg numerów łat
-najmniejszy leksykograficznie. Jeśli nie da się uaktualnić programu do wersji V, wówczas trzeba
-wypisać liczbę -1.
+     * Consider a software with K components and multiple patches.
+     * Each patch can update some (not necessarily all) components to its specified version.
+     * Patch v+1 can only be used if all components updated by that patch have version v.
+     * Find out, whether is it possible to update all components of a given program to a specified
+     * version. If so, write numbers of patches to use.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 10. 
+     * First line of each data set contains 3 integers separated by a whitespace each.
+     * They are, respectively: number of components K, 1 ≤ K ≤ 10, number of patches L, 1 ≤ L ≤ 10000,
+     * and target software version V, 2 ≤ V ≤ 1000.
+     * Following are L pairs of lines describing each patch.
+     * First line of each patch contains two numbers separated by a whitespace.
+     * They are, respectively: patch version VL, and number of updated components KL,
+     * 2 ≤ VL ≤ V, 1 ≤ KL ≤ K. Second line of each patch contains indexes of updated components
+     * separated by a whitespace. Updated components are sorted in ascending order.
+     * Patches are indexed 1 to L in order of appearing in input.
+     * 
+     * Output
+     * D lines, each containing numbers of patches to apply written in order of application.
+     * All numbers must be separated by a whitespace each. If there is more than one answer,
+     * write smallest one lexicographically. If no answer exists, write -1 instead.
      */
     public sealed class Laty : ProblemBase
     {

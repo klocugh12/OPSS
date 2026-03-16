@@ -1,36 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Consider a fixed point in 2D space. A space contains multiple non-overlapping rectangles.
+     * All rectangles are axis-aligned. Find minimum number of rays to draw starting from 
+     * a given point, so that each rectangle intersects with at least one ray.
      * 
-Kosmita wylądował w centrum miasta i chce zniszczyć wszystkie budynki. Tym razem, wyjątkowo,
-nie będziesz ratował świata, ale pomożesz kosmicie.
-Statek kosmity jest wyposażony w potężne działo laserowe dużej mocy. Działo strzela wiązkami
-laserowymi, które są półprostymi wychodzącymi ze statku kosmity. Wiązka lasera jest tak silna, że
-przechodzi przez wszystkie budynki znajdujące się na jej drodze. Budynek trafiony promieniem
-lasera natychmiast zamienia się w obłok pary. Wiązka lasera przemieszcza się tuż nad ziemią - jest
-w stanie trafić w każdy budynek na swojej drodze niezależnie od jego wysokości. Każdy strzał
-pozbawia kosmitę zasobów energii, dzięki której może wrócić na macierzystą planetę. Kosmicie
-zależy na tym, aby zniszczyć wszystkie budynki możliwie najmniejszą liczbą strzałów.
-Zadanie
-Dysponując dokładnym planem rozmieszczenia budynków, musisz wyznaczyć minimalną liczbę
-strzałów potrzebną do zniszczenia wszystkich budynków, przy założeniu, że statek nie może
-zmieniać swojej pozycji.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba C, 1 ≤ C ≤ 10, określająca liczbę zestawów
-danych. W kolejnych wierszach znajdują się zestawy danych. W pierwszym wierszu każdego
-zestawu danych znajduje się liczba N, 1 ≤ N ≤ 10^5, oznaczająca ilość budynków w mieście. W
-kolejnych N wierszach znajdują się opisy budynków. W każdym następnym wierszu danego
-zestawu znajdują się 4 liczby całkowite: xl, yg, xp, yd, -10^9 ≤ xl, yg, xp, yd ≤ 10^9, xl < xp, yd < yg,
-gdzie punkt (xl, yg) jest lewym górnym rogiem budynku, a punkt (xp,yd) prawym dolnym rogiem
-budynku. Zakładamy, że wszystkie budynki mają ściany prostopadłe do osi układu współrzędnych.
-Żadne 2 budynki nie zajmują wspólnej powierzchni, jednak mogą "dotykać się" rogami i bokami.
-Ponieważ niezbędnych pomiarów dokonujemy na statku kosmicznym, więc początek układu
-współrzędnych został ustalony w miejscu lądowania statku. W tym miejscu nie stoi też żaden
-budynek.
-Wyjście
-Dla każdego zestawu danych należy wypisać na standardowe wyjście linię zawierającą jedną liczbę
-naturalną, oznaczającą ilość strzałów konieczną do zniszczenia wszystkich budynków, przy
-założeniu, że statek nie zmienia pozycji i znajduje się w punkcie o współrzędnych (0, 0).
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 10.
+     * First line of each data set contains a number of rectangles N, 1 ≤ N ≤ 10^5.
+     * Following N lines each contain four integers separated by a whitespace: xl, yg, xp, yd, 
+     * -10^9 ≤ xl, yg, xp, yd ≤ 10^9, xl < xp, yd < yg, such as (xl, yg) is a top-left corner 
+     * of the rectangle is (xl, yg) and bottom-right corner of same rectangle is (xp, yd).
+     * All rectangles are axis-aligned. No two rectangles overlap, but they might have common
+     * corners or edges. Assume that point to draw rays from is (0, 0) and no rectangle contains
+     * that point.
+     * 
+     * Output
+     * C lines, each containing a single number equal to minimum number of rays, which
+     * would intersect at least one rectangle in a data set.
      */
     public sealed class Kosmita : ProblemBase
     {

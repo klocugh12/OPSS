@@ -1,27 +1,27 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Danych jest N dowolnych liczb a1, a2, a3, .. , aN, będących początkowymi wyrazami pewnego ciągu.
-Kolejne wyrazy ciągu powstają poprzez zsumowanie N bezpośrednio je poprzedzających wyrazów
-tego ciągu:
-aN+1 = a1 + a2 + .. + aN,
-aN+2 = a2 + a3 + .. + aN+1,
-..
-Zadanie
-Wyznaczyć pięć ostatnich cyfr liczby, będącej sumą wyrazów powyższego ciągu, począwszy od
-wyrazu ap, a skończywszy na wyrazie ak.
-Wejście
-Pierwszą linię wejścia stanowi liczba D, 1 ≤ D ≤ 20, wyznaczająca liczbę zestawów danych. W
-dalszej części wejścia znajduje się D zestawów danych. Zestaw danych składa się z trzech linii.
-Pierwszą z nich stanowi liczba całkowita N, 2 ≤ N ≤ 50, określająca początkową liczbę wyrazów
-ciągu. W drugiej zaś znajduje się N, oddzielonych pojedynczą spacją, liczb całkowitych z
-przedziału <0; 10^5>, będących początkowymi wyrazami ciągu. Ostatnia linia zestawu danych ma
-postać p k, gdzie 0 < p ≤ k < 2^31 oraz p oznacza numer wyrazu od którego rozpoczynamy
-sumowanie, a k numer wyrazu dla którego kończymy sumowanie.
-Wyjście
-Dla każdego z D zestawów danych, w osobnej linii wyjścia należy wypisać pięć (lub mniej - bez zer
-wiodących) ostatnich cyfr liczby, będącej sumą wyrazów ciągu, począwszy od wyrazu ap do
-wyrazu ak włącznie.
+     * Consider a sequence defined as follows. You're given N initial terms a1, a2, a3, .. , aN.
+     * To derive following terms, add up N previous ones. For instance:
+     * aN+1 = a1 + a2 + .. + aN,
+     * aN+2 = a2 + a3 + .. + aN+1.
+     * 
+     * ...and so on.
+     * Your job is to determine five least significant digits of sum of terms of this sequence
+     * starting from ap and ending with ak for certain p and k.
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 20.
+     * Each data set consists of three lines.
+     * First line contains number of initial terms N, 2 ≤ N ≤ 50.
+     * Second line contains N numbers, each separated by a whitespace, equal to those initial terms 
+     * in order; all values are in range <0; 10^5>,.
+     * Third line contains two numbers p and k separated by a whitespace, 0 < p ≤ k < 2^31,
+     * equal to beginning and end of range of terms to add up.
+     * 
+     * Output
+     * D lines, each containing at most 5 (or less if there are leading zeros) least significant 
+     * digits of sum of terms of respective sequence starting with ap and ending with ak (inclusive).
      */
     public sealed class Ciag : ProblemBase
     {

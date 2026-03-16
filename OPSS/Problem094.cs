@@ -1,33 +1,30 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
-     * Prawie każdy, kto instalował oprogramowanie na uniksowych systemach operacyjnych miał do
-czynienia z zależnościami pomiędzy różnymi pakietami.
-Zależność pomiędzy pakietami jest opisana w postaci par liczb (numerów pakietów) oddzielonych
-od siebie pojedynczą spacją. Para A B (gdzie A, B są różnymi numerami pakietów) oznacza, że
-pakiet A powinien być zainstalowany przed pakietem B.
-Dla przykładu, zależności opisane przez następujące pary:
-A B
-B C
-B D
-mogą być instalowane w systemie w następującej kolejności:
-A B C D
-lub
-A B D C.
-Wejście
-W pierwszej linii wejścia znajduje się liczba zestawów danych D, 1 ≤ D ≤ 10. W kolejnych liniach
-znajdują się zestawy danych. Pierwsza linia zestawu zawiera dwie liczby N, 1 ≤ N ≤ 100000, oraz
-Z, 0 ≤ Z ≤ 100000. Liczba N oznacza liczbę pakietów do zainstalowania (pakiety numerowane są
-kolejnymi liczbami od 1 do N), natomiast liczba Z - liczbę zależności. W kolejnych Z liniach
-zestawu znajduje się opis zależności w postaci par A, B (dwóch numerów pakietów oddzielonych
-pojedynczą spacją), 1 ≤ A, B ≤ N.
-Wszystkie zestawy danych są poprawne, co oznacza, że nie może dojść do zapętleń, np. A B (pakiet
-B zależy od A), B C (pakiet C zależy od B), C A (pakiet A zależy od C).
-Wyjście
-Dla każdego zestawu danych program powinien wypisać listę numerów pakietów (oddzielonych
-pojedynczą spacją) w kolejności w jakiej powinny być instalowane. Jeśli jest więcej niż jedno
-rozwiązanie, program powinien wypisać pierwsze (najmniejsze) z nich w porządku
-leksykograficznym.
+     * Installing software packages comes with its own challenges. Notable one is resolving dependencies.
+     * Each dependency is described by a pair of different numbers separated by a whitespace.
+     * Pair A B means package A must be installed before package B.
+     * For instance, dependency chain described as follows:
+     * 1 2
+     * 2 3
+     * 2 4
+     * 
+     * Can be resolved in either of following orders:
+     * 1 2 3 4
+     * 1 2 4 3
+     * 
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 10.
+     * First line of each data set contains two integers separated by a whitespace.
+     * First value is a number of packages to install N, 1 ≤ N ≤ 100000.
+     * Second value is a number of dependencies Z, 0 ≤ Z ≤ 100000. 
+     * Following Z lines each contain a pair of integers separated by a whitespace A B, 1 ≤ A, B ≤ N,
+     * where package B must be installed after package A. 
+     * There are no circular dependencies in input data.
+     * 
+     * Output
+     * D lines, each containing order of packages to install. Indexes of packages must be 
+     * separated by a whitespace. If there are multiple solutions, write smallest one lexicographically.
      */
     public sealed class Zaleznosci : ProblemBase
     {
