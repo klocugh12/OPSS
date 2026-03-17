@@ -1,28 +1,23 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * You're given a fish tank to populate with several species of fish.
+     * Each speies can live in a different temperature range.
+     * Your goal is to find largest possible temperature range, in which all given species can live.
      * 
-Zadanie
-Napisz program, który pomoże nie tylko Agatce, ale również innym potencjalnym hodowcom
-rybek akwariowych określić, jaką temperaturę powinna mieć woda w akwarium, aby mogły w niej
-przeżyć rybki zadanych gatunków.
-Wejście
-Pierwsza linia wejścia zawiera liczbę naturalną N określającą liczbę gatunków rybek (1 ≤ N ≤ 50).
-Kolejne N wierszy zawiera informacje dotyczące warunków temperaturowych dla kolejnych
-gatunków rybek (gatunki rybek ponumerowane są kolejnymi liczbami całkowitymi od 1 do N).
-Każdy z warunków składa się z wiersza zawierającego dwie liczby naturalne: tmin i tmax,
-oddzielone pojedynczą spacją, oznaczające, że dany gatunek jest w stanie przetrwać w temperaturze
-większej lub równej tmin i mniejszej lub równej tmax (3 ≤ tmin ≤ tmax ≤ 38). Kolejny wiersz wejścia
-zawiera liczbę naturalną K oznaczającą liczbę zapytań (1 ≤ K ≤ 1000). W następnych K wierszach
-znajdują się kolejne zapytania. Każde zapytanie składa się z jednej linii, w której znajdują się liczby
-naturalne: m, a1, ..., am, oddzielone pojedynczą spacją (1 ≤ m ≤ N; 1 ≤ ai ≤ N, dla i = 1, 2, ..., m).
-Liczba m oznacza liczbę gatunków, które hodowca chce hodować. Kolejne m różnych od siebie
-liczb: a1, ..., am, określa numery gatunków rybek, które mają być hodowane.
-Wyjście
-Dla każdego zapytania, w kolejnych liniach wyjścia, należy wypisać dwie liczby t1 i t2 oddzielone
-pojedynczą spacją, gdzie t1 ≤ t2, określające końce maksymalnego (różnica t2 - t1 jest
-maksymalna) przedziału domkniętego temperatur, w którym dane gatunki rybek są w stanie
-przetrwać. Jeśli taki przedział nie istnieje, należy wypisać słowo NIE.
+     * Input
+     * First line contains number of species N (1 ≤ N ≤ 50).
+     * Each of the following N ines contains two numbers tmin and tmax, separated by a whitespace,
+     * representing minimum and maximum temperature each species can live in (inclusive, 3 ≤ tmin ≤ tmax ≤ 38). 
+     * Following line contains number of queries K (1 ≤ K ≤ 1000).
+     * Following K lines each contain a single query. A query consists of numbers, each separated by a whitespace.
+     * First number of a query is number of species m and following m numbers are indexes of species 
+     * a1, a2, ... am (1 ≤ m ≤ N; 1 ≤ ai ≤ N, dla i = 1, 2, ..., m).
+     * 
+     * Output
+     * K lines, each containing two numbers t1 and t2 separated by a whitespace,
+     * representing largest temperature range, which can accomodate all species in a query.
+     * If not all species can be accomodated, write NIE instead.
      */
     public sealed class Rybki : ProblemBase
     {

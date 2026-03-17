@@ -8,7 +8,7 @@ namespace OPSS
      * Same thing happened next month. In the third month things went back to normal - 
      * three mature pairs of hamster gave birth to 3 pairs of young ones.
      * To recap: first month results in three pairs, second - four pairs, third - seven pairs.
-     * After one year we had 521 pairs. Your task is to track the growth after given number
+     * After one year we had 521 pairs. Your goal is to track the growth after given number
      * of years, assuming longevity is not the issue. 10 most significant numbers of result are enough.
      * 
      * Input

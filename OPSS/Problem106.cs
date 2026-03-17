@@ -3,24 +3,38 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Consider a markup language OPSSML. Each OPSSML file contains header in first line, followed by
+     * one element in each following line. An element can be either simple or complex.
+     * A simple element has format <name [attr] />, where name is element name, and [attr] is
+     * optional list of attributes.
      * 
-Zadanie
-Napisz program, który dla zadanego pliku OPSSML:
-posortuje leksykograficznie niemalejąco elementy w obrębie każdej listy elementów względem
-nazw elementów,
-posortuje leksykograficznie niemalejąco atrybuty w obrębie każdej listy atrybutów względem nazw
-atrybutów.
-Porządek w sortowaniu leksykograficznym określa kolejność kodów ASCII.
-Wejście
-Na wejściu podana jest zawartość pliku OPSSML, którego rozmiar nie przekracza 106 znaków.
-Wyjście
-Na wyjściu należy wypisać zawartość pliku OPSSML powstałego z pliku, którego zawartość jest
-podana na wejściu, wyłącznie poprzez leksykograficzne posortowanie elementów w obrębie każdej
-listy elementów według nazw elementów oraz poprzez leksykograficzne posortowanie atrybutów w
-obrębie każdej listy atrybutów według nazw atrybutów. Elementy, które w obrębie jednej listy
-elementów mają takie same nazwy elementów, należy wypisać w takiej kolejności, w jakiej podane
-są na liście elementów na wejściu. Nie należy zamieniać elementu skróconego na element pełny,
-ani elementu pełnego na element skrócony.
+     * A complex element has format:
+     * <name [attr] >
+     * [elements]
+     * </name>
+     * 
+     * Where name and [attr] mean the same things as above, and [elements] is optional list of
+     * other elements, either simple or complex ones.
+     * 
+     * An attribute is defined as follows:
+     * name="value"
+     * where name is attribute name, and value is its value. All attributes are separated by a
+     * single whitespace. All attribute names within a single list must be distinct.
+     * 
+     * All names and values are strings up to 20 characters long, consisting of English letters 
+     * (upper- or lowercase) as well as digits.
+     * 
+     * Your goal is to write an OPSSML parser. It must sort attributes and elements in ascending order.
+     * It must sort elements accordingly at all nesting levels. A lexicographical order is determined using
+     * ASCII codes of characters used.
+     * 
+     * Input
+     * A single OPSSML file, no more than 106 characters long.
+     * 
+     * Output
+     * Same OPSSML file after processing by your parser. Sort elements and attributes lexicographically. 
+     * Elements with same nesting level and names should appear in the same order they were in the input file.
+     * Do not convert complex elements to simple ones or other way round.
      */
     public sealed class OPSSML : ProblemBase
     {

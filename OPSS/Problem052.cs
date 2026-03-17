@@ -1,7 +1,7 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Your task is to determine, what shape is on a scanned image.
+     * Your goal is to determine, what shape is on a scanned image.
      * It can be either of three: square, triangle, rectangle. Assume following:
      * All images are black and white.
      * Ellipse's axis and rectangle's sides are always parallel to the edges of the image.

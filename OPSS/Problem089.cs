@@ -6,7 +6,7 @@ namespace OPSS
      * 
      * Customers can place an order for merchandise with specified quality of parameters, or may
      * be satisfied with any batch. If they placed an order with specific requirements, they cannot
-     * be given items which don't meet those requirements. Your task is to determine, 
+     * be given items which don't meet those requirements. Your goal is to determine, 
      * whether all customer orders can be fulfilled, given current store.
      * 
      * Input

@@ -1,39 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Uwaga! Historia jest w całej rozciągłości fikcją literacką i jakiekolwiek podobieństwo do faktów i
-zdarzeń jest zupełnie przypadkowe.
-W pobliżu dosyć dużego, uniwersyteckiego miasta postanowiono rozbudować istniejące lotnisko
-sportowe. Planowane jest wydłużenie i poszerzenia pasa startowego oraz rozbudowa infrastruktury
-lotniska. Inwestycja pewnie ruszyłaby już pełną parą gdyby nie problemy ekologiczne. Trawiaste
-lotnisko sportowe zamieszkuje mianowicie dosyć rzadki gatunek susła, który znalazł tu doskonałe
-warunki rozwoju. Inwestorzy chcą wyłapać sympatyczne zwierzaki i przenieść je w inne miejsce,
-ale ekolodzy uważają, że nigdzie nie znajdzie się tak dobrego siedliska dla susłów i chcą bronić ich
-spokoju. Aby zapobiec wyłapywaniu susłów ekolodzy planują otoczyć ich norki "żywym
-łańcuchem" biorąc się za ręce.
-Znane jest położenie wejść do norek susłów, a problem ekologów polega na określeniu minimalnej
-liczby ludzi, którzy potrzebni są do utworzenia "żywego łańcucha". Spróbuj rozwiązać problem
-ekologów!
-Zadanie
-Należy wyznaczyć minimalną liczbę ekologów, którzy potrzebni są do utworzenia "żywego
-łańcucha" chroniącego norki susłów przy założeniu, że średnia rozpiętość ramion ekologa (i
-ekolożki?) to 150cm. Dodatkowo należy też podać numery punktów oznaczających wejścia do
-norek przez które łańcuch będzie przechodził.
-Wejście
-W pierwszym wierszu wejścia podana jest liczba całkowita 0<L<1001, oznaczająca liczbę
-zestawów danych. W każdym z L kolejnych wierszy występuje liczba Ni (2< Ni<200000),
-oznaczająca liczbę punktów (norek susłów) oraz Ni różnych par liczb całkowitych xi,yi (-100001<xi,
-yi< 100001) oznaczających współrzędne punktów podane w centymetrach. Wszystkie liczby
-oddzielone są pojedynczą spacją.
-Wyjście
-Na wyjściu, w jednym wierszu dla każdego zestawu danych, należy wypisać liczbę ekologów
-niezbędną do utworzenia łańcucha oraz listę numerów punktów, przez które łańcuch będzie
-przechodził. Lista punktów powinna rozpoczynać się od punktu o najmniejszej współrzędnej x,
-przez który będzie przechodził łańcuch a następne punkty na obwodzie łańcucha powinny tworzyć
-obieg o kierunku przeciwnym do ruchu wskazówek zegara. Jeżeli jest kilka punktów na obwodzie
-łańcucha, których współrzędna x równa jest xmin to punktem początkowym łańcucha jest ten, który
-ma najmniejszą współrzędną y. Numeracja punktów jest zgodna z ich kolejnością podaną na
-wejściu.
+     * You're given a number of points on a plane. Find minimum perimeter of a polygon that contains
+     * all of them. A point can lie on a perimeter of said polygon.
+     * 
+     * Input
+     * First line contains number of data sets L 0 < L < 1001.
+     * Each data set contains of integers separated by a whitespace.
+     * First number is a number of points Ni (2 < Ni < 200000), followed by Ni pairs of numbers 
+     * xi, yi (-100001 < xi, yi < 100001), each representing coordinates of a point. 
+     * 
+     * Output
+     * L lines, each containing numbers seaparated by a whitespace.
+     * First number is minimum length of a circumference of said polygon divided by 150.
+     * Following numbers are indexes of points (1 to Ni) on the perimeter, starting with point 
+     * with smallest x coordinate and continuing counterclockwise. If there are multiple points with 
+     * same xmin, then select a point with smallest y-coordinate. Indexes of points match order
+     * they appeared in input.
      */
     public sealed class ProtestEkologow : ProblemBase
     {

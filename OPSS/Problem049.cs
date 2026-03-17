@@ -1,7 +1,7 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Your task is to determine, whether number of ways you can select K out of N items is odd or even.
+     * Your goal is to determine, whether number of ways you can select K out of N items is odd or even.
      * 
      * Input
      * First line contains number of data sets d, 1 ≤ d ≤ 1000.

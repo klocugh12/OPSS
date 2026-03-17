@@ -1,27 +1,27 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * An animal graph G can be described as follows:
+     * ● G is simple, connected and contains exactly two cycles (head and body), each no shorter than 3.
+     * ● Cycles do not have common vertices and are connected by a single path (neck).
+     * ● Head cycle is shorter than body cycle.
+     * ● Two vertices on body cycle have degree 4. Each of them has two additional paths of equal length (two pairs of legs).
+     * ● One or two vertices on body cycle have degree 3. First of them connects body and neck,
+     *   second (optional) one has additional path representing a tail.
+     * ● All remaining body cycle vertices have degree 2.
+     * ● All head cycle vertices have degree 2, except for one connecting head with neck, which has degree 3.
+     * Smallest animal graph has 11 nodes. Given graph's description, answer whether it is an animal graph.
      * 
-Zdefiniujmy pojęcie grafu animalnego. Obrazowo można opisać graf animalny, jako graf który
-odpowiednio narysowany na płaszczyźnie może przedstawiać schemat czworonoga.
-A bardziej formalnie:
-● Graf G nazywamy grafem animalnym, jeśli spełnia następujące warunki:
-● G jest prosty, spójny, zawiera dokładnie 2 cykle, każdy o długości co najmniej 3.
-● Oba cykle są rozłączne, połączone są pojedynczą ścieżką, zawierającą co najmniej 1
-krawędź (ścieżka ta będzie szyją czworonoga).
-● Jeden z cykli jest krótszy od drugiego. Krótszy cykl nazywać będziemy głową, dłuższy
-tułowiem.
-● Dokładnie 2 wierzchołki tułowia mają stopień 4. Do każdego z tych wierzchołków
-dołączone są 2 ścieżki równej długości (są to 2 pary nóg naszego czworonoga).
-● 1 lub 2 wierzchołki tułowia mają stopień 3. Jeden z nich to wierzchołek łączący tułów z
-głową, a ewentualny drugi wierzchołek stopnia 3 to miejsce w którym dołączona do tułowia
-jest jeszcze jedna ścieżka (to ogon naszego czworonoga - nie każdy czworonóg ma ogon).
-● Pozostałe wierzchołki tułowia mają stopnie równe 2.
-● Wszystkie wierzchołki głowy mają stopień 2, za wyjątkiem jednego, łączącego głowę z
-tułowiem. Ma on stopień 3.
-Rys. Przykłady grafów animalnych.
-Najmniejszy graf animalny ma 11 wierzchołków. Twoim zadaniem będzie badanie animalności
-grafów.
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 100.
+     * First line of each data set contains number of nodes n, 1 ≤ n ≤ 100000.
+     * Following n - 1 lines each contain multiple numbers separated by a whitespace.
+     * First number is a number of neighbors of current node with index greater than current one.
+     * Following numbers are indexes of neighbors of current node, sorted in ascending order.
+     * n-th node does not have a corresponding line, because it has greatest index.
+     * 
+     * Output
+     * C lines, each containing an answer for a respective data set: "tak" if graph is an animal, "nie" otherwise.
      */
     public sealed class GrafyAnimalne : ProblemBase
     {
@@ -37,39 +37,87 @@ grafów.
             {    
                 int n = int.Parse(input[j]);
                 j++;
-                List<List<int>> nodes = [];
-                for (int k = 0; k < n; k++)
-                    nodes.Add([]);
-                for (int k = 0; k < n - 1; k++)
+                Dictionary<int, List<int>> nodes = [];
+                for (int k = 1; k <= n; k++)
+                    nodes.Add(k, []);
+                for (int k = 1; k < n; k++)
                 {
-                    foreach(var node in input[j].Split(' ').Skip(1).Select(s => int.Parse(s) - 1))
+                    foreach(var node in input[j].Split(' ').Skip(1).Select(s => int.Parse(s)))
                     {
                         nodes[node].Add(k);
                         nodes[k].Add(node);
                     }
                     j++;
                 }
-                bool isAnimal = true;
-                isAnimal = isAnimal && TrimLegsAndTail(nodes);
-                isAnimal = isAnimal && HasTwoCyclesAndNeck(nodes);
+                bool isAnimal = TrimLegsAndTail(nodes);
+                isAnimal &= HasTwoCyclesAndNeck(nodes);
+                isAnimal &= AreCyclesDifferent(nodes);
                 output.Add(isAnimal ? "tak" : "nie");
             }
         }
 
-        static bool HasTwoCyclesAndNeck(List<List<int>> nodes)
+        static bool AreCyclesDifferent(Dictionary<int, List<int>> nodes)
+        {
+            int[] counts = [0, 0];
+            foreach (var n in nodes.Where(node => node.Value.Count == 3))
+            {
+                HashSet<int>[] cycles = [[], [], []];
+                int i = 0;
+                while (i < 3)
+                {
+                    cycles[i].Add(n.Value[i]);
+                    i++;
+                }
+                i = 0;
+                int next = cycles[i].First();
+                while (i < 3)
+                {
+                    next = nodes[next].FirstOrDefault(node => 
+                        !cycles[i].Contains(node));
+                    if (next == 0 || nodes[next].Count == 3)
+                    {
+                        i++;
+                        if (i < 3)
+                            next = cycles[i].First();
+                    }
+                    else
+                        cycles[i].Add(next);
+                }
+                int value = (cycles[0].Count == cycles[1].Count) ? cycles[0].Count :
+                    (cycles[1].Count == cycles[2].Count ? cycles[1].Count : cycles[0].Count) ;
+                if (counts[0] == 0)
+                    counts[0] = value;
+                else
+                    counts[1] = value;
+            }
+            return counts[0] != counts[1];
+        }
+
+        static bool HasTwoCyclesAndNeck(Dictionary<int, List<int>> nodes)
         {
             if (nodes.Count < 6)
                 return false;
-            nodes.RemoveAll(n => n.Count == 0);
-            nodes.Sort((a, b) => -a.Count.CompareTo(b.Count));
-            return nodes[0].Count == 3 && nodes[1].Count == 3 && nodes.Skip(2).All(n => n.Count == 2);
+            int c2 = 0, c3 = 0;
+            var toRemove = nodes.Keys.Where(k => nodes[k].Count == 0).ToList();
+            foreach (var tr in toRemove)
+                nodes.Remove(tr);
+            foreach(var n in nodes)
+            {
+                if (n.Value.Count == 2)
+                    c2++;
+                else if (n.Value.Count == 3)
+                    c3++;
+                else
+                    return false;
+            }
+            return c3 == 2;
         }
 
-        static bool TrimLegsAndTail(List<List<int>> nodes)
+        static bool TrimLegsAndTail(Dictionary<int, List<int>> nodes)
         {
             if (nodes.Count < 11)
                 return false;
-            int[] ones = Enumerable.Range(0, nodes.Count).Where(j => nodes[j].Count == 1).ToArray();
+            int[] ones = Enumerable.Range(1, nodes.Count).Where(j => nodes[j].Count == 1).ToArray();
             if (ones.Length < 4 || ones.Length > 5)
                 return false;
             List<List<int>> links = [];

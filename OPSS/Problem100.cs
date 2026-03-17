@@ -1,20 +1,19 @@
-using System.Globalization;
-
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Zadanie
-Należy wyznaczyć liczbę różnych konfiguracji, które powstają przy trącaniu się kieliszkami
-parzystej liczby osób siedzących przy okrągłym stole. Stuknięcia kieliszkami w jednej konfiguracji
-odbywają się w tej samej chwili a ręce biesiadników nie mogą się krzyżować.
-Wejście
-W pierwszym wierszu wejścia podana jest liczba całkowita D (0<D≤1000), oznaczająca liczbę
-zestawów danych. W kolejnych D wierszach występują wartości Ni (0<Ni≤8000), oznaczające
-liczby par biesiadników.
-Wyjście
-Na wyjściu, w jednym wierszu dla każdej danej Ni, należy wypisać dwie liczby całkowite: Ki -
-liczbę konfiguracji stuknięć kieliszkami i Ci - ilość cyfr liczby Ki. Jeżeli liczba Ki jest większa lub
-równa 10^9 to należy wypisać tylko 9 jej pierwszych cyfr.
+     * On a wedding reception there was a certain even number of guests.
+     * Determine number of ways guests can clink their glasses with each other, assuming as follows:
+     * All guests participate in cheers. All guests clink their glasses at the same time.
+     * No cheering guests cross hands with each other.
+     * 
+     * Input
+     * First line contains number of data sets D (0<D≤1000).
+     * Each data set contains a single line with number of pairs of guests Ni (0<Ni≤8000).
+     * 
+     * Output
+     * D lines, each containing two numbers separated by a whitespace.
+     * They are, respectively Ki - number of ways guests can clink their glasses, and Ci - number 
+     * of digits Ki has. If Ki is greater or equal to 10^9, write only first 9 digits of Ki.
      */
     public sealed class WeselneToasty : ProblemBase
     {

@@ -14,7 +14,7 @@ namespace OPSS
      * point of the space A. Intensity of radiation grows along some vector R.
      * Intensity of radiation at any given point P is a product of modulus of R (|R|)
      * by distance to a line (in case of 2D space) perpendicular to R vector anchored at point A.
-     * Your task is to find a safe point with minimum radiation intensity. 
+     * Your goal is to find a safe point with minimum radiation intensity. 
      * 
      * Input
      * First line contains two numbers separated by a whitespace N and W,

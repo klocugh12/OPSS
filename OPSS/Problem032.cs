@@ -4,7 +4,7 @@ namespace OPSS
      * Alice and Bob play a gambling game. Each of them writes down a pattern consisting of letters
      * O (heads) and R (tails). Then they alternate throwing a coin, each writing down result,
      * until either of them gets a match against a pattern they have.
-     * Your task is to establish, given two arbitrary patterns, which pattern is more likely to win.
+     * Your goal is to establish, given two arbitrary patterns, which pattern is more likely to win.
      * 
      * Input
      * First line contains number of data sets C, 1 ≤ C ≤ 200.

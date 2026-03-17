@@ -3,27 +3,18 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Write a program to add common fractions. Assume the following:
+     * a fractions can be represented as "a", "a/b/c" or "b/c" where a, b, c are nonnegative
+     * integers. "a" is an integer, "a/b/c" is equivalent to a + b/c, and "b/c" is a common
+     * fraction. Fractions need not be reduced. Write output in the same format.
      * 
-Krzyś ma kłopoty z działaniami na ułamkach. Jego tata, chcąc pomóc synkowi w szkolnych
-problemach zaproponował mu zabawę w dodawanie "nietypowych" ułamków. Nietypowość polega
-na tym, że sposób (format) zapisywania ułamków jest bardzo odmienny od tego, którego nauczają
-w szkole.
-Przyłącz się do tej edukacyjnej zabawy.
-Format zapisywania ułamków to "a", "a/b/c" lub "b/c", gdzie a, b, c są liczbami całkowitymi
-nieujemnymi. Zapis "a" oznacza liczbę całkowitą nieujemną, zapis "a/b/c" oznacza liczbę będącą
-tzw. ułamkiem mieszanym (a+b/c), gdzie część ułamkowa jest właściwa ale może nie być skrócona,
-zaś zapis "b/c" oznacza ułamek właściwy, który może nie być skrócony.
-Zadanie
-Obliczyć sumę dwóch ułamków podanych w "nietypowym" formacie. Wynik przedstawić również
-w "nietypowym" formacie ze skróconą częścią ułamkową.
-Wejście
-W pierwszej linii wejścia znajduje się liczba D, 1 ≤ D ≤ 1000, oznaczająca liczbę zestawów danych.
-W kolejnych D wierszach występują po dwa ułamki, które należy zsumować. Każdy ułamek
-zapisany jest w "nietypowym" formacie, tj. "a", "a/b/c" lub "b/c", gdzie a, b, c są liczbami
-całkowitymi, 0 ≤ a ≤ 10000, 0 < b < c ≤ 10000. Ułamki oddzielone są od siebie znakiem "+".
-Wyjście
-Na wyjściu w osobnej linii dla każdego zestawu należy wypisać sumę dwóch ułamków w
-"nietypowym" formacie przy czym części ułamkowe muszą być ułamkami nieskracalnymi.
+     * Input
+     * First line contains number of data sets D, 1 ≤ D ≤ 1000.
+     * Each data set contains two fractions represented in format described above,
+     * separated by a single + sign. Assume 0 ≤ a ≤ 10000, 0 < b < c ≤ 10000.
+     * 
+     * Output
+     * D lines, each containing reduced sum of provided fractions in a format described above.
      */
     public sealed class Ulamki : ProblemBase
     {

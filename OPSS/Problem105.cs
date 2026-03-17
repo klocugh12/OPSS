@@ -1,26 +1,20 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
-     * W pewnej firmie informatycznej znajdują się serwery gromadzące duże ilości danych. W związku z
-przebudową infrastruktury technicznej podjęto decyzję o przeniesieniu i umieszczeniu danych na
-jednym serwerze. Każde dwa serwery połączone są bezpośrednim łączem. Każdy z serwerów w
-danym momencie może albo wysyłać dane tylko do jednego serwera, albo odbierać dane tylko od
-jednego serwera. Każdy serwer może pomieścić dane znajdujące się na wszystkich serwerach. Cała
-operacja przenoszenia danych powinna zostać przeprowadzona tak, aby trwała jak najkrócej. Czas
-przenoszenia 1MB danych pomiędzy dwoma serwerami jest stały i wynosi 1s.
-Zadanie
-Napisz program, który dla zadanej konfiguracji serwerów (rozmiar przechowywanych danych)
-wyznaczy minimalną liczbę sekund, potrzebnych do wykonania tej operacji.
-Wejście
-Pierwsza linia wejścia zawiera liczbę zestawów danych C (1 ≤ C ≤ 100). W kolejnych wierszach
-wejścia znajdują się zestawy danych. Każdy z C zestawów danych składa się z dwóch wierszy.
-Pierwszy wiersz zestawu zawiera liczbę naturalną n określającą liczbę serwerów (1 ≤ n ≤ 100).
-Drugi wiersz zestawu danych zawiera n liczb całkowitych: a1, ..., an, oddzielonych pojedynczą
-spacją. Liczba ai (i = 1, ..., n; 0 ≤ ai < 2^31) określa rozmiar danych w MB przechowywanych przez i-
-ty serwer.
-Wyjście
-Dla każdego zestawu danych, w kolejnych liniach wyjścia, należy wypisać minimalną liczbę
-sekund potrzebnych do wykonania operacji przenoszenia danych na jeden serwer.
+     * There are n servers in a network. A request has been made to merge all contained data 
+     * onto a single server. Any server has enough capacity to do so, but it is necessary to pick 
+     * one, for which that operation will take the least time. Any unit of data can be transferred 
+     * in a single unit of time between any two servers. A single server can only either transmit
+     * or receive data at any given time.
+     * 
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 100).
+     * Each data set consists of two lines. First line contains number of servers n (1 ≤ n ≤ 100)
+     * Second line contains n integers a1, ..., an, each separated by a whitespace.
+     * Each ai value (i = 1, ..., n; 0 ≤ ai < 2^31) represents amount of data on i-th server.
+     * 
+     * Output
+     * C lines, each containing minimum number of units of time needed to merge all data onto a single server.
      */
     public sealed class Serwery : ProblemBase
     {

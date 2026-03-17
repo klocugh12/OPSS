@@ -1,10 +1,10 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Difficulty: 1/5
      * Fibonacci numbers are defined as follows:
-F(0)=1,
-F(1)=1,
-F(n)=F(n-1)+F(n-2), n>1.
+     * F(0)=1,
+     * F(1)=1
+     * F(n)=F(n-1)+F(n-2), n>1.
      * Find least significant digit of n-th Fibonacci's number in binary system.
      * 
      * Input

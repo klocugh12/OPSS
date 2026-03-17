@@ -1,46 +1,25 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Opsslandia miejscami porośnięta jest bujnymi lasami. Przez jeden z nich drogowcy muszą
-poprowadzić drogę. Las nie jest w każdym miejscu tak samo gęsty, dlatego wybór przebiegu drogi
-wpływa na liczbę wyciętych drzew podczas jej budowy. Ponieważ wszyscy mieszkańcy Opsslandii
-cenią sobie lasy, istotne jest, żeby wyciąć jak najmniej drzew. W celu ułatwienia zadania, drogowcy
-sporządzili kwadratowy plan tej części lasu, przez którą może przebiegać droga. Następnie przy
-użyciu siatki podzielili sporządzony plan na N * N równych kwadratowych obszarów. Jeden koniec
-przyszłej drogi ma być w obszarze znajdującym się w północno-zachodnim rogu siatki, a drugi
-koniec w obszarze znajdującym się południowo-wschodnim rogu siatki. Z pewnych względów
-przez dany obszar drogę można poprowadzić albo na wprost (łącząc obszar sąsiadujący od północy
-z obszarem sąsiadującym od południa lub łącząc obszar sąsiadujący od zachodu z obszarem
-sąsiadującym od wschodu), albo wytyczyć zakręt pod kątem prostym (na przykład łącząc obszar
-sąsiadujący od południa z obszarem sąsiadującym od zachodu lub łącząc obszar sąsiadujący od
-wschodu z obszarem sąsiadującym od północy). Kolejnym krokiem drogowców było wyznaczenie
-dla każdego obszaru liczby drzew, jaką muszą ściąć, gdyby chcieli poprowadzić przez ten obszar
-drogę (wyznaczona liczba drzew do ścięcia jest zawsze taka sama, niezależnie czy jest to zakręt,
-droga na wprost, czy jeden z końców drogi). Jednak nie tylko liczba ściętych drzew decyduje o
-przebiegu drogi. Najważniejsze jest, żeby droga przebiegała przez minimalną liczbę obszarów, co
-zdaniem drogowców spowoduje, że będzie najkrótsza. Ponadto każdy zakręt musi być dobrze
-oznakowany, a drogowcy dysponują znakami, które wystarczą na oznakowanie tylko K zakrętów
-(końce przyszłej drogi nie są zakrętami).
-Zadanie
-Napisz program, który wyznaczy najmniejszą liczbę drzew, jakie drogowcy muszą ściąć budując
-drogę, która będzie przebiegać przez minimalną liczbę obszarów i będzie zawierać nie więcej niż K
-zakrętów.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą D (1 ≤ D ≤ 10) określającą liczbę zestawów danych. W
-następnych liniach opisane są kolejno po sobie zestawy danych. W pierwszej linii zestawu danych
-znajdują się dwie liczby całkowite rozdzielone spacją: liczba N (2 ≤ N ≤ 100) oraz liczba K (1 ≤ K
-< N * N). W każdej z kolejnych N linii zestawu danych znajduje się opis kolejnego wiersza
-obszarów sporządzonego planu. Wiersze obszarów planu podane są w kolejności od najbardziej
-północnego do najbardziej południowego. Opis pojedynczego wiersza planu składa się z N liczb
-całkowitych nieujemnych mniejszych od 1000 oddzielonych od siebie pojedynczymi spacjami.
-Kolejne liczby w opisie wiersza przyporządkowane są kolejnym obszarom sporządzonego planu (w
-kolejności od obszaru najbardziej zachodniego do najbardziej wschodniego). Liczba
-przyporządkowana obszarowi oznacza liczbę drzew, jaką muszą ściąć drogowcy, gdyby chcieli
-poprowadzić drogę przez ten obszar.
-Wyjście
-W oddzielnych liniach dla każdego zestawu danych należy wypisać jedną liczbę całkowitą
-oznaczającą najmniejszą liczbę drzew, jakie drogowcy muszą ściąć budując drogę, która będzie
-przebiegać przez minimalną liczbę obszarów i będzie zawierać nie więcej niż K zakrętów.
+     * A workforce is building a road through the forest. A forest is described by 
+     * a square divided into NxN square sections. Each section contains specified number of trees.
+     * A road starts in northwest corner of the forest and ends in southeast corner.
+     * It can go straight on, or turn at 90 degrees. Determine, how to build a road, given
+     * following restrictions:
+     * ● A road must have lowest possible length.
+     * ● As few trees as possible need to be cut building the road.
+     * ● A road can contain no more than given K turns.
+     * 
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10).
+     * First line of each data set contains two numbers separated by a whitespace.
+     * They are, respectively: length of square's sides N (2 ≤ N ≤ 100), and maximum number of turns 
+     * K (1 ≤ K < N * N). Following N lines each contain N numbers separated by a whitespace,
+     * representing number of trees in each segment needed to cut down to build a road through it.
+     * Each of those numbers is nonnegative and lesser than 1000.
+     * 
+     * Output
+     * D lines, each containing least number of trees to cut down to build a road with at most K turns.
      */
     public sealed class Drogowcy : ProblemBase
     {

@@ -1,44 +1,28 @@
 namespace OPSS
 {
     /* Difficulty: 4/5
-     * Przy głównej ulicy w stolicy Opsslandii po jednej stronie mieści się pałac królewski, a po drugiej
-stronie, wzdłuż ulicy, w rzędzie, w równych odstępach, na N specjalnie przygotowanych miejscach
-pomnikowych ponumerowanych kolejnymi liczbami całkowitymi od 1 do N, stoją pomniki
-wszystkich N dawnych władców kraju. Zgodnie z tradycją każdy rok ma swojego patrona
-wybieranego co roku spośród dawnych władców Opsslandii. Wraz z nadejściem nowego roku
-pomnik nowego patrona, w celu uhonorowania patrona, przenoszony jest naprzeciw pałacu
-królewskiego na miejsce pomnika poprzedniego patrona. Nakłady pracy potrzebne do przeniesienia
-pomnika zależą od ciężaru pomnika i od odległości, na jaką trzeba go przenieść. Dokładniej:
-przeniesienie pomnika o ciężarze C z miejsca pomnikowego o numerze A na miejsce pomnikowe o
-numerze B wymaga C * abs(A - B) jednostek pracy, gdzie abs(x) oznacza wartość bezwzględną
-liczby x. Miejsce naprzeciwko pałacu musi zostać zwolnione, więc pomnik poprzedniego patrona
-trzeba przenieść na inne miejsce. Jednak nie zawsze zwykła zamiana miejsc pomników
-poprzedniego patrona i nowego patrona będzie optymalna pod względem ilości wykonanej pracy.
-Przeniesienie pomnika poprzedniego patrona na miejsce innego lżejszego pomnika, który stoi dość
-blisko, a następnie przeniesienie tego lżejszego pomnika na puste miejsce pozostawione przez
-pomnik nowego patrona może wymagać wykonania mniejszej pracy. Jeszcze bardziej opłacalne
-może być przeniesienie tego lżejszego pomnika na miejsce innego jeszcze lżejszego pomnika, itd.,
-aż ostatni przenoszony pomnik stanie na pustym miejscu pomnikowym pozostawionym przez
-pomnik nowego patrona.
-Zadanie
-Napisz program, który wyznaczy najmniejszą liczbę jednostek pracy, jaką trzeba wykonać, aby
-przenieść pomniki w taki sposób, żeby pomnik nowego patrona stanął na miejscu pomnikowym
-znajdującym się naprzeciwko pałacu królewskiego oraz żeby na każdym miejscu pomnikowym stał
-dokładnie jeden pomnik.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą D (1 ≤ D ≤ 10), określającą liczbę zestawów danych. W
-następnych liniach opisane są kolejno po sobie zestawy danych. W pierwszej linii zestawu danych
-znajdują się trzy liczby całkowite oddzielone spacjami: N, P oraz K (1 ≤ N ≤ 50000; 1 ≤ P, K ≤ N)
-oznaczające odpowiednio: liczbę pomników dawnych władców Opsslandii, numer miejsca
-pomnikowego, na którym stoi pomnik nowego patrona, oraz numer miejsca pomnikowego
-znajdującego się naprzeciwko pałacu królewskiego. Druga linia zestawu danych zawiera N
-oddzielonych od siebie spacjami całkowitych liczb dodatnich mniejszych od 1000000, gdzie i-ta
-liczba w tej linii oznacza ciężar pomnika stojącego na i-tym miejscu pomnikowym.
-Wyjście
-W kolejnych liniach dla każdego zestawu danych należy wypisać jedną liczbę całkowitą
-oznaczającą najmniejszą liczbę jednostek pracy, jaką trzeba wykonać, aby przenieść pomniki w taki
-sposób, żeby pomnik nowego patrona stanął na miejscu pomnikowym znajdującym się naprzeciwko
-pałacu królewskiego oraz żeby na każdym miejscu pomnikowym stał dokładnie jeden pomnik.
+     * Consider an alley with N statues alongside it. Every year, a different statue is 
+     * being moved to the spot next to King's Palace. Cost of moving a statue depends on both 
+     * weight and distance needed to move it, exactly C * |A - B|, where C is weight of statue,
+     * and A and B are respectively, statue's initial and final position. Since there is already 
+     * a statue next to King's Palace, it needs to change position as well. However, it is not 
+     * always optimal to simply swap old and new statue next to King's Palace. It may be better
+     * to move heavier old statue into a position of some other, lighter statue and then move lighter 
+     * statue further back, possibly to the spot of even lighter statue, and so on, until previously freed position
+     * is reached. Your goal is to find minimum possible cost to move a given statue to a given
+     * position next to King's Palace and to have all positions filled.
+     * 
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10).
+     * First line of each data set contains three numbers separated by a whitespace each.
+     * They are, respectively: number of statues N, position of statue to move next to King's Palace P,
+     * and position next to King's Palace K (1 ≤ N ≤ 50000; 1 ≤ P, K ≤ N).
+     * Second line of each data set contains N numbers separated by a whitespace.
+     * An i-th number in line represents weight of statue in i-th position. All weights are 
+     * positive and lesser than 1000000.
+     * 
+     * Output
+     * D lines, each containing minimum cost to move statue from position P to K and have all positions filled.
      */
     public sealed class CzterystaDwadziesciaDwa : ProblemBase
     {

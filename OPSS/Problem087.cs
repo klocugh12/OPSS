@@ -7,7 +7,7 @@ namespace OPSS
      * Second term is equal to sum of first term and second parameter.
      * Each following term is a sum of two previous terms.
      * With right parameter setup, it is possible to get Fibonacci sequence.
-     * Your task is to find a pair of parameters that will generate a given number in most possible steps.
+     * Your goal is to find a pair of parameters that will generate a given number in most possible steps.
      * 
      * Input
      * First line contains number of data sets C (1 ≤ C ≤ 5000).

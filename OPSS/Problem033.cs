@@ -6,7 +6,7 @@ namespace OPSS
      * A company attempts to build network of roads to its office from all homes.
      * Each road can either connect a house and office directly, or two adjacent houses
      * lying on a circle.
-     * Your task is to find number of distinct networks containing minimum possible
+     * Your goal is to find number of distinct networks containing minimum possible
      * number of roads that meet those criteria.
      * 
      * Input

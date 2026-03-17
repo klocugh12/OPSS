@@ -3,93 +3,64 @@ using System.Globalization;
 namespace OPSS
 {
     /* Difficulty: 2/5
-     * Niegdyś w Opsslandii do handlu służył wydzielony teren na otwartej przestrzeni. Dokonywano tam
-transakcji kupna i sprzedaży pewnych rzeczy (dóbr) wartościowych. Takie targowisko umożliwiało
-swobodny, bezpośredni kontakt handlowca z klientem i możliwość negocjowania ceny.
-Wraz z upływem czasu oraz rozwojem Opsslandii targowisko zmieniło się w pełni
-skomputeryzowaną Giełdę Rzeczy Wartościowych.
-Rządzi się ona następującymi regułami:
-● Na Giełdzie Rzeczy Wartościowych można kupować lub sprzedawać wartościowe rzeczy.
-Odbywa się to poprzez składanie zleceń kupna bądź sprzedaży, z podanym limitem ceny.
-Osoba składająca zlecenie musi określić:
-○ symbol (identyfikator) rzeczy wartościowej, którą chce kupić/sprzedać
-○ rodzaj oferty (kupno lub sprzedaż)
-○ liczbę rzeczy wartościowych
-○ limit ceny
-● Kupujący godzi się na kupno określonej rzeczy tylko po cenie, która jest nie większa od
-zadanego limitu ceny zlecenia kupna, zaś sprzedający godzi się na sprzedaż tylko po cenie
-nie mniejszej od zadanego limitu ceny zlecenia sprzedaży.
-● Pomiędzy dwoma osobami (z których jedna złożyła zlecenie kupna, a druga sprzedaży)
-może dojść do realizacji transakcji kupna-sprzedaży po cenie na jaką się godzą.
-● Jeśli kupujący kupi od sprzedającego mniejszą liczbę rzeczy od zadeklarowanej w swoim
-zleceniu, jego zlecenie zostaje zrealizowane częściowo (liczba rzeczy do kupna na zleceniu
-jest zmniejszana o liczbę rzeczy, które zostały faktycznie kupione). Jeśli kupi dokładnie taką
-liczbę rzeczy, jaką zadeklarował, jego zlecenie zostaje zrealizowane w całości. Analogicznie
-jeśli sprzedający nie sprzeda wszystkich rzeczy w jednej transakcji, jego zlecenie sprzedaży
-zostaje zrealizowane częściowo (liczba rzeczy do sprzedaży na zleceniu jest zmniejszana o
-liczbę rzeczy, które zostały sprzedane), jeśli sprzeda dokładnie taką liczbę rzeczy, jaką
-zadeklarował, jego zlecenie zostaje zrealizowane w całości.
-● Zlecenia na daną rzecz umieszczane są w arkuszu zleceń dotyczącym tej rzeczy. Arkusz
-zleceń składa się z dwóch części. Lewa dotyczy zleceń kupna, prawa sprzedaży. Zlecenia
-ułożone są według kolejności ich ewentualnej realizacji, tzn. po stronie kupna od
-najwyższego do najniższego limitu ceny, po stronie sprzedaży odwrotnie. W ramach tego
-samego limitu zlecenia ułożone są według czasu wprowadzenia do systemu giełdowego -
-zlecenia wprowadzone wcześniej znajdują się powyżej zleceń wprowadzonych później.
-Dzięki takiemu układowi najwyższy wiersz arkusza prezentuje zawsze zlecenia posiadające
-najlepszy limit kupna i sprzedaży. Pozycja zlecenia w arkuszu decyduje o kolejności jego
-realizacji.
-● Po złożeniu zlecenia system umieszcza je w arkuszu zleceń i przystępuje do realizacji
-wszystkich możliwych transakcji (w kolejności wynikającej z arkusza zleceń). W przypadku
-złożenia zlecenia kupna transakcje wykonywane są po cenie zleceń sprzedaży. Natomiast w
-przypadku złożenia zlecenia sprzedaży transakcje dokonywane są po cenie zleceń kupna.
-Zlecenia zrealizowane w całości są usuwane z arkusza zleceń.
-● Wolumen dla danej rzeczy jest to suma ilości rzeczy występująca we wszystkich
-dokonanych transakcjach.
-● Aktualny kurs danej rzeczy jest to cena, po której dokonana została ostatnia transakcja dla
-tej rzeczy.
-Przykład:
-Jeśli arkusz zleceń dla rzeczy "A" zawiera zlecenia:
-strona kupna strona sprzedaży
-ilość limit ceny ilość limit ceny
-200 10.50 300 11.10
-100 10.00 200 11.20
-i zostanie złożone zlecenie sprzedaży 250 sztuk rzeczy "A" z limitem ceny 10.00 to zostaną
-wykonane 2 transakcje: sprzedaż-kupno "A": 200 sztuk po 10.50 oraz 50 sztuk po 10.00 (złożone
-zlecenie zostanie zrealizowane w całości, zlecenie kupna 200 sztuk po 10.50 zostanie zrealizowane
-w całości, zlecenie kupna 100 sztuk po 10.00 zostanie zrealizowane częściowo). Po zrealizowaniu
-transakcji arkusz będzie zawierał zlecenia:
-strona kupna strona sprzedaży
-ilość limit ceny ilość limit ceny
-50 10 300 11.10
-200 11.20
-Aktualny kurs "A" to 10.00 (kurs ostatniej transakcji), aktualny wolumen to 250 sztuk.
-Jeśli teraz zostanie złożone zlecenie kupna 310 sztuk rzeczy "A" z limitem ceny 11.10 zostanie
-wykonana 1 transakcja - 300 sztuk w cenie 11.10 a arkusz zleceń będzie zawierał:
-strona kupna strona sprzedaży
-ilość limit ceny ilość limit ceny
-10 11.10 200 11.20
-50 10
-Aktualny kurs "A" to 11.10 (kurs ostatniej transakcji), aktualny wolumen to 550 sztuk.
-Zadanie
-Twoim zadaniem jest napisanie oprogramowania dla opsslandzkiej Giełdy Rzeczy Wartościowych.
-Program na podstawie składanych zleceń powinien wyznaczyć aktualny wolumen oraz kurs dla
-wszystkich rzeczy dostępnych na Giełdzie.
-Wejście
-Pierwsza linia wejścia zawiera liczbę N określającą liczbę złożonych zleceń (1 ≤ N ≤ 100000).
-Kolejne N wierszy zawiera opisy kolejno składanych zleceń. Jedno zlecenie składa się z jednego
-wiersza zawierającego oddzielone od siebie pojedynczą spacją: symbol rzeczy (jedna wielka litera
-alfabetu angielskiego), typ zlecenia (wielka litera K lub S, oznaczająca odpowiednio zlecenie kupna
-lub sprzedaży), liczbę naturalną L określającą liczbę rzeczy wartościowych (1 ≤ L ≤ 10000) oraz
-limit ceny C (0 < C ≤ 10000). Zapis liczby C zawiera separator dziesiętny (kropkę), co najmniej
-jedną cyfrę przed separatorem oraz dokładnie dwie cyfry po separatorze.
-Wyjście
-W pierwszej linii wyjścia należy wypisać liczbę X określającą liczbę rzeczy, dla których doszło do
-przynajmniej jednej transakcji kupna-sprzedaży na Giełdzie. Dla każdej z tych X rzeczy, w
-oddzielnych liniach, należy wypisać: literę określającą symbol rzeczy, wolumen oraz aktualny kurs
-(oddzielone od siebie spacjami). Linie te powinny być wypisane w porządku alfabetycznym
-względem symbolu rzeczy. Kursy należy wypisać w takim samym formacie, w jakim podane są na
-wejściu, czyli z kropką, jako separatorem dziesiętnym, co najmniej jedną cyfrą przed separatorem
-oraz dokładnie dwoma cyframi po separatorze.
+     * In certain city there is a market, which allows you to buy or sell items.
+     * To do so, you place a buy or sell order. Each order must contain following information:
+     * ○ Item ID
+     * ○ Transaction type (buy or sell)
+     * ○ Quantity
+     * ○ Price limit
+     * If you place a buy order, you can only buy items at price below or equal to limit.
+     * If you place a sell order, you can only sell them at price above or equal to limit.
+     * If there are buy and sell orders with overlapping price ranges, it is a match, and transaction 
+     * can happen. Depending on whether there is enough items to sell at sufficiently low price, an 
+     * order can be partially or completely fulfilled. Likewise with sell orders.
+     * Orders are sorted according to price limits. Buy orders with highest limit are put first,
+     * and so are sell orders with lowest limit. If two orders of same type have same limit,
+     * they are sorted in order they appeared. Orders are fulfilled according to their sorting.
+     * All completely fulfilled orders are removed from the list.
+     * A transaction volume is a sum of all quantities for all fulfilled orders for a given item. 
+     * A current rate is the price, at which last order was fulfilled for a given item.
+     * 
+     * Example for a given item "A":
+     *   Buy Orders       Sell Orders
+     * Quantity Limit Quantity   Limit
+     *  200     10.50    300     11.10
+     *  100     10.00    200     11.20
+     *  
+     * Consider next order: item "A", Sell, Qty: 250, Limit: 10.00.
+     * In such case there will be two transactions: First, sell 200 items at rate 10.50, then
+     * sell 50 items at rate 10.00. After that, list will look as follows:
+     *  
+     *   Buy Orders       Sell Orders
+     * Quantity Limit Quantity   Limit
+     *   50     10.00    300     11.10
+     *                   200     11.20 
+     *                   
+     * For item "A" current rate is 10.00 and transaction volume is 250.
+     * Consider next order: item "A", Buy, Qty: 310, Limit: 11.10. 
+     * In such case 300 items will be sold at rate 11.10, and list will look as follows: 
+     * 
+     *   Buy Orders       Sell Orders
+     * Quantity Limit Quantity   Limit
+     *   10     11.10    200     11.20
+     *   50     10.00 
+     *   
+     * Current rate for item A is 11.10, and transaction volume is now 550.
+     * Your goal is to determine a volume and rate for a given list of orders.
+     * 
+     * Input
+     * First line contains number of orders N (1 ≤ N ≤ 100000).
+     * Each order is described by a single line, in which there are four tokens separated by 
+     * a whitespace each. First token is item ID (single uppercase English letter), order type 
+     * (a single letter K or S, respectively meaning buy or sell), a positive integer meaning
+     * quantity of items in order L (1 ≤ L ≤ 10000), and a price limit  C (0 < C ≤ 10000). 
+     * C contains . as decimal separator, has at least one digit before . and exactly two after it.
+     * 
+     * Output
+     * First line contains number X meaning number of items, which had any orders fulfilled (partially or completely).
+     * Following X lines each contain three tokens separated by a whitespace each. First token is item ID.
+     * Second token is transaction volume, and third one is rate at closing time.
+     * Lines should be sorted according to item IDs. Rates should written in the same format as they were in price limits.
      */
     public sealed class GieldaRzeczyWartosciowych : ProblemBase
     {

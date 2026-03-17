@@ -11,7 +11,7 @@ namespace OPSS
      * As a special rule, one- or two-letter words are allowed, if they are themselves contained
      * in any of triplet rom the dictionary, but they are worth 0 points each.
      * 
-     * Your task is to find, how much can a score for a given word be reduced by adding or removing
+     * Your goal is to find, how much can a score for a given word be reduced by adding or removing
      * letters from it, as long as modified words is still legal and first and last letters remain unchanged.
      * 
      * Input
