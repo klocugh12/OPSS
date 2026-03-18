@@ -3,47 +3,32 @@ using System.Globalization;
 namespace OPSS
 {
     /* Difficulty: 4/5
+     * You're given a sphere which is tesellated by either triangles or rectangles, and a point light source.
+     * Your goal is to determine, which of the polygons receives most light.
+     * For each polygon, light intensity depends on an angle, which a ray of light crossing the center 
+     * of each polygon (average of polygon's vertices' coordinates) makes with a plane containing said polygon.
+     * Intensity is maximum for perpendicular ray. If a ray is parallel or does not reach the polygon,
+     * intensity is equal to zero. Intensity also decreases with square of distance from the 
+     * light source to the polygon's center. If for best lit polygon intensity is equal to E,
+     * then for all other polygons intensity is less than (1 - 10^-11) * E.
      * 
-Janek jest studentem ogrodnictwa. W czasie zajęć opiekuje się egzotycznymi drzewkami
-owocowymi mango. Zauważył, że szkodniki, które uszkadzają owoce mango często uszkadzają
-skórkę owocu w miejscach najbardziej nasłonecznionych (lub oświetlonych żarówką). Swoje
-obserwacje chce przekazać w czasie seminarium Koła Naukowego Ogrodników. Janek chciałby,
-aby ta prezentacja wyglądała bardzo efektownie - powinna być poparta jakąś "symulacja
-komputerową". Ponieważ nie jest on zbyt biegły w technice cyfrowej, więc poszukuje kogoś, kto
-potrafi wykonać taką symulację. Najistotniejszym elementem tego pokazu musi być wyznaczenie
-miejsca uszkodzenia owocu w zależności od jego kształtu, kierunku padania promieni i odległości
-od sztucznego źródła światła.
-Powierzchnia owocu została opisana za pomocą małych płatów - figur płaskich (trójkąty,
-czworokąty) tworzących wypukły wielościan. Należy podać numer tego płata, który jest najlepiej
-oświetlony, czyli mówiąc ściśle, na jego powierzchni jest największe natężenie oświetlenia.
-Natężenie oświetlenia (fizycy mierzą je w luksach) płatu zależy od nachylenia jego powierzchni
-względem promieni padających. Maksymalne oświetlenie dostajemy wtedy, gdy promienie są
-prostopadłe do powierzchni, zerowe oświetlenie wtedy gdy promienie są równoległe lub nie
-docierają bezpośrednio do powierzchni, w innych przypadkach dostajemy wartości pośrednie.
-Natężenie oświetlenia jest odwrotnie proporcjonalne do kwadratu odległości płatu od źródła
-światła. W tym zadaniu należy przyjąć, dla uproszczenia, że dla wszystkich punktów płatu
-odległość jest taka sama i równa odległości źródła światła od środka płatu (wyznaczonego przez
-średnią arytmetyczną współrzędnych wierzchołków płatu). Można również założyć, że jeśli
-natężenie oświetlenia najlepiej oświetlonego płatu jest równe E, to natężenie oświetlenia każdego
-innego płatu jest mniejsze od (1 - 10^-11) * E.
-Wejście
-W pierwszym wierszu wejścia jest podana liczba zestawów danych L, (1 ≤ L ≤ 5). Po niej następują
-zestawy danych. W pierwszym wierszu zestawu danych podana jest para liczb naturalnych,
-oddzielona jedną spacją: N W, gdzie N jest liczbą płatów powierzchni (4 ≤ N ≤ 15000), a W liczbą
-punktów, które są wierzchołkami wielokątów opisujących powierzchnię owocu (4 ≤ W ≤ 15000).
-Drugi wiersz zestawu zawiera 3 liczby rzeczywiste oddzielone pojedynczą spacją (-10^10 < x,y,z <
-10^10), które są współrzędnymi źródła światła. Można założyć, że źródło światła jest zawsze
-umieszczone na zewnątrz powierzchni owocu. Następne W wierszy zestawu zawiera po 3 liczby
-rzeczywiste (-10^10 < x,y,z < 10^10) oddzielone pojedynczą spacją, które są współrzędnymi
-wierzchołków wielościanu. Wierzchołki ponumerowane są kolejnymi liczbami naturalnymi od 1 do
-W w kolejności podawania ich współrzędnych. Następne N wierszy zestawu danych zawiera po 4
-liczby całkowite (pierwsze trzy z nich są dodatnie, czwarta jest nieujemna), które są numerami
-wierzchołków należących do płatów powierzchni. Gdy czwarty numer wierzchołka jest równy 0, to
-płat powierzchni jest trójkątem. Gdy wszystkie 4 numery są większe od 0, to płat jest czworokątem.
-Numery wierzchołków są również rozdzielone pojedynczą spacją.
-Wyjście
-Na wyjściu, dla każdego zestawu danych, w jednym wierszu należy wypisać jedną liczbę naturalną,
-która jest numerem najlepiej oświetlonego płata powierzchni.
+     * Input
+     * First line contains number of data sets L, (1 ≤ L ≤ 5).
+     * First line of each data set contains two numbers N and W separated by a whitespace.
+     * N is number of polygons, W is number of vertices (4 ≤ N, W ≤ 15000).
+     * Second line of each data set contains 3 floating point numbers separated by a whitespace each, 
+     * xl, yl, zl (-10^10 < xl, yl, zl < 10^10), representing coordinates of a light source.
+     * A light source is always outside of the sphere.
+     * Following W lines each cotain 3 floating point numbers x, y, z separated by a whitespace each,
+     * representing coordinates of each vertex (-10^10 < x,y,z < 10^10).
+     * Vertices are numbered 1 to W each according to order they appear in input.
+     * Following N rows each contain 4 integers, each separated by a whitespace, representing
+     * indexes of vertices forming each polygon. First three vertices are positive, fourth is nonnegative - 
+     * if equal to zero, a polygon is a triangle, otherwise a polygon is a rectangle.
+     * 
+     * Output
+     * A single number 1 to N equal to index of best lit polygon on a surface of the sphere.
+     * Numbering of polygons corresponds to order they appeared in input.
      */
     public sealed class Robaczek : ProblemBase
     {

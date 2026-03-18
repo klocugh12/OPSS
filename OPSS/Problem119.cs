@@ -1,56 +1,28 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * Consider a board in standard coordinates system. A field (1, 1) is starting field.
+     * Each field has a label meaning direction (g - up, d - down, l - left, p - right) or
+     * it is a final field with label k. There is a unique path from starting to final field, 
+     * following labels on fields step by step. Unfortunately, board has been tampered with.
+     * Some of the labels on a path have been erased, thankfully if a label was erased, its 
+     * neighbors were not. Also, final field was left untouched. However, that is not all. 
+     * All tiles, which are not on the path, have also been given labels indicating directions.
+     * Moreso, following those tiles will get you either off the board, or stuck in an infinite loop.
+     * Given altered board, try to restore original path.
      * 
-Rozważmy kwadratową planszę z polami o standardowych współrzędnych. Pole o współrzędnych (1, 1) 
-    jest zawsze polem startowym. Każde pole ma miejsce na etykietę oznaczającą kierunek (góra, 
-    prawo, dół, lewo), lub w przypadku pola końcowego etykietę koniec. Pola na planszy począwszy 
-    od pola startowego do pola końcowego tworzą ścieżkę w taki sposób, że pierwszym polem ścieżki 
-    jest pole startowe, następnym polem jest pole znajdujące się na planszy najbliżej w kierunku 
-    opisanym etykietą pola startowego, i tak dalej aż do pola końcowego (zobacz rysunek 1.).
-
-rysunek 1.
-
-Dwa złośliwe chochliki postanowiły trochę namieszać na planszy. Pierwszy z nich usunął część 
-    etykiet z pól należących do ścieżki. Na szczęście usuwał on etykiety w taki sposób, że 
-    z dowolnych dwóch sąsiednich (przylegających do siebie bokami) pól ścieżki zniknęła co 
-    najwyżej jedna etykieta. Dodatkowo na pewno nie zniknęły etykiety z pól: startowego i 
-    końcowego oraz pól które mają więcej niż dwa sąsiednie pola należące do ścieżki.
-
-Drugi złośliwy chochlik wprowadził etykiety na wszystkie pola planszy nienależące do ścieżki 
-    w taki sposób, że jeśli w polu z usuniętą (przez pierwszego chochlika) etykietą wstawimy inną 
-    etykietę niż usunięta, to idąc w kierunku przez nią wskazywanym wejdziemy na fałszywą ścieżkę, 
-    czyli taką, która nie prowadzi do pola końcowego (idąc po niej albo wyjdziemy poza planszę, 
-    albo wpadniemy w nieskończoną pętlę - zobacz rysunek 2.).
-
-rysunek 2.
-Zadanie
-
-Napisać program, który dla danej planszy z etykietami (będącej wynikiem działania złośliwych 
-    chochlików) odtworzy ścieżkę, z której usunięto etykiety.
-Wejście
-
-Pierwsza linia wejścia zawiera liczbę zestawów danych C (1 ≤ C ≤ 50). W kolejnych wierszach 
-    wejścia znajdują się zestawy danych. Każdy z C zestawów danych składa się z jednego wiersza 
-    zawierającego liczbę naturalną N (2 ≤ N ≤ 1000) określającą rozmiar planszy oraz N wierszy 
-    składających się z N znaków reprezentujących planszę. Każde pole planszy reprezentowane jest 
-    przez jeden ze znaków: g, p, d, l, k (pierwsza litera etykiety pola) lub znaku . (kropki), 
-    oznaczającego pole scieżki pozbawione etykiety.
-Dane wejściowe składają się co najwyżej z 5000 wierszy.
-
-Dla przykładu plansza z rysunku 2. reprezentowana jest przez zestaw postaci:
-
-4
-pplg
-.pdg
-gd.g
-gdpk
-
-Wyjście
-
-Dla każdego zestawu danych należy wypisać K+1 wierszy: w pierwszym powinna się znaleźć liczba K 
-    oznaczająca długość ścieżki, a w K kolejnych wierszach powinny zostać wypisane po dwie liczby 
-    oznaczające wpółrzędne kolejnych punktów ścieżki.
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 50).
+     * First line of each data set contains length of side of the board N (2 ≤ N ≤ 1000).
+     * Following N lines contain board description. Each such line is N characters long.
+     * Allowed characters are: g, p, d, l (directions as described above), k (final field),
+     * or . (erased label). Input is no more than 5000 lines long.
+     * 
+     * Output
+     * For each data set write K + 1 rows, First row contains a single number K, equal to 
+     * length of restored path. Following K rows each contain two numbers separated by a 
+     * whitespace, representing coordinates of successive tiles on the path, starting from
+     * (1, 1) and ending with tile labelled k.
      */
     public sealed class Sciezka : ProblemBase
     {

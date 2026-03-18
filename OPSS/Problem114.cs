@@ -1,44 +1,31 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * W Opsslandii zbliżają się wybory parlamentarne. Każdy z tamtejszych polityków jest bardzo
-stanowczy i zdecydowany: albo popiera drugiego polityka, albo jest jemu przeciwny. W dodatku
-każdy polityk zawsze odwzajemnia swoje poparcie: popiera tylko tych polityków, którzy go
-popierają, oraz jest przeciwny tylko tym politykom, którzy są jemu przeciwni. Wielu polityków nie
-należy jeszcze do żadnej partii, więc myślą o założeniu nowej. W tym celu spotykają się z innymi
-politykami i wymieniając swoje poglądy rozpatrują ewentualny skład nowej partii. Prawo
-opsslandzkie wymaga, aby do partii należały co najmniej dwie osoby. Jednak wielkim zagrożeniem
-dla istnienia partii jest sytuacja rozłamowa, czyli taka, w której polityk spoza partii jest niektórym
-jej członkom przeciwny, a niektórych członków popiera. Sytuacja rozłamowa grozi rozpadem partii
-i jest powszechnie niepożądana. W celu zlikwidowania sytuacji rozłamowej należy przyjąć do partii
-polityków, którzy tę sytuację powodują. Wówczas, dzięki przynależności do tej samej partii,
-osobiste spory jej członków przestają być istotne i sytuacja rozłamowa przestaje istnieć. Życie w
-Opsslandii pokazuje, że im partia jest większa, tym ma większe trudności w stanowczym działaniu,
-więc politycy są bardziej skłonni tworzyć partie mniej liczne. Niektórzy częściowo kierują się
-również rankingiem zaufania do polityków i chcą wiedzieć, jaką najwyższą i jaką najniższą pozycję
-w rankingu zajmują politycy należący do ich partii (w rankingu zaufania znajdują się wszyscy
-politycy Opsslandii i nigdy nie ma w nim pozycji ex aequo). Wszystkie te kryteria powodują, że
-podczas spotkania dwóch polityków, którzy chcą razem utworzyć nową partię, niezwykle trudno
-jest im wyznaczyć jej skład.
-Zadanie
-Napisz program, który na podstawie danych o wzajemnym poparciu polityków oraz ich pozycjach
-w rankingu zaufania wyznaczy dla danych dwóch polityków najmniejszą możliwą liczbę członków
-partii, do której należeliby obaj politycy i która nie byłaby w sytuacji rozłamowej, a następnie poda
-najwyższą i najniższą pozycję w rankingu zaufania, jaką zajmowaliby politycy tej partii.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą N (2 ≤ N ≤ 800) oznaczającą liczbę polityków w
-Opsslandii. Druga linia zawiera liczbę całkowitą K (0 ≤ K ≤ N*(N-1)/2). W każdej z kolejnych K
-linii znajdują się dwie różne oddzielone spacją liczby całkowite A i B (1 ≤ A, B ≤ N) oznaczające,
-że politycy znajdujący się w rankingu zaufania na pozycjach A i B wzajemnie się popierają. Każda
-z K par liczb A i B określa inną parę polityków. W następnej linii znajduje się liczba całkowita S (1
-≤ S ≤ N*(N-1)/2) oznaczająca liczbę spotkań. Każda z kolejnych S linii zawiera dwie różne
-oddzielone spacją liczby całkowite: X i Y (1 ≤ X, Y ≤ N) oznaczające spotkanie dwóch polityków
-znajdujących się w rankingu zaufania na pozycjach X i Y.
-Wyjście
-Dla każdego spotkania należy wypisać w jednej linii trzy liczby rozdzielone spacjami: najmniejszą
-możliwą liczbę członków partii, do której należeliby obaj spotykający się politycy i która nie
-byłaby w sytuacji rozłamowej, oraz najwyższą i najniższą pozycję w rankingu zaufania, jaką
-zajmowaliby politycy tej partii.
+     * Elections are coming. All politicians are decided on whether they support or oppose each other.
+     * This relation is mutial: if politician A supports politician B, then politician B also supports
+     * politician A. Not all politicians have a party, so they are trying to make a new one.
+     * To do so, they organize meetings to debate and in turn consider roster of new party.
+     * A problematic situation may occur, when some politician outside of the party supports some
+     * politicians from the party, but opposes others. In such case a party could split in two.
+     * To remedy this, it is necessary to have all such politicians join a party. There is also a 
+     * public vote ranking, in which each politician has a distinct ranking (no ties).
+     * Given list of mutual relations between politicians and their public rankings, determine 
+     * smallest size of party including two given politicians, which would not be threatened by 
+     * possible split. Also find highest and lowest ranks in public vote for that party.
+     * 
+     * Input
+     * First line contains number of politicians N (2 ≤ N ≤ 800).
+     * Second line contains a number K (0 ≤ K ≤ N*(N-1)/2).
+     * Following K lines each contain two numbers separated by a whitespace A and B (1 ≤ A, B ≤ N).
+     * They mean politicians ranked A and B in public rankings support each other. All such pairs are distnct.
+     * Folowing line contains number of meetings S (1 ≤ S ≤ N*(N-1)/2).
+     * Following S lines each contain two numbers separated by a whitespace X and Y (1 ≤ X, Y ≤ N).
+     * They are ranks of politicians who participated in a given meeting.
+     * 
+     * Output
+     * S lines, each containing three numbers separated by a whitespace each.
+     * They are, respectively: smallest number of members of a party containing both politicians in a meeting,
+     * which would not be threatened by a split, highest, then lowest rank in a public vote for this party.
      */
     public sealed class Partie : ProblemBase
     {

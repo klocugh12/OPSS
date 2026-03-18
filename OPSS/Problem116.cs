@@ -1,36 +1,26 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
+     * Lately a Santa Claus has gained weight and he cannot fit through some chimneys he used to
+     * enter houses through. In some cases he is no longer able to fit through some windows
+     * or even doors. Santa always prefers going through a chimney if he can. If not, he tries to 
+     * go through the window. As last resort, he tries to go through the door. Santa will fit through 
+     * any opening, if his waist circumference is strictly smaller than circumference of a given
+     * opening. Help Santa determine, which openings to use.
      * 
-Ostatnimi czasy Święty Mikołaj trochę przytył i nie mieści się już w niektórych kominach, 
-    przez które wchodził do domów, by zostawić prezenty. Co gorsza, przestał mieścić się 
-    w niektórych oknach, a nawet drzwiach. Mikołaj zgodnie ze swoimi Zasadami Dyskrecji, 
-    jeśli mieści się w kominie, to wchodzi do domu przez komin. Jeśli nie mieści się w kominie 
-    i mieści się w oknie, to wybiera wejście przez okno. Przez drzwi wchodzi tylko wtedy, 
-    gdy nie mieści się ani w kominie, ani w oknie, a w drzwiach się mieści. W kominie Mikołaj 
-    mieści się, gdy obwód w pasie Mikołaja jest mniejszy od obwodu otworu komina. Podobnie, 
-    Mikołaj mieści się w oknie (drzwiach), gdy obwód w pasie Mikołaja jest mniejszy od obwodu 
-    otworu okna (drzwi). W tym roku Mikołaj ma jeszcze do odwiedzenia wiele domów i szkoda mu 
-    tracić czas na różne próby wejścia do nich. Obawia się też, że podczas niektórych prób wejścia 
-    mógłby się zaklinować.
-
-Napisz program, który mając podany obwód w pasie Mikołaja, obwody otworów kominów, okien i drzwi 
-    domów, wyznaczy sposób wejścia Mikołaja (zgodnie z jego Zasadami Dyskrecji) do każdego z tych domów.
-Wejście
-Pierwsza linia zawiera oddzielone pojedynczą spacją dwie liczby całkowite N oraz M (1 ≤ N ≤ 1000; 
-    80 ≤ M ≤ 200), określające odpowiednio liczbę domów, które ma odwiedzić Mikołaj, oraz obwód 
-    w pasie Mikołaja mierzony w centymetrach. W każdej z kolejnych N linii wejścia znajduje się 
-    opis jednego domu. Opis domu składa się z trzech liczb całkowitych rozdzielonych pojedynczymi 
-    spacjami: Ki, Oi, Di (50 ≤ Ki, Oi, Di ≤ 800), oznaczających mierzone w centymetrach obwody 
-    odpowiednio otworu komina, otworu okna i otworu drzwi i-tego domu.
-Wyjście
-W kolejnych liniach dla każdego opisu domu należy wypisać jeden wyraz oznaczający sposób wejścia 
-    Mikołaja, zgodnie z jego Zasadami Dyskrecji, do domu:
-
-    komin - jeśli Mikołaj ma wejść do domu przez komin,
-    okno - jeśli ma wejść przez okno,
-    drzwi - jeśli ma wejść przez drzwi,
-    brak - jeśli Mikołaj nie mieści się ani w kominie, ani w oknie, ani w drzwiach. 
+     * Input
+     * First line contains two numbers separated by a whitespace N and M (1 ≤ N ≤ 1000; 80 ≤ M ≤ 200).
+     * They are, respectively, number of houses to visit and Santa's waist circumference.
+     * Following N lines each contain three numbers, each separated by a whitespace.
+     * They are, respectively, chimney circumference Ki, window circumference Oi, and door circumference Di 
+     * (50 ≤ Ki, Oi, Di ≤ 800) for i-th house.
+     * 
+     * Output
+     * N lines, each containing a single word corresponding to opening to use for i-th home:
+     * komin - if to use chimney.
+     * okno - if to use window.
+     * drzwi - if to use door.
+     * brak - if none of the openings are large enough.
      */
     public sealed class WejscieMikolaja : ProblemBase
     {

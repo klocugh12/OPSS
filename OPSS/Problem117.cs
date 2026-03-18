@@ -1,28 +1,22 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
+     * John has been invited to a party. Since he owns a bakery, he brought C cookies with him.
+     * He gave each guest as many cookies as possible, but every guest got the same number.
+     * He ate remaining cookies himself. Determine, how many cookies he was able to eat.
      * 
-Zorganizowane zostało ogromne całodniowe przyjęcie, na które zaproszono wiele osób. Każda 
-    zaproszona osoba mogła przyjść na przyjęcie i wyjść, kiedy tylko zechciała. Zaproszony został 
-    też pan Marek, właściciel cukierni, który często obdarowuje swoich znajomych ciastkami. 
-    Na przyjęcie zabrał ze sobą C ciastek, a kiedy tylko dotarł na miejsce, od razu rozdał 
-    wszystkim obecnym (nie licząc siebie) jak najwięcej z tych C ciastek i każdemu po tyle samo. 
-    Ciastka, które po rozdaniu mu zostały, zjadł, bo bardzo je lubi. Napisz program, który 
-    obliczy, ile ciastek zjadł pan Marek.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą D (1 ≤ D ≤ 10), określającą liczbę zestawów danych. 
-    W następnych liniach opisane są kolejno po sobie zestawy danych. W pierwszej linii zestawu 
-    danych znajduje się liczba całkowita N (1 ≤ N ≤ 100). Druga linia zestawu danych zawiera N 
-    liczb całkowitych rozdzielonych pojedynczymi spacjami: x1, x2, x3, ..., xN (-10 ≤ xi ≤ 10 oraz 
-    xi ≠ 0 dla 1 ≤ i ≤ N) oznaczających kolejne zmiany liczby obecnych osób na przyjęciu. Dodatnie 
-    xi oznacza, że na przyjęcie przyszło xi osób. Ujemne xi oznacza, że z przyjęcia wyszło -xi 
-    osób. Przed pierwszą zmianą liczby obecnych, czyli przed x1, na przyjęciu nie było jeszcze 
-    nikogo. Po wszystkich N zmianach liczby obecnych, czyli po xN, na przyjęcie przyszedł pan Marek. 
-    W trzeciej linii zestawu danych znajduje się liczba całkowita C (1 ≤ C ≤ 1000) oznaczająca liczbę 
-    ciastek, z którymi pan Marek przyszedł na przyjęcie.
-Wyjście
-W kolejnych liniach dla każdego zestawu danych należy wypisać jedną liczbę całkowitą oznaczającą 
-    liczbę ciastek, jakie zjadł pan Marek. 
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10).
+     * First line of each data set contains an integer N (1 ≤ N ≤ 100). 
+     * Second line of each data set contains N number separated by a whitespace each:
+     * x1, x2, x3, ..., xN (-10 ≤ xi ≤ 10 and xi ≠ 0 dla 1 ≤ i ≤ N).
+     * Each of the number represents a change in number of guests. Positive xi means xi guests have 
+     * arrived, negative xi means -xi guests have left the party. Initial state was 0 guests.
+     * John came after all N described changes.
+     * Third line of a data set contains number of cookies John brought to a party C (1 ≤ C ≤ 1000).
+     * 
+     * Output
+     * D lines, each containing a number of cookies John ate in the end.
      */
     public sealed class Ciastka : ProblemBase
     {

@@ -1,22 +1,19 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Dla liczb całkowitych N, B (0 ≤ N; 2 ≤ B ≤ 36), przez RB(N) oznaczmy liczbę zdefiniowaną
-następująco:
-N, dla 0 ≤ N ≤ B-1
-RB(N)=
-RB(suma cyfr liczby N w systemie o podstawie B), dla N ≥ B
-Zadanie
-Dla zadanych liczb całkowitych N, B (1 ≤ N ≤ 2^31-1; 2 ≤ B ≤ 36) obliczyć wartość
-RB(1+2+3+...+N).
-Wejście
-Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą L (1 ≤ L ≤ 1000) - jest to liczba zestawów
-danych. W kolejnych L wierszach znajdują się zestawy danych. Każdy zestaw danych składa się z
-dwóch liczb całkowitych N, B oddzielonych pojedynczą spacją (1 ≤ N ≤ 2^31-1; 2 ≤ B ≤ 36).
-Wyjście
-Dla każdego zestawu danych na wyjściu należy wypisać wartość RB(1+2+3+...+N) (w systemie o
-podstawie B). Cyfry większe niż 9 powinny być wypisywane dużymi literami alfabetu angielskiego
-('A' zamiast 10, 'B' zamiast 11, ..., 'Z' zamiast 35).
+     * For integers N, B (0 ≤ N; 2 ≤ B ≤ 36), RB(N) is defined as follows:
+     * N, if 0 ≤ N ≤ B-1
+     * RB(N)= RB(sum of digits of N in base-B representation), dla N ≥ B
+     * Given N, B (1 ≤ N ≤ 2^31-1; 2 ≤ B ≤ 36) find RB(1+2+3+...+N).
+     * 
+     * Input
+     * First line contains number of data sets L (1 ≤ L ≤ 1000).
+     * Each data set consists of a single line containing two numbers N and B, separated by 
+     * a whitespace (1 ≤ N ≤ 2^31-1; 2 ≤ B ≤ 36).
+     * 
+     * Output
+     * L lines, each containing RB(1+2+3+...+N) in base-B representation
+     * For digits greater than 9 use uppercase English letters from A to Z (10 to 35 respectively).
      */
     public sealed class SumaCyfr2 : ProblemBase
     {

@@ -1,30 +1,26 @@
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Consider a blood bank. There are N blood types numbered 1 to N. A group g1 is compatible 
+     * with group g2, if a person with blood type g2 can accept blood type g1. Any blood type 
+     * is compatible with itself. Compatibility of g1 with g2 does not necessarily mean inverse is true.
+     * Your goal is to determine, whether contents of blood bank can service all the patients 
+     * according to blood type compatibility rules.
      * 
-Każdego lata szpitale w Opsslandii narzekają na niewystarczającą liczbę osób oddających krew.
-Często też brakuje jednostek krwi dla przebywających aktualnie w szpitalu pacjentów
-potrzebujących krwi. Problem jest jednak bardziej skomplikowany. Każdy mieszkaniec Opsslandii
-posiada jedną z N grup krwi numerowanych od 1 do N. Mówimy, że grupa krwi g1 jest zgodna z
-grupą krwi g2 wtedy i tylko wtedy, gdy osoba z grupą krwi g2 może przyjąć krew grupy g1. Każda
-grupa krwi jest zgodna sama ze sobą. Fakt zgodności grupy g1 z grupą g2 nie musi oznaczać, że
-grupa g2 jest zgodna z grupą g1.
-Napisz program, który stwierdzi czy jednostki krwi występujące w szpitalu wystarczą dla
-wszystkich potrzebujących krwi pacjentów uwzględniając zgodność grup krwi.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą C (1 ≤ C ≤ 10) określającą liczbę zestawów danych. W
-następnych liniach opisane są kolejno po sobie zestawy danych. W pierwszej linii zestawu danych
-znajduje się jedna liczba całkowita N (1 ≤ N ≤ 100) określająca liczbę grup krwi. W drugiej linii
-zestawu danych znajduje się N liczb całkowitych di (0 ≤ di ≤ 1000). Liczba i-ta w tej linii (1 ≤ i ≤ N)
-określa liczbę dostępnych jednostek krwi grupy o numerze i. W trzeciej linii zestawu danych
-znajduje się N liczb całkowitych bi (0 ≤ bi ≤ 1000). Liczba i-ta w tej linii (1 ≤ i ≤ N) określa liczbę
-jednostek krwi jakie są potrzebne dla pacjentów z grupą krwi o numerze i. W linii o numerze i+3 (1
-≤ i ≤ N) zestawu danych znajduje się liczba całkowita Ci (1 ≤ Ci ≤ N), po której następuje Ci liczb
-całkowitych określających numery grup, z którymi zgodna jest grupa o numerze i.
-Wyjście
-W oddzielnych liniach dla każdego zestawu danych należy wypisać słowo TAK jeśli potrzeby
-pacjentów na krew da się zaspokoić przez posiadane jednostki krwi lub NIE w przeciwnym
-przypadku.
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 10).
+     * First line of each data set contains number of blood types N (1 ≤ N ≤ 100).
+     * Second line of each data set contains N numbers, each separated by a whitespace.
+     * i-th number di in this line is equal of number of units of blood of i-th type in the bank (0 ≤ di ≤ 1000).
+     * Third line of each data set also contains N numbers, each separated by a whitespace.
+     * i-th number bi in this line is equal to number of units of blood of i-th type needed by patients (0 ≤ bi ≤ 1000). Liczba i-ta w tej linii (1 ≤ i ≤ N) określa liczbę.
+     * Following N lines describe compatibility chart of blood types.
+     * Each contains numbers separated by a whitespace. First number is number of blood types compatible 
+     * with i-th type Ci (1 ≤ Ci ≤ N), followed by Ci numbers, each representing a compatible blood type.
+     * 
+     * Output
+     * C lines, each containing an answer: TAK if supplies in blood bank can serve al patients,
+     * NIE otherwise.
      */
     public sealed class GrupyKrwi : ProblemBase
     {

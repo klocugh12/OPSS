@@ -1,35 +1,21 @@
 namespace OPSS
 {
     /* Difficulty: 5/5
-     * Projekty budynków opsslandzkich architektów sięgają granic możliwości ich wykonania.
-Skomplikowanie brył budynków stwarza liczne problemy, na które natrafiają wykonawcy
-projektów. Robotnicy właśnie wybudowali jeden z takich budynków, ale mają problem jego z
-wykończeniem. Budynek musi zostać z każdej strony otoczony przylegającym do ścian chodnikiem
-o szerokości jednego metra, a żeby złożyć zamówienie na materiały potrzebne do wyłożenia
-chodnika, trzeba znać jego powierzchnię. Zewnętrzne ściany budynku zawsze są idealnie proste,
-tworzą między sobą kąt prosty i mają od zewnętrznej strony całkowitą liczbę metrów długości.
-Dzięki temu robotnicy bez trudu naszkicowali plan budynku (tylko ściany zewnętrzne) na kartce w
-kratkę przyjmując skalę, w której jedna kratka na kartce odpowiada w rzeczywistości kwadratowi o
-powierzchni jednego metra kwadratowego. Ściany na planie tworzą łamaną zamkniętą, nie mają
-punktów wspólnych poza końcami ścian i pokrywają się z bokami kratek. Koniec ściany (róg
-budynku) jest punktem wspólnym dokładnie dwóch ścian. Pozostało im teraz policzyć wszystkie
-kratki na planie, na których ma znaleźć się chodnik, czyli te kratki, które są na zewnątrz budynku i
-sąsiadują bokiem lub rogiem z kratką, która jest wewnątrz budynku. Napisz program, który je
-policzy.
-Wejście
-Pierwsza linia zawiera liczbę całkowitą D (1 ≤ D ≤ 10), określającą liczbę zestawów danych. W
-następnych liniach opisane są kolejno po sobie zestawy danych. Jeden zestaw danych opisuje
-sposób, w jaki robotnicy narysowali na kartce plan budynku bez odrywania ołówka od kartki. W
-pierwszej linii zestawu danych znajduje się liczba całkowita N (4 ≤ N ≤ 20000) oznaczająca liczbę
-ścian budynku. Każda z kolejnych N linii zestawu danych zawiera opis kolejnego ruchu ołówka po
-kartce (bez odrywania go od kartki), czyli oddzielone od siebie spacją: wielką literę (kierunek
-rysowania ściany na planie) oraz całkowitą liczbę dodatnią (długość ściany liczoną w kratkach).
-Literą definiującą kierunek jest 'G', 'L', 'D' lub 'P', co oznacza odpowiednio ruch ołówka w górę, w
-lewo, w dół lub w prawo. Plan budynku razem z otaczającym go chodnikiem w całości mieści się
-na kwadratowej kartce w kratkę o rozmiarze 100000 kratek na 100000 kratek.
-Wyjście
-W kolejnych liniach dla każdego zestawu danych należy wypisać jedną liczbę całkowitą
-oznaczającą liczbę kratek na planie, na których ma znaleźć się chodnik.
+     * Consider a building, whose base can be described by a simple, axis-aligned polygon 
+     * with no holes, and each side of the base has integer length.
+     * We want to arrange a pavement around the whole building, putting tiles around it, so that 
+     * they touch either side or corner of the building. Find number of tiles needed.
+     * 
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10).
+     * First line of each data set contains number of walls N (4 ≤ N ≤ 20000).
+     * Each of the following N lines contain an uppercase English letter and a number separated
+     * by a whitespace. A Letter can be any of 'G', 'L', 'D' or 'P' meaning up, let, down and right
+     * respectively. A number determines, how many units to move in following direction to draw a wall.
+     * A whole building is no wider than 100000 units and no longer than 100000 units.
+     * 
+     * Output
+     * D lines, each containing number of tiles needed to place around the building.
      */
     public sealed class Chodnik : ProblemBase
     {

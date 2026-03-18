@@ -1,37 +1,28 @@
-using System.Globalization;
-
 namespace OPSS
 {
     /* Difficulty: 3/5
+     * A crime has been committed. Multiple suspects have been rounded up, of which there is one 
+     * perpetrator. Each suspect may testify several times. In a single testimony a suspect can 
+     * either name a perpetrator, corroborate or contradict any other testimony.
+     * Most likely perpetrator is a suspect, for whom number of false testimonies, assuming that
+     * suspect was in fact guilty, would be the lowest. Note that each suspect can make mutually 
+     * exclusive testimonies - in such case most certainly some of them are lies.
+     * Determine, who is the most likely perpetrator, given list of suspects and their testimonies.
+     * If there is more than one equally likely perpetrator, indicate all of them.
      * 
-Pewien znany, najbardziej skuteczny detektyw Opsslandii prowadzi własne śledztwo w kolejnej 
-    kryminalnej sprawie. Podejrzanych jest wielu, a wśród nich dokładnie jeden winny. Każdy 
-    z podejrzanych może złożyć (nie musi) kilka zeznań. W jednym zeznaniu podejrzany może wskazać 
-    winnego bądź potwierdzić lub zaprzeczyć złożone wcześniej zeznanie dowolnego podejrzanego. 
-    Detektyw swoją skuteczność zawdzięcza własnemu systemowi wyszukiwania winnego. Według tego 
-    systemu osobą uznaną za winną zostaje ta osoba spośród podejrzanych, dla której liczba osób, 
-    które skłamały przy założeniu, że winna jest ta osoba, jest najmniejsza.
-Należy wziąć pod uwagę fakt, że dany podejrzany może złożyć wykluczające się zeznania - np. raz 
-    twierdzi że winna jest pewna osoba, drugi raz że inna, albo twierdzi że każdy z podejrzanych 
-    jest niewinny - wtedy taki podejrzany kłamie.
-Napisz program, który wskaże osobę uznaną przez system detektywa za winną. Jeśli jego system 
-    uznaje wiele osób za winne, program powinien wskazać wszystkie te osoby.
-Wejście
-W pierwszym wierszu wejścia znajduje się liczba całkowita D określająca liczbę zestawów danych 
-    (1 ≤ D ≤ 10). W kolejnych liniach wejścia występują opisy kolejnych zestawów danych. 
-    W pierwszej linii zestawu danych znajdują się oddzielone pojedynczym odstępem dwie liczby 
-    całkowite: N, Z (1 ≤ N ≤ 10000, 1 ≤ Z ≤ 20000), określające odpowiednio: liczbę podejrzanych 
-    (podejrzanych numerujemy kolejnymi liczbami naturalnymi od 1 do N) oraz liczbę wszystkich 
-    złożonych zeznań. W kolejnych Z liniach zestawu występują opisy zeznań w kolejności ich 
-    składania - każde w oddzielnej linii. Zeznanie składa się z oddzielonych od siebie pojedynczym 
-    odstępem: liczby całkowitej P, znaku C, oraz liczby całkowitej K (1 ≤ P ≤ N). Znak C określa 
-    typ zeznania:
-znak C równy "W" - oznacza, że podejrzany o numerze P stwierdził, że osoba o numerze K jest winna,
-znak C równy "P" - oznacza, że podejrzany P stwierdził, że zeznanie złożone jako K-te jest prawdziwe,
-znak C równy "F" - oznacza, że podejrzany P stwierdził, że zeznanie złożone jako K-te jest fałszywe.
-Wyjście
-W kolejnych liniach, dla każdego zestawu danych, należy wypisać w porządku rosnącym numery osób 
-    podejrzanych uznanych przez system jako winne. 
+     * Input
+     * First line contains number of data sets D (1 ≤ D ≤ 10). 
+     * First line of each data set contains two numbers separated by a whitespace.
+     * They are, respectively, number of suspects N and number of testimonies Z (1 ≤ N ≤ 10000, 
+     * 1 ≤ Z ≤ 20000). Suspects are numbered 1 to N. Following Z lines each contain a single testimony.
+     * Each testimony is described by a number P, then a letter C, then a number K, each separated by a 
+     * whitespace (1 ≤ P ≤ N). Interpret them as follows:
+     * If C is "W", then suspect P testified that suspect K is guilty.
+     * If C is "P", then suspect P corroborated K-th testimony.
+     * If C is "F", then suspect P contradicted K-th testimony.
+     * 
+     * Output
+     * D lines, each containing list of most likely perpetrators, listed in ascending order. 
      */
     public sealed class Detektyw : ProblemBase
     {

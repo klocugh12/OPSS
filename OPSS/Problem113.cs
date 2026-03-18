@@ -1,13 +1,14 @@
 namespace OPSS
 {
     /* Difficulty: 3/5
-     * Wejście
-W pierwszym wierszu wejścia znajduje się liczba C określająca liczbę zestawów danych (1 ≤ C ≤
-100). W kolejnych C wierszach wejścia znajdują się zestawy danych. Każdy z C zestawów danych
-składa się z jednej liczby n (1 ≤ n ≤ 100000).
-Wyjście
-Dla każdego zestawu danych, w osobnych liniach wyjścia, należy wypisać liczbę różnych wyników
-iloczynu liczb naturalnych a i b, gdzie 1 ≤ a, b ≤ n.
+     * Find number of distinct products of two natural numbers from 1 to a given n.
+     * 
+     * Input
+     * First line contains number of data sets C (1 ≤ C ≤ 100).
+     * Each line contains a single number n (1 ≤ n ≤ 100000).
+     * 
+     * Output
+     * C lines, each containing number of distinct products of numbers a and b, where 1 ≤ a, b ≤ n.
      */
     public sealed class Iloczyny : ProblemBase
     {
