@@ -1,19 +1,18 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Problemset: 1, Difficulty: 3/5
+     * A frog leaps along the path consisting of n steps, starting from position 1 and ending at position n.
+     * A frog can only move forward. Each leap traverses at least kmin and no more than kmax steps.
+     * Find number of ways a frog can traverse whole path, assuming each leap is at least as long as previous.
      * 
-A frog leaps along the path consisting of n steps, starting from position 1 and ending at position n. 
-    A frog can only move forward. Each leap traverses at least kmin and no more than kmax steps.
-    Find number of ways a frog can traverse whole path, assuming each leap is at least as long as previous.
-
-Input:
-First line contains number of data sets m, 1 ≤ m ≤ 100.
-   Following m lines contain one data set each. Each data set consists of three numbers
-    n, kmin, kmax, each separated by a whitespace. (2 ≤ n ≤ 1000, 1 ≤ kmin ≤ kmax ≤ 1000).
-
-    Output:
-    m lines, where i-th line contains number of ways a frog can reach final step for i-th data set.
-    This number is no greater than 2^31.
+     * Input
+     * First line contains number of data sets m, 1 ≤ m ≤ 100.
+     * Following m lines contain one data set each. Each data set consists of three numbers
+     * n, kmin, kmax, each separated by a whitespace. (2 ≤ n ≤ 1000, 1 ≤ kmin ≤ kmax ≤ 1000).
+     * 
+     * Output
+     * m lines, where i-th line contains number of ways a frog can reach final step for i-th data set.
+     * This number is no greater than 2^31.
      */
     public sealed class Zabka : ProblemBase
     {
@@ -23,8 +22,8 @@ First line contains number of data sets m, 1 ≤ m ≤ 100.
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int m = int.Parse(input[0]);
+            for(int i = 1; i <= m; i++)
             {
                 var splits = input[i].Split(' ');
                 int n = int.Parse(splits[0]), kmin = int.Parse(splits[1]), kmax = Math.Min(n - 1, int.Parse(splits[2]));

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Problemset: 8, Difficulty: 2/5
      * Installing software packages comes with its own challenges. Notable one is resolving dependencies.
      * Each dependency is described by a pair of different numbers separated by a whitespace.
      * Pair A B means package A must be installed before package B.

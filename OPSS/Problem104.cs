@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Problemset: 9, Difficulty: 2/5
      * You're given a fish tank to populate with several species of fish.
      * Each speies can live in a different temperature range.
      * Your goal is to find largest possible temperature range, in which all given species can live.

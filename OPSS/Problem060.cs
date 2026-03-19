@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Problemset: 5, Difficulty: 1/5
      * A certain species of bacteria has a genome, which can be described by chromosomes B, C and S.
      * B and C are simple chromosomes. S is a complex chromosome, which countains for other chromosomes,
      * whether simple or complex ones.

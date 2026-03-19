@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Problemset: 7, Difficulty: 2/5
      * A building is planned to be built over square tiles with dimensions a x a meters.
      * Tiles must be arranged in a shape of a square. Find largest possible side of a building,
      * which can be built over such arrangement, whose base is a square as well. Tiles cannot be cut.

@@ -1,16 +1,15 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
-     
-    A prime number is an integer greater than 1 that is only divisible by 1 and itself.
-    Find n-th prime number.
-
-Input
-First line contains number of data sets C, 1<=C<=200000.
-Following C lines contain one data set each. Each data set consist of single number n, 1<=n<=15000.
-
-    Output
-    C lines, where i-th line contains n-th prime number, where n is value from i-th data set.
+     * A prime number is an integer greater than 1 that is only divisible by 1 and itself.
+     * Find n-th prime number.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 <= C <= 200000.
+     * Following C lines contain one data set each. Each data set consist of single number n, 1 <= n <= 15000.
+     * 
+     * Output
+     * C lines, where i-th line contains n-th prime number, where n is value from i-th data set.
      */
     public sealed class LiczbyPierwsze : ProblemBase
     {
@@ -22,8 +21,8 @@ Following C lines contain one data set each. Each data set consist of single num
         {
             List<int> primes = [3];
 
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
                 int n = int.Parse(input[i]);
                 if (n == 1)

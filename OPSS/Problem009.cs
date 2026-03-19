@@ -1,16 +1,15 @@
 namespace OPSS
 {
     /* Difficulty: 1/5
-     * 
      * Find sum of all numbers from 1 to N.
-
-Input
-    First line contains number of data sets n, 1<=n<=200000.
-    Following n lines each contain a single number N.
-
-    Output
-    n lines, where i-th line contains a sum from 1 to N for i-th data set. 
-    Absolute value of this sum is no greater than 2^31.
+     * 
+     * Input
+     * First line contains number of data sets n, 1 <= n <= 200000.
+     * Following n lines each contain a single integer N.
+     * 
+     * Output
+     * n lines, where i-th line contains a sum from 1 to N for i-th data set. 
+     * Absolute value of this sum is no greater than 2^31.
      */
     public sealed class Suma : ProblemBase
     {
@@ -20,11 +19,11 @@ Input
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int n = int.Parse(input[0]);
+            for(int i = 1; i <= n; i++)
             {
-                uint a = uint.Parse(input[i]);
-                output.Add((a > 0 ? ((a * (a + 1)) >> 1) : (1 - (a * (a - 1) >> 1))).ToString());
+                uint N = uint.Parse(input[i]);
+                output.Add((N > 0 ? ((N * (N + 1)) >> 1) : (1 - (N * (N - 1) >> 1))).ToString());
             }
         }
     }

@@ -29,18 +29,17 @@ namespace OPSS
      * Sample boards. X is a starting point. Fields with x have odd number of poinst assigned.
      * Field with . have even number of points assigned.
      * Empty fields have no points assigned.
-     
-Input
-    First line contains number of data sets d, 1<=d<=20.
-    Following d lines contain one data set each.
-    Each data set consists of four integers, x, y, a, b. x and y are dimensions of board,
-    a and b describe x-coordinate and y-coordinate of starting point respectively.
-    x and y are greater than 2, number of tiles on the board does not exceed 10^9,
-    starting position is on the edge of the board.
-
-    Output
-    d lines, where i-th line contains number of tiles assigned odd number of points for i-th data set.
-
+     * 
+     * Input
+     * First line contains number of data sets d, 1 <= d <= 20.
+     * Following d lines contain one data set each.
+     * Each data set consists of four integers, x, y, a, b. x and y are dimensions of board,
+     * a and b describe x-coordinate and y-coordinate of starting point respectively.
+     * x and y are greater than 2, number of tiles on the board does not exceed 10^9,
+     * starting position is on the edge of the board.
+     * 
+     * Output
+     * d lines, where i-th line contains number of tiles assigned odd number of points for i-th data set.
      */
     public sealed class Pileczka : ProblemBase
     {
@@ -50,8 +49,8 @@ Input
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int d = int.Parse(input[0]);
+            for (int i = 1; i <= d; i++)
             {
                 var tab = input[i].Split(' ').Select(s => int.Parse(s) - 1).ToArray();
                 int temp;
