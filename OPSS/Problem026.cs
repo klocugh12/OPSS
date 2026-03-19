@@ -28,17 +28,17 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
-                int n = int.Parse(input[j]);
-                int c = (1 << (n + 1)) - 1;
+                int H = int.Parse(input[j]);
+                int c = (1 << (H + 1)) - 1;
                 j++;
-                int n2 = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
                 List<string> strings = [];
-                for(int k = 0; k < n2; k++)
+                for(int k = 0; k < N; k++)
                 {
                     if (!strings.Any(s => input[j].EndsWith(s)))
                         strings.Add(input[j]);
@@ -56,7 +56,7 @@ namespace OPSS
                 }
                 foreach (var s in strings)
                 {
-                    c -= (1 << (n - s.Length + 1)) - 1;
+                    c -= (1 << (H - s.Length + 1)) - 1;
                 }
                 output.Add(c.ToString());
             }

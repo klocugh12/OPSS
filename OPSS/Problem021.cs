@@ -24,11 +24,11 @@ namespace OPSS
         protected override void BuildSolution(string[] input, List<string> output)
         {
             var splits = input[0].Split(' ');
-            int tp = int.Parse(splits[0]), tm = int.Parse(splits[1]);
+            int N = int.Parse(splits[0]), M = int.Parse(splits[1]);
             //tp(vs + vp) = tm(vs - vp)
             //vs(tm - tp) = vp(tm + tp)
             //vs = vp(tm + tp)/(tm - tp)
-            output.Add((tp * ((tm + tp) / (tm - tp) + 1)).ToString());
+            output.Add((N * ((M + N) / (M - N) + 1)).ToString());
         }
     }
 }

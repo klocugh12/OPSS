@@ -27,22 +27,22 @@ namespace OPSS
             int N = int.Parse(input[0]);
             for(int i = 1; i <= N; i++)
             {
-                int a = int.Parse(input[i]) - 2;
-                int c = 0, d = 1;
-                while(a > 0)
+                int n = int.Parse(input[i]) - 2;
+                int result = 0, halves = 1;
+                while(n > 0)
                 {
-                    if((a / d) % 2== 0)
+                    if((n / halves) % 2== 0)
                     {
-                        a -= (d << 1);
-                        c += d;
+                        n -= (halves << 1);
+                        result += halves;
                     }
                     else
                     {
-                        a -= d;  
+                        n -= halves;  
                     }
-                    d <<= 1;
+                    halves <<= 1;
                 }
-                output.Add(c.ToString());
+                output.Add(result.ToString());
             }
         }
     }

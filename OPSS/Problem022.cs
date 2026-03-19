@@ -41,15 +41,15 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
-                int[] tab = input[i].Split(' ').Select(s => int.Parse(s)).Skip(1).ToArray();
+                int[] a = input[i].Split(' ').Select(s => int.Parse(s)).Skip(1).ToArray();
                 List<int> result = [];
-                int index = tab.Length - 1;
-                for (int j = 1; j <= tab[0]; j++)
+                int index = a.Length - 1;
+                for (int j = 1; j <= a[0]; j++)
                 {
-                    while (tab[index] < j)
+                    while (a[index] < j)
                         index--;
                     result.Add(index + 1);
                 }

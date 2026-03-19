@@ -27,29 +27,29 @@ namespace OPSS
                 a1 = (int)Math.Pow(10, i) + 1;
                 n *= 10;
             }
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
-                int x = int.Parse(input[i]);
+                int N = int.Parse(input[i]);
                 int j = 1;
-                while (j < ranges.Count && ranges[j] < x)
+                while (j < ranges.Count && ranges[j] < N)
                     j++;
                 a1 = (int)(Math.Pow(10, j - 1));
-                x -= ranges[j - 1];
+                N -= ranges[j - 1];
                 double a = 0.5 * j;
                 double b = (a + a1 - 1);
-                int sqrt = (int)((Math.Sqrt(b * b + a * (x << 2)) - b) / (2.0 * a));
-                x -= sqrt * (a1 - 1) + j * ((sqrt * (sqrt + 1)) >> 1);
+                int sqrt = (int)((Math.Sqrt(b * b + a * (N << 2)) - b) / (2.0 * a));
+                N -= sqrt * (a1 - 1) + j * ((sqrt * (sqrt + 1)) >> 1);
                 a1 = 9;
                 j = 1;
-                while(x > a1)
+                while(N > a1)
                 {
-                    x -= a1;
+                    N -= a1;
                     j++;
                     a1 *= 10;
                 }
-                a1 = (int)Math.Ceiling((double)x / j);
-                output.Add(x == 0 ? (sqrt % 10).ToString() : a1.ToString()[(x + j - 1) % j].ToString());
+                a1 = (int)Math.Ceiling((double)N / j);
+                output.Add(N == 0 ? (sqrt % 10).ToString() : a1.ToString()[(N + j - 1) % j].ToString());
             }
         }
     }
