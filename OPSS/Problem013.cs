@@ -7,11 +7,11 @@ namespace OPSS
      * A pebble jumped over is removed from the board.
      * What is minimum number of pebbles remaining on the board?
      * 
-Input
-Numbers m and n separated by whitespace.
-
-Output
-Minimum number of pebbles remaining on the board.
+     * Input
+     * Numbers m and n separated by whitespace.
+     * 
+     * Output
+     * Minimum number of pebbles remaining on the board.
      */
     public sealed class ProstaGra : ProblemBase
     {
@@ -22,13 +22,12 @@ Minimum number of pebbles remaining on the board.
         protected override void BuildSolution(string[] input, List<string> output)
         {
             var splits = input[0].Split(' ');
-            int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
-            //rządek 3xn się redukuje do 3x(n - 1), ale dla każdej nieparzystej 2xn zostaną dwie.
-            //Dla parzystej n przy 2xn zostanie tylko jedna.
-            if (a == 1 || b == 1)
-                output.Add(((Math.Max(a, b) + 1) >> 1).ToString());
+            int m = int.Parse(splits[0]), n = int.Parse(splits[1]);
+            //3 x n is reduced to 3 x (n - 1), 2 x n is reduced to 2 for odd n, 1 for even n.
+            if (m == 1 || n == 1)
+                output.Add(((Math.Max(m, n) + 1) >> 1).ToString());
             else
-                output.Add((a % 3 == 0 || b % 3 == 0 || ((a == 2 && b % 2 == 1) || (b == 2 && a % 2 == 1))) ? "2" : "1");
+                output.Add((m % 3 == 0 || n % 3 == 0 || ((m == 2 && n % 2 == 1) || (n == 2 && m % 2 == 1))) ? "2" : "1");
         }
     }
 }

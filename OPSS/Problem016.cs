@@ -4,12 +4,12 @@ namespace OPSS
      * You're given 10 numbers from 1 to 10000.
      * Find last digit of number of divisors of product of those numbers.
      * For example, number 6 has 4 divisors (1, 2, 3 and 6).
-
-    Input:
-    Ten lines, each containing a number from 1 to 10000.
-
-    Output:
-    Last digit of number of divisors of product of input numbers.
+     * 
+     * Input
+     * Ten lines, each containing a number from 1 to 10000.
+     * 
+     * Output
+     * Last digit of number of divisors of product of input numbers.
      */
     public sealed class DzielniBaloniarze : ProblemBase
     {
@@ -52,11 +52,11 @@ namespace OPSS
                     j++;
                 }
             }
-            int d = 1;
+            int result = 1;
             for (int i = 0; i < counts.Length; i++)
                 if (counts[i] > 0)
-                    d = (d * (counts[i] + 1)) % 10;
-            output.Add(d.ToString());
+                    result = (result * (counts[i] + 1)) % 10;
+            output.Add(result.ToString());
         }
     }
 }

@@ -6,14 +6,14 @@ namespace OPSS
      * 
      * Find a sum of two arbitrarily long integers.
      * 
-     Input
-    First line contains a single number N (1 ≤ N ≤ 1000000). 
-    Next two lines each contain N digits of numbers to add.
-    Digits are separated by whitespaces. Shorter number is padded with leading zeros.
-    Both numbers are greater than zero and length of their sum does not exceed N digits.
-    
-    Output.
-    A single line containing sum of two numbers.
+     * Input
+     * First line contains a single number N (1 ≤ N ≤ 1000000). 
+     * Next two lines each contain N digits of numbers to add.
+     * Digits are separated by whitespaces. Shorter number is padded with leading zeros.
+     * Both numbers are greater than zero and length of their sum does not exceed N digits.
+     * 
+     * Output
+     * A single line containing sum of two numbers.
      */
     public sealed class SuperdlugaSuma : ProblemBase
     {

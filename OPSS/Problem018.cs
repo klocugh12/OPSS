@@ -27,9 +27,9 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int n = int.Parse(input[0]);
             List<int[]> result = [];
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= n; i++)
             {
                 var splits = input[i].Split(' ');
                 int[] newSplit = [int.Parse(splits[0]), int.Parse(splits[1]), 0];

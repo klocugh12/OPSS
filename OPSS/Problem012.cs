@@ -3,19 +3,18 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 1/5
-     * 
      * You're given an encrypted text and an alphabet.
      * To decipher it, for each character in encrypted text, 
      * find its position in an alphabet counting from the beginning and replace it with character
      * at same position, except counting from the end.
-
-Input
-First line contains an alphabet (ASCII characters with codes [33..126] or ['!'..'~']).
-    Second line contains number of encrypted texts, 0 < N < 1000000.
-Following N lines contain a single encrypted text each.
-
-    Output:
-    N lines each containing a single deciphered text.
+     * 
+     * Input
+     * First line contains an alphabet (ASCII characters with codes [33..126] or ['!'..'~']).
+     * Second line contains number of encrypted texts, 0 < N < 1000000.
+     * Following N lines contain a single encrypted text each.
+     * 
+     * Output
+     * N lines each containing a single deciphered text.
      */
     public sealed class StaryTestament : ProblemBase
     {

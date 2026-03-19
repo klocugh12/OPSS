@@ -6,18 +6,15 @@ namespace OPSS
      * Such number is KN correct if it has no adjacent zeros.
      * 
      * Examples:
-        1010230 is 7-digit KN-correct (n=7, k=4).
-        1000198 is not KN-correct (adjacent zeros).
-        0121235 is 6-digit (NOT 7-digit) KN-correct (n=7, k=7).
-
-    Given K and N, find number of KN-correct numbers.
-     2 ≤ K ≤ 10; 2 ≤ N; 4 ≤ N+K ≤ 18.
-
-    Input
-    Two numbers N i K .
-
-    Output
-    Number of KN-correct numbers.
+     * 1010230 is 7-digit KN-correct (n=7, k=4).
+     * 1000198 is not KN-correct (adjacent zeros).
+     * 0121235 is 6-digit (NOT 7-digit) KN-correct (n=7, k=7).
+     * Given K and N, find number of KN-correct numbers, where 2 ≤ K ≤ 10; 2 ≤ N; 4 ≤ N+K ≤ 18.
+     * Input
+     * A single line containing two numbers N and K separated by a whitespace.
+     * 
+     * Output
+     * Number of KN-correct numbers.
      */
     public sealed class KNLiczby : ProblemBase
     {

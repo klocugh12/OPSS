@@ -3,14 +3,13 @@ using System.Text;
 namespace OPSS
 {
     /* Difficulty: 2/5
+     * Find smallest positive number, whose product of digits is equal to N.
      * 
-Find smallest positive number, whose product of digits is equal to N.
-
-Input
-    A single number N (0 ≤ N ≤ 10^9).
-
-    Output:
-    A number meeting the criteria or -1 if no such number exists.
+     * Input
+     * A single number N (0 ≤ N ≤ 10^9).
+     * 
+     * Output:
+     * A number meeting the criteria or -1 if no such number exists.
      */
     public sealed class IloczynCyfr : ProblemBase
     {

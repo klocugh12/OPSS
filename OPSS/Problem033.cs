@@ -28,8 +28,7 @@ namespace OPSS
             int N = int.Parse(input[0]);
             List<long> denoms = [1L, 3L];
             List<List<int>> denoms2 = [[1], [3]];
-            //Tw. Kirchoffa, wyznacznik macierzy grafowej po eliminacji Gaussa,
-            //skrócony do 2 ostatnich elementów
+            //Kirchoff's theorem, matrix determinant after Gaussian elimination reduced to 2 elements.
             for (int i = 1; i <= N; i++)
             {
                 int a = int.Parse(input[i]);
