@@ -26,26 +26,26 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
-                var s = input[i];
-                if(s.Length < 4 || (s.Length == 4 && s.CompareTo("10EF") <= 0))
+                var N = input[i];
+                if(N.Length < 4 || (N.Length == 4 && N.CompareTo("10EF") <= 0))
                 {
                     output.Add("0");
                     continue;
                 }
-                string first = $"10{new string('0', s.Length - 4)}EF";
-                string second = $"21{new string('0', s.Length - 4)}DE";
-                string third = $"43{new string('0', s.Length - 4)}BC";
-                if (s.CompareTo(first) < 0)
-                    output.Add($"43{new string('F', s.Length - 5)}BC");
-                else if(s.CompareTo(second) < 0)
-                    output.Add($"10{Middle(s, first)}EF");
-                else if (s.CompareTo(third) < 0)
-                    output.Add($"21{Middle(s, second)}DE");
+                string first = $"10{new string('0', N.Length - 4)}EF";
+                string second = $"21{new string('0', N.Length - 4)}DE";
+                string third = $"43{new string('0', N.Length - 4)}BC";
+                if (N.CompareTo(first) < 0)
+                    output.Add($"43{new string('F', N.Length - 5)}BC");
+                else if(N.CompareTo(second) < 0)
+                    output.Add($"10{Middle(N, first)}EF");
+                else if (N.CompareTo(third) < 0)
+                    output.Add($"21{Middle(N, second)}DE");
                 else
-                    output.Add($"43{Middle(s, third)}BC");
+                    output.Add($"43{Middle(N, third)}BC");
             }
         }
 

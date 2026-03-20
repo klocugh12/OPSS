@@ -5,8 +5,8 @@ namespace OPSS
      * Find n-th prime number.
      * 
      * Input
-     * First line contains number of data sets C, 1 <= C <= 200000.
-     * Following C lines contain one data set each. Each data set consist of single number n, 1 <= n <= 15000.
+     * First line contains number of data sets C, 1 ≤ C ≤ 200000.
+     * Following C lines contain one data set each. Each data set consist of single number n, 1 ≤ n ≤ 15000.
      * 
      * Output
      * C lines, where i-th line contains n-th prime number, where n is value from i-th data set.

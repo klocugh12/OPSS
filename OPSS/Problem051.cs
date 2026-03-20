@@ -24,68 +24,68 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int D = int.Parse(input[0]);
+            for(int i = 1; i <= D; i++)
             {
                 var tab = input[i].Split(' ').Select(s => int.Parse(s)).ToArray();
                 int x = Math.Abs(tab[0] - tab[2]);
                 int y = Math.Abs(tab[1] - tab[3]);
-                int c = (Math.Min(x ,y) / 3) * 3;
-                if(c > 0)
+                int moves = (Math.Min(x ,y) / 3) * 3;
+                if(moves > 0)
                 {
-                    x -= c;
-                    y -= c;
-                    c = (c / 3) << 1;
+                    x -= moves;
+                    y -= moves;
+                    moves = (moves / 3) << 1;
                 }
-                int d = (Math.Max(x, y) >> 2) << 2;
+                int dist = (Math.Max(x, y) >> 2) << 2;
                 if (x > y)
-                    x -= d;
+                    x -= dist;
                 else
-                    y -= d;
-                c += (d >> 1);
-                d = x * y;
-                switch(d)
+                    y -= dist;
+                moves += (dist >> 1);
+                dist = x * y;
+                switch(dist)
                 {
                     case 0:
-                        switch(x+y)
+                        switch(x + y)
                         {
                             case 0:
                                 break;
 
                             case 1:
-                                c = (c == 0) ? 3 : c + 1;
+                                moves = (moves == 0) ? 3 : moves + 1;
                                 break;
 
                             case 2:
-                                c += 2;
+                                moves += 2;
                                 break;
 
                             case 3:
-                                c += 3;
+                                moves += 3;
                                 break;
                         }
                         break;
 
                     case 1:
                     case 3:
-                        c += 2;
+                        moves += 2;
                         break;
 
                     case 2:
-                        c++;
+                        moves++;
                         break;
 
                     case 4:
                         if (x + y == 5)
-                            c += 3;
+                            moves += 3;
                         else
-                            c += 4;
+                            moves += 4;
                             break;
 
                     default:
                         break;
                 }
-                output.Add(c.ToString());
+                output.Add(moves.ToString());
             }
         }
     }

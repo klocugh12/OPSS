@@ -24,14 +24,14 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int i = 1;
             while(i < input.Length)
             {
-                int c = int.Parse(input[i]);
+                int C = int.Parse(input[i]);
                 i++;
                 bool odd = false;
-                for(int j = 0; j < c; j++)
+                for(int j = 0; j < C; j++)
                 {
                     var splits = input[i].Split(' ').Select(s => int.Parse(s));
                     if (!splits.Any(s => s % 2 == 0))

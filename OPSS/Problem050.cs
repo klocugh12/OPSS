@@ -13,7 +13,7 @@ namespace OPSS
      * 
      * Input
      * First line contains number of data sets D, 1 ≤ D ≤ 1000.
-     * Each data set consists of a single line containin a single number L, 1 ≤L ≤ 5000, meaning number of years to track.
+     * Each data set consists of a single line containin a single number L, 1 ≤ L ≤ 5000, meaning number of years to track.
      * 
      * Output
      * D lines, each containing two numbers separated by a whitespace. 
@@ -54,19 +54,19 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int D = int.Parse(input[0]);
+            for(int i = 1; i <= D; i++)
             {
-                int a = int.Parse(input[i]) * 12;
-                int m = 2;
+                int L = int.Parse(input[i]) * 12;
+                int months = 2;
                 List<int> n1 = [3], n2 = [4]; 
-                int c = a;
-                while(m < a)
+                int c = L;
+                while(months < L)
                 {
                     List<int> temp = n2;
                     n2 = Add(n1, n2);
                     n1 = temp;
-                    m++;
+                    months++;
                 }
                 output.Add($"{n2.Count} {string.Join("", n2.Take(Math.Min(n2.Count, 10)))}");
             }

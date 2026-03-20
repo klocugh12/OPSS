@@ -4,7 +4,7 @@ namespace OPSS
      * Find sum of all numbers from 1 to N.
      * 
      * Input
-     * First line contains number of data sets n, 1 <= n <= 200000.
+     * First line contains number of data sets n, 1 ≤ n ≤ 200000.
      * Following n lines each contain a single integer N.
      * 
      * Output

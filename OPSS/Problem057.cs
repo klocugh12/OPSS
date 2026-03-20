@@ -1,5 +1,3 @@
-using System.Drawing;
-
 namespace OPSS
 {
     /* Difficulty: 5/5
@@ -81,31 +79,31 @@ namespace OPSS
         protected override void BuildSolution(string[] input, List<string> output)
         {
             var splits = input[0].Split(' ');
-            int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+            int N = int.Parse(splits[0]), W = int.Parse(splits[1]);
             splits = input[1].Split(' ');
-            var radiationPt = splits.Take(b).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
-            var radiationVec = splits.Skip(b).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
+            var radiationPt = splits.Take(W).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
+            var radiationVec = splits.Skip(W).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
             var radiationNorm = Norm(radiationVec);
             var modulus = Math.Sqrt(radiationVec.Select(s => s * s).Sum());
             List<Laser> lasers = [];
             double[] pt = [];
             double dist = double.MaxValue;
-            for (int i = 2; i <= a + 1; i++)
+            for (int i = 2; i <= N + 1; i++)
             {
                 splits = input[i].Split(' ');
-                var laserPt = splits.Take(b).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
-                var laserVec = splits.Skip(b).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
+                var laserPt = splits.Take(W).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
+                var laserVec = splits.Skip(W).Select(s => double.Parse(s, System.Globalization.CultureInfo.InvariantCulture)).ToArray();
                 var laserNorm = Norm(laserVec);
                 List<double> atans = [];
-                for (int j = 0; j < b; j++)
-                    for (int k = j + 1; k < b; k++)
+                for (int j = 0; j < W; j++)
+                    for (int k = j + 1; k < W; k++)
                         atans.Add(Math.Atan2(laserVec[j], laserVec[k]));
                 lasers.Add(new(laserPt, laserNorm, atans));
             }
             List<(double, double[])> candidates = [];
-            for (int i = 0; i < a; i++)
+            for (int i = 0; i < N; i++)
             {
-                for (int j = i + 1; j < a; j++)
+                for (int j = i + 1; j < N; j++)
                 {
                     var cross = Crossing(lasers[i].Point, lasers[j].Point, lasers[i].Norm, lasers[j].Norm);
                     if (cross.Any(c => double.IsNaN(c)))
@@ -119,9 +117,9 @@ namespace OPSS
                         {
                             int dim = 0;
                             var diffs = cross.Zip(l.Point, (a, b) => a - b).ToArray();
-                            for (int k = 0; k < b; k++)
+                            for (int k = 0; k < W; k++)
                             {
-                                for (int k2 = k + 1; k2 < b; k2++)
+                                for (int k2 = k + 1; k2 < W; k2++)
                                 {
                                     var atan = Math.Atan2(diffs[k], diffs[k2]);
                                     if (Math.Abs(atan - l.Atans[dim]) < PI_2)

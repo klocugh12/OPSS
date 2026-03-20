@@ -31,7 +31,7 @@ namespace OPSS
      * Empty fields have no points assigned.
      * 
      * Input
-     * First line contains number of data sets d, 1 <= d <= 20.
+     * First line contains number of data sets d, 1 ≤ d ≤ 20.
      * Following d lines contain one data set each.
      * Each data set consists of four integers, x, y, a, b. x and y are dimensions of board,
      * a and b describe x-coordinate and y-coordinate of starting point respectively.

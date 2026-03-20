@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Difficulty: 2/5
      * Your goal is to determine, what shape is on a scanned image.
      * It can be either of three: square, triangle, rectangle. Assume following:
      * All images are black and white.
@@ -33,22 +33,22 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
                 var splits = input[j].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                int H = int.Parse(splits[0]), B = int.Parse(splits[1]);
                 j++;
                 List<string> lines = [];
-                string zeros = new string('0', b);
+                string zeros = new('0', B);
                 int k = 0;
                 while (k < input[j].Length)
                 {
-                    string s = input[j].Substring(k, b);
+                    string s = input[j].Substring(k, B);
                     if (s != zeros)
                         lines.Add(s);
-                    k += b;
+                    k += B;
                 }
                 if (lines[0] != lines[lines.Count - 1])
                 {

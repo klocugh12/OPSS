@@ -4,9 +4,9 @@ namespace OPSS
      * Compute value of a^b
      * 
      * Input
-     * First line contains number of data sets n, 1<=n<=200000.
+     * First line contains number of data sets n, 1 ≤ n ≤ 200000.
      * Following n lines contain one data set each. Each data set consists of two numbers a, b,
-     * 1=<a<=5, 1<=b<=10, separated with a single whitespace.
+     * 1 ≤ a ≤ 5, 1 ≤ b ≤ 10, separated with a single whitespace.
      * 
      * Output
      * n lines, where i-th line contains value of a^b, where a and b are values from i-th data set.

@@ -60,16 +60,16 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
-                int a = int.Parse(input[i]);
-                if(a < 4)
+                int N = int.Parse(input[i]);
+                if(N < 4)
                 {
-                    output.Add((a - 2).ToString());
+                    output.Add((N - 2).ToString());
                     continue;
                 }
-                int b = ((a - 2) * (a - 3) >> 1) + 1;
+                int b = ((N - 2) * (N - 3) >> 1) + 1;
                 List<int> res = [1];
                 List<int> p2 = [2];
                 while (b > 0)

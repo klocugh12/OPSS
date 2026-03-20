@@ -4,9 +4,9 @@ namespace OPSS
      * Compute value of sum of n numbers.
      * 
      * Input
-     * First line contains number of data sets C, 1<=C<=200000.
-     * Following C lines contain one data set each. Each data set consists of one number n 1 <= n <= 100000,
-     * followed by n numbers ai 0 <= ai <= 1000, 1 <= i <= n.
+     * First line contains number of data sets C, 1 ≤ C ≤ 200000.
+     * Following C lines contain one data set each. Each data set consists of one number n 1 ≤ n ≤ 100000,
+     * followed by n numbers ai 0 ≤ ai ≤ 1000, 1 ≤ i ≤ n.
      * 
      * Output
      * C lines, where i-th line contains sum of values described in i-th data set.
