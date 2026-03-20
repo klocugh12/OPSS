@@ -71,22 +71,22 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int D = int.Parse(input[0]);
+            for (int i = 1; i <= D; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                int K = int.Parse(splits[0]), N = int.Parse(splits[1]);
                 int[] time = [0, 0, 0, 0];
                 int[] factors = [24, 60, 60];
-                List<(int, int, int[])> options = [(1, b - 1, [a])];
+                List<(int, int, int[])> options = [(1, N - 1, [K])];
                 while (options[0].Item2 > 0)
                 {
                     for (int j = 0; j < options.Count; j++)
                     {
                         var opt = options[j];
                         options.RemoveAt(j);
-                        options.Insert(j, (Math.Min(opt.Item1 + 1, a), opt.Item2 - 1, opt.Item3.Concat(opt.Item1 < a ? [a - opt.Item1] : [a]).ToArray()));
-                        if (opt.Item1 < a && opt.Item2 > a - opt.Item1)
+                        options.Insert(j, (Math.Min(opt.Item1 + 1, K), opt.Item2 - 1, opt.Item3.Concat(opt.Item1 < K ? [K - opt.Item1] : [K]).ToArray()));
+                        if (opt.Item1 < K && opt.Item2 > K - opt.Item1)
                         {
                             options.Insert(j, (opt.Item1, opt.Item2 - 1, opt.Item3.Concat(opt.Item1 > 1 ? [opt.Item1] : []).ToArray()));
                             j++;

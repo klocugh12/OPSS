@@ -26,17 +26,17 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 0; i < N; i++)
+            int d = int.Parse(input[0]);
+            for(int i = 0; i < d; i++)
             {
-                double x = double.Parse(input[3 * i + 1], CultureInfo.InvariantCulture);
+                double t = double.Parse(input[3 * i + 1], CultureInfo.InvariantCulture);
                 double[] coeffs = input[3 * (i + 1)].Split(' ').Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
-                double y = 0;
+                double W = 0;
                 for (int j = 0; j < coeffs.Length; j++)
                 {
-                    y = y * x + coeffs[j];
+                    W = W * t + coeffs[j];
                 }
-                output.Add(y.ToString("#.000").Replace(",", "."));
+                output.Add(W.ToString("#.000").Replace(",", "."));
             }
         }
     }

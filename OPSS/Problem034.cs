@@ -82,11 +82,11 @@ namespace OPSS
                 ["5612"] = "16",
                 ["6123"] = "21"
             };
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
                 StringBuilder sb = new(input[i]);
-                int c = 0;
+                int count = 0;
                 while (sb.Length > 2)
                 {
                     string key, newRep;
@@ -121,7 +121,7 @@ namespace OPSS
                         {
                             int n = sb.Length;
                             sb.Replace(key, newRep);
-                            c += (n - sb.Length) / (key.Length - newRep.Length);
+                            count += (n - sb.Length) / (key.Length - newRep.Length);
                         }
                         else
                         {
@@ -130,7 +130,7 @@ namespace OPSS
                             {
                                 int n = sb.Length;
                                 sb.Replace(key, newRep);
-                                c += (n - sb.Length) / (key.Length - newRep.Length);
+                                count += (n - sb.Length) / (key.Length - newRep.Length);
                             }
                         }
                     }
@@ -141,11 +141,11 @@ namespace OPSS
                         {
                             int n = sb.Length;
                             sb.Replace(key, newRep);
-                            c += (n - sb.Length) / (key.Length - newRep.Length);
+                            count += (n - sb.Length) / (key.Length - newRep.Length);
                         }
                     }
                 }
-                output.Add(c.ToString());
+                output.Add(count.ToString());
             }
         }
     }

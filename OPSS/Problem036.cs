@@ -25,35 +25,35 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int D = int.Parse(input[0]);
+            for(int i = 1; i <= D; i++)
             {
-                int a = int.Parse(input[i]);
-                int c = a, k = 2, sqrt = (int)Math.Ceiling(Math.Sqrt(a));
+                int n = int.Parse(input[i]);
+                int count = n, factor = 2, sqrt = (int)Math.Ceiling(Math.Sqrt(n));
                 List<int> divisors = [];
-                while(k <= sqrt)
+                while(factor <= sqrt)
                 {
-                    while(c % k == 0)
+                    while(count % factor == 0)
                     {
-                        if (!divisors.Contains(k))
-                            divisors.Add(k);
-                        c /= k;
+                        if (!divisors.Contains(factor))
+                            divisors.Add(factor);
+                        count /= factor;
                     }
-                    k++;
+                    factor++;
                 }
-                c = a;
+                count = n;
                 if (divisors.Count == 0)
-                    c--;
+                    count--;
                 else
                 {
                     int prod = 1;
                     for (int j = 0; j < divisors.Count; j++)
                     {
                         prod *= divisors[j];
-                        c -= a / prod;
+                        count -= n / prod;
                     }
                 }
-                output.Add(c.ToString());
+                output.Add(count.ToString());
             }
         }
     }

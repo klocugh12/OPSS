@@ -23,28 +23,30 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
                 Dictionary<char, List<int>> occurences = [];
-                for(j = 0; j < input[i].Length; j++)
+                string str = input[i];
+                int L = str.Length;
+                for (j = 0; j < L; j++)
                 {
-                    if (!occurences.ContainsKey(input[i][j]))
-                        occurences.Add(input[i][j], []);
-                    occurences[input[i][j]].Add(j);
+                    if (!occurences.ContainsKey(str[j]))
+                        occurences.Add(str[j], []);
+                    occurences[str[j]].Add(j);
                 }
-                if (input[i].Length == 1)
+                if (L == 1)
                 {
                     output.Add("1");
                     continue;
                 }
-                else if (input[i].Length == 2)
+                else if (L == 2)
                 {
-                    output.Add(input[i][0] == input[i][1] ? "3" : "2");
+                    output.Add(str[0] == str[1] ? "3" : "2");
                     continue;
                 }
-                int count = input[i].Length + (input[i].Length > 1 ? 1 : 0);
+                int count = L + (L > 1 ? 1 : 0);
                 List<(int, int, int, int)> pal2 = [];
                 foreach(var oc in occurences.Keys.Where(k => occurences[k].Count > 1))
                 {
@@ -58,7 +60,7 @@ namespace OPSS
                     }
                 }
                 j = 3;
-                while(j < input[i].Length && pal2.Count > 0)
+                while(j < L && pal2.Count > 0)
                 {
                     if(j % 2 == 1)
                         foreach(var pal in pal2)

@@ -20,7 +20,7 @@ namespace OPSS
      * takes 1 unit of work.
      * 
      * Input
-     * First line contains number of data sets  C, 1 ≤ C ≤ 30.
+     * First line contains number of data sets C, 1 ≤ C ≤ 30.
      * First line of each data set contains number of computers in the network N, 2 ≤ N ≤ 100000.
      * Following N-1 lines each contain a single number equal to number of parent of computers 2 to N.
      * 
@@ -37,16 +37,16 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
-                int n = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
-                List<int>[] nodes = new List<int>[n];
-                for (int k = 0; k < n; k++)
+                List<int>[] nodes = new List<int>[N];
+                for (int k = 0; k < N; k++)
                     nodes[k] = [];
-                for (int k = 1; k < n; k++)
+                for (int k = 1; k < N; k++)
                 {
                     nodes[int.Parse(input[j]) - 1].Add(k);
                     j++;
@@ -69,8 +69,8 @@ namespace OPSS
                         }
                         counts.Add((c, cTotal));
                     }
-                    counts.Sort((a, b) => (Math.Abs(a.Item2 + combined - (n >> 1)).CompareTo(Math.Abs(b.Item2 + combined - (n >> 1)))));
-                    if (head == 0 || Math.Abs(counts[0].Item2 + combined - (n >> 1)) < Math.Abs(combined - (n >> 1)))
+                    counts.Sort((a, b) => (Math.Abs(a.Item2 + combined - (N >> 1)).CompareTo(Math.Abs(b.Item2 + combined - (N >> 1)))));
+                    if (head == 0 || Math.Abs(counts[0].Item2 + combined - (N >> 1)) < Math.Abs(combined - (N >> 1)))
                     {
                         trav.Add(head);
                         head = counts[0].Item1;

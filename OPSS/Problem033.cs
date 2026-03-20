@@ -25,22 +25,22 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             List<long> denoms = [1L, 3L];
             List<List<int>> denoms2 = [[1], [3]];
             //Kirchoff's theorem, matrix determinant after Gaussian elimination reduced to 2 elements.
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
-                int a = int.Parse(input[i]);
-                while (denoms.Count < a)
+                int n = int.Parse(input[i]);
+                while (denoms.Count < n)
                 {
                     denoms.Add(3L * denoms[^1] - denoms[^2]);
                     denoms2.Add(Sub(Mul(denoms2[^1], [3]), denoms2[^2]));
                 }
-                long last = denoms[a - 2] + 1L;
-                var last2 = Add([1], denoms2[a - 2]);
-                var resx2 = Div(Mul(Sub(denoms2[a - 1], last2), Add(last2, denoms2[a - 1])), denoms2[a - 2]);
-                long resx = (denoms[a - 1] - last) * (denoms[a - 1] + last) / denoms[a - 2];
+                long last = denoms[n - 2] + 1L;
+                var last2 = Add([1], denoms2[n - 2]);
+                var resx2 = Div(Mul(Sub(denoms2[n - 1], last2), Add(last2, denoms2[n - 1])), denoms2[n - 2]);
+                long resx = (denoms[n - 1] - last) * (denoms[n - 1] + last) / denoms[n - 2];
                 output.Add(string.Join("", resx2).ToString());
             }
         }

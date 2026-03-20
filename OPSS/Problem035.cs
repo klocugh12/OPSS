@@ -38,25 +38,24 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int d = int.Parse(input[0]);
+            for (int i = 1; i <= d; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
-                if(a < b)
+                int n = int.Parse(splits[0]), k = int.Parse(splits[1]);
+                if(n < k)
                 {
                     output.Add("0");
                     continue;
                 }
                 int j = 0;
-                bool[] cols = new bool[a], diag1 = new bool[(a << 1) - 1], diag2 = new bool[(a << 1) - 1];
-                List<int> queens = new(b);
-                int c = 0;
-                int a2 = a * a;
-                int limit = a2 - Math.Max(a, b + 1);
+                bool[] cols = new bool[n], diag1 = new bool[(n << 1) - 1], diag2 = new bool[(n << 1) - 1];
+                List<int> queens = new(k);
+                int counter = 0;
+                int limit = n * n - Math.Max(n, k + 1);
                 while (true)
                 {
-                    var coords = Deconstruct(j, a);
+                    var coords = Deconstruct(j, n);
                     if (queens.Count == 0)
                     {
                         if (j >= limit)
@@ -65,31 +64,31 @@ namespace OPSS
                         cols[coords.Column] = true;
                         diag1[coords.Diag1] = true;
                         diag2[coords.Diag2] = true;
-                        j += a - (j % a);
+                        j += n - (j % n);
                         continue;
                     }
                     if (!(cols[coords.Column] || diag1[coords.Diag1] || diag2[coords.Diag2]))
                     {
-                        if (queens.Count < b - 1)
+                        if (queens.Count < k - 1)
                         {
                             queens.Add(j);
                             cols[coords.Column] = true;
                             diag1[coords.Diag1] = true;
                             diag2[coords.Diag2] = true;
-                            j += a - (j % a);
+                            j += n - (j % n);
                         }
                         else
                         {
-                            c++;
+                            counter++;
                             j++;
                         }
                     }
                     else
                         j++;
-                    while(j >= a * a)
+                    while(j >= n * n)
                     {
                         j = queens[^1];
-                        coords = Deconstruct(j, a);
+                        coords = Deconstruct(j, n);
                         cols[coords.Column] = false;
                         diag1[coords.Diag1] = false;
                         diag2[coords.Diag2] = false;
@@ -97,7 +96,7 @@ namespace OPSS
                         j++;
                     }
                 }
-                output.Add(c.ToString());
+                output.Add(counter.ToString());
             }
         }
     }
