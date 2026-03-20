@@ -18,20 +18,20 @@ namespace OPSS
 
         protected override string Output => "P\r\nN\r\nP";
 
-        static string Lutek(int a, int b)
+        static string Lutek(int N, int K)
         {
             while (true)
             {
-                b = Math.Min(b, a - b);
-                if (b == 0)
+                K = Math.Min(K, N - K);
+                if (K == 0)
                     return "N";
-                if (b == 1)
-                    return a % 2 == 0 ? "P" : "N";
+                if (K == 1)
+                    return N % 2 == 0 ? "P" : "N";
                 int x = 1;
-                while (x < a)
+                while (x < N)
                     x <<= 1;
-                if (a - b <= a - (x >> 1))
-                    a -= (x >> 1);
+                if (N - K <= N - (x >> 1))
+                    N -= (x >> 1);
                 else
                     return "P";
             } 
@@ -40,12 +40,12 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int d = int.Parse(input[0]);
+            for(int i = 1; i <= d; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
-                output.Add(Lutek(a, b));
+                int N = int.Parse(splits[0]), K = int.Parse(splits[1]);
+                output.Add(Lutek(N, K));
             }
         }
     }

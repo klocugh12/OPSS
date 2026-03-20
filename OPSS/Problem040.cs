@@ -33,36 +33,36 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int d = int.Parse(input[0]);
+            for(int i = 1; i <= d; i++)
             {
                 var splits = input[i].Split(' ');
-                int p = int.Parse(splits[0]), h = int.Parse(splits[1]) + 1;
-                if(p >= h)
+                int P = int.Parse(splits[0]), H = int.Parse(splits[1]) + 1;
+                if(P >= H)
                 {
-                    output.Add(((h * (h + 1)) >> 1).ToString());
+                    output.Add(((H * (H + 1)) >> 1).ToString());
                     continue;
                 }
                 int total = 1;
-                int pp = p;
+                int pp = P;
                 int add = 2;
                 int pow = 1;
-                while (pp * p <= h)
+                while (pp * P <= H)
                 {
                     total += add;
                     add = (add << 1) + 2;
-                    pp *= p;
+                    pp *= P;
                     pow++;
                 }
-                pp = h - pp;
+                pp = H - pp;
                 add = 0;
-                for(int k = 0; k < pp / p; k++)
+                for(int k = 0; k < pp / P; k++)
                 {
                     add = (add << 1) + 2;
                 }
                 total += add;
-                total *= (p * (p + 1)) >> 1;
-                total += (1 << pow) * ((pp % p) * ((pp % p) + 1) >> 1);
+                total *= (P * (P + 1)) >> 1;
+                total += (1 << pow) * ((pp % P) * ((pp % P) + 1) >> 1);
                 output.Add(total.ToString());
             }
         }

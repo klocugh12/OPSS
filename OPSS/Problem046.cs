@@ -22,31 +22,31 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
                 var splits = input[j].Split(' ');
-                int c = int.Parse(splits[0]);
+                int N = int.Parse(splits[0]);
                 j++;
-                var coins = input[j].Split(' ').Select(s => int.Parse(s)).Where(s => s <= c).OrderBy(s => s).ToArray();
+                var coins = input[j].Split(' ').Select(s => int.Parse(s)).Where(s => s <= N).OrderBy(s => s).ToArray();
                 j++;
                 if(coins.Length == 0)
                 {
                     output.Add("0");
                     continue;
                 }
-                int[] counts = new int[c + 1];
+                int[] counts = new int[N + 1];
                 foreach(int coin in coins)
                 {
                     counts[coin] = 1;
                 }
-                for(int k = coins[0] + 1; k <= c; k++)
+                for(int k = coins[0] + 1; k <= N; k++)
                 {
                     foreach (int coin in coins.Where(c2 => c2 < k))
                         counts[k] = counts[k] == 0 ? counts[k - coin] + 1 : Math.Min(counts[k], counts[k - coin] + 1);
                 }
-                output.Add(counts[c].ToString());
+                output.Add(counts[N].ToString());
             }
         }
     }

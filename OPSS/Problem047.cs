@@ -13,14 +13,14 @@ namespace OPSS
      * You must find minimum number of parks to patrol to ensure thieves are caught.
      * 
      * Input
-     * First line contains number of data sets C, 1<=C<=100.
+     * First line contains number of data sets C, 1 ≤ C ≤ 100.
      * Each data set is described as follows:
-     * First line contains two numbers separated by a whitespace, n and m, 1<=n<m<=100000.
+     * First line contains two numbers separated by a whitespace, n and m, 1 ≤ n < m ≤ 100000.
      * They are, respectively, number of junctions and streets in the city.
      * Following m lines contain two numbers separated by a whitespace, 
      * meaning indexes of junctions connecting consecutive streets.
      * Each two junctions can only be connected by a single street, and streets do not intersect with one another.
-     * Following line contains a single number p, 3<=p<=300, meaning number of parks.
+     * Following line contains a single number p, 3 ≤ p ≤ 300, meaning number of parks.
      * Following p lines start with number of junctions (and hence also streets) surrounding given park,
      * then contain that many indexes of junctions surrounding that park.
      * Both parks and junctions in the data set are described in ascending order (1 to p and 1 to m respectively).
@@ -36,22 +36,22 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                int p = int.Parse(splits[0]), m = int.Parse(splits[1]);
                 j++;
                 List<HashSet<int>> parksStreets = [];
                 int k;
-                for(k = 0; k < b; k++)
+                for(k = 0; k < m; k++)
                 {
                     j++;
                 }
-                a = int.Parse(input[j]);
+                p = int.Parse(input[j]);
                 j++;
-                for (k = 0; k < a; k++)
+                for (k = 0; k < p; k++)
                 {
                     var parkJunctions = input[j].Split(' ').Skip(1).Select(i => int.Parse(i) - 1).ToHashSet();
                     parksStreets.Add(parkJunctions);
@@ -68,8 +68,8 @@ namespace OPSS
                 {
                     if (parkParks[k].Skip(1).All(p => parkParks[parkParks[k][0]].Contains(p)))
                     {
-                        foreach(var p in parkParks[k])
-                            parkParks[p].Remove(k);
+                        foreach(var park in parkParks[k])
+                            parkParks[park].Remove(k);
                         parkParks[k].Clear();
                     }
                     k++;

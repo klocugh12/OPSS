@@ -11,12 +11,12 @@ namespace OPSS
      * Your goal is to find number of cells toggled on given positions and dimensions of used chessboards.
      * 
      * Input
-     * First line contains number of data sets C, 1<=C<=20.
-     * First line of each data set contains a number N, 1<=N<=1000, which is number of chessboards used.
+     * First line contains number of data sets C, 1 ≤ C ≤ 20.
+     * First line of each data set contains a number N, 1 ≤ N ≤ 1000, which is number of chessboards used.
      * Following N lines each contain four integers separated by a single whitespace 
-     * x1,y1,x2,y2, -1000000000<=x1,y1,x2,y2<=1000000000. They mean, respectively,
+     * x1,y1,x2,y2, -1000000000 ≤ x1,y1,x2,y2 ≤ 1000000000. They mean, respectively,
      * x and y coordinates of top left and bottom right corner of a chessboard.
-     * Assume x1<=x2 oraz y1<=y2.
+     * Assume x1 ≤ x2 oraz y1 ≤ y2.
      * 
      * Output
      * C lines, each containing number of cells turned on for each data set.
@@ -29,14 +29,14 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
                 List<int[]>[] arrays = [[], []];
-                int a = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
-                for (int k = 0; k < a; k++)
+                for (int k = 0; k < N; k++)
                 {
                     var tab = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                     arrays[Math.Abs((tab[0] % 2) - (tab[1] % 2))].Add(tab);

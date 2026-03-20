@@ -24,29 +24,30 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
                 StringBuilder result = new();
                 int count = 1;
-                for (int j = 1; j <= input[i].Length; j++)
+                string s = input[i];
+                for (int j = 1; j <= s.Length; j++)
                 {
-                    if (j < input[i].Length && input[i][j] == input[i][j - 1])
+                    if (j < s.Length && s[j] == s[j - 1])
                         count++;
                     else
                     {
                         if (count == 1)
                         {
-                            result.Append(input[i][j - 1]);
+                            result.Append(s[j - 1]);
                         }
                         else if (count == 2)
                         {
-                            result.Append(input[i][j - 1]);
-                            result.Append(input[i][j - 1]);
+                            result.Append(s[j - 1]);
+                            result.Append(s[j - 1]);
                         }
                         else
                         {
-                            result.Append(input[i][j - 1]);
+                            result.Append(s[j - 1]);
                             result.Append(count);
                         }
                         count = 1;

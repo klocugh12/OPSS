@@ -38,42 +38,42 @@ namespace OPSS
         }
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
                 var splits = input[j].Split(' ');
-                int K = int.Parse(splits[0]), W = int.Parse(splits[1]);
+                int W = int.Parse(splits[0]), K = int.Parse(splits[1]);
                 j++;
                 List<int[]> rows = [];
-                for (int k = 0; k < W; k++)
+                for (int k = 0; k < K; k++)
                 {
                     rows.Add(input[j].Split(' ').Select(s => int.Parse(s)).ToArray());
                     j++;
                 }
                 int rowsTop = 0;
-                while (rowsTop < rows.Count && Enumerable.Range(0, K).All(i2 => rows[rowsTop][i2] == rowsTop * K + i2 + 1))
+                while (rowsTop < rows.Count && Enumerable.Range(0, W).All(i2 => rows[rowsTop][i2] == rowsTop * W + i2 + 1))
                 {
                     rowsTop++;
                 }
                 int colsLeft = 0;
-                while (colsLeft < K && Enumerable.Range(0, rows.Count).All(
-                    i2 => rows[i2][colsLeft] == i2 * K + colsLeft + 1))
+                while (colsLeft < W && Enumerable.Range(0, rows.Count).All(
+                    i2 => rows[i2][colsLeft] == i2 * W + colsLeft + 1))
                 {
                     colsLeft++;
                 }
-                W -= rowsTop;
-                K -= colsLeft;
-                if (W == 1 && Enumerable.Range(0, K - 1).All(
-                    i2 => rows[rows.Count - 1][i2] == (rows.Count - 1) * K + i2 + 1
-                    || rows[rows.Count - 1][i2 + 1] == (rows.Count - 1) * K + i2 + 1))
-                    W = 0;
-                if (K == 1 && Enumerable.Range(0, K - 1).All(
-                    i2 => rows[i2][K - 1] == i2 * K
-                    || rows[i2 + 1][K - 1] == i2 * K))
+                K -= rowsTop;
+                W -= colsLeft;
+                if (K == 1 && Enumerable.Range(0, W - 1).All(
+                    i2 => rows[rows.Count - 1][i2] == (rows.Count - 1) * W + i2 + 1
+                    || rows[rows.Count - 1][i2 + 1] == (rows.Count - 1) * W + i2 + 1))
                     K = 0;
-                bool solvable = K != 1 && W != 1;
-                solvable = solvable && (K != 2 || W != 2 || FourSolvable(rows));
+                if (W == 1 && Enumerable.Range(0, W - 1).All(
+                    i2 => rows[i2][W - 1] == i2 * W
+                    || rows[i2 + 1][W - 1] == i2 * W))
+                    W = 0;
+                bool solvable = W != 1 && K != 1;
+                solvable = solvable && (W != 2 || K != 2 || FourSolvable(rows));
                 output.Add(solvable ? "tak" : "nie");
             }
         }

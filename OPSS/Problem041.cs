@@ -22,24 +22,24 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
-                StringBuilder s = new(input[i]);
+                StringBuilder N = new(input[i]);
                 int k = int.Parse(input[i].Substring(Math.Max(input[i].Length - 2, 0)));
                 int toAdd = 4 - ((k + 2) % 4);
-                k = s.Length - 1;
+                k = N.Length - 1;
                 bool carry = true;
                 while(k >= 0 && carry)
                 {
-                    int x = (s[k] - '0') + toAdd;
+                    int x = (N[k] - '0') + toAdd;
                     carry = x > 9;
-                    s[k] = (char)((x % 10) + '0');
+                    N[k] = (char)((x % 10) + '0');
                     k--;
                 }
                 if (carry)
-                    s.Insert(0, '1');
-                output.Add(s.ToString());
+                    N.Insert(0, '1');
+                output.Add(N.ToString());
             }
         }
     }
