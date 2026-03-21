@@ -27,17 +27,17 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < C; i++)
             {
                 j++;
                 List<int> samples = input[j].Split(' ').Select(s => int.Parse(s)).ToList();
                 samples.Sort();
                 j++;
-                int c = int.Parse(input[j]);
+                int P = int.Parse(input[j]);
                 j++;
-                for(int k = 0; k < c; k++)
+                for(int k = 0; k < P; k++)
                 {
                     int[] bounds = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                     if (samples[0] > bounds[1] || samples[samples.Count - 1] < bounds[0])

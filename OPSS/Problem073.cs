@@ -39,8 +39,8 @@ namespace OPSS
             {
                 List<int> prev = [1], curr = [3];
 
-                int a = int.Parse(input[i]);
-                for (int j = 1; j < a; j++)
+                int Di = int.Parse(input[i]);
+                for (int j = 1; j < Di; j++)
                 {
                     List<int> next = new(curr);
                     int toCarry = 0;

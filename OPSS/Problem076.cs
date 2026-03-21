@@ -32,16 +32,16 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
                 var splits = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
-                int a = splits[0], b = splits[1];
+                int N = splits[0], K = splits[1];
                 //start end limit length
                 List<int[]> routes = [];
                 j++;
-                for (int k = 0; k < b; k++)
+                for (int k = 0; k < K; k++)
                 {
                     splits = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                     if (splits[0] == 1)
@@ -53,12 +53,12 @@ namespace OPSS
                         }
                     j++;
                 }
-                routes.RemoveAll(r => r[1] != a);
+                routes.RemoveAll(r => r[1] != N);
                 routes.Sort((a, b) => a[3].CompareTo(b[3]));
                 splits = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
-                int C = splits[0], F = splits[1];
+                int T = splits[0], F = splits[1];
                 var groups = routes.GroupBy(r => r[3]).Select(g => (g.Key, g.Sum(r => r[2]))).ToList();
-                if(F < C * groups[0].Key)
+                if(F < T * groups[0].Key)
                 {
                     j++;
                     output.Add("-1");
@@ -70,12 +70,12 @@ namespace OPSS
                     var allowed = groups.Where(g => g.Key <= days).Select(g => (days - g.Key + 1) * g.Item2).ToArray();
                     int x = 0;
                     int k = 0;
-                    while(k < allowed.Length && x + allowed[k] <= F && x < C)
+                    while(k < allowed.Length && x + allowed[k] <= F && x < T)
                     {
                         x += allowed[k];
                         k++;
                     }
-                    if (x >= C)
+                    if (x >= T)
                         break;
                     days++;
                 }

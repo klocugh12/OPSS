@@ -28,9 +28,9 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
                 var splits = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                 j++;
@@ -45,9 +45,9 @@ namespace OPSS
                 }
                 while (planes[0] == empty)
                     planes.RemoveAt(0);
-                while (planes[planes.Count - 1] == empty)
+                while (planes[^1] == empty)
                     planes.RemoveAt(planes.Count - 1);
-                if (planes[0] != planes[planes.Count - 1])
+                if (planes[0] != planes[^1])
                     output.Add("3");
                 else if (planes[0] == planes[1])
                     output.Add("1");

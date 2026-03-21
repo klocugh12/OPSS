@@ -44,24 +44,24 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= D; i++)
             {
-                int c = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
                 int b = 1, p = 1;
-                for (int k = 0; k < c; k++)
+                for (int k = 0; k < N; k++)
                 {
                     var s = input[j].Split(' ');
-                    int x = int.Parse(s[1]);
+                    int X = int.Parse(s[1]);
                     if (s[0] == "p")
-                        p *= x;
+                        p *= X;
                     else
-                        b *= x;
-                    x = gcd(b, p);
-                    b /= x;
-                    p /= x;
+                        b *= X;
+                    X = gcd(b, p);
+                    b /= X;
+                    p /= X;
                     j++;
                 }
                 output.Add(b % p == 0 ? (b / p).ToString() : "-1");

@@ -55,16 +55,16 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int Q = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= Q; i++)
             {
-                int a = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
-                List<Token>[] tokens = new List<Token>[a];
+                List<Token>[] tokens = new List<Token>[N];
                 Dictionary<int, List<(int, int)>> dependencies = [];
-                int[] waiting = new int[a];
-                for (int k = 0; k < a; k++)
+                int[] waiting = new int[N];
+                for (int k = 0; k < N; k++)
                 {
                     tokens[k] = [];
                     double level = 0;
