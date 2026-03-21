@@ -25,13 +25,13 @@ namespace OPSS
         protected override void BuildSolution(string[] input, List<string> output)
         {
             List<int> sieve = [3];
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
-                int n = int.Parse(input[i]);
-                int a = 0, c = 0;
+                int index = int.Parse(input[i]);
+                int m = 0, n = 0;
                 int j = 0, k = 0;
-                while(j < n)
+                while(j < index)
                 {
                     if (k == sieve.Count)
                     {
@@ -39,20 +39,20 @@ namespace OPSS
                         if (sieve.All(p => next % p != 0))
                             sieve.Add(next);
                     }
-                    a = sieve[k]; 
-                    c = ((a * a) >> 1) + 1;
-                    int l = sieve[sieve.Count - 1];
-                    while (sieve[sieve.Count - 1] < c)
+                    m = sieve[k]; 
+                    n = ((m * m) >> 1) + 1;
+                    int l = sieve[^1];
+                    while (sieve[^1] < n)
                     {
                         if (sieve.All(p => l % p != 0))
                             sieve.Add(l);
                         l += 2;
                     }
-                    if (sieve.Contains(c))
+                    if (sieve.Contains(n))
                         j++;
                     k++;
                 }
-                output.Add($"{a} {c}");
+                output.Add($"{m} {n}");
             }
         }
     }

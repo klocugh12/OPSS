@@ -10,45 +10,46 @@ namespace OPSS
      * merge into a simple chromosome with the same letter.
      * When transformations are no longer possible, a bacteria dies.
      * Find its final form. See below for sample bacteria:
-
-+----+----+----+----+
-|    |    |    |    |
-| C  | C  | C  | B  |
-+----+----+----+----+
-|    |    |    |    |
-| C  | C  | C  | B  |
-+----+----+----+----+
-|         |    |    |
-|         | B  | B  |
-|    B    +----+----+
-|         |    |    |
-|         | B  | B  |
-+---------+----+----+
-Cycle 1 is represented by a sequence SSCCCCSCBCBBSBBBB. 
-After transforming it looks like this:
-+---------+----+----+
-|         |    |    |
-|         | C  | B  |
-|    C    +----+----+
-|         |    |    |
-|         | C  | B  |
-+---------+----+----+
-|         |         |
-|         |         |
-|    B    |    B    |
-|         |         |
-|         |         |
-+---------+---------+
-Cycle 2 is represented by a sequence: SCSCBCBBB w czasie 2 cykli.
-
-    Input
-    First line contains number of data sets C, 1 ≤ C ≤ 30.
-    Following C line each contain a single string describing chromosome sequence.
-    Each string is no longer than 100000 characters.
-
-    Output
-    C lines, each containing a string and a number separated by a whitespace.
-    A string represents final genome sequence and a number equals to final cycle of bacteria's life.
+     * 
+     * +----+----+----+----+
+     * |    |    |    |    |
+     * | C  | C  | C  | B  |
+     * +----+----+----+----+
+     * |    |    |    |    |
+     * | C  | C  | C  | B  |
+     * +----+----+----+----+
+     * |         |    |    |
+     * |         | B  | B  |
+     * |    B    +----+----+
+     * |         |    |    |
+     * |         | B  | B  |
+     * +---------+----+----+
+     * Cycle 1 is represented by a sequence SSCCCCSCBCBBSBBBB. 
+     * 
+     * After transforming it looks like this:
+     * +---------+----+----+
+     * |         |    |    |
+     * |         | C  | B  |
+     * |    C    +----+----+
+     * |         |    |    |
+     * |         | C  | B  |
+     * +---------+----+----+
+     * |         |         |
+     * |         |         |
+     * |    B    |    B    |
+     * |         |         |
+     * |         |         |
+     * +---------+---------+
+     * Cycle 2 is represented by a sequence: SCSCBCBBB w czasie 2 cykli.
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 30.
+     * Following C line each contain a single string describing chromosome sequence.
+     * Each string is no longer than 100000 characters.
+     * 
+     * Output
+     * C lines, each containing a string and a number separated by a whitespace.
+     * A string represents final genome sequence and a number equals to final cycle of bacteria's life.
      */
     public sealed class RekursywnaBakteriaCzworkowa : ProblemBase
     {
@@ -58,8 +59,8 @@ Cycle 2 is represented by a sequence: SCSCBCBBB w czasie 2 cykli.
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
                 StringBuilder newGenome = new(input[i]);
                 int cycle = 0;

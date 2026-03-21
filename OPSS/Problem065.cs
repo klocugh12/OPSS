@@ -35,17 +35,17 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int n = int.Parse(input[0]);
             Dictionary<string, int> dict = new();
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= n; i++)
             {
                 var s = input[i].Split(' ');
                 dict.Add(s[0], int.Parse(s[1]));
             }
-            int K = int.Parse(input[N + 1]);
-            for (int i = 0; i < K; i++)
+            int q = int.Parse(input[n + 1]);
+            for (int i = 0; i < q; i++)
             {
-                var s = input[N + i + 2];
+                var s = input[n + i + 2];
                 int sum1 = 0;
                 for (int k = 0; k < s.Length - 2; k++)
                     sum1 += dict[s.Substring(k, 3)];

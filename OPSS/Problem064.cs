@@ -44,53 +44,53 @@ namespace OPSS
                         sums[i][j]++;
                 }
             }
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
                 var splits = input[i].Split(' ');
-                var a = splits[0].Select(s => s - '0').ToList();
-                var b = splits[1].Select(s => s - '0').ToList();
-                int c = int.Parse(splits[2]);
+                var x = splits[0].Select(s => s - '0').ToList();
+                var y = splits[1].Select(s => s - '0').ToList();
+                int a = int.Parse(splits[2]);
                 int sum = 0;
                 int j = 0;
-                int c2 = c;
-                while(j < a.Count - 1)
+                int c2 = a;
+                while(j < x.Count - 1)
                 {
-                    for(int k = a[j] + 1; k <= Math.Min(c2, 9); k++)
+                    for(int k = x[j] + 1; k <= Math.Min(c2, 9); k++)
                     {
-                        int l = a.Count - 2 - j;
+                        int l = x.Count - 2 - j;
                         while (l >= 0 && sums[l].Count > c2 - k)
                         {
                             sum += sums[l][c2 - k];
                             l--;
                         }
                     }
-                    c2 -= a[j];
+                    c2 -= x[j];
                     j++;
                 }
-                if (c2 >= a[a.Count - 1] && c2 < 10)
+                if (c2 >= x[x.Count - 1] && c2 < 10)
                     sum++;
-                for(j = a.Count + 1; j < b.Count; j++)
+                for(j = x.Count + 1; j < y.Count; j++)
                 {
-                    sum += sums[j - 1][c];
+                    sum += sums[j - 1][a];
                 }
                 j = 0;
-                c2 = c;
-                while (j < b.Count - 1)
+                c2 = a;
+                while (j < y.Count - 1)
                 {
-                    for (int k = b[j] - 1; k >= (j == 0 ? 1 : 0) && k <= c2; k--)
+                    for (int k = y[j] - 1; k >= (j == 0 ? 1 : 0) && k <= c2; k--)
                     {
-                        int l = b.Count - 2 - j;
+                        int l = y.Count - 2 - j;
                         while (l >= 0 && sums[l].Count > c2 - k)
                         {
                             sum += sums[l][c2 - k];
                             l--;
                         }
                     }
-                    c2 -= b[j];
+                    c2 -= y[j];
                     j++;
                 }
-                if (c2 <= b[b.Count - 1] && c2 >= 0)
+                if (c2 <= y[y.Count - 1] && c2 >= 0)
                     sum++;
                 output.Add(sum.ToString());
             }

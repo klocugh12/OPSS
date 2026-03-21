@@ -25,43 +25,43 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int n = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= n; i++)
             {
-                int b = int.Parse(input[j].Split(' ')[1]);
+                int r = int.Parse(input[j].Split(' ')[1]);
                 j++;
-                string s = input[j];
+                string pattern = input[j];
                 j++;
-                int c = 0;
+                int count = 0;
                 int xxx = 0;
-                for(int k = 0; k < s.Length; k++)
+                for(int k = 0; k < pattern.Length; k++)
                 {
-                    bool isMod10 = (s.Length - k) % 2 == 1;
-                    if (s[k] == 'X')
+                    bool isMod10 = (pattern.Length - k) % 2 == 1;
+                    if (pattern[k] == 'X')
                     {
                         xxx++;
                     }
                     else
                     {
                         if (isMod10)
-                            b = (b + s[k] - '0') % 11;
+                            r = (r + pattern[k] - '0') % 11;
                         else
-                            b = (b + 11 - s[k] + '0') % 11;
+                            r = (r + 11 - pattern[k] + '0') % 11;
                     }
                 }
                 if (xxx == 0)
                 {
-                    output.Add(b == 0 ? "1" : "0");
+                    output.Add(r == 0 ? "1" : "0");
                     continue;
                 }
                 else
                 {
-                    c = (int)(9 * Math.Pow(10, xxx - 1) / 11.0);
-                    if ((s.Length % 2 == 1) ^ (b == 0 || b == 10))
-                        c++;
+                    count = (int)(9 * Math.Pow(10, xxx - 1) / 11.0);
+                    if ((pattern.Length % 2 == 1) ^ (r == 0 || r == 10))
+                        count++;
                 }    
-                output.Add(c.ToString());
+                output.Add(count.ToString());
             }
         }
     }
