@@ -20,18 +20,18 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int L = int.Parse(input[0]);
+            for(int i = 1; i <= L; i++)
             {
-                int a = int.Parse(input[i]);
-                if (a == 0)
+                int c = int.Parse(input[i]);
+                if (c == 0)
                     output.Add("0");
-                else if (a % 2 == 1)
-                    output.Add((a >> 1).ToString());
-                else if (a % 4 == 2)
+                else if (c % 2 == 1)
+                    output.Add((c >> 1).ToString());
+                else if (c % 4 == 2)
                     output.Add("-1");
                 else
-                    output.Add((((a >> 1) - 1) >> 1).ToString());
+                    output.Add((((c >> 1) - 1) >> 1).ToString());
             }
         }
     }

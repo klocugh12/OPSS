@@ -24,15 +24,15 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
-                int a = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
                 Dictionary<int, List<int>> horiz = [];
                 Dictionary<int, List<int>> vert = [];
-                for (int k = 0; k < a; k++)
+                for (int k = 0; k < N; k++)
                 {
                     var s = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                     if (!vert.ContainsKey(s[0]))

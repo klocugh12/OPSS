@@ -54,14 +54,14 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
                 List<(double, double)> houseSweeps = [];
-                int c = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
-                for (int k = 0; k < c; k++)
+                for (int k = 0; k < N; k++)
                 {
                     var coords = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                     double[] angles = [Math.Atan2(coords[1], coords[0]), Math.Atan2(coords[3], coords[0]),

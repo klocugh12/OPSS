@@ -26,18 +26,18 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
-                int a = int.Parse(input[j]);
+                int D = int.Parse(input[j]);
                 j++;  
-                int b = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
                 List<int[]> points = [];
-                int[] modulosX = new int[a];
-                int[] modulosY = new int[a];
-                for (int k = 0; k < b; k++)
+                int[] modulosX = new int[D];
+                int[] modulosY = new int[D];
+                for (int k = 0; k < N; k++)
                 {
                     points.Add(input[j].Split(' ').Select(s => int.Parse(s)).ToArray());
                     if (k > 0)
@@ -45,12 +45,12 @@ namespace OPSS
                         if (points[k][0] == points[k - 1][0])
                         {
                             var dist = Math.Abs(points[k][1] - points[k - 1][1]);
-                            modulosX[points[k][0] % a] += dist;
+                            modulosX[points[k][0] % D] += dist;
                         }
                         else
                         {
                             var dist = Math.Abs(points[k][0] - points[k - 1][0]);
-                            modulosY[points[k][1] % a] += dist;
+                            modulosY[points[k][1] % D] += dist;
                         }
                     }
                     j++;
@@ -58,15 +58,15 @@ namespace OPSS
                 if (points[points.Count - 1][0] == points[0][0])
                 {
                     var dist = Math.Abs(points[points.Count - 1][1] - points[0][1]);
-                    modulosX[points[0][0] % a] += dist;
+                    modulosX[points[0][0] % D] += dist;
                 }
                 else
                 {
                     var dist = Math.Abs(points[points.Count - 1][0] - points[0][0]);
-                    modulosY[points[0][1] % a] += dist;
+                    modulosY[points[0][1] % D] += dist;
                 }
                 int maxX = 0, maxY = 0;
-                for(int k = 1; k < a; k++)
+                for(int k = 1; k < D; k++)
                 {
                     if (modulosX[k] > modulosX[maxX])
                         maxX = k;
@@ -80,30 +80,30 @@ namespace OPSS
                     var p2 = points[(k + 1) % points.Count];
                     if (p1[0] != p2[0])
                     {
-                        if (p1[1] % a != maxY)
+                        if (p1[1] % D != maxY)
                         {
                             int x1 = Math.Min(p1[0], p2[0]);
                             int x2 = Math.Max(p1[0], p2[0]);
-                            x1 -= (((x1 % a) - maxX + a)) % a;
-                            x2 += (((x2 % a) - maxX + a)) % a;
+                            x1 -= (((x1 % D) - maxX + D)) % D;
+                            x2 += (((x2 % D) - maxX + D)) % D;
                             int y = p1[1];
-                            y -= (((y % a) - maxY + a)) % a;
-                            var toAdd = Enumerable.Range(0, (x2 - x1) / a).Select(k => (x1 + k * a, y));
+                            y -= (((y % D) - maxY + D)) % D;
+                            var toAdd = Enumerable.Range(0, (x2 - x1) / D).Select(k => (x1 + k * D, y));
                             foreach (var cut in toAdd.Where(ta => !cuts.Contains(ta)))
                                 cuts.Add(cut);
                         }
                     }
                     else
                     {
-                        if (p1[0] % a != maxX)
+                        if (p1[0] % D != maxX)
                         {
                             int y1 = Math.Min(p1[1], p2[1]);
                             int y2 = Math.Max(p1[1], p2[1]);
-                            y1 -= (((y1 % a) - maxY + a)) % a;
-                            y2 += (((y2 % a) - maxY + a)) % a;
+                            y1 -= (((y1 % D) - maxY + D)) % D;
+                            y2 += (((y2 % D) - maxY + D)) % D;
                             int x = p1[0];
-                            x -= (((x % a) - maxX + a)) % a;
-                            var toAdd = Enumerable.Range(0, (y2 - y1) / a).Select(k => (x, y1 + k * a));
+                            x -= (((x % D) - maxX + D)) % D;
+                            var toAdd = Enumerable.Range(0, (y2 - y1) / D).Select(k => (x, y1 + k * D));
                             foreach (var cut in toAdd.Where(ta => !cuts.Contains(ta)))
                                 cuts.Add(cut);
                         }

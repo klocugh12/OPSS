@@ -9,7 +9,7 @@ namespace OPSS
      * 
      * Input
      * First line contains number of data sets D, 1 ≤ D ≤ 100.
-     * Each data set contains a single number n, 0 ≤ n < 1010.
+     * Each data set contains a single number n, 0 ≤ n < 10^10.
      * 
      * Output
      * D lines, each containing largest self-descriptive number no lesser than n, or -1 
@@ -23,7 +23,7 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             List<long> results = [];
             int len = 4;
             while (len <= 10)
@@ -66,11 +66,11 @@ namespace OPSS
                 len++;
                 
             }
-            for (int k = 0; k < N; k++)
+            for (int k = 0; k < D; k++)
             {
-                int c = int.Parse(input[k + 1]);
+                int n = int.Parse(input[k + 1]);
                 int j = 0;
-                while (j < results.Count && c >= results[j])
+                while (j < results.Count && n >= results[j])
                     j++;
                 output.Add(j == 0 ? "-1" : results[j - 1].ToString());
             }

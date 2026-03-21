@@ -25,11 +25,11 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
-                var groups = input[i].Split(' ').Select(s => int.Parse(s)).ToArray();
-                output.Add( groups.Select(g => g > 1 ? 2 : 1).Sum() % 2 == 0 ? "J" : "B");
+                var groups = input[i].Split(' ').Skip(1).Select(s => int.Parse(s)).ToArray();
+                output.Add(groups.Select(g => g > 1 ? 2 : 1).Sum() % 2 == 0 ? "J" : "B");
             }
         }
     }
