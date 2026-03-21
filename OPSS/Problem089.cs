@@ -36,22 +36,22 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int Z = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= Z; i++)
             {
                 var splits = input[j].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                int S = int.Parse(splits[0]), R = int.Parse(splits[1]);
                 j++;
                 List<int[]> stores = [];
-                for (int k = 0; k < a; k++)
+                for (int k = 0; k < S; k++)
                 {
                     var enumerable = input[j].Split(' ').Select(s => int.Parse(s));
                     stores.Add(enumerable.Concat([enumerable.Count(s => s == 0)]).ToArray());
                     j++;
                 }
                 List<int[]> conditions = [];
-                for (int k = 0; k < b; k++)
+                for (int k = 0; k < R; k++)
                 {
                     var enumerable = input[j].Split(' ').Select(s => int.Parse(s));
                     conditions.Add(enumerable.Concat([ enumerable.Count(s => s == 0) ]).ToArray());

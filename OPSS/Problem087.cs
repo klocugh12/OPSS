@@ -28,25 +28,25 @@ namespace OPSS
         protected override void BuildSolution(string[] input, List<string> output)
         {
             List<int> fib = [1, 1];
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
-                int a = int.Parse(input[i]);
-                while (a > fib[fib.Count - 1])
-                    fib.Add(fib[fib.Count - 1] + fib[fib.Count - 2]);
+                int N = int.Parse(input[i]);
+                while (N > fib[^1])
+                    fib.Add(fib[^1] + fib[^2]);
                 int n = fib.Count - 1;
-                while (n > 0 && a > (fib[n] + fib[n - 1]))
+                while (n > 0 && N > (fib[n] + fib[n - 1]))
                     n--;
                 bool found = false;
                 while (n > 0 && !found)
                 {
-                    for (int j = 1; j <= (a / fib[n]); j++)
-                        for (int k = 1; k <= (a / fib[n]); k++)
-                            if (j * fib[n - 1] + k * fib[n] == a)
+                    for (int j = 1; j <= (N / fib[n]); j++)
+                        for (int k = 1; k <= (N / fib[n]); k++)
+                            if (j * fib[n - 1] + k * fib[n] == N)
                             {
                                 output.Add($"{j} {k}");
                                 found = true;
-                                j = a;
+                                j = N;
                                 break;
                             }
                     if (!found)

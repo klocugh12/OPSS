@@ -3,49 +3,49 @@ namespace OPSS
     /* Difficulty: 4/5
      * Consider set of 66 tiles, each containing distinct pairs of numbers from 1 to 11:
      * 
-1 | 1
-1 | 2
-..
-1 | 11
-2 | 2
-2 | 3
-..
-2 | 11
-..
-11 | 11
-     Try arranging them in such a way:
-● Select initial value P
-● Arrange tiles horizontally such as adjacent tiles have same numbers on their near sides.
-● Each number from 1 to 11 appears exactly twice in a line.
-● Leftmost and rightmost numbers are both P.
-    Each of tiles is assigned a certain score.
-    Find minimum and maximum possible score.
-    Tilesets can have 6, 10, 15, 21, 28, 36, 45, 55 or 66 pieces, corresponding to maximum numbers
-    from range 3 to 11.
-For example 15 tileset is described below:
-1 | 1
-1 | 2
-..
-1 | 5
-2 | 2
-2 | 3
-..
-2 | 5
-..
-5 | 5
-
-Input
-    First line contains number of data sets C, 1 ≤ C ≤ 3.
-    Each data set consists three lines.
-    First line contains number N of tiles in a tileset (possible values: 6, 10, 15, 21, 28, 36,
-    45, 55, 66). Second line contains N integers from range <-1000; 1000>, assigning scores to tiles
-    (tiles are ordered as follows: 1 | 1, 1 | 2, .. 2 | 2, 2 | 3, ..). 
-    Third line contains a single number equal to initial number P, 1 ≤ P ≤ 11.
-
-    Output
-    C lines, each containing minimum and maximum score for each data set.
-    Numbers are separated by a single whitespace. If there are no sequences of tiles which satisfy
-    requirements, minimum and maximum scores are both equal to 0.
+     * 1 | 1
+     * 1 | 2
+     * ..
+     * 1 | 11
+     * 2 | 2
+     * 2 | 3
+     * ..
+     * 2 | 11
+     * ..
+     * 11 | 11
+     * Try arranging them in such a way:
+     * ● Select initial value P
+     * ● Arrange tiles horizontally such as adjacent tiles have same numbers on their near sides.
+     * ● Each number from 1 to 11 appears exactly twice in a line.
+     * ● Leftmost and rightmost numbers are both P.
+     * Each of tiles is assigned a certain score.
+     * Find minimum and maximum possible score.
+     * Tilesets can have 6, 10, 15, 21, 28, 36, 45, 55 or 66 pieces, corresponding to maximum numbers
+     * from range 3 to 11.
+     * For example 15 tileset is described below:
+     * 1 | 1
+     * 1 | 2
+     * ..
+     * 1 | 5
+     * 2 | 2
+     * 2 | 3
+     * ..
+     * 2 | 5
+     * ..
+     * 5 | 5
+     * 
+     * Input
+     * First line contains number of data sets C, 1 ≤ C ≤ 3.
+     * Each data set consists three lines.
+     * First line contains number N of tiles in a tileset (possible values: 6, 10, 15, 21, 28, 36,
+     * 45, 55, 66). Second line contains N integers from range <-1000; 1000>, assigning scores to tiles
+     * (tiles are ordered as follows: 1 | 1, 1 | 2, .. 2 | 2, 2 | 3, ..). 
+     * Third line contains a single number equal to initial number P, 1 ≤ P ≤ 11.
+     * 
+     * Output
+     * C lines, each containing minimum and maximum score for each data set.
+     * Numbers are separated by a single whitespace. If there are no sequences of tiles which satisfy
+     * requirements, minimum and maximum scores are both equal to 0.
      */
     public sealed class Klocki : ProblemBase
     {
@@ -57,18 +57,18 @@ Input
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
-                int n = int.Parse(input[j]);
-                n = (int)Math.Sqrt(n << 1);
+                int N = int.Parse(input[j]);
+                N = (int)Math.Sqrt(N << 1);
                 Dictionary<(int, int), int> scores = [];
                 j++;
                 List<int> splits = input[j].Split(' ').Select(s => int.Parse(s)).ToList();
                 j++;
-                for (int k = 0; k < n; k++)
-                    for (int l = k; l < n; l++)
+                for (int k = 0; k < N; k++)
+                    for (int l = k; l < N; l++)
                     {
                         if (k != l)
                         {
@@ -78,12 +78,12 @@ Input
                     }
                 int start = int.Parse(input[j]);
                 j++;
-                if (start > n)
+                if (start > N)
                 {
                     output.Add("0 0");
                     continue;
                 }
-                List<int> toUse = Enumerable.Range(1, n).ToList();
+                List<int> toUse = Enumerable.Range(1, N).ToList();
                 List<int> max = [start];
                 List<int> min = [start];
                 toUse.Remove(start);

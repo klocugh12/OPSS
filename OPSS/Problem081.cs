@@ -22,12 +22,12 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
-                output.Add((b * (int)Math.Sqrt(a)).ToString());
+                int k = int.Parse(splits[0]), a = int.Parse(splits[1]);
+                output.Add((a * (int)Math.Sqrt(k)).ToString());
             }
         }
     }

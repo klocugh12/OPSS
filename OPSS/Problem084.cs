@@ -20,8 +20,8 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for(int i = 1; i <= C; i++)
             {
                 output.Add(Math.Floor(input[i << 1].Split(' ').Select(s => Math.Log10(int.Parse(s))).Sum() + 1.0).ToString());
             }

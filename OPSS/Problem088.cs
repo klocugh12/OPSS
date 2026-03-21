@@ -31,9 +31,9 @@ namespace OPSS
             for(int i = 1; i <= N; i++)
             {
                 var splits = input[i].Split(' ').Select(s => double.Parse(s)).ToArray();
-                double k = splits[1] / Math.Tan(Math.PI * splits[2] / (2 * splits[0]));
-                double kb = k / splits[1];
-                double x = 2.0 * splits[0] * Math.Asin((Math.Sqrt(kb * kb + 4) - kb) / 2.0) / Math.PI;
+                double tanNorm = splits[1] / Math.Tan(Math.PI * splits[2] / (2 * splits[0]));
+                double cosNorm = tanNorm / splits[1];
+                double x = 2.0 * splits[0] * Math.Asin((Math.Sqrt(cosNorm * cosNorm + 4) - cosNorm) / 2.0) / Math.PI;
                 List<int> format = [];
                 for(int j = 0; j < coeffs.Length; j++)
                 {

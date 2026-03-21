@@ -18,12 +18,12 @@ namespace OPSS
      * a virus can alter healthy genome.
      * 
      * Input
-     * First line contains a number and two letters separated by a whitespace. First number N, 0< N ≤ 1000000
+     * First line contains a number and two letters separated by a whitespace. First number N, 0 < N ≤ 1000000
      * represents length of genome. It is followed by two letters A-J describing a healthy gene P.
      * Next line contains N pairs of letters, each pair separated by a single whitespace,
      * describing infected genome.
      * Following line contains number of bacteria's lengths D, 0 < D ≤ 40.
-     * Last line contains numbers di, 1 ≤ di≤ 40, where 0< i≤ D, each separated by a whitespace 
+     * Last line contains numbers di, 1 ≤ di ≤ 40, where 0< i ≤ D, each separated by a whitespace 
      * and representing a bacteria's length.
      * 
      * Output
