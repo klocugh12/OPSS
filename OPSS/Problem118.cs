@@ -32,15 +32,15 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
                 List<(int, string, int)> Ws = [];
-                var D = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
-                int[] supps = new int[D[0]]; 
+                var pars = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
+                int[] supps = new int[pars[0]]; 
                 j++;
-                for(int k = 0; k < D[1]; k++)
+                for(int k = 0; k < pars[1]; k++)
                 {
                     var s = input[j].Split(' ');
                     var p = (int.Parse(s[0]), s[1], int.Parse(s[2]));
@@ -76,7 +76,7 @@ namespace OPSS
                 }
                 List<int> minLiars = [];
                 int min = 0;
-                for(int k = 0; k < D[0]; k++)
+                for(int k = 0; k < pars[0]; k++)
                 {
                     if (supps[k] > min)
                     {

@@ -19,11 +19,11 @@ namespace OPSS
         protected override void BuildSolution(string[] input, List<string> output)
         {
             List<int> totals = [1];
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int C = int.Parse(input[0]);
+            for (int i = 1; i <= C; i++)
             {
-                var k = int.Parse(input[i]);
-                while(k > totals.Count)
+                var n = int.Parse(input[i]);
+                while(n > totals.Count)
                 {
                     int j = totals.Count + 1;
                     int lim = (int)Math.Ceiling(Math.Sqrt(j));
@@ -38,7 +38,7 @@ namespace OPSS
                     }
                     totals.Add(totals[j - 2] + j - (k2 == 0 ? 0 : (j / k2 ) - 1));
                 }
-                output.Add(totals[k - 1].ToString());
+                output.Add(totals[n - 1].ToString());
             }
         }
     }

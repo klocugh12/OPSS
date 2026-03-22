@@ -23,25 +23,25 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int L = int.Parse(input[0]);
+            for (int i = 1; i <= L; i++)
             {
                 var splits = input[i].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
-                int c = a % 2 == 0 ? 1 : -1;
-                a++;
-                a >>= 1;
-                a *= ((a << 1) + c);
+                int N = int.Parse(splits[0]), B = int.Parse(splits[1]);
+                int c = N % 2 == 0 ? 1 : -1;
+                N++;
+                N >>= 1;
+                N *= ((N << 1) + c);
                 List<int> numbers = [];
                 do
                 {
                     numbers.Clear();
-                    while (a > 0)
+                    while (N > 0)
                     {
-                        numbers.Add(a % b);
-                        a /= b;
+                        numbers.Add(N % B);
+                        N /= B;
                     }
-                    a = numbers.Sum();
+                    N = numbers.Sum();
                 }
                 while (numbers.Count != 1);
                 output.Add(numbers[0] < 10 ? numbers[0].ToString() : ((char)('A' + (numbers[0] - 10))).ToString());

@@ -43,8 +43,8 @@ namespace OPSS
                 supports[supps[0]].Add(supps[1]);
                 supports[supps[1]].Add(supps[0]);
             }
-            int k = int.Parse(input[N + 2]);
-            for(int i = 0; i < k; i++)
+            int K = int.Parse(input[N + 2]);
+            for(int i = 0; i < K; i++)
             {
                 var meeting = input[N + i + 3].Split(' ').Select(s => int.Parse(s) - 1).ToArray();
                 List<int> party = new(meeting);

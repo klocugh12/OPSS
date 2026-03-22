@@ -32,23 +32,23 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= C; i++)
             {
                 List<(int, int)> solution = [(1, 1)];
-                int n = int.Parse(input[j]);
-                List<string> maze = new(n);
+                int N = int.Parse(input[j]);
+                List<string> maze = new(N);
                 j++;
                 (int, int) end = (-1, -1);
-                for (int k = 0; k < n; k++)
+                for (int k = 0; k < N; k++)
                 {
                     maze.Insert(0, input[j]);
                     if (end.Item1 < 0)
                     {
                         int index = input[j].IndexOf('k');
                         if (index >= 0)
-                            end = (index, n - k - 1);
+                            end = (index, N - k - 1);
                     }
                     j++;
                 }
@@ -56,11 +56,11 @@ namespace OPSS
                 List<(int, int)> options = [];
                 if (end.Item1 > 0)
                     options.Add((end.Item1 - 1, end.Item2));
-                if (end.Item1 < n - 1)
+                if (end.Item1 < N - 1)
                     options.Add((end.Item1 + 1, end.Item2));
                 if (end.Item2 > 0)
                     options.Add((end.Item1, end.Item2 - 1));
-                if (end.Item2 < n - 1)
+                if (end.Item2 < N - 1)
                     options.Add((end.Item1, end.Item2 + 1));
                 foreach (var pt in options)
                 {
@@ -82,7 +82,7 @@ namespace OPSS
                             hasMove = true;
                             continue;
                         }
-                        if (y < n - 1
+                        if (y < N - 1
                             && (maze[y + 1][x] == 'd' || maze[y + 1][x] == '.')
                             && !moves.Contains((x + 1, y + 2)))
                         {
@@ -102,7 +102,7 @@ namespace OPSS
                             hasMove = true;
                             continue;
                         }
-                        if (x < n - 1
+                        if (x < N - 1
                             && (maze[y][x + 1] == 'l' || maze[y][x + 1] == '.')
                             && !moves.Contains((x + 2, y + 1)))
                         {
@@ -128,7 +128,7 @@ namespace OPSS
                                     switch (dots[^1].Item3)
                                     {
                                         case 1:
-                                            if (y < n - 1)
+                                            if (y < N - 1)
                                             {
                                                 y++;
                                                 hasMove = true;
@@ -144,7 +144,7 @@ namespace OPSS
                                             break;
 
                                         case 3:
-                                            if (x < n - 1)
+                                            if (x < N - 1)
                                             {
                                                 x++;
                                                 hasMove = true;

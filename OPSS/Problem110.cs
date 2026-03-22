@@ -30,17 +30,17 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int C = int.Parse(input[0]);
             int j = 1;
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= C; i++)
             {
-                int n = int.Parse(input[j]);
+                int N = int.Parse(input[j]);
                 j++;
                 var stored = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                 j++;
                 var needed = input[j].Split(' ').Select(s => int.Parse(s));
                 stored = stored.Zip(needed, (a, b) => a - b).ToArray();
-                for(int k = 0; k < n; k++)
+                for(int k = 0; k < N; k++)
                 {
                     j++;
                     if (stored[k] <= 0)
