@@ -105,7 +105,7 @@ namespace OPSS
                 if (!NewNode.SelfClosed)
                     Current = NewNode;
             }
-            output.AddRange(Current.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries));
+            output.AddRange(Current!.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries));
         }
     }
 }

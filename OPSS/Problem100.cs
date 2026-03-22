@@ -7,8 +7,8 @@ namespace OPSS
      * No cheering guests cross hands with each other.
      * 
      * Input
-     * First line contains number of data sets D (0<D≤1000).
-     * Each data set contains a single line with number of pairs of guests Ni (0<Ni≤8000).
+     * First line contains number of data sets D (0 < D ≤ 1000).
+     * Each data set contains a single line with number of pairs of guests Ni (0 < Ni ≤ 8000).
      * 
      * Output
      * D lines, each containing two numbers separated by a whitespace.
@@ -82,12 +82,12 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             List<Dictionary<int, int>> catalan = [new() { { 1, 1 } }, new() { { 1, 1 } }, new() { { 2, 1 } }];
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
-                int a = int.Parse(input[i]);
-                while (catalan.Count <= a)
+                int Ni = int.Parse(input[i]);
+                while (catalan.Count <= Ni)
                 {
                     Dictionary<int, int> factors = new(catalan[^1]);
                     Factorize(factors, (catalan.Count << 1) - 1);
@@ -104,10 +104,10 @@ namespace OPSS
                     catalan.Add(factors);
                 }                
                 List<int> res = [1];
-                foreach (var c in catalan[a].Keys)
+                foreach (var c in catalan[Ni].Keys)
                 {
                     int k = c;
-                    for (int j = 1; j < catalan[a][c]; j++)
+                    for (int j = 1; j < catalan[Ni][c]; j++)
                         k *= c;
                     List<int> fac = [];
                     while (k > 0)

@@ -114,10 +114,10 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int X = int.Parse(input[0]);
             Dictionary<string, List<(int, double)>> buys = [], sales = [];
             Dictionary<string, (int, double)> results = [];
-            for(int i = 1; i <= N; i++)
+            for(int i = 1; i <= X; i++)
             {
                 var splits = input[i].Split(' ');
                 if (!buys.ContainsKey(splits[0]))

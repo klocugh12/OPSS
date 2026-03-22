@@ -32,16 +32,16 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
                 var splits = input[j].Split(' ');
-                int a = int.Parse(splits[1]) - 1, b = int.Parse(splits[2]) - 1;
+                int P = int.Parse(splits[1]) - 1, K = int.Parse(splits[2]) - 1;
                 j++;
                 var tab = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
                 j++;
-                List<int> solution = [a, b];
+                List<int> solution = [P, K];
                 bool cont;
                 do
                 {

@@ -35,34 +35,34 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
+            int D = int.Parse(input[0]);
             int j = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= D; i++)
             {
                 var splits = input[j].Split(' ');
-                int a = int.Parse(splits[0]), b = int.Parse(splits[1]);
+                int N = int.Parse(splits[0]), K = int.Parse(splits[1]);
                 j++;
                 List<int[]> tab = [];
-                for (int k = 0; k < a; k++)
+                for (int k = 0; k < N; k++)
                 {
                     tab.Add(input[j].Split(' ').Select(s => int.Parse(s)).ToArray());
                     j++;
                 }
                 int sumH = 0, sumV = 0;
-                for (int k2 = 1; k2 < a; k2++)
+                for (int k2 = 1; k2 < N; k2++)
                 {
                     sumH += tab[0][k2];
                     sumV += tab[k2][0];
                 }
-                for (int k2 = 1; k2 < a - 1; k2++)
+                for (int k2 = 1; k2 < N - 1; k2++)
                 {
-                    sumH += tab[k2][a - 1];
+                    sumH += tab[k2][N - 1];
                     sumV += tab[1 - 1][k2];
                 }
                 List<(int, int)> corners = [(0, 0)];
-                corners.Add(sumH > sumV ? (a - 1, 0) : (0, a - 1));
-                corners.Add((a - 1, a - 1));
-                while (corners.Count < b + 2)
+                corners.Add(sumH > sumV ? (N - 1, 0) : (0, N - 1));
+                corners.Add((N - 1, N - 1));
+                while (corners.Count < K + 2)
                 {
                     var minSol = (-1, (0, 0), (0, 0), int.MaxValue);
                     for (int k = 0; k < corners.Count - 2; k++)
@@ -156,7 +156,7 @@ namespace OPSS
                     corners[minSol.Item1] = minSol.Item3;
                     corners.Insert(minSol.Item1, minSol.Item2);
                 }
-                int cost = tab[a - 1][a - 1];
+                int cost = tab[N - 1][N - 1];
                 Point pos3 = new()
                 {
                     X = 0,

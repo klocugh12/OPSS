@@ -24,8 +24,8 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for(int i = 1; i <= N; i++)
+            int D = int.Parse(input[0]);
+            for(int i = 1; i <= D; i++)
             {
                 var splits = input[i].Split('+');
                 var val1 = splits[0].Split('/').Select(s => int.Parse(s)).ToArray();
@@ -35,30 +35,30 @@ namespace OPSS
                     results[0] = val1[0];
                 if(val1.Length > 1)
                 {
-                    results[1] = val1[val1.Length - 2];
-                    results[2] = val1[val1.Length - 1];
+                    results[1] = val1[^2];
+                    results[2] = val1[^1];
                 }
                 if (val2.Length != 2)
                     results[0] += val2[0];
                 if (val2.Length > 1)
                 {
-                    results[1] = results[1] * val2[val2.Length - 1] + val2[val2.Length - 2] * results[2];
-                    results[2] *= val2[val2.Length - 1];
+                    results[1] = results[1] * val2[^1] + val2[^2] * results[2];
+                    results[2] *= val2[^1];
                     int whole = results[1] / results[2];
                     results[0] += whole;
                     results[1] -= whole * results[2];
                 }
-                int a = results[1], b = results[2];
-                while(a > 0)
+                int b = results[1], c = results[2];
+                while(b > 0)
                 {
-                    int temp = a;
-                    a = b % a;
-                    b = temp;
+                    int temp = b;
+                    b = c % b;
+                    c = temp;
                 }
-                if(b > 1)
+                if(c > 1)
                 {
-                    results[1] /= b;
-                    results[2] /= b;
+                    results[1] /= c;
+                    results[2] /= c;
                 }
                 StringBuilder sb = new();
                 if (results[0] > 0)

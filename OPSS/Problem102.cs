@@ -39,8 +39,8 @@ namespace OPSS
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
-            int N = int.Parse(input[0]);
-            for (int i = 1; i <= N; i++)
+            int L = int.Parse(input[0]);
+            for (int i = 1; i <= L; i++)
             {
                 List<PointData> points = [];
                 int minX = int.MaxValue, minY = int.MaxValue;
