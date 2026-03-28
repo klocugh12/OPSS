@@ -25,7 +25,7 @@ namespace OPSS
 
         protected override string Output => "tak\r\nnie";
 
-        static bool FourSolvable(List<int[]> puzzle)
+        static bool FourSolvable(Dictionary<int, int[]> puzzle)
         {
             var last4 = Enumerable.Range(0, 2).SelectMany(i => puzzle[puzzle.Count + i - 2].TakeLast(2)).ToList();
             if (!last4.Contains(0))
@@ -36,6 +36,23 @@ namespace OPSS
             }
             return last4[0] < last4[1] && last4[1] < last4[2];
         }
+
+        static void SolveLine(Dictionary<int, int[]> puzzle, bool column, int index)
+        {
+            int W = puzzle.Count;
+            int K = puzzle[0].Length;
+
+        }
+
+        static void MoveTo(Dictionary<int, int[]> puzzle, int p, int k)
+        {
+
+        }
+
+        static IEnumerable<int> RowIndexes(int row, int K) => Enumerable.Range(0, K).Select(r => K * row + r);
+
+        static IEnumerable<int> ColIndexes(int col, int W) => Enumerable.Range(0, W).Select(r => W * r + col);
+
         protected override void BuildSolution(string[] input, List<string> output)
         {
             int C = int.Parse(input[0]);
@@ -45,36 +62,25 @@ namespace OPSS
                 var splits = input[j].Split(' ');
                 int W = int.Parse(splits[0]), K = int.Parse(splits[1]);
                 j++;
-                List<int[]> rows = [];
-                for (int k = 0; k < K; k++)
+                int swaps = 0;
+                List<int> positions = new(W * K);
+                for (int k = 0; k < W; k++)
                 {
-                    rows.Add(input[j].Split(' ').Select(s => int.Parse(s)).ToArray());
+                    positions.AddRange(input[j].Split(' ').Select(s => int.Parse(s)));
                     j++;
                 }
-                int rowsTop = 0;
-                while (rowsTop < rows.Count && Enumerable.Range(0, W).All(i2 => rows[rowsTop][i2] == rowsTop * W + i2 + 1))
+                for(int k = 0; k < positions.Count; k++)
                 {
-                    rowsTop++;
+                    if (positions[k] == 0)
+                        continue;
+                    swaps += positions.Skip(k + 1).Count(p => p > 0 && p < positions[k]);
                 }
-                int colsLeft = 0;
-                while (colsLeft < W && Enumerable.Range(0, rows.Count).All(
-                    i2 => rows[i2][colsLeft] == i2 * W + colsLeft + 1))
+                if(W % 2 == 0)
                 {
-                    colsLeft++;
+                    var index = positions.IndexOf(0);
+                    swaps += (W - index / K - 1);
                 }
-                K -= rowsTop;
-                W -= colsLeft;
-                if (K == 1 && Enumerable.Range(0, W - 1).All(
-                    i2 => rows[rows.Count - 1][i2] == (rows.Count - 1) * W + i2 + 1
-                    || rows[rows.Count - 1][i2 + 1] == (rows.Count - 1) * W + i2 + 1))
-                    K = 0;
-                if (W == 1 && Enumerable.Range(0, W - 1).All(
-                    i2 => rows[i2][W - 1] == i2 * W
-                    || rows[i2 + 1][W - 1] == i2 * W))
-                    W = 0;
-                bool solvable = W != 1 && K != 1;
-                solvable = solvable && (W != 2 || K != 2 || FourSolvable(rows));
-                output.Add(solvable ? "tak" : "nie");
+                output.Add(swaps % 2 == 0 ? "tak" : "nie");
             }
         }
     }
