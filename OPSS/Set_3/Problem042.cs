@@ -78,7 +78,7 @@ namespace OPSS
                 if(W % 2 == 0)
                 {
                     var index = positions.IndexOf(0);
-                    swaps += (W - index / K - 1);
+                    swaps += index / K + 1;
                 }
                 output.Add(swaps % 2 == 0 ? "tak" : "nie");
             }
