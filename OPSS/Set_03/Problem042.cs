@@ -2,8 +2,9 @@ namespace OPSS
 {
     /* Difficulty: 4/5
      * A sliding puzzle consists of N x N square with a single free tile. Other tiles are numbered 1 .. N*N.
-     * Using free tile, manipulate other tiles in other to line up all tiles in ascending order,
-     * left to right, top to bottom, and the free tile is in the bottom right corner.
+     * You can only manipulate it by swapping free space with a tile directly adjacent to it. 
+     * A puzzle is solved when all tiles are arranged in ascending order,
+     * left to right, top to bottom, and with free space in the bottom right corner.
      * Not all initial arrangements are solvable. You need to determine, whether given
      * initial arrangement is solvable.
      * 
@@ -24,34 +25,6 @@ namespace OPSS
         protected override string Input => "2\r\n4 4\r\n1 6 2 4\r\n3 13 11 7\r\n14 5 10 8\r\n0 9 15 12\r\n4 4\r\n1 2 3 4\r\n5 6 7 8\r\n9 10 11 12\r\n13 15 14 0";
 
         protected override string Output => "tak\r\nnie";
-
-        static bool FourSolvable(Dictionary<int, int[]> puzzle)
-        {
-            var last4 = Enumerable.Range(0, 2).SelectMany(i => puzzle[puzzle.Count + i - 2].TakeLast(2)).ToList();
-            if (!last4.Contains(0))
-                return false;
-            while (last4.Last() != 0)
-            {
-                last4 = [last4[2], last4[0], last4[3], last4[1]];
-            }
-            return last4[0] < last4[1] && last4[1] < last4[2];
-        }
-
-        static void SolveLine(Dictionary<int, int[]> puzzle, bool column, int index)
-        {
-            int W = puzzle.Count;
-            int K = puzzle[0].Length;
-
-        }
-
-        static void MoveTo(Dictionary<int, int[]> puzzle, int p, int k)
-        {
-
-        }
-
-        static IEnumerable<int> RowIndexes(int row, int K) => Enumerable.Range(0, K).Select(r => K * row + r);
-
-        static IEnumerable<int> ColIndexes(int col, int W) => Enumerable.Range(0, W).Select(r => W * r + col);
 
         protected override void BuildSolution(string[] input, List<string> output)
         {
