@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 1/5
      * A resonant word is a word containing more vowels (upper- or lowercase letters: 
      * 'a', 'e', 'i', 'o', 'u', 'y') than consonants and has at least one consonant.
      * Given a list of words determine number of resonant words on that list.

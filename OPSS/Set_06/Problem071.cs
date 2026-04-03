@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 0.75s, Memory limit: 16MB, Difficulty: 2/5
      * Paramecium iustus is a singular genus. It feeds on bacteria, but a colony attempts to 
      * equally distribute all local bateria between members to consume, then search for food 
      * somewhere else. Periodically colony multiplies by factor X. Local bacteria multiply the same way.

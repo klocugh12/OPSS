@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 3/5
      * Bob has an algae colony and is trying to estimate its growth rate. After a day colony grew 
      * by factor 4, with new cells being 3 times as numerous as old ones, but after 5 days
      * ratio was estimated to be a little below 600, hence growth factor per day is not constantly 4.

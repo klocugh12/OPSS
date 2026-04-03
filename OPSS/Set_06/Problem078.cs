@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2s, Memory limit: 1MB, Difficulty: 3/5
      * You're given series bitmaps describing a 3D space composed of black and white pixels.
      * Each bitmap represents one of the following: ellipsoid, cuboid or a square pyramid.
      * Recognize a figure represented by a bitmap, assuming that each radius of an ellipsoid, 

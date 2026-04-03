@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 4/5
      * You're given set of expressions to evaulate. Each expression can be any of following:
      * 1. A single unsigned number.
      * 2. Two expressions with addition, subtraction, multiplication or division operators (+, -, *, /, respectively).

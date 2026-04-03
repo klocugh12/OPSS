@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 0.5s, Memory limit: 32MB, Difficulty: 5/5
      * Consider a 8x7 board, for which each tile has assigned a number from 0 to 6.
      * You're given a set of 28 stones 2x1, each having distinct pair of numbers from 0 to 6
      * (some of them have same number on both tiles). Find number of ways to tile a board with 

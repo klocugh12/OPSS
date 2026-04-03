@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 0.75s, Memory limit: 16MB, Difficulty: 3/5
      * You're given a number of samples, which contain specific particles.
      * You're given a set of norms, which specify allowed minimum and maximum number of particles in a sample.
      * Find number of samples, which satisfy each norm.

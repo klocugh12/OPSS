@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 5/5
      * Consider a game, where you take an integer X1, reverse its digits, and add the two together.
      * Repeat this process for a resulting sum.
      * You're given some number Z. Find a smallest number that allows you to reach Z in a finite

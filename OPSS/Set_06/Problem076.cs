@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 4/5
      * A logistics company provides transport services between N towns connected with K roads.
      * Any two cities have at most a single road connecting them and each road is two-way.
      * From any city you can get to any other city, but not necessarily directly.

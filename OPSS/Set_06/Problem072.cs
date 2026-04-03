@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 16MB, Difficulty: 4/5
      * You're given N integer numbers. Find out whether you can create a subset of those numbers,
      * whose sum is equal to a given value.
      * 
