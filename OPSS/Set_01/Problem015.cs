@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 2s, Memory limit: 0.5MB, Difficulty: 1/5
      * 
      * Find a sum of two arbitrarily long integers.
      * 

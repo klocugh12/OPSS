@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 3/5
      * 
      * Consider a base-K N-digit number.
      * Such number is KN correct if it has no adjacent zeros.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 2MB, Difficulty: 2/5
      * 
      * Consider the scale to measure weight from the interval (0, 1) with specified precision.
      * Precision can be set as integer from 1 to 10. If precision is equal to m, 

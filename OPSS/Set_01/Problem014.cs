@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 0.5s, Memory limit: 1MB, Difficulty: 2/5
      * Find smallest positive number, whose product of digits is equal to N.
      * 
      * Input

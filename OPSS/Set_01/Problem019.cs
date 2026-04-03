@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 4/5
      * Towers of Hanoi is a classic game with three rods and n disks.
      * Initially, all disks are on the first rod, sorted from largest to smallest bottom-up.
      * Its goal is to move all disks from first rod to second, in keeping with two rules:

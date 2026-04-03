@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 3/5
      * We're given an infinite tiled board. 
      * We fill rectangle consisting of m x n tiles with pebbles, each occupying a single tile.
      * A pebble can jump over another stone horizontally or vertically, if pebbles to jump to is free.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 2/5
      * Compute value of M = 11^n.
      * Hint:
      *           1 + 1 = 2

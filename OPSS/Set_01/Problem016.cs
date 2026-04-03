@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 3/5
      * You're given 10 numbers from 1 to 10000.
      * Find last digit of number of divisors of product of those numbers.
      * For example, number 6 has 4 divisors (1, 2, 3 and 6).

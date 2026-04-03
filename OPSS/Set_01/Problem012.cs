@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1.5s, Memory limit: 1.5MB, Difficulty: 1/5
      * You're given an encrypted text and an alphabet.
      * To decipher it, for each character in encrypted text, 
      * find its position in an alphabet counting from the beginning and replace it with character
