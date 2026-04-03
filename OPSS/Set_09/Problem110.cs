@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 2/5
      * Consider a blood bank. There are N blood types numbered 1 to N. A group g1 is compatible 
      * with group g2, if a person with blood type g2 can accept blood type g1. Any blood type 
      * is compatible with itself. Compatibility of g1 with g2 does not necessarily mean inverse is true.

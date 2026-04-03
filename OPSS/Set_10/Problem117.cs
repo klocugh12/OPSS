@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Memory limit: 4MB, Difficulty: 1/5
      * John has been invited to a party. Since he owns a bakery, he brought C cookies with him.
      * He gave each guest as many cookies as possible, but every guest got the same number.
      * He ate remaining cookies himself. Determine, how many cookies he was able to eat.

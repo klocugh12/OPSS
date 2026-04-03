@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2s, Memory limit: 64MB, Difficulty: 3/5
      * Find number of distinct products of two natural numbers from 1 to a given n.
      * 
      * Input

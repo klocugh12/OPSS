@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 5/5
      * Consider a building, whose base can be described by a simple, axis-aligned polygon 
      * with no holes, and each side of the base has integer length.
      * We want to arrange a pavement around the whole building, putting tiles around it, so that 

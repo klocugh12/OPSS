@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Memory limit: 40MB, Difficulty: 3/5
      * Consider a board in standard coordinates system. A field (1, 1) is starting field.
      * Each field has a label meaning direction (g - up, d - down, l - left, p - right) or
      * it is a final field with label k. There is a unique path from starting to final field, 

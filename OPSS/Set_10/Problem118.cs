@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Memory limit: 16MB, Difficulty: 3/5
      * A crime has been committed. Multiple suspects have been rounded up, of which there is one 
      * perpetrator. Each suspect may testify several times. In a single testimony a suspect can 
      * either name a perpetrator, corroborate or contradict any other testimony.

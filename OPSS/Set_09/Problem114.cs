@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 3/5
      * Elections are coming. All politicians are decided on whether they support or oppose each other.
      * This relation is mutial: if politician A supports politician B, then politician B also supports
      * politician A. Not all politicians have a party, so they are trying to make a new one.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 3/5
      * For integers N, B (0 ≤ N; 2 ≤ B ≤ 36), RB(N) is defined as follows:
      * N, if 0 ≤ N ≤ B-1
      * RB(N)= RB(sum of digits of N in base-B representation), dla N ≥ B

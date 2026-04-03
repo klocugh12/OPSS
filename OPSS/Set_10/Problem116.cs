@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Memory limit: 4MB, Difficulty: 1/5
      * Lately a Santa Claus has gained weight and he cannot fit through some chimneys he used to
      * enter houses through. In some cases he is no longer able to fit through some windows
      * or even doors. Santa always prefers going through a chimney if he can. If not, he tries to 

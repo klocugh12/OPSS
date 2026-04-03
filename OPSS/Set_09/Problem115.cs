@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 4/5
      * You're given a sphere which is tesellated by either triangles or rectangles, and a point light source.
      * Your goal is to determine, which of the polygons receives most light.
      * For each polygon, light intensity depends on an angle, which a ray of light crossing the center 
