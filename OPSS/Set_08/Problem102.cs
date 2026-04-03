@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 16MB, Difficulty: 4/5
      * You're given a number of points on a plane. Find minimum perimeter of a polygon that contains
      * all of them. A point can lie on a perimeter of said polygon.
      * 

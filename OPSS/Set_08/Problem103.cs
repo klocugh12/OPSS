@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 3s, Memory limit: 16MB, Difficulty: 3/5
      * An animal graph G can be described as follows:
      * ● G is simple, connected and contains exactly two cycles (head and body), each no shorter than 3.
      * ● Cycles do not have common vertices and are connected by a single path (neck).

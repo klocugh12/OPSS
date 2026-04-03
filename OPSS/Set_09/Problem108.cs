@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 4/5
      * Consider an alley with N statues alongside it. Every year, a different statue is 
      * being moved to the spot next to King's Palace. Cost of moving a statue depends on both 
      * weight and distance needed to move it, exactly C * |A - B|, where C is weight of statue,

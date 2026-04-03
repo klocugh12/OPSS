@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 3/5
      * Write a program to add common fractions. Assume the following:
      * a fractions can be represented as "a", "a/b/c" or "b/c" where a, b, c are nonnegative
      * integers. "a" is an integer, "a/b/c" is equivalent to a + b/c, and "b/c" is a common

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 5/5
      * A workforce is building a road through the forest. A forest is described by 
      * a square divided into NxN square sections. Each section contains specified number of trees.
      * A road starts in northwest corner of the forest and ends in southeast corner.

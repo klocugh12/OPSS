@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 0.75s, Memory limit: 16MB, Difficulty: 5/5
      * On a wedding reception there was a certain even number of guests.
      * Determine number of ways guests can clink their glasses with each other, assuming as follows:
      * All guests participate in cheers. All guests clink their glasses at the same time.

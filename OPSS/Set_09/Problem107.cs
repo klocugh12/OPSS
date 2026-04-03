@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 2/5
      * In certain city there is a market, which allows you to buy or sell items.
      * To do so, you place a buy or sell order. Each order must contain following information:
      * ○ Item ID

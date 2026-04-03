@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 3/5
      * Consider a markup language OPSSML. Each OPSSML file contains header in first line, followed by
      * one element in each following line. An element can be either simple or complex.
      * A simple element has format <name [attr] />, where name is element name, and [attr] is

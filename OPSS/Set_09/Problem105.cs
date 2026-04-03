@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 0.5s, Memory limit: 4MB, Difficulty: 1/5
      * There are n servers in a network. A request has been made to merge all contained data 
      * onto a single server. Any server has enough capacity to do so, but it is necessary to pick 
      * one, for which that operation will take the least time. Any unit of data can be transferred 
