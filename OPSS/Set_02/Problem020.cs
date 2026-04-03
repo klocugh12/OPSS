@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 1/5
      * 
      * Find last digit of 3^n.
      * 

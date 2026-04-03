@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2.5s, Memory limit: 6MB, Difficulty: 4/5
      * One day Bob was bored and started writing down a sequence. It went as follows: 1121231234123451234561234567... 
      * Find n-th digit of that sequence
      * 

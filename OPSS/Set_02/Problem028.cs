@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 4/5
      * Alice and Bob play a game, where they append pieces of line in alternating manner, 
      * until line collapses under its own weight.
      * First piece is appended to an infinitely durable hook, following pieces are each appended to the last one.

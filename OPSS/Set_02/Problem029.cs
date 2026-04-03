@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 6MB, Difficulty: 2/5
      * You're given a sequence f, where:
      * f0 = 0,
      * fn = n^3 * (fn-1+1) + n^2, n > 0

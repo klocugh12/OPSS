@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 2/5
      * 
      * Alice and Bob spend time arranging pebbles in specific patterns, such as
      * each column of the arrangement has no more pebbles than previous ones.

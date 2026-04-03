@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2.5s, Memory limit: 16MB, Difficulty: 3/5
      * 
      * An AB-tree is a complete tree, whose nodes are words made using letters {a, b}.
      * Its root is an empty word "0". For any word w in a tree, it has two children 

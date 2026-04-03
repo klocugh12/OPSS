@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 2/5
      * Alice threw a birthday party, baked a cake and invited her guests.
      * To slice a cake, she made K straight cuts to make as many pieces as possible, 
      * so that each guest gets a single piece.

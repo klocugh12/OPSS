@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 3s, Memory limit: 6MB, Difficulty: 3/5
      * In order to hang the curtains it is a good idea to first hang clips on both ends,
      * then find the middle to hang a clip there, then repeat process recursively for two halves
      * that still need hanging. If however we have even number of clips remaining, it is necessary

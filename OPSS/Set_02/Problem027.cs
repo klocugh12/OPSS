@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 3/5
      * 
      * You have unlimited amount of 2x1 domino tiles of size.
      * Find number of ways you can tile a 3xN rectangle using those tiles.

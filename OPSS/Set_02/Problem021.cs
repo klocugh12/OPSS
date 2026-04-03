@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 2/5
      * 
      * A ship travels one hour downstream and two hours upstream. How long would a raft travel downstream?
      * 
