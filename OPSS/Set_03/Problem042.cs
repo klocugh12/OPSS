@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 16MB, Difficulty: 4/5
      * A sliding puzzle consists of N x N square with a single free tile. Other tiles are numbered 1 .. N*N.
      * You can only manipulate it by swapping free space with a tile directly adjacent to it. 
      * A puzzle is solved when all tiles are arranged in ascending order,

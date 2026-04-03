@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2s, Memory limit: 2MB, Difficulty: 3/5
      * You have a vending machine, which gives out a change after each transaction.
      * Given list of coin values and a change to dispense, find minimum number of coins to use.
      * 

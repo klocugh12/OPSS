@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 2MB, Difficulty: 3/5
      * 
      * A software company is moving to another office. A move is organized as follows:
      * 1) Each employee packs their things in a box, carries it outside, and puts it

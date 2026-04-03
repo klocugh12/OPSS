@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 2MB, Difficulty: 1/5
      * You're given a string of English uppercase letters.
      * Compress them into strings in following way:
      * If there are more than two occurrences of same letter in a row, only write first occurence

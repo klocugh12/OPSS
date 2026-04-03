@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 2MB, Difficulty: 2/5
      * 
      * A balanced number is a number, which has same number of odd and even divisors.
      * For a given N, find smallest number greater than N.

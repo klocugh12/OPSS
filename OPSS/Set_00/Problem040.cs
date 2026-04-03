@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 4/5
      * A Pascal's triangle is constructed as follows:
      * Left and right edges of a triangle are both filled with ones.
      * Inner numbers inside of a triangle are a sum of two numbers above. Picture below

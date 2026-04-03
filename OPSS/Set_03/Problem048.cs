@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2.5s, Memory limit: 8MB, Difficulty: 4/5
      * In order to send signals to outer space, a new, peculiar interface has been developed.
      * It consists of arbitrarily large board divided into square cells.
      * Each cell can be set to on or off state at any given moment.

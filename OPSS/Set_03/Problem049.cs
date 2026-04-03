@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 2MB, Difficulty: 3/5
      * Your goal is to determine, whether number of ways you can select K out of N items is odd or even.
      * 
      * Input

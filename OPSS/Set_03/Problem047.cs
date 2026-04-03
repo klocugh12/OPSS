@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 4/5
      * Thieves have robbed the bank and are trying to escape to their hideout.
      * To avoid being spotted as much as possible, they will be going through numerous city parks.
      * Each city park is bounded by three or more streets and contains no streets itself.

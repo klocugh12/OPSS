@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 2s, Memory limit: 8MB, Difficulty: 2/5
      * Consider following programing language names OPS:
      * Commands are executed left to right.
      * Each command is either an inteeger or one of 4 tokens: 'O', 'P', 'S', '.'
