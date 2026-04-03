@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2s, Memory limit: 16MB, Difficulty: 3/5
      * Bees, as we know, build honeycombs out of adjacent regular hexagons.
      * One swarm of bees however did things differently. It built its honeycomb in such a way that:
      * ● regular hexagons don't have common edges, only common vertices,

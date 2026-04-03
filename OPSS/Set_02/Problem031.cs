@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 20MB, Difficulty: 4/5
      * You're given a network of N computers. Not all computers are directly connected, 
      * but for any two computers in the network there exists some connection between them.
      * Network has a tree structure, i.e. there exists a parent node for any computer in the network

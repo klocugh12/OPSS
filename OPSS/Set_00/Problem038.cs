@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 4/5
      * You're given a safe you need to crack. A safe contains a keypad with digits 0 to 9.
      * Using flour, you've found, which digits are in the code (flour stuck to the grease 
      * from the fingers). You also know, how long the code is. 

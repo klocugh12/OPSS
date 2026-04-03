@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 1.5s, Memory limit: 6MB, Difficulty: 5/5
      * A certain company has its office in a center of a circle, on whose perimeter lie
      * houses of all of company's employees.
      * A company attempts to build network of roads to its office from all homes.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 4/5
      * Alice and Bob play a gambling game. Each of them writes down a pattern consisting of letters
      * O (heads) and R (tails). Then they alternate throwing a coin, each writing down result,
      * until either of them gets a match against a pattern they have.

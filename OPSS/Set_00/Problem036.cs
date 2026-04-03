@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 3/5
      * Consider n lamps handled by a robot. Each robot has its series number k.
      * A robot with series number k can toggle a switch on first k lamps (either turning them on or off).
      * Then they move on to next k lamps, doing the same operation. They continue this cycle

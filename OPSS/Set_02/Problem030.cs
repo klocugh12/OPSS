@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 4/5
      * You're given a word consisting of letters from English alphabet.
      * Find number of ways you can remove letters from that word, such as resulting word reads the same
      * left to right and right to left. Each way is considered unique, if it removes letters from different

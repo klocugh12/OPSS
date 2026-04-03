@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 3s, Memory limit: 16MB, Difficulty: 3/5
      * A queen is a chess piece which attacks its whole rank (row), file (column) and both diagonals.
      * Given n x n chessboard, find number of ways you can place k queens, so that no two queens attack each other.
      * 

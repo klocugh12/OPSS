@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 4/5
      * You're given a number of points describing a simple, closed polygon. 
      * Find out, whether given point lies inside a polygon or on its edge.
      * 

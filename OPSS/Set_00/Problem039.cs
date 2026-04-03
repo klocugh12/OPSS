@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1.5s, Memory limit: 2MB, Difficulty: 1/5
      * Find out value for a given polynomial for a given argument.
      * 
      * Input:
