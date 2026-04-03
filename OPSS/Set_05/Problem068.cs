@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 3s, Memory limit: 16MB, Difficulty: 3/5
      * A Pythagorean triangle is described by a triplet of integers, which satisfy equation a^2 + b^2 = c^2.
      * A subset of Pythagorean triangles are so called Perfect Pythagorean triangles,
      * for which additionally two of (a, b, c) numbers are prime.

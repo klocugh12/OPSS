@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2.5s, Memory limit: 6MB, Difficulty: 4/5
      * A text search should work quickly, but also help users in case they make a typing error.
      * In case a user types a word that is not found, a some alternative should be given, sorted descending
      * by similarity to original word.

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 16MB, Difficulty: 4/5
      * Szkrable is a popular and complex word game.
      * It has a predefined dictionary of legal three-letter words (triplets).
      * A word is legal only if each triplet of consecutive characters in it forms a legal word

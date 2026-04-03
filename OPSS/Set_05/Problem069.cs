@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 2/5
      * You're given groups of samples, which are evaluated according to 10 parameters each.
      * Find number of samples, which meet given evaluation criteria.
      * 

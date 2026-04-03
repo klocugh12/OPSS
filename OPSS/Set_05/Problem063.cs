@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 2s, Memory limit: 4MB, Difficulty: 3/5
      * An IP address version P consists of P numbers from 0 to 255 separated by a dot each.
      * In this case addresses can only consist of some specific, predetermined numbers.
      * Knowing those numbers, print possible IP addresses in ascending order.

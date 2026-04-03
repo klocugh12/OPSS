@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 1/5
      * 
      * You're given a sequence of parentheses ().
      * Find the number of brackets that need to be added in order for sequence to be valid.

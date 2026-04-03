@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 4MB, Difficulty: 4/5
      * Given integers x, y, a, find number of integers from x to y (inclusive), 
      * whose sum of digits is equal to a.
      * 

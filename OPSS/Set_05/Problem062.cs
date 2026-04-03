@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 2s, Memory limit: 4MB, Difficulty: 4/5
      * You're given a bitmap representing a rectangle or ellipse.
      * Find an angle it is rotated against x-axis. Assume the following:
      * Bitmaps are black and white, 1 meaning black pixel, 0 meaning white pixel.

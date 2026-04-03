@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 4/5
      * Consider a numeric pattern consisting of digits 0-9 and a wildcard X.
      * A wildcard can be any digit other than leading zero.
      * For example, pattern 'X12' is not matched by '012', but is by '112'.
