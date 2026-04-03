@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 5s, Memory limit: 32MB, Difficulty: 3/5
      * Consider a fixed point in 2D space. A space contains multiple non-overlapping rectangles.
      * All rectangles are axis-aligned. Find minimum number of rays to draw starting from 
      * a given point, so that each rectangle intersects with at least one ray.

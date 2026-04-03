@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 0.5s, Memory limit: 4MB, Difficulty: 1/5
      * Phone numbers can be encoded by words, where letters are mapped to digits as described below:
      * ABC: 2
      * DEF: 3

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 2/5
      * Given an integer c, find pairs of nonnegative integers a, b such as a^2 - b^2 = c.
      * If there are multiple such pairs, pick one with smallest difference between a and b.
      * If there are still multiple candidates, pick one with smallest value of b.

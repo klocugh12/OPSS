@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 3/5
      * Consider a software with K components and multiple patches.
      * Each patch can update some (not necessarily all) components to its specified version.
      * Patch v+1 can only be used if all components updated by that patch have version v.

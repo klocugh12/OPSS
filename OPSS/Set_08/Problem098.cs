@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 3s, Memory limit: 16MB, Difficulty: 5/5
      * Consider a sequence defined as follows. You're given N initial terms a1, a2, a3, .. , aN.
      * To derive following terms, add up N previous ones. For instance:
      * aN+1 = a1 + a2 + .. + aN,

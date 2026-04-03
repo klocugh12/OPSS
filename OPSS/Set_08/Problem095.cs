@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 16MB, Difficulty: 4/5
      * A natural number L is self-descriptive, if, for all k from 1 to L's length,
      * k-th digit in order from most to least significant, is equal to number of occurrences 
      * of digit k + 1. In other words, most significant digit is number of zeroes in L,

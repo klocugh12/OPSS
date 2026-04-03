@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 3/5
      * Alice and Bob play a game in which they take turns herding sheeps divided into several groups,
      * starting with Alice. A player during they turn can herd any number of sheeps provided they are all
      * from the same group. Whoever has to herd the last sheep, loses the game.

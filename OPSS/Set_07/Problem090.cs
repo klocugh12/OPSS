@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 64MB, Difficulty: 3/5
      * A Loner is a single player game with simple rules: you're given a rectangular board made of square tiles.
      * Some number of pieces is distributed across the board. Each tile can contain no more than 1 piece.
      * In each turn you remove all pieces from a single row, or a single column.

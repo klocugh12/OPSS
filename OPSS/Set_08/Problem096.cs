@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 4/5
      * John is building a new house. He tiled the floor using square tiles, forming a rectangle.
      * Then he wants to build walls on the tiled floor. He wants to put as much wall as possible 
      * on the edges of tiles, otherwise he is forced to cut the tiles.
