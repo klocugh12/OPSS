@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 4/5
      * A communication company has set up network of its transmitters.
      * It decided to configure it in such way that each transmitter can reach any other tranmsmitter
      * either directly or using at most a single intermediate transmitter.

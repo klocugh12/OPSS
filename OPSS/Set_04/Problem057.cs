@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 5/5
+    /* Time limit: 2.5s, Memory limit: 16MB, Difficulty: 5/5
      * Consider W-dimensional space.
      * It contains a number of laser cannons bounding the safe area. 
      * Each cannon is placed in some Di point and is described by a vector Li indicating its direction.

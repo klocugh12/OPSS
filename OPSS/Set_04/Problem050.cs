@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 4MB, Difficulty: 3/5
      * A certain hamster colony is particularly prolific at breeding.
      * Each pair of hamsters births two hamsters every month.
      * Newborn hamsters are capable of breeding after one month.

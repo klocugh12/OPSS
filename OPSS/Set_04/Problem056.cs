@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 6MB, Difficulty: 2/5
      * 
      * A train travels from Lublin to Kraków. It stops at several midway stations, where passengers 
      * board the train or leave it. Find maximum number of passengers on a train during a trip.

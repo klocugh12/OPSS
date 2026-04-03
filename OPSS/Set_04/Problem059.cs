@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 3/5
      * Consider following cipher:
      * 
      * C/C++:

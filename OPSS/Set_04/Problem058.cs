@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 8MB, Difficulty: 4/5
      * A company needs to segregate its waste to become environmentally friendly.
      * There are N bins, each dedicated for one type of waste. To segregate waste, a robot is employed
      * to move waste item by item between containers. Each item can only be moved once, and moving any item

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 0.5MB, Difficulty: 2/5
      * Your goal is to determine, what shape is on a scanned image.
      * It can be either of three: square, triangle, rectangle. Assume following:
      * All images are black and white.
@@ -50,7 +50,7 @@ namespace OPSS
                         lines.Add(s);
                     k += B;
                 }
-                if (lines[0] != lines[lines.Count - 1])
+                if (lines[0] != lines[^1])
                 {
                     output.Add("3");
                 }

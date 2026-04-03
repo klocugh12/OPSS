@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 3/5
      * A nonnegative integer H is HEX-palindromic, if there exists a natural number k > 1
      * such as multiplying H times k and reversing it, we get H again, if we use hexadecimal
      * representation. No leading zeros are allowed.

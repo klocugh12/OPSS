@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 4MB, Difficulty: 2/5
      * Alice and Bob have plenty of chocolate bars left after a birthday party.
      * They decided they will be eating it piece by piece in alternating manner,
      * with Alice taking the first piece out of first chocolate bar.

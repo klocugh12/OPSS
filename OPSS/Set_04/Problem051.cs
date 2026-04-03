@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 6MB, Difficulty: 3/5
      * 
      * A knight is a chess piece which moves in L-shaped pattern. First, it moves 2 squares in 
      * one of four direction, then it moves one square in direction perpendicular to previous one.
