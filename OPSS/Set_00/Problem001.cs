@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 1/5
      * 
      * Compute value of the greatest common divisor of two numbers a and b.
      * 

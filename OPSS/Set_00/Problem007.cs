@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 1/5
      * A factorial (n!) is defined as 1 for n ≤ 1 and product of all integers from 1 to n otherwise.
      * Find last digit of n!.
      * 

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 1/5
      * Fibonacci numbers are defined as follows:
      * F(0)=1,
      * F(1)=1,

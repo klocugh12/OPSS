@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 2/5
      * Find square of a number consisting of 1s only (1, 11, 111, 1111, ...).
      * 
      * Input

@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1s, Memory limit: 1MB, Difficulty: 4/5
      * 
      * We're given a board of size m x n, made of square tiles.
      * We pick an starting position on the edge of the board.

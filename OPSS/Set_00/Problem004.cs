@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 1.5s, Memory limit: 1.5MB, Difficulty: 1/5
      * A prime number is an integer greater than 1 that is only divisible by 1 and itself.
      * Find n-th prime number.
      * 

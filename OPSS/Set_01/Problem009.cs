@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 1/5
+    /* Time limit: 2s, Memory limit: 1.5MB, Difficulty: 1/5
      * Find sum of all numbers from 1 to N.
      * 
      * Input

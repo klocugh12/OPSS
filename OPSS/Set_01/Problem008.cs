@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1s, Memory limit: 1.5MB, Difficulty: 3/5
      * A frog leaps along the path consisting of n steps, starting from position 1 and ending at position n.
      * A frog can only move forward. Each leap traverses at least kmin and no more than kmax steps.
      * Find number of ways a frog can traverse whole path, assuming each leap is at least as long as previous.
