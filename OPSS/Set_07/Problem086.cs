@@ -2,7 +2,7 @@ using System.Text;
 
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 4/5
      * A bit pattern is a binary number with n-bits, of which k are equal to 1, 1 ≤ k ≤ n.
      * Consider all bit patterns sorted lexicographically in descending order.
      * Find d-th bit pattern. Assume that d is not larger than number of such bit patterns.

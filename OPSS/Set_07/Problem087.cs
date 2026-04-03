@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 16MB, Difficulty: 3/5
      * Consider a sequence generated as follows:
      * First, set up two parameters as positive integers.
      * First term of a sequence is equal to sum of two parameters.

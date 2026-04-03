@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 2/5
+    /* Time limit: 1.5s, Memory limit: 8MB, Difficulty: 2/5
      * Given list of numbers, find number of digits of their product.
      * 
      * Input

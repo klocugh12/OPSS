@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 4/5
      * Consider a genome coded with pairs of uppercase letters A-J. A healthy genome consists of
      * the same pair P repeated n times. For example, if P equals 'AA', then healthy genome with
      * length 3 is 'AA AA AA'. A virus alters a healthy gene to another one, different than P.

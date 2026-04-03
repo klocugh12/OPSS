@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 0.5s, Memory limit: 8MB, Difficulty: 3/5
      * Alice and Bob are playing poker and using matches to bet. Alice has only blue matches and Bob
      * only green ones. Before the betting phase there were a blue matches and b green ones on the table.
      * Alice and Bob take turns, starting with one, who has less matches on the table.

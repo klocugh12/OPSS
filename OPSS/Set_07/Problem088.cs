@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 0.5s, Memory limit: 16MB, Difficulty: 3/5
      * You're given two lines, a quarter of certain cosine wave and half of certain tangent graph 
      * (both starting from angle 0). a is a value for which a cosine becomes 0. 
      * b is value of cosine wave for angle 0. c is an argument, for which tg(c) = b.

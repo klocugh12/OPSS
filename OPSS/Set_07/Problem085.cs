@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 4/5
+    /* Time limit: 0.5s, Memory limit: 8MB, Difficulty: 4/5
      * Consider set of 66 tiles, each containing distinct pairs of numbers from 1 to 11:
      * 
      * 1 | 1

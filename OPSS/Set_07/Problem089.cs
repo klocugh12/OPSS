@@ -1,6 +1,6 @@
 namespace OPSS
 {
-    /* Difficulty: 3/5
+    /* Time limit: 1.5s, Memory limit: 32MB, Difficulty: 3/5
      * You are running a store containing some items. Items are stored in batches. Each batch can be
      * described with 3 integers A, B, C, representing certain quality parameters of items.
      * 
