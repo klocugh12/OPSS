@@ -85,11 +85,11 @@ namespace OPSS
             int k;
             for (k = 0; k < shorter.Count; k++)
             {
-                longer[longer.Count - k - 1] += shorter[shorter.Count - k - 1] + (carry ? 1 : 0);
-                int a = longer[longer.Count - k - 1];
+                longer[^(k + 1)] += shorter[^(k + 1)] + (carry ? 1 : 0);
+                int a = longer[^(k + 1)];
                 carry = a >= 10;
                 if (carry)
-                    longer[longer.Count - k - 1] %= 10;
+                    longer[^(k + 1)] %= 10;
             }
             k = longer.Count - shorter.Count - 1;
             while (carry && k >= 0)
@@ -111,11 +111,11 @@ namespace OPSS
             int k;
             for (k = 0; k < shorter.Count; k++)
             {
-                longer[longer.Count - k - 1] -= shorter[shorter.Count - k - 1] + (carry ? 1 : 0);
-                int a = longer[longer.Count - k - 1];
+                longer[^(k + 1)] -= shorter[^(k + 1)] + (carry ? 1 : 0);
+                int a = longer[^(k + 1)];
                 carry = a < 0;
                 if (carry)
-                    longer[longer.Count - k - 1] += 10;
+                    longer[^(k + 1)] += 10;
             }
             k = longer.Count - shorter.Count - 1;
             while (carry && k >= 0)

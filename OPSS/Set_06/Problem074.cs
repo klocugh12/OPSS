@@ -40,7 +40,7 @@ namespace OPSS
                 for (int k = 0; k < P; k++)
                 {
                     int[] bounds = input[j].Split(' ').Select(s => int.Parse(s)).ToArray();
-                    if (samples[0] > bounds[1] || samples[samples.Count - 1] < bounds[0])
+                    if (samples[0] > bounds[1] || samples[^1] < bounds[0])
                     {
                         output.Add("0");
                         j++;

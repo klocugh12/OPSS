@@ -23,7 +23,7 @@ namespace OPSS
             int a1 = 1, n = 9;
             for (int i = 1; i <= 4; i++)
             {
-                ranges.Add(ranges[ranges.Count - 1] + (n * ((a1 << 1) + (n - 1) * i) >> 1));
+                ranges.Add(ranges[^1] + (n * ((a1 << 1) + (n - 1) * i) >> 1));
                 a1 = (int)Math.Pow(10, i) + 1;
                 n *= 10;
             }

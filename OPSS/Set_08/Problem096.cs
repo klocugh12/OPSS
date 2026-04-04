@@ -55,14 +55,14 @@ namespace OPSS
                     }
                     j++;
                 }
-                if (points[points.Count - 1][0] == points[0][0])
+                if (points[^1][0] == points[0][0])
                 {
-                    var dist = Math.Abs(points[points.Count - 1][1] - points[0][1]);
+                    var dist = Math.Abs(points[^1][1] - points[0][1]);
                     modulosX[points[0][0] % D] += dist;
                 }
                 else
                 {
-                    var dist = Math.Abs(points[points.Count - 1][0] - points[0][0]);
+                    var dist = Math.Abs(points[^1][0] - points[0][0]);
                     modulosY[points[0][1] % D] += dist;
                 }
                 int maxX = 0, maxY = 0;

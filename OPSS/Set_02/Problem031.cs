@@ -82,7 +82,7 @@ namespace OPSS
                 int p = head;
                 while (trav.Any())
                 {
-                    var last = trav[trav.Count - 1];
+                    var last = trav[^1];
                     nodes[last].Remove(p);
                     nodes[p].Add(last);
                     p = last;
